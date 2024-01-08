@@ -169,50 +169,53 @@ const Home = () => {
 
                 {/* Skills */}
                 <section className="container-fluid p-5 bg-white">
-                    <h2 className=" mb-4">Skills</h2>
-                    <div className="row container">
-                        <div className="col-lg-6">
-                            <h3>Frontend</h3>
-                            <ul>
-                                <li>React.js</li>
-                                <li>JavaScript (ES6+)</li>
-                                <li>HTML5</li>
-                                <li>CSS3</li>
-                            </ul>
-                            <p>Proficiency Level: Advanced</p>
-                        </div>
-                        {/* Backend */}
-                        <div className="col-lg-6">
-                            <h3>Backend</h3>
-                            <ul>
-                                <li>Node.js</li>
-                                <li>Express.js</li>
-                                <li>PHP</li>
-                            </ul>
-                            <p>Proficiency Level: Intermediate</p>
-                        </div>
+                    <div className={"container"}>
+                        <h2 className=" mb-4">Skills</h2>
                         <div className="row container">
-                            {/* Databases */}
                             <div className="col-lg-6">
-                                <h3>Databases</h3>
+                                <h3>Frontend</h3>
                                 <ul>
-                                    <li>MongoDB</li>
-                                    <li>MySQL</li>
-                                    <li>PostgreSQL</li>
+                                    <li>React.js</li>
+                                    <li>JavaScript (ES6+)</li>
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
                                 </ul>
                                 <p>Proficiency Level: Advanced</p>
                             </div>
-                            {/* Other Skills */}
+                            {/* Backend */}
                             <div className="col-lg-6">
-                                <h3>Other Skills</h3>
+                                <h3>Backend</h3>
                                 <ul>
-                                    <li>Git</li>
-                                    <li>RESTful APIs</li>
+                                    <li>Node.js</li>
+                                    <li>Express.js</li>
+                                    <li>PHP</li>
                                 </ul>
-                                <p>Proficiency Level: Advanced</p>
+                                <p>Proficiency Level: Intermediate</p>
+                            </div>
+                            <div className="row container">
+                                {/* Databases */}
+                                <div className="col-lg-6">
+                                    <h3>Databases</h3>
+                                    <ul>
+                                        <li>MongoDB</li>
+                                        <li>MySQL</li>
+                                        <li>PostgreSQL</li>
+                                    </ul>
+                                    <p>Proficiency Level: Advanced</p>
+                                </div>
+                                {/* Other Skills */}
+                                <div className="col-lg-6">
+                                    <h3>Other Skills</h3>
+                                    <ul>
+                                        <li>Git</li>
+                                        <li>RESTful APIs</li>
+                                    </ul>
+                                    <p>Proficiency Level: Advanced</p>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </section>
 
                 {/* Contact Banner */}
