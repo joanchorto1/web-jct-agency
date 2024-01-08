@@ -170,8 +170,8 @@ const Home = () => {
                 {/* Skills */}
                 <section className="container-fluid p-5 bg-white">
                     <div className={"container"}>
-                        <h2 className=" mb-4">Skills</h2>
-                        <div className="row container">
+
+                        <div className="row container ">
                             <div className="col-lg-6">
                                 <h3>Frontend</h3>
                                 <ul>
