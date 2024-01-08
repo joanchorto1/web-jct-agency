@@ -50,7 +50,7 @@ const Home = () => {
         <Layout>
             <Helmet>
                 <title>Phoenix Group Tarragona - Contacta con nuestra agencia de Marketing Digital. </title>
-                <link rel="canonical" href="https://phoenixgrp.es/contacto"/>
+                <link rel="canonical" href="https://jctagency.com/"/>
                 <meta name={"description"} content={"Estamos aquí para responder a tus preguntas y discutir cómo podemos ayudarte a alcanzar tus objetivos. Puedes contactarnos a través de los siguientes métodos(Mail/Telefono/Formulario de Contacto)"}/>
             </Helmet>
             <div className="d-flex flex-column text-dark bg-dark">
