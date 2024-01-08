@@ -1,3 +1,16 @@
+.service-button {
+  border: none;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.service-button:hover {
+  background-color: #e0e0e0;
+}
+
 .App {
   text-align: center;
 }
@@ -9,7 +22,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: scale infinite 4s ease-in-out;
   }
 }
 
@@ -34,5 +47,26 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.9);
+  }
+  100% {
+    transform: scale(1);
   }
 }
