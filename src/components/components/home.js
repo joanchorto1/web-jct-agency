@@ -1,10 +1,49 @@
-import React from 'react';
+import React, {useState} from 'react';
 import LogoJCT from "../img/LOGO(Fondo Transparent).png";
 import Joanimg from "../img/Selecció_213.png"
+import PortfoilImg from "../img/Selecció_214.png"
 import Layout from "../layouts/layout";
 import {Helmet} from "react-helmet";
-
+import TaskImg from "../img/Selecció_215.png"
+import PhoenixImg from "../img/Selecció_216.png"
+import emailjs from "emailjs-com";
 const Home = () => {
+
+    const [isFormSubmitted, setFormSubmitted] = useState(false);
+    const [formFields, setFormFields] = useState({
+        nombre: '',
+        email: ''
+
+    });
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        // Configurar el servicio Email.js
+        emailjs.sendForm('service_uaggcy8', 'template_f7zqqc9', e.target, 'PrtHsOGCYBrChfJU3')
+            .then((result) => {
+                console.log(result.text);
+                setFormSubmitted(true);
+                // Vaciar los campos del formulario después del envío exitoso
+                setFormFields({
+                    nombre: '',
+                    email: ''
+
+                });
+            })
+            .catch((error) => {
+                console.log(error.text);
+                setFormSubmitted(false);
+            });
+    };
+
+    const handleChange = (e) => {
+        // Actualizar el estado de los campos del formulario mientras el usuario escribe
+        setFormFields({
+            ...formFields,
+            [e.target.name]: e.target.value,
+        });
+    };
 
     return (
 
@@ -100,15 +139,17 @@ const Home = () => {
                                 <div className="card border-5 border-dark h-100">
                                     <div className="card-body">
                                         <h5 className="card-title">Personal Blog</h5>
+                                        <img className={"card-img pb-3"} src={PhoenixImg} alt=""/>
+
                                         <ul >
                                             <li>Description:</li>
                                             <p>Created a personal blog using Node.js and Express for the backend, MongoDB as the database, and React for the frontend. Implemented CRUD functions for blog articles.</p>
                                             <li>Technologies used:</li>
                                             <p>Node.js, Express, MongoDB, React, HTML, CSS, JavaScript.</p>
                                             <li>Repository:</li>
-                                            <a  href="https://github.com/your_username/personal-blog" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                            <a  href="https://github.com/joanchorto1/phoenixgroupweb" target="_blank" rel="noopener noreferrer">GitHub</a>
                                             <li>Web:</li>
-                                            <a href="https://github.com/your_username/personal-blog" target="_blank" rel="noopener noreferrer">Link</a>
+                                            <a href="https://phoenixgrp.es/" target="_blank" rel="noopener noreferrer">Link</a>
                                         </ul>
                                     </div>
                                 </div>
@@ -119,15 +160,18 @@ const Home = () => {
                                 <div className="card border-5 border-dark h-100">
                                     <div className="card-body">
                                         <h5 className="card-title">Task Management App</h5>
+                                        <img className={"card-img pb-3"} src={TaskImg} alt=""/>
+                                        <img className={"card-img pb-3"} src={TaskImg} alt=""/>
+
                                         <ul>
                                             <li>Description:</li>
                                             <p>Developed a task management application with functionalities to create, update, and delete tasks. Used React for the user interface and Firebase for real-time data storage.</p>
                                             <li>Technologies used:</li>
                                             <p>React, Firebase, HTML, CSS, JavaScript.</p>
                                             <li>Repository:</li>
-                                            <a href="https://github.com/your_username/task-app" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                            <a href="https://github.com/joanchorto1/php_for_laravel_developers" target="_blank" rel="noopener noreferrer">GitHub</a>
                                             <li>Web:</li>
-                                            <a href="https://github.com/your_username/personal-blog" target="_blank" rel="noopener noreferrer">Link</a>
+                                            <a href="http://phpforlaravel.joanchortodev.me/" target="_blank" rel="noopener noreferrer">Link</a>
                                         </ul>
                                     </div>
                                 </div>
@@ -138,15 +182,17 @@ const Home = () => {
                                 <div className="card border-5 border-dark h-100">
                                     <div className="card-body">
                                         <h5 className="card-title">Personal Portfolio</h5>
+                                        <img className={"card-img pb-3"} src={PortfoilImg} alt=""/>
+
                                         <ul>
                                             <li>Description:</li>
                                             <p>Created my personal portfolio using React for the frontend. Showcases darkrmation about me, skills, projects, and contact details.</p>
                                             <li>Technologies used:</li>
                                             <p>React, HTML, CSS, JavaScript.</p>
                                             <li>Repository:</li>
-                                            <a href="https://github.com/your_username/personal-portfolio" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                            <a href="https://github.com/joanchorto1/web-jct-agency" target="_blank" rel="noopener noreferrer">GitHub</a>
                                             <li>Web:</li>
-                                            <a href="https://github.com/your_username/personal-blog" target="_blank" rel="noopener noreferrer">Link</a>
+                                            <a href="https://jctagency.com" target="_blank" rel="noopener noreferrer">Link</a>
                                         </ul>
                                     </div>
                                 </div>
@@ -230,17 +276,41 @@ const Home = () => {
                                         <p className="card-text">
                                             Feel free to ask any questions or inquire about anything!
                                         </p>
-                                        <form>
-                                            <div className="form-group">
-                                                <label htmlFor="name">Name:</label>
-                                                <input type="text" className="form-control" id="name" name="name" required />
+                                        <form onSubmit={handleSubmit}>
+                                            <div className="mb-3">
+                                                <label htmlFor="nombre" className="form-label">
+                                                    Name:
+                                                </label>
+                                                <input
+                                                    type="text"
+                                                    className="form-control"
+                                                    id="nombre"
+                                                    name="nombre"
+                                                    value={formFields.nombre}
+                                                    onChange={handleChange}
+                                                    required
+                                                />
                                             </div>
-                                            <div className="form-group">
-                                                <label htmlFor="email">Email:</label>
-                                                <input type="email" className="form-control" id="email" name="email" required />
+                                            <div className="mb-3">
+                                                <label htmlFor="email" className="form-label">
+                                                    Email:
+                                                </label>
+                                                <input
+                                                    type="email"
+                                                    className="form-control"
+                                                    id="email"
+                                                    name="email"
+                                                    value={formFields.email}
+                                                    onChange={handleChange}
+                                                    required
+                                                />
                                             </div>
-                                            <button type="submit" className="btn btn-dark text-white mt-5"><strong>Contact</strong></button>
-                                        </form>
+                                            <button type="submit" className="btn btn-dark text-white">
+                                                Send Message
+                                            </button>
+                                            {isFormSubmitted && (
+                                                <p className="text-dark mt-3">Done!</p>
+                                            )}                                        </form>
                                     </div>
                                 </div>
                             </div>

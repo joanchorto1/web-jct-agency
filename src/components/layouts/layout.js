@@ -22,7 +22,7 @@ const Layout = ({children}) => {
 
                         <h5>Contacto</h5>
                         <p>Dirección: Online</p>
-                        <p>Email: info@jctagency.es</p>
+                        <p>Email: joan@jctagency.com</p>
                         <p>Teléfono: 633 391 411</p>
                     </div>
 

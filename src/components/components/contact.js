@@ -18,7 +18,7 @@ const Contact = () => {
         e.preventDefault();
 
         // Configurar el servicio Email.js
-        emailjs.sendForm('service_0md04a8', 'template_4wu4rsh', e.target, 'igLg_BldBQqE1PovM')
+        emailjs.sendForm('service_uaggcy8', 'template_yav8r89', e.target, 'PrtHsOGCYBrChfJU3')
             .then((result) => {
                 console.log(result.text);
                 setFormSubmitted(true);
@@ -47,8 +47,8 @@ const Contact = () => {
     return (
         <Layout>
             <Helmet>
-                <title>Phoenix Group Tarragona - Contact our Digital Marketing Agency.</title>
-                <link rel="canonical" href="https://phoenixgrp.es/contacto"/>
+                <title>JCT Agency - Contact our FreeLancer & Junior Fullstack Developer.</title>
+                <link rel="canonical" href="https://jctagency.com/contacto"/>
                 <meta name={"description"} content={"We are here to answer your questions and discuss how we can help you achieve your goals. You can contact us through the following methods (Email/Phone/Contact Form)"}/>
             </Helmet>
 
@@ -81,7 +81,7 @@ const Contact = () => {
                             <strong>Direction:</strong> Online
                         </p>
                         <p>
-                            <strong>Email:</strong> info@jctagency.com
+                            <strong>Email:</strong> joan@jctagency.com
                         </p>
                         <p>
                             <strong>Phone:</strong> +34 633391411
