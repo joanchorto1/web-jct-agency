@@ -131,7 +131,7 @@ const Home = () => {
 
 
                 {/* Skills */}
-                <section className="container-fluid p-5 bg-white">
+                <section className="container-fluid p-5 bg-light">
                     <div className={"container"}>
 
                         <div className="row container ">
