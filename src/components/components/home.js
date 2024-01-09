@@ -129,7 +129,72 @@ const Home = () => {
 
                 </section>
 
-                {/* My Projects */}
+
+                {/* Skills */}
+                <section className="container-fluid p-5 bg-white">
+                    <div className={"container"}>
+
+                        <div className="row container ">
+                            <div className="col-lg-6">
+                                <h3>Frontend</h3>
+                                <ul>
+                                    <li>React.js</li>
+                                    <li>JavaScript (ES6+)</li>
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
+                                </ul>
+                                <p>Proficiency Level: Advanced</p>
+                            </div>
+                            {/* Backend */}
+                            <div className="col-lg-6">
+                                <h3>Backend</h3>
+                                <ul>
+                                    <li>Node.js</li>
+                                    <li>Express.js</li>
+                                    <li>PHP</li>
+                                </ul>
+                                <p>Proficiency Level: Intermediate</p>
+                            </div>
+                            <div className="row container">
+                                {/* Databases */}
+                                <div className="col-lg-6">
+                                    <h3>Databases</h3>
+                                    <ul>
+                                        <li>MongoDB</li>
+                                        <li>MySQL</li>
+                                        <li>PostgreSQL</li>
+                                    </ul>
+                                    <p>Proficiency Level: Advanced</p>
+                                </div>
+                                {/* Other Skills */}
+                                <div className="col-lg-6">
+                                    <h3>Other Skills</h3>
+                                    <ul>
+                                        <li>Git</li>
+                                        <li>RESTful APIs</li>
+                                    </ul>
+                                    <p>Proficiency Level: Advanced</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section className="container-fluid bg-dark-subtle  text-black text-center">
+                    <div className={"container p-5"}>
+                        <div>
+                            <h2 className="mb-4">Ready to take your project to the next level?</h2>
+                            <p className="lead">Contact me, and let's create something amazing together!</p>
+                        </div>
+                        <div>
+                            <button className={"btn bg-dark text-light mt-5"}><strong>Contact Now</strong></button>
+                        </div>
+                    </div>
+                </section>
+
+
+
                 <section style={{ paddingTop: 0 }} className="container-fluid bg-light pb-5 pt-5">
                     <div className="container">
                         <h2 className="text-center text-black mb-4">My Projects</h2>
@@ -199,69 +264,6 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                </section>
-
-                <section className="container-fluid bg-dark-subtle  text-black text-center">
-                    <div className={"container p-5"}>
-                        <div>
-                            <h2 className="mb-4">Ready to take your project to the next level?</h2>
-                            <p className="lead">Contact me, and let's create something amazing together!</p>
-                        </div>
-                        <div>
-                            <button className={"btn bg-dark text-light mt-5"}><strong>Contact Now</strong></button>
-                        </div>
-                    </div>
-                </section>
-
-                {/* Skills */}
-                <section className="container-fluid p-5 bg-white">
-                    <div className={"container"}>
-
-                        <div className="row container ">
-                            <div className="col-lg-6">
-                                <h3>Frontend</h3>
-                                <ul>
-                                    <li>React.js</li>
-                                    <li>JavaScript (ES6+)</li>
-                                    <li>HTML5</li>
-                                    <li>CSS3</li>
-                                </ul>
-                                <p>Proficiency Level: Advanced</p>
-                            </div>
-                            {/* Backend */}
-                            <div className="col-lg-6">
-                                <h3>Backend</h3>
-                                <ul>
-                                    <li>Node.js</li>
-                                    <li>Express.js</li>
-                                    <li>PHP</li>
-                                </ul>
-                                <p>Proficiency Level: Intermediate</p>
-                            </div>
-                            <div className="row container">
-                                {/* Databases */}
-                                <div className="col-lg-6">
-                                    <h3>Databases</h3>
-                                    <ul>
-                                        <li>MongoDB</li>
-                                        <li>MySQL</li>
-                                        <li>PostgreSQL</li>
-                                    </ul>
-                                    <p>Proficiency Level: Advanced</p>
-                                </div>
-                                {/* Other Skills */}
-                                <div className="col-lg-6">
-                                    <h3>Other Skills</h3>
-                                    <ul>
-                                        <li>Git</li>
-                                        <li>RESTful APIs</li>
-                                    </ul>
-                                    <p>Proficiency Level: Advanced</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </section>
 
                 {/* Contact Banner */}
