@@ -1,12 +1,9 @@
 import React, {useState} from 'react';
 import LogoJCT from "../img/LOGO(Fondo Transparent).png";
 import Joanimg from "../img/Selecció_213.png"
-import PortfoilImg from "../img/Selecció_214.png"
 import Layout from "../layouts/layout";
 import {Helmet} from "react-helmet";
-import TaskImg from "../img/Selecció_215.png"
 import emailjs from "emailjs-com";
-import PhoenixImg from "../img/Selecció_216.png";
 const Home = () => {
 
     const [isFormSubmitted, setFormSubmitted] = useState(false);
