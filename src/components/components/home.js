@@ -5,8 +5,8 @@ import PortfoilImg from "../img/Selecció_214.png"
 import Layout from "../layouts/layout";
 import {Helmet} from "react-helmet";
 import TaskImg from "../img/Selecció_215.png"
-import PhoenixImg from "../img/Selecció_216.png"
 import emailjs from "emailjs-com";
+import PhoenixImg from "../img/Selecció_216.png";
 const Home = () => {
 
     const [isFormSubmitted, setFormSubmitted] = useState(false);
@@ -49,9 +49,9 @@ const Home = () => {
 
         <Layout>
             <Helmet>
-                <title>Phoenix Group Tarragona - Contacta con nuestra agencia de Marketing Digital. </title>
+                <title>Joan Chorto Tomas | Programador Web | Freelancer</title>
                 <link rel="canonical" href="https://jctagency.com/"/>
-                <meta name={"description"} content={"Estamos aquí para responder a tus preguntas y discutir cómo podemos ayudarte a alcanzar tus objetivos. Puedes contactarnos a través de los siguientes métodos(Mail/Telefono/Formulario de Contacto)"}/>
+                <meta name={"description"} content={" I'm Joan Chortó Tomàs, a passionate Freelancer and Junior Software Developer. My goal is to create innovative and efficient solutions using my knowledge in various technologies."}/>
             </Helmet>
             <div className="d-flex flex-column text-dark bg-dark">
 
@@ -204,8 +204,6 @@ const Home = () => {
                                 <div className="card border-5 border-dark h-100">
                                     <div className="card-body">
                                         <h5 className="card-title">Personal Blog</h5>
-                                        <img className={"card-img pb-3"} src={PhoenixImg} alt=""/>
-
                                         <ul >
                                             <li>Description:</li>
                                             <p>Created a personal blog using Node.js and Express for the backend, MongoDB as the database, and React for the frontend. Implemented CRUD functions for blog articles.</p>
@@ -216,6 +214,7 @@ const Home = () => {
                                             <li>Web:</li>
                                             <a href="https://phoenixgrp.es/" target="_blank" rel="noopener noreferrer">Link</a>
                                         </ul>
+
                                     </div>
                                 </div>
                             </div>
@@ -225,8 +224,6 @@ const Home = () => {
                                 <div className="card border-5 border-dark h-100">
                                     <div className="card-body">
                                         <h5 className="card-title">Task Management App</h5>
-                                        <img className={"card-img pb-3"} src={TaskImg} alt=""/>
-                                        <img className={"card-img pb-3"} src={TaskImg} alt=""/>
 
                                         <ul>
                                             <li>Description:</li>
@@ -238,6 +235,7 @@ const Home = () => {
                                             <li>Web:</li>
                                             <a href="http://phpforlaravel.joanchortodev.me/" target="_blank" rel="noopener noreferrer">Link</a>
                                         </ul>
+
                                     </div>
                                 </div>
                             </div>
@@ -247,7 +245,6 @@ const Home = () => {
                                 <div className="card border-5 border-dark h-100">
                                     <div className="card-body">
                                         <h5 className="card-title">Personal Portfolio</h5>
-                                        <img className={"card-img pb-3"} src={PortfoilImg} alt=""/>
 
                                         <ul>
                                             <li>Description:</li>
@@ -259,6 +256,7 @@ const Home = () => {
                                             <li>Web:</li>
                                             <a href="https://jctagency.com" target="_blank" rel="noopener noreferrer">Link</a>
                                         </ul>
+
                                     </div>
                                 </div>
                             </div>
