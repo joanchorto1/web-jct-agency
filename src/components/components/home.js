@@ -48,6 +48,7 @@ const Home = () => {
             <Helmet>
                 <title>Joan Chorto Tomas | Programador Web | Freelancer</title>
                 <link rel="canonical" href="https://jctagency.com/"/>
+                <title>JCT AGENCY - FREELANCER DEVELOPER - CV - JUNIOR DEVELOPER</title>
                 <meta name={"description"} content={" I'm Joan Chortó Tomàs, a passionate Freelancer and Junior Software Developer. My goal is to create innovative and efficient solutions using my knowledge in various technologies."}/>
             </Helmet>
             <div className="d-flex flex-column text-dark bg-dark">
@@ -80,7 +81,7 @@ const Home = () => {
 
                         <div>
                             <h1 className="pb-3">Joan Chortó Tomàs</h1>
-                            <h2 className={"text-white"}>Freelancer & Junior Software Developer </h2>
+                            <h2 className={"text-white"}>Freelancer & Junior Developer </h2>
                         </div>
                     </div>
 
@@ -120,9 +121,6 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-
-
-
 
                 </section>
 
@@ -176,6 +174,68 @@ const Home = () => {
                         </div>
                     </div>
 
+                </section>
+                <section className={"bg-dark-subtle"}>
+                    <div className="container p-5">
+                        <h2 className="text-center text-black mb-4 ">My Services</h2>
+
+                        {/* Project 1 */}
+                        <div className="mb-4">
+                            <div className="card border-5 border-dark h-100">
+
+                                <h5 className="card-title p-3">Web Development</h5>
+                                <ul>
+                                    <li>Creation of websites from scratch.</li>
+                                    <li>Maintenance and updating of existing sites.</li>
+                                    <li>Development of responsive and mobile-friendly websites.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        {/* Project 2 */}
+                        <div className="mb-4">
+                            <div className="card border-5 border-dark h-100">
+
+                                <h5 className="card-title p-3">Mobile App Development</h5>
+                                <ul>
+                                    <li>Creation of applications for iOS and Android.</li>
+                                    <li>Development of native applications or applications based on technologies like React Native or Flutter.</li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+                        {/* Project 3 */}
+                        <div className="mb-4">
+                            <div className="card border-5 border-dark h-100">
+
+                                <h5 className="card-title p-3">Custom Software Development</h5>
+                                <ul>
+                                    <li>Creation of custom software tailored to client needs.</li>
+                                    <li>Development of enterprise management systems (ERP) or CRM systems.</li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+                        <div className="mb-4">
+                            <div className="card border-5 border-dark h-100">
+
+                                <h5 className="card-title p-3">API Integration</h5>
+                                <ul>
+                                    <li>Connecting systems through API integration.</li>
+                                    <li>Development of solutions leveraging third-party services via APIs.</li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+
+
+
+                    </div>
                 </section>
 
                 <section className="container-fluid bg-dark-subtle  text-black text-center">
