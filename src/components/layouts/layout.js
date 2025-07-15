@@ -16,7 +16,7 @@ const Layout = ({children}) => {
             <footer className={"pt-5 bg-dark text-white pb-3"}  >
                 <div className="container d-flex align-items-center justify-content-between pb-3">
                     <div className="col-md-3 w-25">
-                        <img className="navbar-logo w-50" src={logoImage} alt="Logo PhoenixGroup"/>
+                        <img className="navbar-logo w-50" src={logoImage} alt="Logo JCT Agency"/>
                     </div>
                     <div className="col-md-3 w-25">
 
@@ -31,7 +31,7 @@ const Layout = ({children}) => {
                 </div>
                 <div className={"text-center "}>
                     <p>
-                       Web developed for JCT Agency © 2024.
+                       © 2024 JCT Agency.
                     </p>
                 </div>
 
