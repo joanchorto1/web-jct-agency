@@ -47,9 +47,9 @@ const Contact = () => {
     return (
         <Layout>
             <Helmet>
-                <title>JCT Agency - Contact our FreeLancer & Junior Fullstack Developer.</title>
+                <title>JCT Agency - Contacto</title>
                 <link rel="canonical" href="https://jctagency.com/contacto"/>
-                <meta name={"description"} content={"We are here to answer your questions and discuss how we can help you achieve your goals. You can contact us through the following methods (Email/Phone/Contact Form)"}/>
+                <meta name="description" content="Estamos disponibles para resolver tus dudas y ofrecerte la mejor solución."/>
             </Helmet>
 
             <div>
@@ -63,7 +63,7 @@ const Contact = () => {
                             </li>
                             <li className="nav-item">
                                 <strong>
-                                    <a className="nav-link text-white" href="/contacto" style={{ fontSize: '1.2rem' }}>Contact</a>
+                                    <a className="nav-link text-white" href="/contacto" style={{ fontSize: '1.2rem' }}>Contacto</a>
                                 </strong>
                             </li>
                         </ul>
@@ -71,12 +71,12 @@ const Contact = () => {
                 </div>
 
                 <section className={"container pt-5"}>
-                    <h1 className="text-center mb-4">Contact Me</h1>
+                    <h1 className="text-center mb-4">Contacto</h1>
                     <p className="text-center text-muted">
-                        We are here to answer your questions and discuss how we can help you achieve your goals. You can contact us through the following methods:
+                        Estamos aquí para responder a tus preguntas y ayudarte en tu proyecto. Puedes contactar con nosotros mediante:
                     </p>
                     <div>
-                        <h2 className="mb-3">Contact Information</h2>
+                        <h2 className="mb-3">Información de contacto</h2>
                         <p>
                             <strong>Direction:</strong> Online
                         </p>
@@ -88,11 +88,11 @@ const Contact = () => {
                         </p>
                     </div>
                     <div className="mt-4 pb-5">
-                        <h2 className="mb-3">Contact Form</h2>
+                        <h2 className="mb-3">Formulario de contacto</h2>
                         <form onSubmit={handleSubmit}>
                             <div className="mb-3">
                                 <label htmlFor="nombre" className="form-label">
-                                    Name:
+                                    Nombre:
                                 </label>
                                 <input
                                     type="text"
@@ -106,7 +106,7 @@ const Contact = () => {
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="empresa" className="form-label">
-                                    Company:
+                                    Empresa:
                                 </label>
                                 <input
                                     type="text"
@@ -134,7 +134,7 @@ const Contact = () => {
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="mensaje" className="form-label">
-                                    Message:
+                                    Mensaje:
                                 </label>
                                 <textarea
                                     className="form-control"
@@ -147,10 +147,10 @@ const Contact = () => {
                                 />
                             </div>
                             <button type="submit" className="btn btn-dark text-white">
-                                Send Message
+                                Enviar
                             </button>
                             {isFormSubmitted && (
-                                <p className="text-dark mt-3">Done!</p>
+                                <p className="text-dark mt-3">¡Enviado!</p>
                             )}
                         </form>
                     </div>
