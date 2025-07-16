@@ -37,6 +37,7 @@ const Layout = ({children}) => {
 
             </footer>
         </>
-            );
+    );
 };
-            export default Layout;
+
+export default Layout;
