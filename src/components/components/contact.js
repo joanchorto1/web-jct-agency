@@ -53,23 +53,6 @@ const Contact = () => {
             </Helmet>
 
             <div>
-                <div className={"bg-dark p-3"}>
-                    <nav className="pt-3 navbar navbar-expand-lg navbar-dark">
-                        <ul className="navbar-nav d-flex" style={{ listStyleType: 'none', margin: 0, padding: 0 }}>
-                            <li className="nav-item">
-                                <strong>
-                                    <a className="nav-link text-white" href="/" style={{ fontSize: '1.2rem', marginRight: '15px' }}>Home</a>
-                                </strong>
-                            </li>
-                            <li className="nav-item">
-                                <strong>
-                                    <a className="nav-link text-white" href="/contacto" style={{ fontSize: '1.2rem' }}>Contacto</a>
-                                </strong>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-
                 <section className={"container pt-5"}>
                     <h1 className="text-center mb-4">Contacto</h1>
                     <p className="text-center text-muted">

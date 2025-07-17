@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import Layout from "../layouts/layout";
-import LogoJCT from "../img/LOGO(Fondo Transparent).png";
 import WebPhoto from "../img/WebPho.jpeg";
 import AveroImage from "../img/bossacompra.png";
+import fondoHome from "../img/fondoHome.jpg";
+import portatilIcon from "../img/portatilIcon.png";
+import movilIcon from "../img/movilIcon.jpeg";
+import lapizIcon from "../img/lapizIcon.jpeg";
 import { Helmet } from "react-helmet";
 import emailjs from "emailjs-com";
 
@@ -35,76 +38,71 @@ const Home = () => {
           content="JCT Agency desarrolla soluciones de software empresarial y servicios a medida."
         />
       </Helmet>
-      <div className="d-flex flex-column bg-jct-blue">
-        {/* Banner */}
-        <section className="container">
-          <div>
-            <nav className="pt-3 navbar navbar-expand-lg navbar-dark bg-jct-blue">
-              <ul className="navbar-nav d-flex" style={{ listStyleType: 'none', margin: 0, padding: 0 }}>
-                <li className="nav-item">
-                  <strong>
-                    <a className="nav-link text-white" href="/" style={{ fontSize: '1.2rem', marginRight: '15px' }}>
-                      Home
-                    </a>
-                  </strong>
-                </li>
-                <li className="nav-item">
-                  <strong>
-                    <a className="nav-link text-white" href="/contacto" style={{ fontSize: '1.2rem' }}>
-                      Contacto
-                    </a>
-                  </strong>
-                </li>
-              </ul>
-            </nav>
-          </div>
-
-          <div className="d-flex align-items-center text-white justify-content-between" style={{ height: '40vh' }}>
-            <div>
-              <img style={{ maxWidth: '50%', height: 'auto' }} src={LogoJCT} alt="Logo JCT Agency" />
-            </div>
-            <div>
-              <h1 className="pb-3">JCT Agency</h1>
-              <h2 className="text-white">Software empresarial y desarrollo a medida</h2>
-            </div>
+      <div className="d-flex flex-column">
+        {/* Hero */}
+        <section
+          className="hero d-flex align-items-center text-white text-center"
+          style={{
+            backgroundImage: `url(${fondoHome})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            height: '70vh'
+          }}
+        >
+          <div className="container">
+            <h1 className="display-4 fw-bold">JCT Agency</h1>
+            <p className="lead">Software empresarial i solucions digitals a mida</p>
+            <a href="/contacto" className="btn btn-light mt-3">Contacta'ns</a>
           </div>
         </section>
 
         {/* Sobre nosotros */}
-        <section className="container-fluid bg-white p-5 text-black">
-          <div className="container">
-            <h2 className="mb-4">Sobre Nosotros</h2>
-            <p>
-              En JCT Agency ajudem a digitalitzar i optimitzar processos amb eines de software adaptades al teu negoci.
-              Apostem per la innovació constant i el treball proper amb els nostres clients per aconseguir resultats de qualitat.
-              Desenvolupem projectes a mida, des de webs corporatives fins a solucions d'automatització interna.
-            </p>
-            <img className="img-fluid rounded my-3" src={WebPhoto} alt="Projectes en desenvolupament" />
+        <section className="container py-5">
+          <div className="row align-items-center g-4">
+            <div className="col-md-6">
+              <h2 className="mb-4">Sobre nosaltres</h2>
+              <p>
+                A JCT Agency impulsem la digitalització del teu negoci mitjançant eines de software a mida.
+                Treballem colze a colze amb tu per aconseguir resultats d'alta qualitat i processos més eficients.
+              </p>
+              <p>Som especialistes en desenvolupament web, aplicacions i integració de sistemes empresarials.</p>
+            </div>
+            <div className="col-md-6 text-center">
+              <img className="img-fluid rounded" src={WebPhoto} alt="Projectes en desenvolupament" />
+            </div>
           </div>
         </section>
 
         {/* Servicios */}
-        <section className="bg-light">
-          <div className="container p-5">
-            <h2 className="text-center text-dark mb-4">Serveis</h2>
-            <p>
-              Oferim solucions integrals perquè la teva empresa pugui treure el màxim rendiment de la tecnologia. Ens especialitzem en:
-            </p>
-            <ul>
-              <li><strong>Desenvolupament Web</strong>: creació i manteniment de portals moderns i aplicacions progressives.</li>
-              <li><strong>Aplicacions Mòbils</strong>: dissenyem apps nadiues i multiplataforma preparades per a les botigues oficials.</li>
-              <li><strong>Programari a Mida</strong>: ERP i sistemes de gestió personalitzats amb integració d'APIs externes.</li>
-            </ul>
-            <p className="mt-3">Donem suport complet durant tot el cicle de vida del projecte i t'assessorem per assolir els teus objectius digitals.</p>
+        <section className="bg-light py-5">
+          <div className="container">
+            <h2 className="text-center mb-4">Serveis</h2>
+            <div className="row g-4 text-center">
+              <div className="col-md-4">
+                <img src={portatilIcon} alt="Desenvolupament web" style={{ width: '60px' }} className="mb-3" />
+                <h5>Desenvolupament Web</h5>
+                <p>Creació i manteniment de portals moderns i apps progressives.</p>
+              </div>
+              <div className="col-md-4">
+                <img src={movilIcon} alt="Aplicacions mòbils" style={{ width: '60px' }} className="mb-3" />
+                <h5>Aplicacions Mòbils</h5>
+                <p>Disseny d'apps nadiues i multiplataforma per a les botigues oficials.</p>
+              </div>
+              <div className="col-md-4">
+                <img src={lapizIcon} alt="Programari a mida" style={{ width: '60px' }} className="mb-3" />
+                <h5>Programari a Mida</h5>
+                <p>Sistemes de gestió integrats i personalitzats amb APIs externes.</p>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* Línea Avero */}
-        <section className="container p-5 bg-avero">
-          <h2 className="text-center mb-4">Línia AVERO</h2>
+        <section className="container py-5 bg-avero text-center">
+          <h2 className="mb-4">Línia AVERO</h2>
           <p>
-            Solucions de facturació amb <strong>Verifactu</strong> integrades directament al teu negoci. Pròximament
-            incorporarem el mòdul de comptabilitat.
+            Solucions de facturació amb <strong>Verifactu</strong> integrades directament al teu negoci.
+            Properament incorporarem el mòdul de comptabilitat.
           </p>
           <img className="img-fluid rounded mb-3" src={AveroImage} alt="Facturació Avero" />
           <div className="text-center">
