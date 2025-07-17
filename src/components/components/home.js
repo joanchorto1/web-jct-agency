@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Layout from "../layouts/layout";
 import LogoJCT from "../img/LOGO(Fondo Transparent).png";
+import WebPhoto from "../img/WebPho.jpeg";
+import AveroImage from "../img/bossacompra.png";
 import { Helmet } from "react-helmet";
 import emailjs from "emailjs-com";
 
@@ -33,11 +35,11 @@ const Home = () => {
           content="JCT Agency desarrolla soluciones de software empresarial y servicios a medida."
         />
       </Helmet>
-      <div className="d-flex flex-column text-dark bg-dark">
+      <div className="d-flex flex-column bg-jct-blue">
         {/* Banner */}
         <section className="container">
           <div>
-            <nav className="pt-3 navbar navbar-expand-lg navbar-dark">
+            <nav className="pt-3 navbar navbar-expand-lg navbar-dark bg-jct-blue">
               <ul className="navbar-nav d-flex" style={{ listStyleType: 'none', margin: 0, padding: 0 }}>
                 <li className="nav-item">
                   <strong>
@@ -73,68 +75,53 @@ const Home = () => {
           <div className="container">
             <h2 className="mb-4">Sobre Nosotros</h2>
             <p>
-              En JCT Agency ayudamos a digitalizar y optimizar procesos mediante soluciones de software hechas a
-              medida. Nuestro equipo trabaja con las últimas tecnologías para ofrecer productos de calidad.
+              En JCT Agency ajudem a digitalitzar i optimitzar processos amb eines de software adaptades al teu negoci.
+              Apostem per la innovació constant i el treball proper amb els nostres clients per aconseguir resultats de qualitat.
+              Desenvolupem projectes a mida, des de webs corporatives fins a solucions d'automatització interna.
             </p>
+            <img className="img-fluid rounded my-3" src={WebPhoto} alt="Projectes en desenvolupament" />
           </div>
         </section>
 
         {/* Servicios */}
-        <section className="bg-dark-subtle">
+        <section className="bg-light">
           <div className="container p-5">
-            <h2 className="text-center text-black mb-4">Servicios</h2>
-            <div className="mb-4">
-              <div className="card border-5 border-dark h-100">
-                <h5 className="card-title p-3">Desarrollo Web</h5>
-                <ul>
-                  <li>Creación y mantenimiento de sitios web.</li>
-                  <li>Portales empresariales y apps progresivas.</li>
-                </ul>
-              </div>
-            </div>
-            <div className="mb-4">
-              <div className="card border-5 border-dark h-100">
-                <h5 className="card-title p-3">Aplicaciones Móviles</h5>
-                <ul>
-                  <li>Apps nativas y multiplataforma.</li>
-                  <li>Publicación en tiendas oficiales.</li>
-                </ul>
-              </div>
-            </div>
-            <div className="mb-4">
-              <div className="card border-5 border-dark h-100">
-                <h5 className="card-title p-3">Software a Medida</h5>
-                <ul>
-                  <li>ERP y sistemas de gestión personalizados.</li>
-                  <li>Integración con APIs y servicios externos.</li>
-                </ul>
-              </div>
-            </div>
+            <h2 className="text-center text-dark mb-4">Serveis</h2>
+            <p>
+              Oferim solucions integrals perquè la teva empresa pugui treure el màxim rendiment de la tecnologia. Ens especialitzem en:
+            </p>
+            <ul>
+              <li><strong>Desenvolupament Web</strong>: creació i manteniment de portals moderns i aplicacions progressives.</li>
+              <li><strong>Aplicacions Mòbils</strong>: dissenyem apps nadiues i multiplataforma preparades per a les botigues oficials.</li>
+              <li><strong>Programari a Mida</strong>: ERP i sistemes de gestió personalitzats amb integració d'APIs externes.</li>
+            </ul>
+            <p className="mt-3">Donem suport complet durant tot el cicle de vida del projecte i t'assessorem per assolir els teus objectius digitals.</p>
           </div>
         </section>
 
         {/* Línea Avero */}
-        <section className="container p-5">
-          <h2 className="text-center mb-4">Línea AVERO</h2>
+        <section className="container p-5 bg-avero">
+          <h2 className="text-center mb-4">Línia AVERO</h2>
           <p>
-            Soluciones de facturación con <strong>Verifactu</strong> integradas en tu negocio. Próximamente añadiremos
-            módulo de contabilidad.
+            Solucions de facturació amb <strong>Verifactu</strong> integrades directament al teu negoci. Pròximament
+            incorporarem el mòdul de comptabilitat.
           </p>
+          <img className="img-fluid rounded mb-3" src={AveroImage} alt="Facturació Avero" />
           <div className="text-center">
-            <button className="btn btn-dark" onClick={() => setShowAvero(!showAvero)}>
-              {showAvero ? 'Ocultar detalles' : 'Ver detalles'}
+            <button className="btn btn-light" onClick={() => setShowAvero(!showAvero)}>
+              {showAvero ? 'Ocultar detalls' : 'Veure detalls'}
             </button>
           </div>
           {showAvero && (
             <div className="mt-3">
-              <p>• Generación y envío automático de facturas Verifactu.</p>
-              <p>• Historial seguro y accesible de todas tus facturas.</p>
+              <p>• Generació i enviament automàtic de factures Verifactu.</p>
+              <p>• Historial segur i accessible de totes les teves factures.</p>
             </div>
           )}
         </section>
 
         {/* Contacto */}
-        <section className="bg-dark-subtle pt-5 pb-5">
+        <section className="bg-primary-subtle pt-5 pb-5">
           <div className="container pb-5">
             <h2 className="text-center text-dark-emphasis mb-4">¡Contáctanos!</h2>
             <div className="row justify-content-center">
@@ -171,7 +158,7 @@ const Home = () => {
                           required
                         />
                       </div>
-                      <button type="submit" className="btn btn-dark text-white">
+                      <button type="submit" className="btn btn-primary text-white">
                         Enviar
                       </button>
                       {isFormSubmitted && <p className="text-dark mt-3">¡Mensaje enviado!</p>}

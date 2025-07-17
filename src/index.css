@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.bg-avero {
+  background-color: #ff6600;
+  color: white;
+}
+
+.text-avero {
+  color: #ff6600;
+}
+
+.bg-jct-blue {
+  background-color: #0d6efd;
+  color: white;
+}
