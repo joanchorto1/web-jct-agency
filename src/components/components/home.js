@@ -1,26 +1,33 @@
 import React, { useState } from 'react';
 import Layout from "../layouts/layout";
-import WebPhoto from "../img/WebPho.jpeg";
-import AveroImage from "../img/bossacompra.png";
-import fondoHome from "../img/fondoHome.jpg";
-import portatilIcon from "../img/portatilIcon.png";
-import movilIcon from "../img/movilIcon.jpeg";
-import lapizIcon from "../img/lapizIcon.jpeg";
 import { Helmet } from "react-helmet";
 import emailjs from "emailjs-com";
 
+import WebPhoto from "../img/WebPho.jpeg";
+import AveroImage from "../img/bossacompra.png";
+import portatilIcon from "../img/portatilIcon.png";
+import lapizIcon from "../img/lapizIcon.jpeg";
+import infoIcon from "../img/infoIcon.jpeg";
+import contactIcon from "../img/contactIcon.jpeg";
+import movilIcon from "../img/movilIcon.jpeg";
+import monedaIcon from "../img/monedaIcon.jpeg";
+
 const Home = () => {
   const [isFormSubmitted, setFormSubmitted] = useState(false);
-  const [formFields, setFormFields] = useState({ nombre: '', email: '' });
-  const [showAvero, setShowAvero] = useState(false);
+  const [formFields, setFormFields] = useState({
+    nom: "",
+    empresa: "",
+    email: "",
+    missatge: "",
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm('service_uaggcy8', 'template_f7zqqc9', e.target, 'PrtHsOGCYBrChfJU3')
+      .sendForm("service_uaggcy8", "template_f7zqqc9", e.target, "PrtHsOGCYBrChfJU3")
       .then(() => {
         setFormSubmitted(true);
-        setFormFields({ nombre: '', email: '' });
+        setFormFields({ nom: "", empresa: "", email: "", missatge: "" });
       })
       .catch(() => setFormSubmitted(false));
   };
@@ -32,137 +39,311 @@ const Home = () => {
   return (
     <Layout>
       <Helmet>
-        <title>JCT Agency | Software Empresarial a Medida</title>
+        <title>JCT Agency | Solucions digitals per fer créixer el teu negoci</title>
         <meta
           name="description"
-          content="JCT Agency desarrolla soluciones de software empresarial y servicios a medida."
+          content="Desenvolupem programari empresarial modern, intuïtiu i segur."
         />
       </Helmet>
-      <div className="d-flex flex-column">
-        {/* Hero */}
-        <section
-          className="hero d-flex align-items-center text-white text-center"
-          style={{
-            backgroundImage: `url(${fondoHome})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            height: '70vh'
-          }}
-        >
+
+      <div className="bg-white text-dark">
+        {/* Claim principal */}
+        <section className="py-5 text-center">
           <div className="container">
-            <h1 className="display-4 fw-bold">JCT Agency</h1>
-            <p className="lead">Software empresarial i solucions digitals a mida</p>
-            <a href="/contacto" className="btn btn-light mt-3">Contacta'ns</a>
-          </div>
-        </section>
-
-        {/* Sobre nosotros */}
-        <section className="container py-5">
-          <div className="row align-items-center g-4">
-            <div className="col-md-6">
-              <h2 className="mb-4">Sobre nosaltres</h2>
-              <p>
-                A JCT Agency impulsem la digitalització del teu negoci mitjançant eines de software a mida.
-                Treballem colze a colze amb tu per aconseguir resultats d'alta qualitat i processos més eficients.
-              </p>
-              <p>Som especialistes en desenvolupament web, aplicacions i integració de sistemes empresarials.</p>
-            </div>
-            <div className="col-md-6 text-center">
-              <img className="img-fluid rounded" src={WebPhoto} alt="Projectes en desenvolupament" />
+            <h1 className="display-5 fw-bold">
+              JCT Agency – Solucions digitals per fer créixer el teu negoci
+            </h1>
+            <p className="lead">Desenvolupem programari empresarial modern, intuïtiu i segur.</p>
+            <p>
+              Ajudem autònoms, PIMEs i gestories a simplificar la gestió diària amb
+              software adaptat a les seves necessitats i al marc legal vigent.
+            </p>
+            <div className="d-flex justify-content-center gap-3 mt-4">
+              <a href="#serveis" className="btn btn-primary">
+                ➡️ Coneix els nostres serveis
+              </a>
+              <a href="/contacto" className="btn btn-outline-primary">
+                ➡️ Parla amb nosaltres
+              </a>
             </div>
           </div>
         </section>
 
-        {/* Servicios */}
-        <section className="bg-light py-5">
+        {/* Qui som */}
+        <section id="qui-som" className="py-5">
+          <div className="container">
+            <div className="row align-items-center g-4">
+              <div className="col-md-6">
+                <h2 className="mb-4">Qui som</h2>
+                <p>
+                  A JCT Agency som una agència tecnològica especialitzada en
+                  solucions empresarials i software SaaS.
+                </p>
+                <p>El nostre objectiu és doble:</p>
+                <ul>
+                  <li>
+                    Acompanyar autònoms i PIMEs en la seva digitalització amb
+                    eines simples i fiables.
+                  </li>
+                  <li>
+                    Ser el partner tecnològic de confiança de les gestories,
+                    oferint eines que els permetin créixer i aportar més valor
+                    als seus clients.
+                  </li>
+                </ul>
+                <p>Valors que ens defineixen:</p>
+                <ul>
+                  <li>
+                    <strong>Innovació</strong> → sempre a l’avantguarda en
+                    tecnologia i normatives.
+                  </li>
+                  <li>
+                    <strong>Simplicitat</strong> → software intuïtiu que
+                    facilita el treball, no el complica.
+                  </li>
+                  <li>
+                    <strong>Compliment legal i seguretat</strong> → desenvolupem
+                    sistemes totalment adaptats a Veri*Factu i altres obligacions
+                    normatives.
+                  </li>
+                  <li>
+                    <strong>Proximitat i suport</strong> → ens involucrem en els
+                    projectes dels nostres clients.
+                  </li>
+                </ul>
+              </div>
+              <div className="col-md-6 text-center">
+                <img
+                  src={WebPhoto}
+                  alt="Equip JCT Agency"
+                  className="img-fluid rounded"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Serveis */}
+        <section id="serveis" className="py-5 bg-light">
           <div className="container">
             <h2 className="text-center mb-4">Serveis</h2>
-            <div className="row g-4 text-center">
-              <div className="col-md-4">
-                <img src={portatilIcon} alt="Desenvolupament web" style={{ width: '60px' }} className="mb-3" />
-                <h5>Desenvolupament Web</h5>
-                <p>Creació i manteniment de portals moderns i apps progressives.</p>
+            <div className="row g-4">
+              <div className="col-md-3 text-center">
+                <img
+                  src={portatilIcon}
+                  alt="Desenvolupament de software empresarial"
+                  style={{ width: "60px" }}
+                  className="mb-3"
+                />
+                <h5>Desenvolupament de software empresarial</h5>
+                <p>
+                  Creació de programes propis, solucions SaaS i integracions amb
+                  serveis externs.
+                </p>
               </div>
-              <div className="col-md-4">
-                <img src={movilIcon} alt="Aplicacions mòbils" style={{ width: '60px' }} className="mb-3" />
-                <h5>Aplicacions Mòbils</h5>
-                <p>Disseny d'apps nadiues i multiplataforma per a les botigues oficials.</p>
+              <div className="col-md-3 text-center">
+                <img
+                  src={infoIcon}
+                  alt="Consultoria tecnològica i legal"
+                  style={{ width: "60px" }}
+                  className="mb-3"
+                />
+                <h5>Consultoria tecnològica i legal</h5>
+                <p>
+                  Assessorament en noves normatives i estratègia de
+                  digitalització.
+                </p>
               </div>
-              <div className="col-md-4">
-                <img src={lapizIcon} alt="Programari a mida" style={{ width: '60px' }} className="mb-3" />
-                <h5>Programari a Mida</h5>
-                <p>Sistemes de gestió integrats i personalitzats amb APIs externes.</p>
+              <div className="col-md-3 text-center">
+                <img
+                  src={lapizIcon}
+                  alt="Disseny i manteniment web"
+                  style={{ width: "60px" }}
+                  className="mb-3"
+                />
+                <h5>Disseny i manteniment web</h5>
+                <p>
+                  Creació i gestió de webs corporatives, actualitzacions i
+                  seguretat.
+                </p>
+              </div>
+              <div className="col-md-3 text-center">
+                <img
+                  src={contactIcon}
+                  alt="Suport continuat"
+                  style={{ width: "60px" }}
+                  className="mb-3"
+                />
+                <h5>Suport continuat</h5>
+                <p>Atenció propera i evolució constant del software.</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Línea Avero */}
-        <section className="container py-5 bg-avero text-center">
-          <h2 className="mb-4">Línia AVERO</h2>
-          <p>
-            Solucions de facturació amb <strong>Verifactu</strong> integrades directament al teu negoci.
-            Properament incorporarem el mòdul de comptabilitat.
-          </p>
-          <img className="img-fluid rounded mb-3" src={AveroImage} alt="Facturació Avero" />
-          <div className="text-center">
-            <button className="btn btn-light" onClick={() => setShowAvero(!showAvero)}>
-              {showAvero ? 'Ocultar detalls' : 'Veure detalls'}
-            </button>
-          </div>
-          {showAvero && (
-            <div className="mt-3">
-              <p>• Generació i enviament automàtic de factures Verifactu.</p>
-              <p>• Historial segur i accessible de totes les teves factures.</p>
+        {/* Productes propis */}
+        <section id="productes" className="py-5">
+          <div className="container">
+            <h2 className="text-center mb-4">Productes propis</h2>
+            <div className="row align-items-center g-4">
+              <div className="col-md-6 text-center">
+                <img
+                  src={AveroImage}
+                  alt="Avero"
+                  className="img-fluid rounded"
+                />
+              </div>
+              <div className="col-md-6">
+                <h3>Avero – Facturació moderna i segura</h3>
+                <p>
+                  Un software SaaS que simplifica la facturació d’autònoms i
+                  PIMEs, i garanteix el compliment legal amb Veri*Factu.
+                </p>
+                <p>
+                  Funcionalitats: factures, pressupostos, albarans, TPV, enviament
+                  automàtic a l’AEAT, gestió de clients i productes.
+                </p>
+              </div>
             </div>
-          )}
+          </div>
         </section>
 
-        {/* Contacto */}
-        <section className="bg-primary-subtle pt-5 pb-5">
-          <div className="container pb-5">
-            <h2 className="text-center text-dark-emphasis mb-4">¡Contáctanos!</h2>
-            <div className="row justify-content-center">
-              <div className="col-md-8">
-                <div className="card">
-                  <div className="card-body">
-                    <h5 className="card-title">Solicita más información</h5>
-                    <form onSubmit={handleSubmit}>
-                      <div className="mb-3">
-                        <label htmlFor="nombre" className="form-label">
-                          Nombre:
-                        </label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          id="nombre"
-                          name="nombre"
-                          value={formFields.nombre}
-                          onChange={handleChange}
-                          required
-                        />
-                      </div>
-                      <div className="mb-3">
-                        <label htmlFor="email" className="form-label">
-                          Email:
-                        </label>
-                        <input
-                          type="email"
-                          className="form-control"
-                          id="email"
-                          name="email"
-                          value={formFields.email}
-                          onChange={handleChange}
-                          required
-                        />
-                      </div>
-                      <button type="submit" className="btn btn-primary text-white">
-                        Enviar
-                      </button>
-                      {isFormSubmitted && <p className="text-dark mt-3">¡Mensaje enviado!</p>}
-                    </form>
+        {/* Què aportem */}
+        <section id="aportem" className="py-5 bg-light">
+          <div className="container">
+            <h2 className="text-center mb-4">Què aportem als nostres clients</h2>
+            <div className="row g-4">
+              <div className="col-md-3 text-center">
+                <img
+                  src={infoIcon}
+                  alt="Confiança"
+                  style={{ width: "60px" }}
+                  className="mb-3"
+                />
+                <h5>Confiança</h5>
+                <p>Treballem perquè compleixin amb la normativa sense maldecaps.</p>
+              </div>
+              <div className="col-md-3 text-center">
+                <img
+                  src={monedaIcon}
+                  alt="Eficiència"
+                  style={{ width: "60px" }}
+                  className="mb-3"
+                />
+                <h5>Eficiència</h5>
+                <p>Estalvi de temps i simplificació de processos.</p>
+              </div>
+              <div className="col-md-3 text-center">
+                <img
+                  src={movilIcon}
+                  alt="Escalabilitat"
+                  style={{ width: "60px" }}
+                  className="mb-3"
+                />
+                <h5>Escalabilitat</h5>
+                <p>Solucions pensades per créixer amb el negoci.</p>
+              </div>
+              <div className="col-md-3 text-center">
+                <img
+                  src={contactIcon}
+                  alt="Aliances estratègiques"
+                  style={{ width: "60px" }}
+                  className="mb-3"
+                />
+                <h5>Aliances estratègiques</h5>
+                <p>Oferim a les gestories eines que generen nous ingressos.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Blog / Recursos */}
+        <section id="blog" className="py-5">
+          <div className="container">
+            <h2 className="text-center mb-4">Blog / Recursos</h2>
+            <ul className="list-unstyled">
+              <li>“Com digitalitzar la gestió d’una PIME en 5 passos”</li>
+              <li>“Guia pràctica per a gestories sobre Veri*Factu”</li>
+              <li>“Per què un SaaS és millor que un software tradicional?”</li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Contacte */}
+        <section id="contacte" className="py-5 bg-light">
+          <div className="container">
+            <h2 className="text-center mb-4">Contacte</h2>
+            <div className="row g-4">
+              <div className="col-md-6">
+                <p>Parlem del teu projecte?</p>
+                <p>📧 Correu: info@jctagency.com</p>
+                <p>📍 Ubicació: [ciutat/província]</p>
+                <p>📱 Xarxes socials (LinkedIn, etc.)</p>
+              </div>
+              <div className="col-md-6">
+                <form onSubmit={handleSubmit}>
+                  <div className="mb-3">
+                    <label htmlFor="nom" className="form-label">
+                      Nom i cognoms
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="nom"
+                      name="nom"
+                      value={formFields.nom}
+                      onChange={handleChange}
+                      required
+                    />
                   </div>
-                </div>
+                  <div className="mb-3">
+                    <label htmlFor="empresa" className="form-label">
+                      Empresa
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="empresa"
+                      name="empresa"
+                      value={formFields.empresa}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="email" className="form-label">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      className="form-control"
+                      id="email"
+                      name="email"
+                      value={formFields.email}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="missatge" className="form-label">
+                      Missatge
+                    </label>
+                    <textarea
+                      className="form-control"
+                      id="missatge"
+                      name="missatge"
+                      rows="3"
+                      value={formFields.missatge}
+                      onChange={handleChange}
+                      required
+                    ></textarea>
+                  </div>
+                  <button type="submit" className="btn btn-primary">
+                    Enviar
+                  </button>
+                  {isFormSubmitted && (
+                    <p className="mt-3">¡Missatge enviat!</p>
+                  )}
+                </form>
               </div>
             </div>
           </div>
@@ -173,3 +354,4 @@ const Home = () => {
 };
 
 export default Home;
+
