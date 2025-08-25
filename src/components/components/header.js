@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import logoImage from '../img/LOGO(Fondo Transparent).png';
+import logoImage from '../img/LOGO JCTAGENCY.png';
 
 const Header = () => (
   <Navbar bg="primary" variant="dark" expand="lg" className="py-3">
