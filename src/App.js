@@ -7,6 +7,9 @@ import Avero from "./components/components/avero";
 import Blog from "./components/components/blog";
 import SeoArticle from "./components/components/blog/seo";
 import SoftwareArticle from "./components/components/blog/software";
+import DigitalitzarPimeArticle from "./components/components/blog/digitalitzar-pime";
+import VerifactuGestoriesArticle from "./components/components/blog/verifactu-gestories";
+import SaasVsTradicionalArticle from "./components/components/blog/saas-vs-tradicional";
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
           <Route path='/blog' element={<Blog/>}/>
           <Route path='/blog/optimitzacio-seo' element={<SeoArticle/>}/>
           <Route path='/blog/software-a-mida-beneficis' element={<SoftwareArticle/>}/>
+          <Route path='/blog/digitalitzar-pime' element={<DigitalitzarPimeArticle/>}/>
+          <Route path='/blog/verifactu-gestories' element={<VerifactuGestoriesArticle/>}/>
+          <Route path='/blog/saas-vs-tradicional' element={<SaasVsTradicionalArticle/>}/>
         </Routes>
       </BrowserRouter>
   );
