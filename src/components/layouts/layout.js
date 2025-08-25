@@ -6,20 +6,16 @@ const Layout = ({ children }) => (
   <>
     <Header />
     <main>{children}</main>
-    <footer className="pt-5 bg-dark text-white pb-3">
-      <div className="container d-flex align-items-center justify-content-between pb-3">
-        <div className="col-md-3 w-25">
-          <img className="navbar-logo w-50" src={logoImage} alt="Logo JCT Agency" />
+    <footer className="bg-primary text-white py-4">
+      <div className="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+        <div className="mb-3 mb-md-0">
+          <img src={logoImage} alt="Logo JCT Agency" style={{ height: '40px' }} />
         </div>
-        <div className="col-md-3 w-25">
-          <h5>Contacto</h5>
-          <p>Dirección: Online</p>
-          <p>Email: joan@jctagency.com</p>
-          <p>Teléfono: 633 391 411</p>
+        <div className="text-center">
+          <p className="mb-1">© 2024 JCT Agency – Solucions digitals i software SaaS.</p>
+          <p className="mb-1">Email: joan@jctagency.com | Telèfon: 633 391 411</p>
+          <p className="mb-0">Segueix-nos a LinkedIn</p>
         </div>
-      </div>
-      <div className="text-center">
-        <p>© 2024 JCT Agency.</p>
       </div>
     </footer>
   </>
