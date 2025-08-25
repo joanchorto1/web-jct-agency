@@ -9,7 +9,7 @@ const Blog = () => (
       <title>Blog de JCT Agency | Recursos per a PIMEs i gestories</title>
       <meta
         name="description"
-        content="Articles sobre SEO, desenvolupament i màrqueting digital per ajudar la teva empresa a créixer."
+        content="Guies de digitalització, SEO i programari Veri*Factu per fer créixer el teu negoci i millorar la gestió empresarial."
       />
     </Helmet>
     <section className="container py-5">

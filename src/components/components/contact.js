@@ -49,7 +49,10 @@ const Contact = () => {
             <Helmet>
                 <title>JCT Agency - Contacto</title>
                 <link rel="canonical" href="https://jctagency.com/contacto"/>
-                <meta name="description" content="Estamos disponibles para resolver tus dudas y ofrecerte la mejor solución."/>
+                <meta
+                    name="description"
+                    content="Contacta amb JCT Agency per rebre assessorament tecnològic i solucions digitals adaptades al teu negoci."
+                />
             </Helmet>
 
             <div>

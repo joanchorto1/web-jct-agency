@@ -8,7 +8,7 @@ const DigitalitzarPimeArticle = () => (
       <title>Com digitalitzar la gestió d’una PIME en 5 passos | JCT Agency</title>
       <meta
         name="description"
-        content="Guia completa per a petites empreses que volen digitalitzar-se: eines, estratègies i bones pràctiques."
+        content="Passos clau per digitalitzar una PIME amb eines SaaS, estratègies de transformació digital i consells pràctics per millorar l'eficiència."
       />
     </Helmet>
     <article className="container py-5">
