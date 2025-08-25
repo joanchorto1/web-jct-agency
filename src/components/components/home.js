@@ -3,14 +3,14 @@ import Layout from "../layouts/layout";
 import { Helmet } from "react-helmet";
 import emailjs from "emailjs-com";
 
-import WebPhoto from "../img/WebPho.jpeg";
-import AveroImage from "../img/bossacompra.png";
-import portatilIcon from "../img/portatilIcon.png";
-import lapizIcon from "../img/lapizIcon.jpeg";
+import QuiSomImage from "../img/QUI SOM.png";
+import AveroLogo from "../img/AVERO LOGO.png";
+import softwareImg from "../img/DESENVOLUPAMENT SOFTWARE.png";
+import consultoriesImg from "../img/CONSULTORIES.png";
+import dissenyWebImg from "../img/DISENY PAGINES WEB.png";
+import suportImg from "../img/SUPORT.png";
 import infoIcon from "../img/infoIcon.jpeg";
 import contactIcon from "../img/contactIcon.jpeg";
-import movilIcon from "../img/movilIcon.jpeg";
-import monedaIcon from "../img/monedaIcon.jpeg";
 
 const Home = () => {
   const [isFormSubmitted, setFormSubmitted] = useState(false);
@@ -114,7 +114,7 @@ const Home = () => {
               </div>
               <div className="col-md-6 text-center">
                 <img
-                  src={WebPhoto}
+                  src={QuiSomImage}
                   alt="Equip JCT Agency"
                   className="img-fluid rounded"
                 />
@@ -130,7 +130,7 @@ const Home = () => {
             <div className="row g-4">
               <div className="col-md-3 text-center">
                 <img
-                  src={portatilIcon}
+                  src={softwareImg}
                   alt="Desenvolupament de software empresarial"
                   style={{ width: "60px" }}
                   className="mb-3"
@@ -143,7 +143,7 @@ const Home = () => {
               </div>
               <div className="col-md-3 text-center">
                 <img
-                  src={infoIcon}
+                  src={consultoriesImg}
                   alt="Consultoria tecnològica i legal"
                   style={{ width: "60px" }}
                   className="mb-3"
@@ -156,7 +156,7 @@ const Home = () => {
               </div>
               <div className="col-md-3 text-center">
                 <img
-                  src={lapizIcon}
+                  src={dissenyWebImg}
                   alt="Disseny i manteniment web"
                   style={{ width: "60px" }}
                   className="mb-3"
@@ -169,7 +169,7 @@ const Home = () => {
               </div>
               <div className="col-md-3 text-center">
                 <img
-                  src={contactIcon}
+                  src={suportImg}
                   alt="Suport continuat"
                   style={{ width: "60px" }}
                   className="mb-3"
@@ -188,7 +188,7 @@ const Home = () => {
             <div className="row align-items-center g-4">
               <div className="col-md-6 text-center">
                 <img
-                  src={AveroImage}
+                  src={AveroLogo}
                   alt="Avero"
                   className="img-fluid rounded"
                 />
@@ -224,22 +224,10 @@ const Home = () => {
                 <p>Treballem perquè compleixin amb la normativa sense maldecaps.</p>
               </div>
               <div className="col-md-3 text-center">
-                <img
-                  src={monedaIcon}
-                  alt="Eficiència"
-                  style={{ width: "60px" }}
-                  className="mb-3"
-                />
                 <h5>Eficiència</h5>
                 <p>Estalvi de temps i simplificació de processos.</p>
               </div>
               <div className="col-md-3 text-center">
-                <img
-                  src={movilIcon}
-                  alt="Escalabilitat"
-                  style={{ width: "60px" }}
-                  className="mb-3"
-                />
                 <h5>Escalabilitat</h5>
                 <p>Solucions pensades per créixer amb el negoci.</p>
               </div>
