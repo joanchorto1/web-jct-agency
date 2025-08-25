@@ -3,7 +3,7 @@ import Layout from "../layouts/layout";
 import { Helmet } from "react-helmet";
 import emailjs from "emailjs-com";
 
-import heroImg from "../img/contactIcon.jpeg";
+import heroImg from "../img/QUI SOM.png";
 import autonomIcon from "../img/AUTONOM.png";
 import pimesIcon from "../img/PYME.png";
 import gestoriesIcon from "../img/GESTORIA.png";
