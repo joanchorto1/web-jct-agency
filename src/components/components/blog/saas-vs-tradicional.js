@@ -8,7 +8,7 @@ const SaasVsTradicionalArticle = () => (
       <title>Per què un SaaS és millor que un software tradicional? | JCT Agency</title>
       <meta
         name="description"
-        content="Comparativa completa entre solucions SaaS i software tradicional: costos, flexibilitat i seguretat."
+        content="Comparativa entre SaaS i software tradicional per escollir la millor opció en costos, escalabilitat i seguretat per al teu negoci."
       />
     </Helmet>
     <article className="container py-5">

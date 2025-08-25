@@ -8,7 +8,7 @@ const SoftwareArticle = () => (
       <title>Beneficis del software a mida per a gestories i PIMEs | JCT Agency</title>
       <meta
         name="description"
-        content="Anàlisi detallada sobre el valor del software personalitzat per a petites empreses i gestories: eficiència, integració i creixement."
+        content="Beneficis del software a mida per a gestories i PIMEs: automatitza processos, integra eines i impulsa el creixement empresarial."
       />
     </Helmet>
     <article className="container py-5">

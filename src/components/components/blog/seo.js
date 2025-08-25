@@ -8,7 +8,7 @@ const SeoArticle = () => (
       <title>Optimització SEO per a PIMEs: guia completa | JCT Agency</title>
       <meta
         name="description"
-        content="Article extens sobre SEO per a petites empreses: estratègies, eines i bones pràctiques per millorar el posicionament a Google."
+        content="Guia SEO per a PIMEs amb tècniques per posicionar la web a Google, atraure clients locals i optimitzar continguts."
       />
     </Helmet>
     <article className="container py-5">

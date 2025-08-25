@@ -51,7 +51,7 @@ const Home = () => {
         <title>JCT Agency | Solucions digitals per fer créixer el teu negoci</title>
         <meta
           name="description"
-          content="Som una agència tecnològica especialitzada en software SaaS i programari empresarial."
+          content="Agència digital catalana especialista en software SaaS i solucions tecnològiques per a autònoms, PIMEs i gestories."
         />
       </Helmet>
 

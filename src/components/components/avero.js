@@ -7,7 +7,10 @@ const Avero = () => (
   <Layout>
     <Helmet>
       <title>Avero – Programa de facturació 100% adaptat a VeriFactu i la Llei Crea y Crece</title>
-      <meta name="description" content="La solució més simple i moderna per complir amb VeriFactu i la Llei Crea y Crece." />
+      <meta
+        name="description"
+        content="Programa de facturació Avero per a autònoms, PIMEs i gestories; compleix Veri*Factu i la Llei Crea y Crece amb una eina senzilla i moderna."
+      />
     </Helmet>
     <div className="bg-white text-dark">
       {/* Hero */}

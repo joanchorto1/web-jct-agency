@@ -8,7 +8,7 @@ const VerifactuGestoriesArticle = () => (
       <title>Guia pràctica per a gestories sobre Veri*Factu | JCT Agency</title>
       <meta
         name="description"
-        content="Tot el que una gestoria ha de saber per adaptar-se a Veri*Factu: normativa, passos d’implementació i consells."
+        content="Guia per a gestories sobre Veri*Factu: requisits de l'AEAT, passos d'implantació i recomanacions per garantir el compliment legal."
       />
     </Helmet>
     <article className="container py-5">
