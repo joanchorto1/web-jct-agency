@@ -139,9 +139,9 @@ const Avero = () => (
         <div className="container">
           <p><a href="https://avero.jctagency.com">avero.jctagency.com</a></p>
           <ul className="list-unstyled">
-            <li><a href="#">Programa de facturació VeriFactu</a></li>
-            <li><a href="#">Factures electròniques AEAT</a></li>
-            <li><a href="#">Software de facturació per autònoms i gestories</a></li>
+            <li><a href="/programa-de-facturacio-verifactu">Programa de facturació VeriFactu</a></li>
+            <li><a href="/factures-electroniques-aeat">Factures electròniques AEAT</a></li>
+            <li><a href="/software-facturacio-autonoms-gestories">Software de facturació per autònoms i gestories</a></li>
           </ul>
         </div>
       </footer>
