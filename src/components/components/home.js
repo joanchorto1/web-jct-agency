@@ -9,8 +9,10 @@ import softwareImg from "../img/DESENVOLUPAMENT SOFTWARE.png";
 import consultoriesImg from "../img/CONSULTORIES.png";
 import dissenyWebImg from "../img/DISENY PAGINES WEB.png";
 import suportImg from "../img/SUPORT.png";
-import infoIcon from "../img/infoIcon.jpeg";
-import contactIcon from "../img/contactIcon.jpeg";
+import confiancaImg from "../img/CONFIANÇA.png";
+import eficienciaImg from "../img/EFICIENCIA.png";
+import escalabilitatImg from "../img/ESCALABILITAT.png";
+import aliancesImg from "../img/ALIANÇES.png";
 
 const Home = () => {
   const [isFormSubmitted, setFormSubmitted] = useState(false);
@@ -215,7 +217,7 @@ const Home = () => {
             <div className="row g-4">
               <div className="col-md-3 text-center">
                 <img
-                  src={infoIcon}
+                  src={confiancaImg}
                   alt="Confiança"
                   style={{ width: "60px" }}
                   className="mb-3"
@@ -224,16 +226,28 @@ const Home = () => {
                 <p>Treballem perquè compleixin amb la normativa sense maldecaps.</p>
               </div>
               <div className="col-md-3 text-center">
+                <img
+                  src={eficienciaImg}
+                  alt="Eficiència"
+                  style={{ width: "60px" }}
+                  className="mb-3"
+                />
                 <h5>Eficiència</h5>
                 <p>Estalvi de temps i simplificació de processos.</p>
               </div>
               <div className="col-md-3 text-center">
+                <img
+                  src={escalabilitatImg}
+                  alt="Escalabilitat"
+                  style={{ width: "60px" }}
+                  className="mb-3"
+                />
                 <h5>Escalabilitat</h5>
                 <p>Solucions pensades per créixer amb el negoci.</p>
               </div>
               <div className="col-md-3 text-center">
                 <img
-                  src={contactIcon}
+                  src={aliancesImg}
                   alt="Aliances estratègiques"
                   style={{ width: "60px" }}
                   className="mb-3"
