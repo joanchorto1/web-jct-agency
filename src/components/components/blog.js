@@ -34,6 +34,36 @@ const Blog = () => (
           Descobreix per què invertir en solucions personalitzades pot impulsar l'eficiència del teu negoci.
         </p>
       </article>
+      <article className="mb-4">
+        <h2>
+          <Link to="/blog/digitalitzar-pime" className="text-decoration-none">
+            Com digitalitzar la gestió d’una PIME en 5 passos
+          </Link>
+        </h2>
+        <p className="text-muted">
+          Guia pas a pas per modernitzar la teva empresa amb eines digitals accessibles i eficients.
+        </p>
+      </article>
+      <article className="mb-4">
+        <h2>
+          <Link to="/blog/verifactu-gestories" className="text-decoration-none">
+            Guia pràctica per a gestories sobre Veri*Factu
+          </Link>
+        </h2>
+        <p className="text-muted">
+          Tot el que has de saber sobre la nova normativa de facturació i com adaptar-t’hi sense complicacions.
+        </p>
+      </article>
+      <article className="mb-4">
+        <h2>
+          <Link to="/blog/saas-vs-tradicional" className="text-decoration-none">
+            Per què un SaaS és millor que un software tradicional?
+          </Link>
+        </h2>
+        <p className="text-muted">
+          Comparativa entre models per escollir la solució tecnològica més adequada per al teu negoci.
+        </p>
+      </article>
     </section>
   </Layout>
 );
