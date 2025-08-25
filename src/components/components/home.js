@@ -211,9 +211,10 @@ const Home = () => {
                   <li>Gestió de clients i productes</li>
                   <li>Compliment normatiu amb Veri*Factu</li>
                 </ul>
-                <a href="/avero" className="btn btn-primary">
-                  Coneix Avero
-                </a>
+                <div className="d-flex gap-3 mt-3">
+                  <a href="/avero" className="btn btn-primary">Coneix Avero</a>
+                  <a href="https://avero.jctagency.com" className="btn btn-outline-primary">Prova Avero gratis</a>
+                </div>
               </div>
               <div className="col-md-6 text-center">
                 <img src={AveroLogo} alt="Avero" className="img-fluid" style={{ maxWidth: "300px" }} />
