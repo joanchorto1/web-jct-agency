@@ -3,10 +3,10 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 import logoImage from '../img/LOGO JCTAGENCY.png';
 
 const Header = () => (
-  <Navbar bg="primary" variant="dark" expand="lg" className="py-3">
+  <Navbar expand="lg" className="navbar-custom shadow-sm py-3" sticky="top">
     <Container>
       <Navbar.Brand href="/">
-        <img src={logoImage} alt="JCT Agency" style={{ height: '40px' }} />
+        <img src={logoImage} alt="JCT Agency" />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="main-navbar" />
       <Navbar.Collapse id="main-navbar">
