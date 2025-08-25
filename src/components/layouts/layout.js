@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/header';
-import logoImage from '../img/LOGO(Fondo Transparent).png';
+import logoImage from '../img/LOGO JCTAGENCY.png';
 
 const Layout = ({ children }) => (
   <>
