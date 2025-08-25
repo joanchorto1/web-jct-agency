@@ -4,9 +4,10 @@ import { Helmet } from "react-helmet";
 import emailjs from "emailjs-com";
 
 import heroImg from "../img/contactIcon.jpeg";
-import autonomIcon from "../img/portatilIcon.png";
-import pimesIcon from "../img/bossacompra.png";
-import gestoriesIcon from "../img/infoIcon.jpeg";
+import autonomIcon from "../img/AUTONOM.png";
+import pimesIcon from "../img/PYME.png";
+import gestoriesIcon from "../img/GESTORIA.png";
+
 
 import softwareImg from "../img/DESENVOLUPAMENT SOFTWARE.png";
 import consultoriesImg from "../img/CONSULTORIES.png";
