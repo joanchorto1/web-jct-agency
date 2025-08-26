@@ -20,8 +20,7 @@ import confiancaImg from "../img/CONFIANÇA.png";
 import eficienciaImg from "../img/EFICIENCIA.png";
 import escalabilitatImg from "../img/ESCALABILITAT.png";
 import aliancesImg from "../img/ALIANÇES.png";
-import portatilIcon from "../img/portatilIcon.png";
-
+import CTAIMAGE from "../img/CTA_HOME.png";
 const Home = () => {
   const [isFormSubmitted, setFormSubmitted] = useState(false);
   const [formFields, setFormFields] = useState({
@@ -132,7 +131,7 @@ const Home = () => {
                 <a href="#contacte" className="btn btn-primary mt-3">Contacta'ns</a>
               </div>
               <div className="col-md-6 text-center">
-                <img src={portatilIcon} alt="Programari a mida" className="img-fluid" style={{ maxWidth: "300px" }} />
+                <img src={CTAIMAGE} alt="Programari a mida" className="img-fluid" style={{ maxWidth: "300px" }} />
               </div>
             </div>
           </div>
