@@ -75,3 +75,59 @@ code {
 .footer-sub a:focus {
   text-decoration: underline;
 }
+
+/* Avero button styles */
+.btn-avero {
+  background-color: #ff6600;
+  border-color: #ff6600;
+  color: #fff;
+}
+
+.btn-avero:hover,
+.btn-avero:focus {
+  background-color: #e65c00;
+  border-color: #e65c00;
+  color: #fff;
+}
+
+.btn-outline-avero {
+  color: #ff6600;
+  border-color: #ff6600;
+}
+
+.btn-outline-avero:hover,
+.btn-outline-avero:focus {
+  background-color: #ff6600;
+  color: #fff;
+}
+
+/* Home page layout improvements */
+.home-view section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.home-view section + section {
+  margin-top: 3rem;
+}
+
+.home-view a:not(.btn) {
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.home-view a:not(.btn):hover,
+.home-view a:not(.btn):focus {
+  text-decoration: underline;
+}
+
+.home-view .btn-link {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.home-view .btn-link:hover,
+.home-view .btn-link:focus {
+  text-decoration: underline;
+}

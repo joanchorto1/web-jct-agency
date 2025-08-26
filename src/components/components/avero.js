@@ -21,13 +21,13 @@ const Avero = () => (
               <h1>Avero – Programa de facturació 100% adaptat a VeriFactu i la Llei Crea y Crece.*</h1>
               <p>La solució més simple i moderna per a autònoms, PIMEs i gestories. Compleix amb la normativa sense complicacions.</p>
               <div className="d-flex gap-3 mt-3 flex-column flex-sm-row">
-                <a href="https://avero.jctagency.com" className="btn btn-primary">Prova Avero gratis</a>
-                <a href="/contacto" className="btn btn-outline-primary">Demana una demo</a>
+                <a href="https://avero.jctagency.com" className="btn btn-avero">Prova Avero gratis</a>
+                <a href="/contacto" className="btn btn-outline-avero">Demana una demo</a>
               </div>
             </div>
             <div className="col-md-6 text-center position-relative">
               <img src={AveroLogo} alt="Mockup Avero" className="img-fluid" style={{ maxWidth: '400px' }} />
-              <span className="badge bg-success position-absolute top-0 start-50 translate-middle-x mt-2">Adaptat a Veri*Factu – RD 1007/2023</span>
+              <span className="badge bg-avero position-absolute top-0 start-50 translate-middle-x mt-2">Adaptat a Veri*Factu – RD 1007/2023</span>
             </div>
           </div>
         </div>
@@ -122,7 +122,7 @@ const Avero = () => (
               </tr>
             </tbody>
           </table>
-          <a href="https://avero.jctagency.com" className="btn btn-primary">Consulta els nostres plans</a>
+          <a href="https://avero.jctagency.com" className="btn btn-avero">Consulta els nostres plans</a>
         </div>
       </section>
 
