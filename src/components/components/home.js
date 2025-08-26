@@ -20,6 +20,7 @@ import confiancaImg from "../img/CONFIANÇA.png";
 import eficienciaImg from "../img/EFICIENCIA.png";
 import escalabilitatImg from "../img/ESCALABILITAT.png";
 import aliancesImg from "../img/ALIANÇES.png";
+import portatilIcon from "../img/portatilIcon.png";
 
 const Home = () => {
   const [isFormSubmitted, setFormSubmitted] = useState(false);
@@ -55,7 +56,7 @@ const Home = () => {
         />
       </Helmet>
 
-      <div className="bg-white text-dark">
+      <div className="bg-white text-dark home-view">
         {/* Hero */}
         <section className="py-5">
           <div className="container">
@@ -116,6 +117,22 @@ const Home = () => {
                 />
                 <h5>Gestories</h5>
                 <p>Programari que facilita nous serveis digitals als clients.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA custom software */}
+        <section id="cta-programari" className="text-center bg-light">
+          <div className="container">
+            <div className="row align-items-center g-4">
+              <div className="col-md-6">
+                <h2 className="mb-3">Necessites un programa específic per la teva empresa?</h2>
+                <p>Vols estalviar temps optimitzant tasques amb un programari a mida!</p>
+                <a href="#contacte" className="btn btn-primary mt-3">Contacta'ns</a>
+              </div>
+              <div className="col-md-6 text-center">
+                <img src={portatilIcon} alt="Programari a mida" className="img-fluid" style={{ maxWidth: "300px" }} />
               </div>
             </div>
           </div>
