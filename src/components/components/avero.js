@@ -96,42 +96,42 @@ const Avero = () => (
         </div>
       </section>
 
-      {/* Plans i preus */}
-      <section className="py-5 bg-light">
-        <div className="container">
-          <h2 className="mb-4">Plans i preus</h2>
-          <table className="table">
-            <thead>
-              <tr>
-                <th>Pla</th>
-                <th>Preu</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Autònoms</td>
-                <td>des de XX €/mes</td>
-              </tr>
-              <tr>
-                <td>PIME</td>
-                <td>des de XX €/mes</td>
-              </tr>
-              <tr>
-                <td>Gestories</td>
-                <td>pla especial amb múltiples empreses vinculades</td>
-              </tr>
-            </tbody>
-          </table>
-          <a href="https://avero.jctagency.com" className="btn btn-avero">Consulta els nostres plans</a>
-        </div>
-      </section>
+      {/*/!* Plans i preus *!/*/}
+      {/*<section className="py-5 bg-light">*/}
+      {/*  <div className="container">*/}
+      {/*    <h2 className="mb-4">Plans i preus</h2>*/}
+      {/*    <table className="table">*/}
+      {/*      <thead>*/}
+      {/*        <tr>*/}
+      {/*          <th>Pla</th>*/}
+      {/*          <th>Preu</th>*/}
+      {/*        </tr>*/}
+      {/*      </thead>*/}
+      {/*      <tbody>*/}
+      {/*        <tr>*/}
+      {/*          <td>Autònoms</td>*/}
+      {/*          <td>des de XX €/mes</td>*/}
+      {/*        </tr>*/}
+      {/*        <tr>*/}
+      {/*          <td>PIME</td>*/}
+      {/*          <td>des de XX €/mes</td>*/}
+      {/*        </tr>*/}
+      {/*        <tr>*/}
+      {/*          <td>Gestories</td>*/}
+      {/*          <td>pla especial amb múltiples empreses vinculades</td>*/}
+      {/*        </tr>*/}
+      {/*      </tbody>*/}
+      {/*    </table>*/}
+      {/*    <a href="https://avero.jctagency.com" className="btn btn-avero">Consulta els nostres plans</a>*/}
+      {/*  </div>*/}
+      {/*</section>*/}
 
       {/* CTA final */}
       <section className="py-5 text-center" style={{ backgroundColor: '#ff8c00' }}>
         <div className="container">
           <h2>Adelanta’t a la normativa. Prova Avero avui i compleix amb Veri*Factu sense preocupacions.</h2>
           <div className="d-flex gap-3 justify-content-center flex-column flex-sm-row mt-3">
-            <a href="https://avero.jctagency.com" className="btn btn-dark">Crear compte gratis</a>
+            <a href="https://avero.jctagency.com" className="btn btn-dark">Crear compte</a>
             <a href="/contacto" className="btn btn-outline-dark text-dark">Contacta amb un assessor</a>
           </div>
         </div>
