@@ -2,6 +2,10 @@ import React from 'react';
 import Layout from '../layouts/layout';
 import { Helmet } from 'react-helmet';
 import AveroLogo from '../img/AVERO LOGO.png';
+// TODO: Afegir imatges i vídeo reals quan estiguin disponibles
+// import GalleryImg1 from '../img/avero-gallery-1.png';
+// import GalleryImg2 from '../img/avero-gallery-2.png';
+// import DemoVideo from '../videos/avero-demo.mp4';
 
 const Avero = () => (
   <Layout>
@@ -93,6 +97,38 @@ const Avero = () => (
           <h2>Testimonis / Casos d’ús</h2>
           <blockquote className="blockquote">“Amb Avero genero les meves factures en segons i sé que estan validades per l’AEAT.”</blockquote>
           <blockquote className="blockquote">“Hem estalviat hores setmanals en la gestió de clients i IVA.”</blockquote>
+        </div>
+      </section>
+
+      {/* Galeria d'imatges */}
+      <section className="py-5 bg-light">
+        <div className="container">
+          <h2>Galeria</h2>
+          <p>Descobreix captures de pantalla i exemples de l'entorn d'Avero.</p>
+          {/* TODO: Afegir imatges reals de la galeria quan estiguin disponibles.
+          <div className="row g-3">
+            <div className="col-md-4">
+              <img src={GalleryImg1} alt="Captura 1" className="img-fluid rounded" />
+            </div>
+            <div className="col-md-4">
+              <img src={GalleryImg2} alt="Captura 2" className="img-fluid rounded" />
+            </div>
+            // Afegir més imatges segons sigui necessari
+          </div>
+          */}
+        </div>
+      </section>
+
+      {/* Vídeo explicatiu */}
+      <section className="py-5">
+        <div className="container">
+          <h2>Vídeo explicatiu</h2>
+          <p>Pròximament disponible: un vídeo que mostra com funciona Avero pas a pas.</p>
+          {/* TODO: Incrustar el vídeo explicatiu quan estigui llest.
+          <div className="ratio ratio-16x9">
+            <video src={DemoVideo} controls></video>
+          </div>
+          */}
         </div>
       </section>
 
