@@ -9,7 +9,7 @@ const Layout = ({ children }) => (
     <footer className="footer-custom py-4 mt-auto">
       <div className="container d-flex flex-column flex-md-row align-items-center justify-content-between">
         <div className="mb-3 mb-md-0">
-          <img src={logoImage} alt="Logo JCT Agency" style={{ height: '40px' }} />
+          <img src={logoImage} alt="Logo JCT Agency" />
         </div>
         <div className="text-center text-md-end">
           <p className="mb-1">© 2024 JCT Agency – Solucions digitals i software SaaS.</p>
