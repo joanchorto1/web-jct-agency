@@ -24,19 +24,19 @@ import CTAIMAGE from "../img/CTA_HOME.png";
 const Home = () => {
   const [isFormSubmitted, setFormSubmitted] = useState(false);
   const [formFields, setFormFields] = useState({
-    nom: "",
+    nombre: "",
     empresa: "",
     email: "",
-    missatge: "",
+    mensaje: "",
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm("service_uaggcy8", "template_f7zqqc9", e.target, "PrtHsOGCYBrChfJU3")
+      .sendForm("service_uaggcy8", "template_88m2twe", e.target, "PrtHsOGCYBrChfJU3")
       .then(() => {
         setFormSubmitted(true);
-        setFormFields({ nom: "", empresa: "", email: "", missatge: "" });
+        setFormFields({ nombre: "", empresa: "", email: "", mensaje: "" });
       })
       .catch(() => setFormSubmitted(false));
   };
@@ -346,10 +346,10 @@ const Home = () => {
                 <form onSubmit={handleSubmit}>
                   <input
                     type="text"
-                    name="nom"
+                    name="nombre"
                     placeholder="Nom i cognoms"
                     className="form-control mb-3"
-                    value={formFields.nom}
+                    value={formFields.nombre}
                     onChange={handleChange}
                     required
                   />
@@ -371,11 +371,11 @@ const Home = () => {
                     required
                   />
                   <textarea
-                    name="missatge"
+                    name="mensaje"
                     placeholder="Missatge"
                     className="form-control mb-3"
                     rows="4"
-                    value={formFields.missatge}
+                    value={formFields.mensaje}
                     onChange={handleChange}
                     required
                   ></textarea>
