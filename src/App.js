@@ -1,5 +1,9 @@
 import './App.css';
+import { useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import Home from "./components/components/home";
 import Contact from "./components/components/contact";
 
@@ -13,21 +17,28 @@ import SaasVsTradicionalArticle from "./components/components/blog/saas-vs-tradi
 import Pressupost from "./components/components/pressupost";
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      duration: 800,
+    });
+  }, []);
+
   return (
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/avero' element={<Avero/>}/>
-          <Route path='/contacto' element={<Contact/>}/>
-          <Route path='/blog' element={<Blog/>}/>
-          <Route path='/blog/optimitzacio-seo' element={<SeoArticle/>}/>
-          <Route path='/blog/software-a-mida-beneficis' element={<SoftwareArticle/>}/>
-          <Route path='/blog/digitalitzar-pime' element={<DigitalitzarPimeArticle/>}/>
-          <Route path='/blog/verifactu-gestories' element={<VerifactuGestoriesArticle/>}/>
-          <Route path='/blog/saas-vs-tradicional' element={<SaasVsTradicionalArticle/>}/>
-          <Route path='/pressupost' element={<Pressupost/>}/>
-        </Routes>
-      </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/avero' element={<Avero/>}/>
+        <Route path='/contacto' element={<Contact/>}/>
+        <Route path='/blog' element={<Blog/>}/>
+        <Route path='/blog/optimitzacio-seo' element={<SeoArticle/>}/>
+        <Route path='/blog/software-a-mida-beneficis' element={<SoftwareArticle/>}/>
+        <Route path='/blog/digitalitzar-pime' element={<DigitalitzarPimeArticle/>}/>
+        <Route path='/blog/verifactu-gestories' element={<VerifactuGestoriesArticle/>}/>
+        <Route path='/blog/saas-vs-tradicional' element={<SaasVsTradicionalArticle/>}/>
+        <Route path='/pressupost' element={<Pressupost/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
