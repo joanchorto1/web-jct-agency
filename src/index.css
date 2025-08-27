@@ -30,8 +30,10 @@ code {
   border-bottom: 1px solid #e5e5e5;
 }
 
-.navbar-custom .navbar-brand img {
+.navbar-custom .navbar-brand img,
+.footer-custom img {
   height: 40px;
+  border-radius: 8px;
 }
 
 .navbar-custom .nav-link {
