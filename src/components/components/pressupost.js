@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Layout from '../layouts/layout';
 import { Helmet } from 'react-helmet';
 import emailjs from 'emailjs-com';
+import { Link } from 'react-router-dom';
 
 const Pressupost = () => {
   const [service, setService] = useState('');
@@ -159,8 +160,14 @@ const Pressupost = () => {
         )}
 
         {price !== null && (
-          <div className="alert alert-info mt-4" role="alert">
-            Pressupost estimat: {price}€
+          <div className="mt-4 text-center">
+            <div className="alert alert-info" role="alert">
+              Pressupost estimat: {price}€
+            </div>
+            <p>Si el pressupost et quadra</p>
+            <Link to="/contacto" className="btn btn-success">
+              Contacta
+            </Link>
           </div>
         )}
       </div>
