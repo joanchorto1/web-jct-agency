@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     AOS.init({
       once: true,
-      duration: 800,
+      duration: 1000,
     });
   }, []);
 
