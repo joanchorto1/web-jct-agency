@@ -18,7 +18,7 @@ const Contact = () => {
         e.preventDefault();
 
         // Configurar el servicio Email.js
-        emailjs.sendForm('service_uaggcy8', 'template_yav8r89', e.target, 'PrtHsOGCYBrChfJU3')
+        emailjs.sendForm('service_uaggcy8', 'template_88m2twe', e.target, 'PrtHsOGCYBrChfJU3')
             .then((result) => {
                 console.log(result.text);
                 setFormSubmitted(true);
