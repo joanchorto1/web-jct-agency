@@ -2,6 +2,9 @@ import React from 'react';
 import Layout from '../layouts/layout';
 import { Helmet } from 'react-helmet';
 import AveroLogo from '../img/AVERO LOGO.png';
+import facturacioImg from '../img/monedaIcon.jpeg';
+import utilitatsImg from '../img/analisis.png';
+import aeatImg from '../img/mailIcon.png';
 // TODO: Afegir imatges i vídeo reals quan estiguin disponibles
 // import GalleryImg1 from '../img/avero-gallery-1.png';
 // import GalleryImg2 from '../img/avero-gallery-2.png';
@@ -53,8 +56,10 @@ const Avero = () => (
           <div className="row">
             {/* Facturació */}
             <div className="col-md-4 mb-4">
-              <div className="p-4 border-top border-4 border-avero">
-                <ul className="list-unstyled feature-list mb-0">
+              <div className="p-4 border-top border-4 border-avero text-center">
+                <img src={facturacioImg} alt="Facturació" style={{ width: '60px' }} className="mb-3" />
+                <h3>Facturació</h3>
+                <ul className="list-unstyled feature-list mb-0 mt-3 text-start">
                   <li className="mb-2">Factures electròniques (creació, enviament, rectificatives, simplificades).</li>
                   <li className="mb-2">Gestió de pressupostos i albarans, conversió en factura amb un clic.</li>
                   <li className="mb-2">Control de clients i proveïdors amb historial complet.</li>
@@ -67,8 +72,10 @@ const Avero = () => (
 
             {/* Utilitats premium */}
             <div className="col-md-4 mb-4">
-              <div className="p-4 border-top border-4 border-avero">
-                <ul className="list-unstyled feature-list mb-0">
+              <div className="p-4 border-top border-4 border-avero text-center">
+                <img src={utilitatsImg} alt="Utilitats premium" style={{ width: '60px' }} className="mb-3" />
+                <h3>Utilitats premium</h3>
+                <ul className="list-unstyled feature-list mb-0 mt-3 text-start">
                   <li className="mb-2">Quadres de comandament i informes: ingressos, despeses, beneficis, IVA.</li>
                   <li className="mb-2">Gestió multiempresa i multiusuari amb rols i permisos.</li>
                   <li className="mb-2">Integració amb Stripe i passarel·les de pagament.</li>
@@ -79,8 +86,10 @@ const Avero = () => (
 
             {/* AEAT */}
             <div className="col-md-4 mb-4">
-              <div className="p-4 border-top border-4 border-avero">
-                <ul className="list-unstyled feature-list mb-0">
+              <div className="p-4 border-top border-4 border-avero text-center">
+                <img src={aeatImg} alt="AEAT" style={{ width: '60px' }} className="mb-3" />
+                <h3>AEAT</h3>
+                <ul className="list-unstyled feature-list mb-0 mt-3 text-start">
                   <li className="mb-2">Enviament automàtic a l’AEAT en temps real (modalitat Veri*Factu).</li>
                   <li className="mb-2">Còpies de seguretat i conservació de registres (complint el RRSIF).</li>
                   <li className="mb-0">Generació de codi QR tributari a les factures.</li>
