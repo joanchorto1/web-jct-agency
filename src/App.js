@@ -10,6 +10,7 @@ import SoftwareArticle from "./components/components/blog/software";
 import DigitalitzarPimeArticle from "./components/components/blog/digitalitzar-pime";
 import VerifactuGestoriesArticle from "./components/components/blog/verifactu-gestories";
 import SaasVsTradicionalArticle from "./components/components/blog/saas-vs-tradicional";
+import Pressupost from "./components/components/pressupost";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path='/blog/digitalitzar-pime' element={<DigitalitzarPimeArticle/>}/>
           <Route path='/blog/verifactu-gestories' element={<VerifactuGestoriesArticle/>}/>
           <Route path='/blog/saas-vs-tradicional' element={<SaasVsTradicionalArticle/>}/>
+          <Route path='/pressupost' element={<Pressupost/>}/>
         </Routes>
       </BrowserRouter>
   );
