@@ -103,6 +103,15 @@ code {
   color: #fff;
 }
 
+/* Avero feature block styles */
+.border-avero {
+  border-color: #ff6600 !important;
+}
+
+.feature-list li::marker {
+  color: #ff6600;
+}
+
 /* Home page layout improvements */
 .home-view section {
   padding-top: 5rem;

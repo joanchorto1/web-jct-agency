@@ -50,21 +50,44 @@ const Avero = () => (
       <section className="py-5 bg-light">
         <div className="container">
           <h2 className="mb-4">Funcionalitats clau</h2>
-          <ul className="list-unstyled">
-            <li>✅ Factures electròniques (creació, enviament, rectificatives, simplificades).</li>
-            <li>✅ Enviament automàtic a l’AEAT en temps real (modalitat Veri*Factu).</li>
-            <li>✅ Gestió de pressupostos i albarans, conversió en factura amb un clic.</li>
-            <li>✅ Control de clients i proveïdors amb historial complet.</li>
-            <li>✅ Gestió d’articles i productes (preus, categories, stock bàsic).</li>
-            <li>✅ Quadres de comandament i informes: ingressos, despeses, beneficis, IVA.</li>
-            <li>✅ Signatura i certificat digital integrat per a remissió segura.</li>
-            <li>✅ Còpies de seguretat i conservació de registres (complint el RRSIF).</li>
-            <li>✅ Generació de codi QR tributari a les factures.</li>
-            <li>✅ Enviament de factures per correu electrònic i PDF professional.</li>
-            <li>✅ TPV integrat per a vendes físiques amb emissió de tiquets legals.</li>
-            <li>✅ Gestió multiempresa i multiusuari amb rols i permisos.</li>
-            <li>✅ Integració amb Stripe i passarel·les de pagament.</li>
-          </ul>
+          <div className="row">
+            {/* Facturació */}
+            <div className="col-md-4 mb-4">
+              <div className="p-4 border-top border-4 border-avero">
+                <ul className="list-unstyled feature-list mb-0">
+                  <li className="mb-2">Factures electròniques (creació, enviament, rectificatives, simplificades).</li>
+                  <li className="mb-2">Gestió de pressupostos i albarans, conversió en factura amb un clic.</li>
+                  <li className="mb-2">Control de clients i proveïdors amb historial complet.</li>
+                  <li className="mb-2">Gestió d’articles i productes (preus, categories, stock bàsic).</li>
+                  <li className="mb-2">Enviament de factures per correu electrònic i PDF professional.</li>
+                  <li className="mb-0">TPV integrat per a vendes físiques amb emissió de tiquets legals.</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Utilitats premium */}
+            <div className="col-md-4 mb-4">
+              <div className="p-4 border-top border-4 border-avero">
+                <ul className="list-unstyled feature-list mb-0">
+                  <li className="mb-2">Quadres de comandament i informes: ingressos, despeses, beneficis, IVA.</li>
+                  <li className="mb-2">Gestió multiempresa i multiusuari amb rols i permisos.</li>
+                  <li className="mb-2">Integració amb Stripe i passarel·les de pagament.</li>
+                  <li className="mb-0">Signatura i certificat digital integrat per a remissió segura.</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* AEAT */}
+            <div className="col-md-4 mb-4">
+              <div className="p-4 border-top border-4 border-avero">
+                <ul className="list-unstyled feature-list mb-0">
+                  <li className="mb-2">Enviament automàtic a l’AEAT en temps real (modalitat Veri*Factu).</li>
+                  <li className="mb-2">Còpies de seguretat i conservació de registres (complint el RRSIF).</li>
+                  <li className="mb-0">Generació de codi QR tributari a les factures.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
