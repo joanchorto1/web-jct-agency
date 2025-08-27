@@ -128,11 +128,35 @@ const Avero = () => (
       {/* Testimonis */}
       <section className="py-5">
         <div className="container">
-          <h2>Testimonis / Casos d’ús</h2>
-          <blockquote className="blockquote">“Amb Avero genero les meves factures en segons i sé que estan validades per l’AEAT.”</blockquote>
-          <img src={man} alt=""/>
-          <img src={woman} alt=""/>
-          <blockquote className="blockquote">“Hem estalviat hores setmanals en la gestió de clients i IVA.”</blockquote>
+          <h2 className="text-center mb-4">Testimonis / Casos d’ús</h2>
+          <div className="row g-4 justify-content-center">
+            <div className="col-md-6 col-lg-5">
+              <div className="p-4 bg-light h-100 text-center rounded">
+                <img
+                  src={man}
+                  alt="Client satisfet"
+                  className="img-fluid rounded-circle mb-3"
+                  style={{ width: '120px', height: '120px', objectFit: 'cover' }}
+                />
+                <blockquote className="blockquote mb-0">
+                  “Amb Avero genero les meves factures en segons i sé que estan validades per l’AEAT.”
+                </blockquote>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-5">
+              <div className="p-4 bg-light h-100 text-center rounded">
+                <img
+                  src={woman}
+                  alt="Client satisfet"
+                  className="img-fluid rounded-circle mb-3"
+                  style={{ width: '120px', height: '120px', objectFit: 'cover' }}
+                />
+                <blockquote className="blockquote mb-0">
+                  “Hem estalviat hores setmanals en la gestió de clients i IVA.”
+                </blockquote>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
