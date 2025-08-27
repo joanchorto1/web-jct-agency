@@ -2,9 +2,11 @@ import React from 'react';
 import Layout from '../layouts/layout';
 import { Helmet } from 'react-helmet';
 import AveroLogo from '../img/AVERO LOGO.png';
-import facturacioImg from '../img/monedaIcon.jpeg';
-import utilitatsImg from '../img/analisis.png';
-import aeatImg from '../img/mailIcon.png';
+import facturacioImg from '../img/Facturacio_Avero.png';
+import utilitatsImg from '../img/Funcionalitats_Premium.png';
+import aeatImg from '../img/AEAT_Funcions.png';
+import man from '../img/Man.png';
+import woman from '../img/Woman.png';
 // TODO: Afegir imatges i vídeo reals quan estiguin disponibles
 // import GalleryImg1 from '../img/avero-gallery-1.png';
 // import GalleryImg2 from '../img/avero-gallery-2.png';
@@ -128,6 +130,8 @@ const Avero = () => (
         <div className="container">
           <h2>Testimonis / Casos d’ús</h2>
           <blockquote className="blockquote">“Amb Avero genero les meves factures en segons i sé que estan validades per l’AEAT.”</blockquote>
+          <img src={man} alt=""/>
+          <img src={woman} alt=""/>
           <blockquote className="blockquote">“Hem estalviat hores setmanals en la gestió de clients i IVA.”</blockquote>
         </div>
       </section>
