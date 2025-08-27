@@ -1,5 +1,5 @@
 import Layout from "../layouts/layout";
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import React, {useState} from "react";
 import {Helmet} from "react-helmet";
 

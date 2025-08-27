@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Layout from "../layouts/layout";
 import { Helmet } from "react-helmet";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 import heroImg from "../img/QUI SOM.png";
 import autonomIcon from "../img/AUTONOM.png";
