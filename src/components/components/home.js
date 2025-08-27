@@ -327,6 +327,15 @@ const Home = () => {
           </div>
         </section>
 
+        {/* Pressupost */}
+        <section id="pressupost" className="py-5 bg-light">
+          <div className="container text-center">
+            <h2 className="mb-4">Vols una estimació del teu projecte?</h2>
+            <p>Utilitza la nostra calculadora per conèixer el pressupost aproximat.</p>
+            <a href="/pressupost" className="btn btn-outline-primary">Calcula el teu pressupost</a>
+          </div>
+        </section>
+
         {/* Contacte */}
         <section id="contacte" className="py-5 bg-light">
           <div className="container">
