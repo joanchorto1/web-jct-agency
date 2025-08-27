@@ -23,7 +23,7 @@ const Avero = () => (
     </Helmet>
     <div className="bg-white text-dark">
       {/* Hero */}
-      <section className="py-5 bg-light text-center text-md-start">
+      <section className="py-5 bg-light text-center text-md-start" data-aos="fade-up">
         <div className="container">
           <div className="row align-items-center g-4 flex-column flex-md-row">
             <div className="col-md-6">
@@ -43,7 +43,7 @@ const Avero = () => (
       </section>
 
       {/* Per què Avero */}
-      <section className="py-5">
+      <section className="py-5" data-aos="fade-up">
         <div className="container">
           <h2>Per què Avero?</h2>
           <p>Avero és el programari de facturació creat per JCT Agency pensat per a cobrir les noves obligacions legals i simplificar la gestió diària de les empreses. Amb VeriFactu en vigor des de 2025 i l’entrada obligatòria al 2026, necessites un sistema segur, modern i validat per l’AEAT.*</p>
@@ -52,7 +52,7 @@ const Avero = () => (
       </section>
 
       {/* Funcionalitats clau */}
-      <section className="py-5 bg-light">
+      <section className="py-5 bg-light" data-aos="fade-up">
         <div className="container">
           <h2 className="mb-4">Funcionalitats clau</h2>
           <div className="row">
@@ -103,7 +103,7 @@ const Avero = () => (
       </section>
 
       {/* Compliment legal */}
-      <section className="py-5">
+      <section className="py-5" data-aos="fade-up">
         <div className="container">
           <h2>Compliment legal (Veri*Factu i Llei Crea y Crece)</h2>
           <p>Veri*Factu: Avero envia cada factura a l’AEAT amb hash encadenat, registre inalterable i QR tributari.</p>
@@ -114,7 +114,7 @@ const Avero = () => (
       </section>
 
       {/* Per a qui és Avero */}
-      <section className="py-5 bg-light">
+      <section className="py-5 bg-light" data-aos="fade-up">
         <div className="container">
           <h2>Per a qui és Avero</h2>
           <ul className="list-unstyled">
@@ -126,7 +126,7 @@ const Avero = () => (
       </section>
 
       {/* Testimonis */}
-      <section className="py-5">
+      <section className="py-5" data-aos="fade-up">
         <div className="container">
           <h2 className="text-center mb-4">Testimonis / Casos d’ús</h2>
           <div className="row g-4 justify-content-center">
@@ -161,7 +161,7 @@ const Avero = () => (
       </section>
 
       {/* Galeria d'imatges */}
-      <section className="py-5 bg-light">
+      <section className="py-5 bg-light" data-aos="fade-up">
         <div className="container">
           <h2>Galeria</h2>
           <p>Descobreix captures de pantalla i exemples de l'entorn d'Avero.</p>
@@ -180,7 +180,7 @@ const Avero = () => (
       </section>
 
       {/* Vídeo explicatiu */}
-      <section className="py-5">
+      <section className="py-5" data-aos="fade-up">
         <div className="container">
           <h2>Vídeo explicatiu</h2>
           <p>Pròximament disponible: un vídeo que mostra com funciona Avero pas a pas.</p>
@@ -223,7 +223,7 @@ const Avero = () => (
       {/*</section>*/}
 
       {/* CTA final */}
-      <section className="py-5 text-center" style={{ backgroundColor: '#ff8c00' }}>
+      <section className="py-5 text-center" style={{ backgroundColor: '#ff8c00' }} data-aos="fade-up">
         <div className="container">
           <h2>Adelanta’t a la normativa. Prova Avero avui i compleix amb Veri*Factu sense preocupacions.</h2>
           <div className="d-flex gap-3 justify-content-center flex-column flex-sm-row mt-3">

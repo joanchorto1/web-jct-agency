@@ -57,7 +57,7 @@ const Home = () => {
 
       <div className="bg-white text-dark home-view">
         {/* Hero */}
-        <section className="py-5">
+        <section className="py-5" data-aos="fade-up">
           <div className="container">
             <div className="row align-items-center g-4 flex-column flex-md-row">
               <div className="col-md-6">
@@ -89,7 +89,7 @@ const Home = () => {
         </section>
 
         {/* Clients */}
-        <section id="clients" className="py-5 bg-light">
+        <section id="clients" className="py-5 bg-light" data-aos="fade-up">
           <div className="container">
             <h2 className="text-center mb-4">Ajudem empreses com la teva</h2>
             <p className="text-center">
@@ -122,7 +122,7 @@ const Home = () => {
         </section>
 
         {/* CTA custom software */}
-        <section id="cta-programari" className="text-center bg-light">
+        <section id="cta-programari" className="text-center bg-light" data-aos="fade-up">
           <div className="container">
             <div className="row align-items-center g-4">
               <div className="col-md-6">
@@ -138,7 +138,7 @@ const Home = () => {
         </section>
 
         {/* Serveis */}
-        <section id="serveis" className="py-5">
+        <section id="serveis" className="py-5" data-aos="fade-up">
           <div className="container">
             <h2 className="text-center mb-4">Els nostres serveis</h2>
             <p className="text-center mb-5">
@@ -211,7 +211,7 @@ const Home = () => {
         </section>
 
         {/* Avero */}
-        <section id="avero" className="py-5 bg-light">
+        <section id="avero" className="py-5 bg-light" data-aos="fade-up">
           <div className="container">
             <div className="row align-items-center g-4">
               <div className="col-md-6">
@@ -241,7 +241,7 @@ const Home = () => {
         </section>
 
         {/* Beneficis */}
-        <section id="beneficis" className="py-5">
+        <section id="beneficis" className="py-5" data-aos="fade-up">
           <div className="container">
             <h2 className="text-center mb-4">Què aportem als nostres clients</h2>
             <div className="row row-cols-2 row-cols-md-4 g-4">
@@ -286,7 +286,7 @@ const Home = () => {
         </section>
 
         {/* Valors */}
-        <section id="valors" className="py-5 bg-light">
+        <section id="valors" className="py-5 bg-light" data-aos="fade-up">
           <div className="container">
             <h2 className="text-center mb-4">Els nostres valors</h2>
             <p className="text-center">
@@ -310,7 +310,7 @@ const Home = () => {
         </section>
 
         {/* Blog / Recursos */}
-        <section id="blog" className="py-5">
+        <section id="blog" className="py-5" data-aos="fade-up">
           <div className="container">
             <h2 className="text-center mb-4">Recursos i guies útils</h2>
             <ul className="list-unstyled">
@@ -328,7 +328,7 @@ const Home = () => {
         </section>
 
         {/* Pressupost */}
-        <section id="pressupost" className="py-5 bg-light">
+        <section id="pressupost" className="py-5 bg-light" data-aos="fade-up">
           <div className="container text-center">
             <h2 className="mb-4">Vols una estimació del teu projecte?</h2>
             <p>Utilitza la nostra calculadora per conèixer el pressupost aproximat.</p>
@@ -337,7 +337,7 @@ const Home = () => {
         </section>
 
         {/* Contacte */}
-        <section id="contacte" className="py-5 bg-light">
+        <section id="contacte" className="py-5 bg-light" data-aos="fade-up">
           <div className="container">
             <div className="row g-4">
               <div className="col-md-6">
