@@ -340,17 +340,29 @@ const Home = () => {
               A JCT Agency treballem amb una filosofia clara: oferir <strong>innovació, simplicitat, seguretat i proximitat</strong>.
             </p>
             <ul className="list-unstyled row g-4 mt-4">
-              <li className="col-md-3">
-                <strong>Innovació</strong> – sempre a l’avantguarda tecnològica i legal.
+              <li className="col-md-3 d-flex align-items-start">
+                <span className="text-primary me-2">•</span>
+                <span>
+                  <strong>Innovació</strong> – sempre a l’avantguarda tecnològica i legal.
+                </span>
               </li>
-              <li className="col-md-3">
-                <strong>Simplicitat</strong> – software intuïtiu que facilita el treball, no el complica.
+              <li className="col-md-3 d-flex align-items-start">
+                <span className="text-primary me-2">•</span>
+                <span>
+                  <strong>Simplicitat</strong> – software intuïtiu que facilita el treball, no el complica.
+                </span>
               </li>
-              <li className="col-md-3">
-                <strong>Compliment legal i seguretat</strong> – desenvolupem sistemes totalment adaptats a Veri*Factu i altres normatives.
+              <li className="col-md-3 d-flex align-items-start">
+                <span className="text-primary me-2">•</span>
+                <span>
+                  <strong>Compliment legal i seguretat</strong> – desenvolupem sistemes totalment adaptats a Veri*Factu i altres normatives.
+                </span>
               </li>
-              <li className="col-md-3">
-                <strong>Proximitat i suport</strong> – ens involucrem en cada projecte com si fos nostre.
+              <li className="col-md-3 d-flex align-items-start">
+                <span className="text-primary me-2">•</span>
+                <span>
+                  <strong>Proximitat i suport</strong> – ens involucrem en cada projecte com si fos nostre.
+                </span>
               </li>
             </ul>
           </div>
