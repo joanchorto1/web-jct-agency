@@ -6,7 +6,7 @@ const Header = () => (
   <Navbar expand="lg" className="navbar-custom shadow-sm py-3" sticky="top">
     <Container>
       <Navbar.Brand href="/">
-        <img src={logoImage} alt="JCT Agency" />
+        <img src={logoImage} alt="JCT Agency" className="rounded-circle" />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="main-navbar" />
       <Navbar.Collapse id="main-navbar">
