@@ -21,6 +21,11 @@ import eficienciaImg from "../img/EFICIENCIA.png";
 import escalabilitatImg from "../img/ESCALABILITAT.png";
 import aliancesImg from "../img/ALIANÇES.png";
 import CTAIMAGE from "../img/CTA_HOME.png";
+
+
+import AjuntamentAldeaLogo from "../img/AJUNTAMENT.jpeg";
+import EGEALogo from "../img/EGEA.png";
+import GERCOLogo from "../img/gerco-serveis-integrals.png";
 const Home = () => {
   const [isFormSubmitted, setFormSubmitted] = useState(false);
   const [formFields, setFormFields] = useState({
@@ -298,7 +303,7 @@ const Home = () => {
               <div className="col-md-4">
                 <div className="mb-3" style={{ height: "80px" }}>
                   <img
-                    src=""
+                    src={AjuntamentAldeaLogo}
                     alt="Ajuntament de L'Aldea"
                     className="img-fluid h-100"
                     style={{ objectFit: "contain" }}
@@ -309,7 +314,7 @@ const Home = () => {
               <div className="col-md-4">
                 <div className="mb-3" style={{ height: "80px" }}>
                   <img
-                    src=""
+                    src={EGEALogo}
                     alt="EGEA Arquitectura"
                     className="img-fluid h-100"
                     style={{ objectFit: "contain" }}
@@ -320,7 +325,7 @@ const Home = () => {
               <div className="col-md-4">
                 <div className="mb-3" style={{ height: "80px" }}>
                   <img
-                    src=""
+                    src={GERCOLogo}
                     alt="GERCO Serveis Integrals"
                     className="img-fluid h-100"
                     style={{ objectFit: "contain" }}
