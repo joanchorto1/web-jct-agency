@@ -121,22 +121,6 @@ const Home = () => {
           </div>
         </section>
 
-        {/* CTA custom software */}
-        <section id="cta-programari" className="text-center bg-light" data-aos="fade-up">
-          <div className="container">
-            <div className="row align-items-center g-4">
-              <div className="col-md-6">
-                <h2 className="mb-3">Necessites un programa específic per la teva empresa?</h2>
-                <p>Vols estalviar temps optimitzant tasques amb un programari a mida!</p>
-                <a href="#contacte" className="btn btn-primary mt-3">Contacta'ns</a>
-              </div>
-              <div className="col-md-6 text-center">
-                <img src={CTAIMAGE} alt="Programari a mida" className="img-fluid" style={{ maxWidth: "300px" }} />
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Serveis */}
         <section id="serveis" className="py-5" data-aos="fade-up">
           <div className="container">
@@ -240,6 +224,27 @@ const Home = () => {
           </div>
         </section>
 
+        {/* CTA custom software */}
+        <section id="cta-programari" className="text-center bg-light" data-aos="fade-up">
+          <div className="container">
+            <div className="row align-items-center g-4">
+              <div className="col-md-6">
+                <h2 className="mb-3">Necessites un programa específic per la teva empresa?</h2>
+                <p>Vols estalviar temps optimitzant tasques amb un programari a mida!</p>
+                <a href="#contacte" className="btn btn-primary mt-3">Contacta'ns</a>
+              </div>
+              <div className="col-md-6 text-center">
+                <img
+                  src={CTAIMAGE}
+                  alt="Programari a mida"
+                  className="img-fluid"
+                  style={{ maxWidth: "300px" }}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Beneficis */}
         <section id="beneficis" className="py-5" data-aos="fade-up">
           <div className="container">
@@ -280,6 +285,48 @@ const Home = () => {
                 <p>
                   Oferim a les <strong>gestories</strong> eines que obren <strong>nous canals d’ingressos</strong> i milloren el servei als seus clients.
                 </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Clients que confien */}
+        <section id="clients-validen" className="py-5 bg-light" data-aos="fade-up">
+          <div className="container">
+            <h2 className="text-center mb-4">Clients que confien en nosaltres</h2>
+            <div className="row text-center align-items-center g-4">
+              <div className="col-md-4">
+                <div className="mb-3" style={{ height: "80px" }}>
+                  <img
+                    src=""
+                    alt="Ajuntament de L'Aldea"
+                    className="img-fluid h-100"
+                    style={{ objectFit: "contain" }}
+                  />
+                </div>
+                <p>Ajuntament de L'Aldea</p>
+              </div>
+              <div className="col-md-4">
+                <div className="mb-3" style={{ height: "80px" }}>
+                  <img
+                    src=""
+                    alt="EGEA Arquitectura"
+                    className="img-fluid h-100"
+                    style={{ objectFit: "contain" }}
+                  />
+                </div>
+                <p>EGEA Arquitectura</p>
+              </div>
+              <div className="col-md-4">
+                <div className="mb-3" style={{ height: "80px" }}>
+                  <img
+                    src=""
+                    alt="GERCO Serveis Integrals"
+                    className="img-fluid h-100"
+                    style={{ objectFit: "contain" }}
+                  />
+                </div>
+                <p>GERCO Serveis Integrals</p>
               </div>
             </div>
           </div>
