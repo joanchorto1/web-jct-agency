@@ -62,7 +62,7 @@ const Home = () => {
 
       <div className="bg-white text-dark home-view">
         {/* Hero */}
-        <section className="py-5" data-aos="fade-up">
+        <section className="py-5 bg-white" data-aos="fade-up">
           <div className="container">
             <div className="row align-items-center g-4 flex-column flex-md-row">
               <div className="col-md-6">
@@ -127,7 +127,7 @@ const Home = () => {
         </section>
 
         {/* Serveis */}
-        <section id="serveis" className="py-5" data-aos="fade-up">
+        <section id="serveis" className="py-5 bg-white" data-aos="fade-up">
           <div className="container">
             <h2 className="text-center mb-4">Els nostres serveis</h2>
             <p className="text-center mb-5">
@@ -230,7 +230,7 @@ const Home = () => {
         </section>
 
         {/* CTA custom software */}
-        <section id="cta-programari" className="text-center bg-light" data-aos="fade-up">
+        <section id="cta-programari" className="py-5 text-center bg-white" data-aos="fade-up">
           <div className="container">
             <div className="row align-items-center g-4">
               <div className="col-md-6">
@@ -251,7 +251,7 @@ const Home = () => {
         </section>
 
         {/* Beneficis */}
-        <section id="beneficis" className="py-5" data-aos="fade-up">
+        <section id="beneficis" className="py-5 bg-light" data-aos="fade-up">
           <div className="container">
             <h2 className="text-center mb-4">Què aportem als nostres clients</h2>
             <div className="row row-cols-2 row-cols-md-4 g-4">
@@ -296,7 +296,7 @@ const Home = () => {
         </section>
 
         {/* Clients que confien */}
-        <section id="clients-validen" className="py-5 bg-light" data-aos="fade-up">
+        <section id="clients-validen" className="py-5 bg-white" data-aos="fade-up">
           <div className="container">
             <h2 className="text-center mb-4">Clients que confien en nosaltres</h2>
             <div className="row text-center align-items-center g-4">
@@ -374,7 +374,7 @@ const Home = () => {
         </section>
 
         {/* Blog / Recursos */}
-        <section id="blog" className="py-5" data-aos="fade-up">
+        <section id="blog" className="py-5 bg-white" data-aos="fade-up">
           <div className="container">
             <h2 className="text-center mb-4">Recursos i guies útils</h2>
             <ul className="list-unstyled">
@@ -401,7 +401,7 @@ const Home = () => {
         </section>
 
         {/* Contacte */}
-        <section id="contacte" className="py-5 bg-light" data-aos="fade-up">
+        <section id="contacte" className="py-5 bg-white" data-aos="fade-up">
           <div className="container">
             <div className="row g-4">
               <div className="col-md-6">
