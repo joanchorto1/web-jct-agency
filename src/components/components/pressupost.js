@@ -36,18 +36,18 @@ const Pressupost = () => {
     let total = 0;
     if (service === 'web') {
       total = 1300;
-      if (formData.pages === '6-10') total += 500;
-      if (formData.pages === '11+') total += 1000;
-      if (formData.ecommerce) total += 1000;
+      if (formData.pages === '6-10') total += 1000;
+      if (formData.pages === '11+') total += 2000;
+      if (formData.ecommerce) total += 1500;
     } else if (service === 'software') {
       total = 4500;
-      if (formData.modules === '3-5') total += 2000;
-      if (formData.modules === '6+') total += 4000;
-      if (formData.cloud) total += 1500;
+      if (formData.modules === '3-5') total += 3000;
+      if (formData.modules === '6+') total += 6000;
+      if (formData.cloud) total += 2500;
     } else if (service === 'app') {
       total = 7500;
-      if (formData.platforms === 'both') total += 2500;
-      if (formData.auth) total += 1000;
+      if (formData.platforms === 'both') total += 3500;
+      if (formData.auth) total += 1500;
     }
     return total;
   };
