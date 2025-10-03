@@ -15,6 +15,7 @@ import Pressupost from './components/components/pressupost';
 
 
 
+
 const HomePage = lazy(() => import('./pages/Home'));
 const SectorsPage = lazy(() => import('./pages/Sectors'));
 const SolutionsPage = lazy(() => import('./pages/Solutions'));
@@ -34,6 +35,19 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/avero' element={<Avero/>}/>
+        <Route path='/contacto' element={<Contact/>}/>
+        <Route path='/blog' element={<Blog/>}/>
+        <Route path='/blog/optimitzacio-seo' element={<SeoArticle/>}/>
+        <Route path='/blog/software-a-mida-beneficis' element={<SoftwareArticle/>}/>
+        <Route path='/blog/digitalitzar-pime' element={<DigitalitzarPimeArticle/>}/>
+        <Route path='/blog/verifactu-gestories' element={<VerifactuGestoriesArticle/>}/>
+        <Route path='/blog/saas-vs-tradicional' element={<SaasVsTradicionalArticle/>}/>
+        <Route path='/pressupost' element={<Pressupost/>}/>
+        <Route path='/resultats' element={<ResultsPage/>}/>
+      </Routes>
 
 
       <Suspense fallback={<div className="page-loading">Carregant la nova experiència...</div>}>
