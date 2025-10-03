@@ -16,6 +16,11 @@ import VerifactuGestoriesArticle from "./components/components/blog/verifactu-ge
 import SaasVsTradicionalArticle from "./components/components/blog/saas-vs-tradicional";
 import Pressupost from "./components/components/pressupost";
 
+import SectorsIndex from "./pages/sectors";
+import ConstructionSector from "./pages/sectors/construction";
+import InstallationsSector from "./pages/sectors/installations";
+import MaintenanceSector from "./pages/sectors/maintenance";
+
 function App() {
   useEffect(() => {
     AOS.init({
@@ -37,6 +42,10 @@ function App() {
         <Route path='/blog/verifactu-gestories' element={<VerifactuGestoriesArticle/>}/>
         <Route path='/blog/saas-vs-tradicional' element={<SaasVsTradicionalArticle/>}/>
         <Route path='/pressupost' element={<Pressupost/>}/>
+        <Route path='/sectors' element={<SectorsIndex/>}/>
+        <Route path='/sectors/construction' element={<ConstructionSector/>}/>
+        <Route path='/sectors/installations' element={<InstallationsSector/>}/>
+        <Route path='/sectors/maintenance' element={<MaintenanceSector/>}/>
       </Routes>
     </BrowserRouter>
   );
