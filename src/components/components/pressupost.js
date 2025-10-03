@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
-import Layout from '../layouts/layout';
 import { Helmet } from 'react-helmet';
+import { Link, useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
-import { Link } from 'react-router-dom';
+
+import Layout from '../layouts/layout';
+import { DEFAULT_LANGUAGE } from '../../i18n';
 
 const Pressupost = () => {
+  const { t } = useTranslation();
+  const { lang } = useParams();
+  const currentLang = lang ?? DEFAULT_LANGUAGE;
+
   const [service, setService] = useState('');
   const initialForm = {
     nombre: '',
@@ -15,11 +22,13 @@ const Pressupost = () => {
     modules: '1-2',
     cloud: false,
     platforms: 'one',
-    auth: false
+    auth: false,
   };
   const [formData, setFormData] = useState(initialForm);
   const [price, setPrice] = useState(null);
   const [sent, setSent] = useState(false);
+
+  const buildPath = (path = '') => `/${currentLang}${path ? `/${path}` : ''}`;
 
   const handleServiceChange = (e) => {
     setService(e.target.value);
@@ -57,14 +66,25 @@ const Pressupost = () => {
     const estimated = calculatePrice();
     setPrice(estimated);
     const { nombre, empresa, email, ...rest } = formData;
-    const mensaje = `Servei: ${service}\nDetalls: ${JSON.stringify(rest)}\nPressupost: ${estimated}€`;
+    const serviceLabel = service ? t(`pressupost.form.projectType.values.${service}`) : '';
+    const mensaje = t('pressupost.emailMessage', {
+      service: serviceLabel,
+      details: JSON.stringify(rest),
+      price: estimated,
+    });
+
     emailjs
-      .send('service_uaggcy8', 'template_yav8r89', {
-        nombre,
-        empresa,
-        email,
-        mensaje
-      }, 'PrtHsOGCYBrChfJU3')
+      .send(
+        'service_uaggcy8',
+        'template_yav8r89',
+        {
+          nombre,
+          empresa,
+          email,
+          mensaje,
+        },
+        'PrtHsOGCYBrChfJU3'
+      )
       .then(() => {
         setSent(true);
         setFormData(initialForm);
@@ -75,18 +95,18 @@ const Pressupost = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Calcula el teu pressupost | JCT Agency</title>
-        <meta name="description" content="Calcula de manera orientativa el cost del teu projecte digital." />
+        <title>{t('pressupost.meta.title')}</title>
+        <meta name="description" content={t('pressupost.meta.description')} />
       </Helmet>
       <div className="container py-5">
-        <h1 className="mb-4 text-center">Calculadora de pressupost</h1>
+        <h1 className="mb-4 text-center">{t('pressupost.title')}</h1>
         <div className="mb-4">
-          <label className="form-label">Tipus de projecte</label>
+          <label className="form-label">{t('pressupost.form.projectType.label')}</label>
           <select className="form-select" value={service} onChange={handleServiceChange} required>
-            <option value="">Selecciona una opció</option>
-            <option value="web">Pàgina web</option>
-            <option value="software">Programa a mida</option>
-            <option value="app">App mòbil</option>
+            <option value="">{t('pressupost.form.projectType.placeholder')}</option>
+            <option value="web">{t('pressupost.form.projectType.options.web')}</option>
+            <option value="software">{t('pressupost.form.projectType.options.software')}</option>
+            <option value="app">{t('pressupost.form.projectType.options.app')}</option>
           </select>
         </div>
 
@@ -95,16 +115,16 @@ const Pressupost = () => {
             {service === 'web' && (
               <>
                 <div className="mb-3">
-                  <label className="form-label">Nombre de pàgines</label>
+                  <label className="form-label">{t('pressupost.form.web.pagesLabel')}</label>
                   <select name="pages" className="form-select" value={formData.pages} onChange={handleChange}>
-                    <option value="1-5">1-5</option>
-                    <option value="6-10">6-10</option>
-                    <option value="11+">Més de 10</option>
+                    <option value="1-5">{t('pressupost.form.web.pages.options.basic')}</option>
+                    <option value="6-10">{t('pressupost.form.web.pages.options.medium')}</option>
+                    <option value="11+">{t('pressupost.form.web.pages.options.advanced')}</option>
                   </select>
                 </div>
                 <div className="form-check mb-3">
                   <input className="form-check-input" type="checkbox" id="ecommerce" name="ecommerce" checked={formData.ecommerce} onChange={handleChange} />
-                  <label className="form-check-label" htmlFor="ecommerce">Incloure e-commerce</label>
+                  <label className="form-check-label" htmlFor="ecommerce">{t('pressupost.form.web.ecommerce')}</label>
                 </div>
               </>
             )}
@@ -112,16 +132,16 @@ const Pressupost = () => {
             {service === 'software' && (
               <>
                 <div className="mb-3">
-                  <label className="form-label">Nombre de mòduls</label>
+                  <label className="form-label">{t('pressupost.form.software.modulesLabel')}</label>
                   <select name="modules" className="form-select" value={formData.modules} onChange={handleChange}>
-                    <option value="1-2">1-2</option>
-                    <option value="3-5">3-5</option>
-                    <option value="6+">6 o més</option>
+                    <option value="1-2">{t('pressupost.form.software.modules.options.basic')}</option>
+                    <option value="3-5">{t('pressupost.form.software.modules.options.medium')}</option>
+                    <option value="6+">{t('pressupost.form.software.modules.options.advanced')}</option>
                   </select>
                 </div>
                 <div className="form-check mb-3">
                   <input className="form-check-input" type="checkbox" id="cloud" name="cloud" checked={formData.cloud} onChange={handleChange} />
-                  <label className="form-check-label" htmlFor="cloud">Integració al núvol</label>
+                  <label className="form-check-label" htmlFor="cloud">{t('pressupost.form.software.cloud')}</label>
                 </div>
               </>
             )}
@@ -129,44 +149,44 @@ const Pressupost = () => {
             {service === 'app' && (
               <>
                 <div className="mb-3">
-                  <label className="form-label">Plataformes</label>
+                  <label className="form-label">{t('pressupost.form.app.platformsLabel')}</label>
                   <select name="platforms" className="form-select" value={formData.platforms} onChange={handleChange}>
-                    <option value="one">iOS o Android</option>
-                    <option value="both">iOS i Android</option>
+                    <option value="one">{t('pressupost.form.app.platforms.options.single')}</option>
+                    <option value="both">{t('pressupost.form.app.platforms.options.multiple')}</option>
                   </select>
                 </div>
                 <div className="form-check mb-3">
                   <input className="form-check-input" type="checkbox" id="auth" name="auth" checked={formData.auth} onChange={handleChange} />
-                  <label className="form-check-label" htmlFor="auth">Autenticació d'usuaris</label>
+                  <label className="form-check-label" htmlFor="auth">{t('pressupost.form.app.auth')}</label>
                 </div>
               </>
             )}
 
             <div className="mb-3">
-              <label className="form-label">Nom</label>
+              <label className="form-label">{t('pressupost.form.name')}</label>
               <input type="text" name="nombre" className="form-control" value={formData.nombre} onChange={handleChange} required />
             </div>
             <div className="mb-3">
-              <label className="form-label">Empresa</label>
+              <label className="form-label">{t('pressupost.form.company')}</label>
               <input type="text" name="empresa" className="form-control" value={formData.empresa} onChange={handleChange} />
             </div>
             <div className="mb-3">
-              <label className="form-label">Email</label>
+              <label className="form-label">{t('pressupost.form.email')}</label>
               <input type="email" name="email" className="form-control" value={formData.email} onChange={handleChange} required />
             </div>
-            <button type="submit" className="btn btn-primary">Calcula pressupost</button>
-            {sent && <p className="mt-3">Dades enviades correctament.</p>}
+            <button type="submit" className="btn btn-primary">{t('pressupost.form.submit')}</button>
+            {sent && <p className="mt-3">{t('pressupost.form.success')}</p>}
           </form>
         )}
 
         {price !== null && (
           <div className="mt-4 text-center">
             <div className="alert alert-info" role="alert">
-              Pressupost estimat: {price}€
+              {t('pressupost.result.estimated', { price })}
             </div>
-            <p>Si el pressupost et quadra</p>
-            <Link to="/contacto" className="btn btn-success">
-              Contacta
+            <p>{t('pressupost.result.nextStep')}</p>
+            <Link to={buildPath('contacto')} className="btn btn-success">
+              {t('pressupost.result.contactCta')}
             </Link>
           </div>
         )}
@@ -176,4 +196,3 @@ const Pressupost = () => {
 };
 
 export default Pressupost;
-

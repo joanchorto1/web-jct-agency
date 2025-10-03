@@ -1,0 +1,700 @@
+{
+  "common": {
+    "brandAlt": "JCT Agency"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "avero": "Avero",
+    "blog": "Blog",
+    "quote": "Presupuesto",
+    "contact": "Contacto"
+  },
+  "language": {
+    "label": "Selecciona idioma",
+    "options": {
+      "ca": "Catalán",
+      "es": "Castellano"
+    }
+  },
+  "layout": {
+    "footer": {
+      "logoAlt": "Logo JCT Agency",
+      "copy": "© 2024 JCT Agency – Soluciones digitales y software SaaS.",
+      "contact": "Email: joan@jctagency.com | Teléfono: 633 391 411",
+      "follow": "Síguenos en LinkedIn"
+    }
+  },
+  "home": {
+    "meta": {
+      "title": "JCT Agency | Soluciones digitales para hacer crecer tu negocio",
+      "description": "Agencia digital catalana especialista en software SaaS y soluciones tecnológicas para autónomos, pymes y gestorías."
+    },
+    "hero": {
+      "title": "JCT Agency – Soluciones digitales para autónomos, pymes y gestorías",
+      "description": "Somos una agencia tecnológica especializada en <strong>software SaaS</strong> y <strong>programas empresariales</strong> que simplifican la gestión y garantizan el <strong>cumplimiento legal con Veri*Factu</strong>.",
+      "ctaServices": "Descubre nuestros servicios",
+      "ctaContact": "Habla con nosotros",
+      "imageAlt": "Equipo de JCT Agency"
+    },
+    "clients": {
+      "title": "Ayudamos a empresas como la tuya",
+      "description": "Nuestro software está pensado para <strong>autónomos</strong>, <strong>pymes</strong> y <strong>gestorías</strong> que quieren digitalizarse sin complicaciones.",
+      "items": {
+        "autonomous": {
+          "alt": "Autónomos",
+          "title": "Autónomos",
+          "description": "Soluciones adaptadas a profesionales independientes."
+        },
+        "smes": {
+          "alt": "Pymes",
+          "title": "Pymes",
+          "description": "Herramientas modernas para optimizar la gestión empresarial."
+        },
+        "accountants": {
+          "alt": "Gestorías",
+          "title": "Gestorías",
+          "description": "Software que facilita nuevos servicios digitales a tus clientes."
+        }
+      }
+    },
+    "services": {
+      "title": "Nuestros servicios",
+      "description": "En JCT Agency ofrecemos servicios digitales para impulsar el crecimiento y la eficiencia de tu negocio.",
+      "learnMore": "Más información",
+      "items": {
+        "software": {
+          "alt": "Desarrollo de software empresarial",
+          "title": "Desarrollo de software empresarial",
+          "description": "Creamos <strong>software propio</strong>, <strong>soluciones SaaS</strong> e <strong>integraciones con servicios externos</strong> para que tu empresa trabaje con herramientas modernas y seguras."
+        },
+        "consulting": {
+          "alt": "Consultoría tecnológica y legal",
+          "title": "Consultoría tecnológica y legal",
+          "description": "Te asesoramos en <strong>nuevas normativas</strong>, <strong>estrategias de digitalización</strong> y cumplimiento con <strong>Veri*Factu</strong>, para que siempre vayas un paso por delante."
+        },
+        "web": {
+          "alt": "Diseño y mantenimiento web",
+          "title": "Diseño y mantenimiento web",
+          "description": "Creamos y gestionamos <strong>webs corporativas</strong> modernas, con <strong>mantenimiento continuo</strong>, actualizaciones y seguridad garantizada."
+        },
+        "support": {
+          "alt": "Soporte continuado",
+          "title": "Soporte continuado",
+          "description": "Nos implicamos en tus proyectos con <strong>atención cercana</strong> y <strong>evolución constante del software</strong>, para que tu negocio nunca se detenga."
+        }
+      }
+    },
+    "avero": {
+      "title": "Avero – Facturación moderna y segura",
+      "description": "<strong>Avero</strong> es nuestro <strong>software SaaS de facturación</strong>, pensado para <strong>autónomos y pymes</strong>. Permite gestionar <strong>facturas, presupuestos, albaranes y TPV</strong> de forma sencilla, con <strong>envío automático a la AEAT</strong> y total cumplimiento legal con <strong>Veri*Factu</strong>.",
+      "list": {
+        "pointOne": "Facturación electrónica completa y segura",
+        "pointTwo": "Presupuestos, albaranes y TPV integrados",
+        "pointThree": "Gestión de clientes y productos",
+        "pointFour": "Cumplimiento normativo con Veri*Factu"
+      },
+      "primaryCta": "Conoce Avero",
+      "secondaryCta": "Prueba Avero gratis",
+      "imageAlt": "Logotipo de Avero"
+    },
+    "customCta": {
+      "title": "¿Necesitas un programa específico para tu empresa?",
+      "description": "¡Ahorra tiempo optimizando tareas con un software a medida!",
+      "button": "Contacta",
+      "imageAlt": "Software a medida"
+    },
+    "benefits": {
+      "title": "Qué aportamos a nuestros clientes",
+      "items": {
+        "trust": {
+          "alt": "Confianza",
+          "title": "Confianza",
+          "description": "Trabajamos para que cumplas la normativa sin complicaciones, con <strong>soluciones fiables y seguras</strong>."
+        },
+        "efficiency": {
+          "alt": "Eficiencia",
+          "title": "Eficiencia",
+          "description": "Optimiza tu tiempo con <strong>procesos simplificados</strong> y un software intuitivo."
+        },
+        "scalability": {
+          "alt": "Escalabilidad",
+          "title": "Escalabilidad",
+          "description": "Nuestras soluciones crecen con tu negocio, adaptándose a nuevas necesidades."
+        },
+        "partnerships": {
+          "alt": "Alianzas estratégicas",
+          "title": "Alianzas estratégicas",
+          "description": "Ofrecemos a las <strong>gestorías</strong> herramientas que abren <strong>nuevas vías de ingresos</strong> y mejoran el servicio a sus clientes."
+        }
+      }
+    },
+    "testimonials": {
+      "title": "Clientes que confían en nosotros",
+      "items": {
+        "ajuntament": {
+          "alt": "Ajuntament de L'Aldea",
+          "name": "Ajuntament de L'Aldea"
+        },
+        "egea": {
+          "alt": "EGEA Arquitectura",
+          "name": "EGEA Arquitectura"
+        },
+        "gerco": {
+          "alt": "GERCO Serveis Integrals",
+          "name": "GERCO Serveis Integrals"
+        }
+      }
+    },
+    "values": {
+      "title": "Nuestros valores",
+      "description": "En JCT Agency trabajamos con una filosofía clara: ofrecer <strong>innovación, simplicidad, seguridad y proximidad</strong>.",
+      "items": {
+        "innovation": "<strong>Innovación</strong> – siempre a la vanguardia tecnológica y legal.",
+        "simplicity": "<strong>Simplicidad</strong> – software intuitivo que facilita el trabajo, no lo complica.",
+        "compliance": "<strong>Cumplimiento legal y seguridad</strong> – desarrollamos sistemas totalmente adaptados a Veri*Factu y otras normativas.",
+        "support": "<strong>Proximidad y soporte</strong> – nos implicamos en cada proyecto como si fuera nuestro."
+      }
+    },
+    "blog": {
+      "title": "Recursos y guías útiles",
+      "links": {
+        "digitalisation": "Cómo digitalizar la gestión de una pyme en 5 pasos",
+        "verifactu": "Guía práctica para gestorías sobre Veri*Factu",
+        "saas": "¿Por qué un SaaS es mejor que un software tradicional?"
+      }
+    },
+    "quoteSection": {
+      "title": "¿Quieres una estimación de tu proyecto?",
+      "description": "Utiliza nuestra calculadora para conocer el presupuesto aproximado.",
+      "button": "Calcula tu presupuesto"
+    },
+    "contact": {
+      "title": "¿Hablamos de tu proyecto?",
+      "description": "Si buscas un partner tecnológico para digitalizar tu empresa, contacta con nosotros.",
+      "form": {
+        "name": "Nombre y apellidos",
+        "company": "Empresa",
+        "email": "Email",
+        "message": "Mensaje",
+        "submit": "Enviar mensaje",
+        "success": "¡Mensaje enviado!"
+      },
+      "details": {
+        "email": "info@jctagency.com",
+        "location": "Tarragona (Cataluña)",
+        "phone": "633 391 411"
+      }
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "JCT Agency - Contacto",
+      "description": "Contacta con JCT Agency para recibir asesoramiento tecnológico y soluciones digitales adaptadas a tu negocio."
+    },
+    "title": "Contacto",
+    "intro": "Estamos aquí para responder tus preguntas y ayudarte en tu proyecto. Puedes contactar con nosotros mediante:",
+    "info": {
+      "title": "Información de contacto",
+      "addressLabel": "Dirección:",
+      "addressValue": "Online",
+      "emailLabel": "Email:",
+      "emailValue": "joan@jctagency.com",
+      "phoneLabel": "Teléfono:",
+      "phoneValue": "+34 633 391 411"
+    },
+    "form": {
+      "title": "Formulario de contacto",
+      "nameLabel": "Nombre",
+      "namePlaceholder": "Nombre completo",
+      "companyLabel": "Empresa",
+      "companyPlaceholder": "Nombre de la empresa",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Correo electrónico",
+      "messageLabel": "Mensaje",
+      "messagePlaceholder": "Cuéntanos tu proyecto",
+      "submit": "Enviar",
+      "success": "¡Enviado!"
+    }
+  },
+  "pressupost": {
+    "meta": {
+      "title": "Calcula tu presupuesto | JCT Agency",
+      "description": "Calcula de forma orientativa el coste de tu proyecto digital."
+    },
+    "title": "Calculadora de presupuesto",
+    "form": {
+      "projectType": {
+        "label": "Tipo de proyecto",
+        "placeholder": "Selecciona una opción",
+        "options": {
+          "web": "Página web",
+          "software": "Programa a medida",
+          "app": "App móvil"
+        },
+        "values": {
+          "web": "Página web",
+          "software": "Programa a medida",
+          "app": "App móvil"
+        }
+      },
+      "web": {
+        "pagesLabel": "Número de páginas",
+        "pages": {
+          "options": {
+            "basic": "1-5",
+            "medium": "6-10",
+            "advanced": "Más de 10"
+          }
+        },
+        "ecommerce": "Incluir e-commerce"
+      },
+      "software": {
+        "modulesLabel": "Número de módulos",
+        "modules": {
+          "options": {
+            "basic": "1-2",
+            "medium": "3-5",
+            "advanced": "6 o más"
+          }
+        },
+        "cloud": "Integración en la nube"
+      },
+      "app": {
+        "platformsLabel": "Plataformas",
+        "platforms": {
+          "options": {
+            "single": "iOS o Android",
+            "multiple": "iOS y Android"
+          }
+        },
+        "auth": "Autenticación de usuarios"
+      },
+      "name": "Nombre",
+      "company": "Empresa",
+      "email": "Email",
+      "submit": "Calcular presupuesto",
+      "success": "Datos enviados correctamente."
+    },
+    "emailMessage": "Servicio: {{service}}\nDetalles: {{details}}\nPresupuesto: {{price}}€",
+    "result": {
+      "estimated": "Presupuesto estimado: {{price}}€",
+      "nextStep": "Si el presupuesto encaja",
+      "contactCta": "Contacta"
+    }
+  },
+  "blog": {
+    "meta": {
+      "title": "Blog de JCT Agency | Recursos para pymes y gestorías",
+      "description": "Guías de digitalización, SEO y software Veri*Factu para hacer crecer tu negocio y mejorar la gestión empresarial."
+    },
+    "title": "Blog",
+    "posts": {
+      "seo": {
+        "title": "Optimización SEO para pymes: 5 consejos clave",
+        "excerpt": "Aprende cómo mejorar la visibilidad de tu negocio en Google con técnicas sencillas y efectivas."
+      },
+      "software": {
+        "title": "Beneficios del software a medida para gestorías y pymes",
+        "excerpt": "Descubre por qué invertir en soluciones personalizadas puede impulsar la eficiencia de tu negocio."
+      },
+      "digital": {
+        "title": "Cómo digitalizar la gestión de una pyme en 5 pasos",
+        "excerpt": "Guía paso a paso para modernizar tu empresa con herramientas digitales accesibles y eficientes."
+      },
+      "verifactu": {
+        "title": "Guía práctica para gestorías sobre Veri*Factu",
+        "excerpt": "Todo lo que debes saber sobre la nueva normativa de facturación y cómo adaptarte sin complicaciones."
+      },
+      "saas": {
+        "title": "¿Por qué un SaaS es mejor que un software tradicional?",
+        "excerpt": "Comparativa entre modelos para elegir la solución tecnológica más adecuada para tu negocio."
+      }
+    }
+  },
+  "avero": {
+    "meta": {
+      "title": "Avero – Programa de facturación 100% adaptado a VeriFactu y la Ley Crea y Crece",
+      "description": "Programa de facturación Avero para autónomos, pymes y gestorías; cumple Veri*Factu y la Ley Crea y Crece con una herramienta sencilla y moderna."
+    },
+    "hero": {
+      "title": "Avero – Programa de facturación 100% adaptado a VeriFactu y la Ley Crea y Crece.*",
+      "description": "La solución más simple y moderna para autónomos, pymes y gestorías. Cumple con la normativa sin complicaciones.",
+      "primaryCta": "Prueba Avero gratis",
+      "secondaryCta": "Solicita una demo",
+      "imageAlt": "Mockup de Avero",
+      "badge": "Adaptado a Veri*Factu – RD 1007/2023"
+    },
+    "why": {
+      "title": "¿Por qué Avero?",
+      "description": "Avero es el software de facturación creado por JCT Agency pensado para cubrir las nuevas obligaciones legales y simplificar la gestión diaria de las empresas. Con VeriFactu en vigor desde 2025 y la entrada obligatoria en 2026, necesitas un sistema seguro, moderno y validado por la AEAT.*",
+      "keywords": "Software de facturación VeriFactu · Programa de facturas Crea y Crece · Facturación para autónomos y pymes"
+    },
+    "features": {
+      "title": "Funcionalidades clave",
+      "blocks": {
+        "billing": {
+          "alt": "Facturación",
+          "title": "Facturación",
+          "items": [
+            "Facturas electrónicas (creación, envío, rectificativas, simplificadas).",
+            "Gestión de presupuestos y albaranes, conversión en factura con un clic.",
+            "Control de clientes y proveedores con historial completo.",
+            "Gestión de artículos y productos (precios, categorías, stock básico).",
+            "Envío de facturas por correo electrónico y PDF profesional.",
+            "TPV integrado para ventas físicas con emisión de tickets legales."
+          ]
+        },
+        "utilities": {
+          "alt": "Utilidades premium",
+          "title": "Utilidades premium",
+          "items": [
+            "Cuadros de mando e informes: ingresos, gastos, beneficios, IVA.",
+            "Gestión multiempresa y multiusuario con roles y permisos.",
+            "Integración con Stripe y pasarelas de pago.",
+            "Firma y certificado digital integrados para un envío seguro."
+          ]
+        },
+        "aeat": {
+          "alt": "AEAT",
+          "title": "AEAT",
+          "items": [
+            "Envío automático a la AEAT en tiempo real (modalidad Veri*Factu).",
+            "Copias de seguridad y conservación de registros (cumpliendo el RRSIF).",
+            "Generación de código QR tributario en las facturas."
+          ]
+        }
+      }
+    },
+    "compliance": {
+      "title": "Cumplimiento legal (Veri*Factu y Ley Crea y Crece)",
+      "items": [
+        "Veri*Factu: Avero envía cada factura a la AEAT con hash encadenado, registro inalterable y QR tributario.",
+        "Ley Crea y Crece: Factura electrónica obligatoria para operaciones B2B.",
+        "Normativa aplicable: RD 1007/2023, Orden HAC/1177/2024 y modificaciones RD 254/2025."
+      ],
+      "note": "Avero es el software de facturación certificado y adaptado al reglamento Veri*Factu (AEAT) y a la Ley Crea y Crece."
+    },
+    "target": {
+      "title": "¿Para quién es Avero?",
+      "description": "<strong>Avero</strong> está pensado para <strong>autónomos, pymes y gestorías</strong> que necesitan cumplir la normativa y mejorar su operativa diaria.",
+      "items": [
+        "Gestión completa de facturas, presupuestos y clientes desde un único lugar.",
+        "Control de acceso por roles para coordinar equipos internos y gestorías.",
+        "API e integraciones para conectar Avero con otros sistemas empresariales."
+      ]
+    },
+    "cta": {
+      "title": "¿Quieres hablar con un experto de Avero?",
+      "description": "Te ayudamos a adaptar tu negocio a Veri*Factu y a la Ley Crea y Crece.",
+      "primaryCta": "Crear cuenta",
+      "secondaryCta": "Contacta con un asesor"
+    },
+    "testimonials": {
+      "title": "Testimonios / Casos de uso",
+      "man": {
+        "alt": "Cliente satisfecho",
+        "quote": "“Con Avero genero mis facturas en segundos y sé que están validadas por la AEAT.”"
+      },
+      "woman": {
+        "alt": "Clienta satisfecha",
+        "quote": "“Hemos ahorrado horas semanales en la gestión de clientes e IVA.”"
+      }
+    },
+    "gallery": {
+      "title": "Galería",
+      "description": "Descubre capturas de pantalla y ejemplos del entorno de Avero."
+    },
+    "video": {
+      "title": "Vídeo explicativo",
+      "description": "Próximamente disponible: un vídeo que muestra cómo funciona Avero paso a paso."
+    },
+    "finalCta": {
+      "title": "Adelántate a la normativa. Prueba Avero hoy y cumple con Veri*Factu sin preocupaciones.",
+      "primaryCta": "Crear cuenta",
+      "secondaryCta": "Contacta con un asesor"
+    },
+    "footer": {
+      "links": {
+        "verifactu": "Programa de facturación VeriFactu",
+        "aeat": "Facturas electrónicas AEAT",
+        "software": "Software de facturación para autónomos y gestorías"
+      }
+    }
+  },
+  "articles": {
+    "digitalitzarPime": {
+      "meta": {
+        "title": "Cómo digitalizar la gestión de una pyme en 5 pasos | JCT Agency",
+        "description": "Pasos clave para digitalizar una pyme con herramientas SaaS, estrategias de transformación digital y consejos prácticos para mejorar la eficiencia."
+      },
+      "title": "Cómo digitalizar la gestión de una pyme en 5 pasos",
+      "sections": [
+        {
+          "paragraphs": [
+            "La digitalización ya no es una opción, es una necesidad para cualquier pyme que quiera mantenerse competitiva. Muchas pequeñas empresas han funcionado durante años con procesos manuales, documentos en papel y herramientas dispersas que complican el día a día. Este artículo pretende ser una guía detallada para que cualquier gestor o propietario pueda iniciar la transformación digital con confianza. Desde la planificación inicial hasta la implantación de herramientas y la formación del equipo, te explicamos cómo dar el paso hacia un modelo de gestión más eficiente y orientado al futuro."
+          ]
+        },
+        {
+          "heading": "1. Analiza el estado actual y define objetivos",
+          "paragraphs": [
+            "Antes de adquirir software o contratar servicios, es esencial entender cómo funciona actualmente la empresa. Realiza un inventario de procesos: contabilidad, gestión de clientes, control de stock, tareas administrativas y comunicación interna. Identifica los puntos débiles y aquellas actividades que generan más trabajo manual. A continuación, define objetivos concretos de digitalización, como reducir el tiempo de facturación, mejorar la trazabilidad de los pedidos o aumentar la satisfacción del cliente. Estos objetivos deben ser medibles y estar alineados con la estrategia global de la compañía. Contar con indicadores clave de rendimiento permitirá valorar los avances y ajustar el plan cuando sea necesario."
+          ]
+        },
+        {
+          "heading": "2. Elige las herramientas adecuadas",
+          "paragraphs": [
+            "El mercado ofrece una gran variedad de herramientas digitales: gestores de facturación, CRMs, plataformas de comunicación, sistemas de gestión de proyectos y aplicaciones de comercio electrónico, entre otras. El objetivo no es adquirir la solución más cara, sino aquella que mejor se adapte a los procesos y al presupuesto de la pyme. Prioriza las aplicaciones en la nube, que permiten acceder a la información desde cualquier lugar y reducir los costes de infraestructura. Valora también la posibilidad de utilizar programas modulares que puedan crecer a medida que lo haga el negocio. Consulta opiniones de otros usuarios, solicita demostraciones y asegúrate de que la herramienta cumple con la normativa vigente en materia de protección de datos y factura electrónica."
+          ]
+        },
+        {
+          "heading": "3. Integra los sistemas y automatiza procesos",
+          "paragraphs": [
+            "Una vez seleccionadas las herramientas, el siguiente paso es garantizar que todas trabajen de manera coordinada. Las integraciones permiten que los datos circulen sin errores ni duplicidades. Por ejemplo, el CRM puede estar conectado con el programa de facturación para que las ventas se reflejen automáticamente en la contabilidad. También se pueden automatizar tareas como el envío de correos de seguimiento, la generación de informes o la sincronización de stock entre la tienda física y la online. Dedica tiempo a definir los flujos de información y utiliza APIs o conectores proporcionados por los proveedores. Una buena integración no solo ahorra tiempo, sino que ofrece una visión global del negocio, facilitando la toma de decisiones basada en datos."
+          ]
+        },
+        {
+          "heading": "4. Forma al equipo y promueve la cultura digital",
+          "paragraphs": [
+            "La tecnología por sí sola no garantiza el éxito. Es fundamental que las personas que la utilizarán se sientan cómodas y entiendan las ventajas del cambio. Organiza sesiones de formación adaptadas a cada departamento y crea materiales de apoyo como manuales o vídeos breves. Promueve una cultura digital donde el aprendizaje continuo sea valorado y los errores se consideren una oportunidad de mejora. Implica a los trabajadores en el proceso, pidiendo su opinión y permitiéndoles proponer ideas. Cuando el equipo ve que la digitalización facilita su trabajo y elimina tareas repetitivas, la adopción es mucho más rápida y natural."
+          ]
+        },
+        {
+          "heading": "5. Mide resultados y ajusta la estrategia",
+          "paragraphs": [
+            "La transformación digital es un camino continuo. Tras implantar las herramientas y formar al equipo, es importante establecer un sistema de seguimiento que permita medir el impacto. Utiliza indicadores como el tiempo de respuesta a los clientes, el número de errores en la facturación o el coste de gestión por proyecto. Compara estos valores con los objetivos iniciales y detecta áreas de mejora. Puede ser necesario añadir nuevas funcionalidades, cambiar de proveedor o reforzar la formación en determinados puntos. La flexibilidad es clave: la digitalización no es un proyecto con principio y fin, sino una evolución constante que debe acompañar el crecimiento del negocio."
+          ]
+        },
+        {
+          "heading": "Beneficios adicionales de la digitalización",
+          "paragraphs": [
+            "Además de optimizar procesos, la digitalización aporta una serie de beneficios transversales. Permite trabajar de manera colaborativa, independientemente de la ubicación de los miembros del equipo, y facilita el acceso a nuevas oportunidades de negocio a través de Internet. La disponibilidad de datos en tiempo real mejora la toma de decisiones y reduce los riesgos. También contribuye a una imagen de marca más profesional e innovadora, lo que puede atraer nuevos clientes y partners. Por último, muchas herramientas digitales están preparadas para cumplir con normativas como el RGPD o VeriFactu, lo que simplifica el cumplimiento legal y evita sanciones."
+          ]
+        },
+        {
+          "heading": "Conclusión",
+          "paragraphs": [
+            "Digitalizar una pyme no tiene por qué ser un proceso traumático. Con una planificación adecuada y el apoyo de profesionales, es posible transformar la empresa de forma gradual y rentable. Lo importante es comenzar con objetivos claros, elegir las herramientas correctas e implicar a todo el equipo en el cambio. En JCT Agency hemos ayudado a numerosas empresas a dar este paso, y sabemos que los resultados llegan cuando la tecnología se combina con una visión estratégica. Si estás preparado para modernizar la gestión de tu negocio, la digitalización es el camino que te permitirá crecer y afrontar con garantías los retos del futuro."
+          ]
+        }
+      ]
+    },
+    "seo": {
+      "meta": {
+        "title": "Optimización SEO para pymes: guía completa | JCT Agency",
+        "description": "Guía SEO para pymes con técnicas para posicionar tu web en Google, atraer clientes locales y optimizar contenidos."
+      },
+      "title": "Optimización SEO para pymes: guía completa",
+      "sections": [
+        {
+          "paragraphs": [
+            "El posicionamiento orgánico en buscadores es uno de los pilares para generar tráfico cualificado hacia tu web sin depender exclusivamente de la publicidad de pago. Para una pyme, invertir en SEO significa establecer una base sólida que le permita competir con empresas más grandes y llegar a nuevos clientes potenciales. En esta guía profundizamos en las principales estrategias que puedes aplicar desde hoy mismo. El artículo está pensado como referencia completa: encontrarás recomendaciones prácticas, ejemplos reales y consejos sobre cómo implementarlas con recursos limitados. El objetivo es que puedas entender cada paso y llevarlo a la práctica sin necesidad de conocimientos técnicos avanzados."
+          ]
+        },
+        {
+          "heading": "1. Investigación de palabras clave",
+          "paragraphs": [
+            "Antes de redactar cualquier contenido es imprescindible saber qué términos utilizan tus clientes cuando buscan información relacionada con tu producto o servicio. Empieza elaborando una lista de posibles palabras y expresiones, incluyendo sinónimos y consultas de cola larga. Herramientas como Google Keyword Planner, Ubersuggest o AnswerThePublic permiten conocer el volumen de búsquedas, la dificultad y las tendencias. Dedica tiempo a entender la intención de cada búsqueda: no es lo mismo “gestoría para autónomos en Barcelona” que “cómo llevar la contabilidad de un autónomo”. Esta fase te servirá para crear contenido que responda exactamente a lo que necesita el usuario, mejorando la relevancia y aumentando las opciones de aparecer en los primeros resultados de Google."
+          ]
+        },
+        {
+          "heading": "2. Contenido de calidad y estrategia editorial",
+          "paragraphs": [
+            "Una vez identificadas las palabras clave, es momento de desarrollar una estrategia editorial. El contenido debe ser útil, original y centrado en resolver problemas reales. Planifica un calendario de publicaciones que combine artículos informativos, guías y casos de éxito. Es recomendable mantener una estructura clara con títulos, subtítulos y listas que faciliten la lectura. Incluye imágenes optimizadas con textos alternativos descriptivos y, siempre que sea posible, añade ejemplos propios de tu actividad empresarial. Recuerda que la actualización periódica del contenido es clave: Google valora las webs que se mantienen activas y aportan novedades de forma constante. Además, una buena estrategia editorial favorece que otras webs enlacen a tus artículos, incrementando la autoridad del dominio."
+          ]
+        },
+        {
+          "heading": "3. SEO local y ficha de Google Business",
+          "paragraphs": [
+            "Si tu negocio tiene una ubicación física o presta servicios en una zona geográfica concreta, trabajar el SEO local es imprescindible. El primer paso es crear y optimizar la ficha de Google Business Profile, asegurándote de que la información de contacto, horarios y categorías sea correcta. Anima a tus clientes a dejar reseñas y respóndelas siempre, ya que son un factor de posicionamiento y refuerzan la confianza. En la web, incluye tu ubicación en las páginas de servicios y en el pie de página, utilizando datos estructurados para que los buscadores entiendan mejor dónde operas. Publicar contenido relacionado con tu ciudad o comarca también ayuda a atraer tráfico cualificado que busca soluciones cerca de su ubicación."
+          ]
+        },
+        {
+          "heading": "4. Optimización técnica de la web",
+          "paragraphs": [
+            "Una web rápida y sin errores es fundamental para que tu esfuerzo en contenidos dé resultados. Revisa periódicamente la velocidad de carga con herramientas como PageSpeed Insights o Lighthouse y aplica las mejoras recomendadas: compresión de imágenes, minificación de recursos e implementación de caché. La web debe ser totalmente responsive, adaptarse a móviles y tabletas, y utilizar el protocolo HTTPS para garantizar la seguridad. También es importante disponer de un mapa del sitio y un archivo robots.txt correctamente configurados para que Google pueda rastrear las páginas sin problemas. Los errores 404 y los enlaces rotos deben solucionarse rápidamente para evitar penalizaciones y una mala experiencia de usuario."
+          ]
+        },
+        {
+          "heading": "5. Estrategia de enlazado interno",
+          "paragraphs": [
+            "Crear una red de enlaces interna coherente facilita que los buscadores entiendan la estructura de tu sitio y distribuye la autoridad entre las distintas páginas. Cada vez que publiques un nuevo artículo, enlázalo con contenido relacionado que ya exista en tu web. Esto prolonga el tiempo de sesión de los usuarios y reduce la tasa de rebote. Utiliza textos de anclaje descriptivos, evitando frases genéricas como “haz clic aquí”. Las páginas más importantes deberían recibir más enlaces internos, y es recomendable hacer un seguimiento regular para detectar oportunidades de enlazado que ayuden a posicionar palabras clave concretas. Un buen enlazado interno también sirve para guiar al usuario hacia la conversión, ya sea rellenar un formulario, descargar un recurso o contratar un servicio."
+          ]
+        },
+        {
+          "heading": "6. Link building y colaboraciones",
+          "paragraphs": [
+            "Los enlaces que provienen de otras webs siguen siendo uno de los factores de posicionamiento más relevantes. Para una pyme, la clave es conseguir backlinks de calidad sin recurrir a prácticas dudosas. Puedes colaborar con blogs de tu sector, participar en eventos y publicar notas de prensa en medios locales. Los directorios empresariales, asociaciones profesionales o proveedores también pueden enlazar tu sitio si ofreces contenido de interés. Prioriza la calidad sobre la cantidad: un solo enlace de una web con autoridad puede ser más valioso que decenas de baja calidad. Además, diversifica los textos de anclaje y evita un patrón artificial que pueda levantar sospechas en los algoritmos de Google."
+          ]
+        },
+        {
+          "heading": "7. Experiencia de usuario y Core Web Vitals",
+          "paragraphs": [
+            "Google ha incorporado las Core Web Vitals como indicador clave de la experiencia de usuario. Estos parámetros miden la velocidad de carga, la estabilidad visual y la interactividad de la página. Para optimizarlos, reduce los scripts innecesarios, utiliza fuentes web eficientes y reserva espacio para las imágenes para evitar movimientos inesperados. Una experiencia de usuario positiva no solo ayuda al posicionamiento, sino que también aumenta la probabilidad de conversión. Recuerda que el SEO y la usabilidad van de la mano: cuando el usuario encuentra rápidamente lo que busca y navega sin dificultades, es más probable que vuelva y recomiende tu web."
+          ]
+        },
+        {
+          "heading": "8. Analítica y mejora continua",
+          "paragraphs": [
+            "Ninguna estrategia SEO está completa sin un sistema de medición que permita evaluar los resultados. Configura Google Analytics y Google Search Console para monitorizar el tráfico, las palabras clave que generan visitas y el comportamiento de los usuarios. Establece objetivos claros, como conversiones o descargas, y realiza un seguimiento periódico para identificar qué páginas funcionan mejor. La analítica también sirve para detectar contenido obsoleto o palabras clave emergentes que vale la pena trabajar. El SEO es un proceso iterativo: analiza, aprende y aplica mejoras constantes para mantenerte por delante de la competencia."
+          ]
+        },
+        {
+          "heading": "9. Automatización y herramientas de apoyo",
+          "paragraphs": [
+            "Aunque muchas acciones SEO se pueden hacer manualmente, utilizar herramientas de automatización puede ahorrar tiempo y recursos. Plataformas como Screaming Frog, SEMrush o Ahrefs permiten auditar la web, detectar errores técnicos y monitorizar la estrategia de link building. También puedes programar alertas para saber cuándo un competidor publica nuevo contenido o recibe un enlace relevante. La automatización no sustituye la creatividad ni la planificación estratégica, pero sí facilita la gestión diaria y permite concentrarte en tareas de mayor valor, como la creación de contenido o el desarrollo de nuevos servicios."
+          ]
+        },
+        {
+          "heading": "10. Conclusiones y próximos pasos",
+          "paragraphs": [
+            "Implementar una estrategia SEO efectiva requiere constancia y una visión a largo plazo. Las pymes que apuestan por esta disciplina consiguen una presencia online más sólida, un flujo constante de clientes potenciales y una imagen de marca reforzada. Comienza por los aspectos básicos: una buena investigación de palabras clave, contenido relevante y una web técnicamente optimizada. A medida que obtengas resultados, amplía las acciones con estrategias de link building, mejoras de experiencia de usuario y automatización. Recuerda que el SEO es una carrera de fondo: cada acción suma y, con perseverancia, tu negocio puede destacar en un entorno digital cada vez más competitivo."
+          ]
+        }
+      ]
+    },
+    "software": {
+      "meta": {
+        "title": "Beneficios del software a medida para gestorías y pymes | JCT Agency",
+        "description": "Ventajas del desarrollo de software a medida para optimizar procesos en gestorías y pequeñas empresas."
+      },
+      "title": "Beneficios del software a medida para gestorías y pymes",
+      "sections": [
+        {
+          "paragraphs": [
+            "El software a medida se ha convertido en una herramienta clave para gestorías y pymes que necesitan soluciones específicas para sus procesos internos. A diferencia de las herramientas genéricas, el desarrollo personalizado permite adaptar las funcionalidades exactas a las necesidades del negocio, integrándose con otros sistemas y garantizando la seguridad de los datos. En este artículo repasamos los principales beneficios y cómo puede impactar directamente en la productividad de la empresa."
+          ]
+        },
+        {
+          "heading": "1. Automatización de procesos repetitivos",
+          "paragraphs": [
+            "Con software a medida es posible automatizar tareas que antes requerían horas de trabajo manual. Desde la generación de documentos fiscales hasta el envío de avisos a clientes, la tecnología permite reducir errores y liberar tiempo para que los equipos se enfoquen en tareas de mayor valor."
+          ]
+        },
+        {
+          "heading": "2. Integración con otras herramientas",
+          "paragraphs": [
+            "Las gestorías y pymes suelen utilizar múltiples aplicaciones: programas de contabilidad, CRMs, plataformas de facturación o herramientas de firma digital. Un software a medida permite integrar todas estas soluciones en un único entorno, evitando la duplicación de datos y mejorando la trazabilidad de la información."
+          ]
+        },
+        {
+          "heading": "3. Cumplimiento normativo asegurado",
+          "paragraphs": [
+            "El marco legal evoluciona constantemente y obliga a las empresas a mantenerse al día. Desarrollar software a medida garantiza que todas las actualizaciones normativas se apliquen de forma centralizada, reduciendo el riesgo de sanciones y facilitando auditorías internas."
+          ]
+        },
+        {
+          "heading": "4. Experiencia de usuario personalizada",
+          "paragraphs": [
+            "Cada equipo trabaja de forma diferente. Un software a medida puede diseñarse para que la experiencia de usuario sea intuitiva y adaptada al flujo de trabajo de cada departamento, incrementando la adopción y la satisfacción de los empleados."
+          ]
+        },
+        {
+          "heading": "5. Escalabilidad y flexibilidad",
+          "paragraphs": [
+            "A medida que la gestoría o la pyme crece, también lo hacen sus necesidades. El software a medida permite añadir nuevas funcionalidades, perfiles de usuario o integraciones sin tener que cambiar de herramienta, asegurando una inversión a largo plazo."
+          ]
+        },
+        {
+          "heading": "Conclusión",
+          "paragraphs": [
+            "Invertir en software a medida es apostar por una solución que acompaña el crecimiento del negocio. En JCT Agency diseñamos y desarrollamos aplicaciones adaptadas a cada proyecto, con un enfoque en la seguridad, la usabilidad y el cumplimiento legal."
+          ]
+        }
+      ]
+    },
+    "verifactu": {
+      "meta": {
+        "title": "Guía práctica para gestorías sobre Veri*Factu | JCT Agency",
+        "description": "Aspectos clave de Veri*Factu para gestorías: obligaciones, plazos y cómo adaptarse a la normativa."
+      },
+      "title": "Guía práctica para gestorías sobre Veri*Factu",
+      "sections": [
+        {
+          "paragraphs": [
+            "Veri*Factu es el sistema impulsado por la AEAT para garantizar la integridad y autenticidad de los registros de facturación. Para las gestorías, conocer sus detalles es esencial para asesorar correctamente a sus clientes y adaptar los procesos internos."
+          ]
+        },
+        {
+          "heading": "1. ¿Qué es Veri*Factu?",
+          "paragraphs": [
+            "Es un marco normativo que obliga a enviar las facturas a la AEAT en tiempo real, garantizando que no puedan manipularse posteriormente. Cada factura genera un código hash y un registro inalterable."
+          ]
+        },
+        {
+          "heading": "2. ¿Quién debe cumplir la normativa?",
+          "paragraphs": [
+            "Todas las empresas y profesionales que emiten facturas deben adaptar sus sistemas a Veri*Factu antes de la entrada en vigor obligatoria. Las gestorías deben prepararse para ofrecer herramientas que cumplan con estos requisitos."
+          ]
+        },
+        {
+          "heading": "3. ¿Qué funcionalidades debe tener el software?",
+          "paragraphs": [
+            "El programa debe generar códigos QR tributarios, conservar registros seguros, evitar la manipulación de asientos y permitir el envío inmediato a la AEAT. También debe registrar eventos y asegurar copias de seguridad."
+          ]
+        },
+        {
+          "heading": "4. ¿Cómo puede ayudar una gestoría a sus clientes?",
+          "paragraphs": [
+            "Implementando un software certificado como Avero, ofreciendo formación sobre la nueva normativa y monitorizando que todas las facturas se transmitan correctamente."
+          ]
+        },
+        {
+          "heading": "5. Beneficios de adaptarse pronto",
+          "paragraphs": [
+            "Adoptar Veri*Factu con tiempo permite evitar sanciones, mejorar la relación con los clientes y posicionar a la gestoría como referente en cumplimiento normativo y transformación digital."
+          ]
+        }
+      ]
+    },
+    "saas": {
+      "meta": {
+        "title": "¿Por qué un SaaS es mejor que un software tradicional? | JCT Agency",
+        "description": "Comparativa entre software SaaS y soluciones tradicionales para decidir la mejor opción para tu negocio."
+      },
+      "title": "¿Por qué un SaaS es mejor que un software tradicional?",
+      "sections": [
+        {
+          "paragraphs": [
+            "Elegir entre un software SaaS (Software as a Service) y una solución tradicional instalada en servidores propios es una decisión clave para muchas empresas. A continuación analizamos las diferencias principales para ayudarte a tomar la mejor decisión."
+          ]
+        },
+        {
+          "heading": "1. Coste inicial y mantenimiento",
+          "paragraphs": [
+            "El modelo SaaS funciona bajo suscripción y evita una gran inversión inicial en licencias e infraestructura. El software tradicional requiere equipos, instalaciones y actualizaciones costosas."
+          ]
+        },
+        {
+          "heading": "2. Actualizaciones y seguridad",
+          "paragraphs": [
+            "Con SaaS, el proveedor se encarga de las actualizaciones automáticas, las mejoras de seguridad y las copias de seguridad. En un entorno tradicional, la empresa debe gestionar estos procesos manualmente."
+          ]
+        },
+        {
+          "heading": "3. Escalabilidad",
+          "paragraphs": [
+            "El SaaS permite ampliar o reducir usuarios y funcionalidades con facilidad. Las soluciones tradicionales exigen planificación e inversión en hardware adicional."
+          ]
+        },
+        {
+          "heading": "4. Accesibilidad",
+          "paragraphs": [
+            "Un software SaaS es accesible desde cualquier dispositivo conectado a Internet, facilitando el teletrabajo y la colaboración. El software tradicional suele limitarse a la oficina o requiere configuraciones VPN complejas."
+          ]
+        },
+        {
+          "heading": "5. Integraciones",
+          "paragraphs": [
+            "Muchas soluciones SaaS ofrecen APIs y conectores para integrarse con otras herramientas del mercado. Las aplicaciones tradicionales pueden necesitar desarrollos a medida y más tiempo para lograr la misma conexión."
+          ]
+        },
+        {
+          "heading": "Conclusión",
+          "paragraphs": [
+            "El modelo SaaS destaca por su flexibilidad, seguridad y rapidez de despliegue. Aun así, es importante analizar las necesidades específicas de cada empresa para escoger la solución que aporte más valor a largo plazo."
+          ]
+        }
+      ]
+    }
+  }
+}

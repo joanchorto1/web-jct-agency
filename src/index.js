@@ -5,6 +5,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import emailjs from '@emailjs/browser';
+import './i18n';
 
 emailjs.init('PrtHsOGCYBrChfJU3');
 

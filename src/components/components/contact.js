@@ -1,10 +1,16 @@
-import Layout from "../layouts/layout";
+import React, { useState } from "react";
 import emailjs from '@emailjs/browser';
-import React, {useState} from "react";
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
+import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
+import Layout from "../layouts/layout";
+import { DEFAULT_LANGUAGE } from '../../i18n';
 
 const Contact = () => {
+    const { t } = useTranslation();
+    const { lang } = useParams();
+    const currentLang = lang ?? DEFAULT_LANGUAGE;
 
     const [isFormSubmitted, setFormSubmitted] = useState(false);
     const [formFields, setFormFields] = useState({
@@ -16,13 +22,9 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        // Configurar el servicio Email.js
         emailjs.sendForm('service_uaggcy8', 'template_88m2twe', e.target, 'PrtHsOGCYBrChfJU3')
-            .then((result) => {
-                console.log(result.text);
+            .then(() => {
                 setFormSubmitted(true);
-                // Vaciar los campos del formulario después del envío exitoso
                 setFormFields({
                     nombre: '',
                     empresa: '',
@@ -30,14 +32,12 @@ const Contact = () => {
                     mensaje: '',
                 });
             })
-            .catch((error) => {
-                console.log(error.text);
+            .catch(() => {
                 setFormSubmitted(false);
             });
     };
 
     const handleChange = (e) => {
-        // Actualizar el estado de los campos del formulario mientras el usuario escribe
         setFormFields({
             ...formFields,
             [e.target.name]: e.target.value,
@@ -47,44 +47,45 @@ const Contact = () => {
     return (
         <Layout>
             <Helmet>
-                <title>JCT Agency - Contacto</title>
-                <link rel="canonical" href="https://jctagency.com/contacto"/>
+                <title>{t('contact.meta.title')}</title>
+                <link rel="canonical" href={`https://jctagency.com/${currentLang}/contacto`} />
                 <meta
                     name="description"
-                    content="Contacta amb JCT Agency per rebre assessorament tecnològic i solucions digitals adaptades al teu negoci."
+                    content={t('contact.meta.description')}
                 />
             </Helmet>
 
             <div>
-                <section className={"container pt-5"}>
-                    <h1 className="text-center mb-4">Contacto</h1>
+                <section className="container pt-5">
+                    <h1 className="text-center mb-4">{t('contact.title')}</h1>
                     <p className="text-center text-muted">
-                        Estamos aquí para responder a tus preguntas y ayudarte en tu proyecto. Puedes contactar con nosotros mediante:
+                        {t('contact.intro')}
                     </p>
                     <div>
-                        <h2 className="mb-3">Información de contacto</h2>
+                        <h2 className="mb-3">{t('contact.info.title')}</h2>
                         <p>
-                            <strong>Direction:</strong> Online
+                            <strong>{t('contact.info.addressLabel')}</strong> {t('contact.info.addressValue')}
                         </p>
                         <p>
-                            <strong>Email:</strong> joan@jctagency.com
+                            <strong>{t('contact.info.emailLabel')}</strong> {t('contact.info.emailValue')}
                         </p>
                         <p>
-                            <strong>Phone:</strong> +34 633391411
+                            <strong>{t('contact.info.phoneLabel')}</strong> {t('contact.info.phoneValue')}
                         </p>
                     </div>
                     <div className="mt-4 pb-5">
-                        <h2 className="mb-3">Formulario de contacto</h2>
+                        <h2 className="mb-3">{t('contact.form.title')}</h2>
                         <form onSubmit={handleSubmit}>
                             <div className="mb-3">
                                 <label htmlFor="nombre" className="form-label">
-                                    Nombre:
+                                    {t('contact.form.nameLabel')}
                                 </label>
                                 <input
                                     type="text"
                                     className="form-control"
                                     id="nombre"
                                     name="nombre"
+                                    placeholder={t('contact.form.namePlaceholder')}
                                     value={formFields.nombre}
                                     onChange={handleChange}
                                     required
@@ -92,13 +93,14 @@ const Contact = () => {
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="empresa" className="form-label">
-                                    Empresa:
+                                    {t('contact.form.companyLabel')}
                                 </label>
                                 <input
                                     type="text"
                                     className="form-control"
                                     id="empresa"
                                     name="empresa"
+                                    placeholder={t('contact.form.companyPlaceholder')}
                                     value={formFields.empresa}
                                     onChange={handleChange}
                                     required
@@ -106,13 +108,14 @@ const Contact = () => {
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="email" className="form-label">
-                                    Email:
+                                    {t('contact.form.emailLabel')}
                                 </label>
                                 <input
                                     type="email"
                                     className="form-control"
                                     id="email"
                                     name="email"
+                                    placeholder={t('contact.form.emailPlaceholder')}
                                     value={formFields.email}
                                     onChange={handleChange}
                                     required
@@ -120,23 +123,24 @@ const Contact = () => {
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="mensaje" className="form-label">
-                                    Mensaje:
+                                    {t('contact.form.messageLabel')}
                                 </label>
                                 <textarea
                                     className="form-control"
                                     id="mensaje"
                                     name="mensaje"
                                     rows="4"
+                                    placeholder={t('contact.form.messagePlaceholder')}
                                     value={formFields.mensaje}
                                     onChange={handleChange}
                                     required
                                 />
                             </div>
                             <button type="submit" className="btn btn-dark text-white">
-                                Enviar
+                                {t('contact.form.submit')}
                             </button>
                             {isFormSubmitted && (
-                                <p className="text-dark mt-3">¡Enviado!</p>
+                                <p className="text-dark mt-3">{t('contact.form.success')}</p>
                             )}
                         </form>
                     </div>

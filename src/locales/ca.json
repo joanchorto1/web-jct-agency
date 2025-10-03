@@ -1,0 +1,700 @@
+{
+  "common": {
+    "brandAlt": "JCT Agency"
+  },
+  "navigation": {
+    "home": "Inici",
+    "avero": "Avero",
+    "blog": "Blog",
+    "quote": "Pressupost",
+    "contact": "Contacte"
+  },
+  "language": {
+    "label": "Selecciona idioma",
+    "options": {
+      "ca": "Català",
+      "es": "Castellano"
+    }
+  },
+  "layout": {
+    "footer": {
+      "logoAlt": "Logo JCT Agency",
+      "copy": "© 2024 JCT Agency – Solucions digitals i software SaaS.",
+      "contact": "Email: joan@jctagency.com | Telèfon: 633 391 411",
+      "follow": "Segueix-nos a LinkedIn"
+    }
+  },
+  "home": {
+    "meta": {
+      "title": "JCT Agency | Solucions digitals per fer créixer el teu negoci",
+      "description": "Agència digital catalana especialista en software SaaS i solucions tecnològiques per a autònoms, PIMEs i gestories."
+    },
+    "hero": {
+      "title": "JCT Agency – Solucions digitals per a autònoms, PIMEs i gestories",
+      "description": "Som una agència tecnològica especialitzada en <strong>software SaaS</strong> i <strong>programari empresarial</strong> que simplifica la gestió i garanteix el <strong>compliment legal amb Veri*Factu</strong>.",
+      "ctaServices": "Descobreix els nostres serveis",
+      "ctaContact": "Parla amb nosaltres",
+      "imageAlt": "Equip de JCT Agency"
+    },
+    "clients": {
+      "title": "Ajudem empreses com la teva",
+      "description": "El nostre software està pensat per a <strong>autònoms</strong>, <strong>PIMEs</strong> i <strong>gestories</strong> que volen digitalitzar-se sense complicacions.",
+      "items": {
+        "autonomous": {
+          "alt": "Autònoms",
+          "title": "Autònoms",
+          "description": "Solucions adaptades als professionals independents."
+        },
+        "smes": {
+          "alt": "PIMEs",
+          "title": "PIMEs",
+          "description": "Eines modernes per optimitzar la gestió empresarial."
+        },
+        "accountants": {
+          "alt": "Gestories",
+          "title": "Gestories",
+          "description": "Programari que facilita nous serveis digitals als clients."
+        }
+      }
+    },
+    "services": {
+      "title": "Els nostres serveis",
+      "description": "A JCT Agency oferim serveis digitals per impulsar el creixement i l’eficiència del teu negoci.",
+      "learnMore": "Més informació",
+      "items": {
+        "software": {
+          "alt": "Desenvolupament de software empresarial",
+          "title": "Desenvolupament de software empresarial",
+          "description": "Creem <strong>programari propi</strong>, <strong>solucions SaaS</strong> i <strong>integracions amb serveis externs</strong> perquè la teva empresa treballi amb eines modernes i segures."
+        },
+        "consulting": {
+          "alt": "Consultoria tecnològica i legal",
+          "title": "Consultoria tecnològica i legal",
+          "description": "T’assessorem en <strong>noves normatives</strong>, <strong>estratègies de digitalització</strong> i compliment amb <strong>Veri*Factu</strong>, perquè estiguis sempre a l’avantguarda."
+        },
+        "web": {
+          "alt": "Disseny i manteniment web",
+          "title": "Disseny i manteniment web",
+          "description": "Creem i gestionem <strong>webs corporatives</strong> modernes, amb <strong>manteniment constant</strong>, actualitzacions i seguretat garantida."
+        },
+        "support": {
+          "alt": "Suport continuat",
+          "title": "Suport continuat",
+          "description": "Ens involucrem en els teus projectes amb <strong>atenció propera</strong> i <strong>evolució constant del software</strong>, perquè el teu negoci mai s’aturi."
+        }
+      }
+    },
+    "avero": {
+      "title": "Avero – Facturació moderna i segura",
+      "description": "<strong>Avero</strong> és el nostre <strong>software SaaS de facturació</strong>, pensat per a <strong>autònoms i PIMEs</strong>. Et permet gestionar <strong>factures, pressupostos, albarans i TPV</strong> de forma simple, amb <strong>enviament automàtic a l’AEAT</strong> i total compliment legal amb <strong>Veri*Factu</strong>.",
+      "list": {
+        "pointOne": "Facturació electrònica completa i segura",
+        "pointTwo": "Pressupostos, albarans i TPV integrats",
+        "pointThree": "Gestió de clients i productes",
+        "pointFour": "Compliment normatiu amb Veri*Factu"
+      },
+      "primaryCta": "Coneix Avero",
+      "secondaryCta": "Prova Avero gratis",
+      "imageAlt": "Logotip d'Avero"
+    },
+    "customCta": {
+      "title": "Necessites un programa específic per la teva empresa?",
+      "description": "Vols estalviar temps optimitzant tasques amb un programari a mida!",
+      "button": "Contacta'ns",
+      "imageAlt": "Programari a mida"
+    },
+    "benefits": {
+      "title": "Què aportem als nostres clients",
+      "items": {
+        "trust": {
+          "alt": "Confiança",
+          "title": "Confiança",
+          "description": "Treballem perquè compleixis amb la normativa sense maldecaps, amb <strong>solucions fiables i segures</strong>."
+        },
+        "efficiency": {
+          "alt": "Eficiència",
+          "title": "Eficiència",
+          "description": "Optimitza el teu temps amb <strong>processos simplificats</strong> i un software intuïtiu."
+        },
+        "scalability": {
+          "alt": "Escalabilitat",
+          "title": "Escalabilitat",
+          "description": "Les nostres solucions creixen amb el teu negoci, adaptant-se a noves necessitats."
+        },
+        "partnerships": {
+          "alt": "Aliances estratègiques",
+          "title": "Aliances estratègiques",
+          "description": "Oferim a les <strong>gestories</strong> eines que obren <strong>nous canals d’ingressos</strong> i milloren el servei als seus clients."
+        }
+      }
+    },
+    "testimonials": {
+      "title": "Clients que confien en nosaltres",
+      "items": {
+        "ajuntament": {
+          "alt": "Ajuntament de L'Aldea",
+          "name": "Ajuntament de L'Aldea"
+        },
+        "egea": {
+          "alt": "EGEA Arquitectura",
+          "name": "EGEA Arquitectura"
+        },
+        "gerco": {
+          "alt": "GERCO Serveis Integrals",
+          "name": "GERCO Serveis Integrals"
+        }
+      }
+    },
+    "values": {
+      "title": "Els nostres valors",
+      "description": "A JCT Agency treballem amb una filosofia clara: oferir <strong>innovació, simplicitat, seguretat i proximitat</strong>.",
+      "items": {
+        "innovation": "<strong>Innovació</strong> – sempre a l’avantguarda tecnològica i legal.",
+        "simplicity": "<strong>Simplicitat</strong> – software intuïtiu que facilita el treball, no el complica.",
+        "compliance": "<strong>Compliment legal i seguretat</strong> – desenvolupem sistemes totalment adaptats a Veri*Factu i altres normatives.",
+        "support": "<strong>Proximitat i suport</strong> – ens involucrem en cada projecte com si fos nostre."
+      }
+    },
+    "blog": {
+      "title": "Recursos i guies útils",
+      "links": {
+        "digitalisation": "Com digitalitzar la gestió d’una PIME en 5 passos",
+        "verifactu": "Guia pràctica per a gestories sobre Veri*Factu",
+        "saas": "Per què un SaaS és millor que un software tradicional?"
+      }
+    },
+    "quoteSection": {
+      "title": "Vols una estimació del teu projecte?",
+      "description": "Utilitza la nostra calculadora per conèixer el pressupost aproximat.",
+      "button": "Calcula el teu pressupost"
+    },
+    "contact": {
+      "title": "Parlem del teu projecte?",
+      "description": "Si busques un partner tecnològic per digitalitzar la teva empresa, contacta amb nosaltres.",
+      "form": {
+        "name": "Nom i cognoms",
+        "company": "Empresa",
+        "email": "Email",
+        "message": "Missatge",
+        "submit": "Enviar missatge",
+        "success": "Missatge enviat!"
+      },
+      "details": {
+        "email": "info@jctagency.com",
+        "location": "Tarragona (Catalunya)",
+        "phone": "633 391 411"
+      }
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "JCT Agency - Contacte",
+      "description": "Contacta amb JCT Agency per rebre assessorament tecnològic i solucions digitals adaptades al teu negoci."
+    },
+    "title": "Contacte",
+    "intro": "Estem aquí per respondre les teves preguntes i ajudar-te en el teu projecte. Pots contactar amb nosaltres mitjançant:",
+    "info": {
+      "title": "Informació de contacte",
+      "addressLabel": "Direcció:",
+      "addressValue": "Online",
+      "emailLabel": "Email:",
+      "emailValue": "joan@jctagency.com",
+      "phoneLabel": "Telèfon:",
+      "phoneValue": "+34 633 391 411"
+    },
+    "form": {
+      "title": "Formulari de contacte",
+      "nameLabel": "Nom",
+      "namePlaceholder": "Nom complet",
+      "companyLabel": "Empresa",
+      "companyPlaceholder": "Nom de l'empresa",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Correu electrònic",
+      "messageLabel": "Missatge",
+      "messagePlaceholder": "Explica'ns el teu projecte",
+      "submit": "Enviar",
+      "success": "Enviat!"
+    }
+  },
+  "pressupost": {
+    "meta": {
+      "title": "Calcula el teu pressupost | JCT Agency",
+      "description": "Calcula de manera orientativa el cost del teu projecte digital."
+    },
+    "title": "Calculadora de pressupost",
+    "form": {
+      "projectType": {
+        "label": "Tipus de projecte",
+        "placeholder": "Selecciona una opció",
+        "options": {
+          "web": "Pàgina web",
+          "software": "Programa a mida",
+          "app": "App mòbil"
+        },
+        "values": {
+          "web": "Pàgina web",
+          "software": "Programa a mida",
+          "app": "App mòbil"
+        }
+      },
+      "web": {
+        "pagesLabel": "Nombre de pàgines",
+        "pages": {
+          "options": {
+            "basic": "1-5",
+            "medium": "6-10",
+            "advanced": "Més de 10"
+          }
+        },
+        "ecommerce": "Incloure e-commerce"
+      },
+      "software": {
+        "modulesLabel": "Nombre de mòduls",
+        "modules": {
+          "options": {
+            "basic": "1-2",
+            "medium": "3-5",
+            "advanced": "6 o més"
+          }
+        },
+        "cloud": "Integració al núvol"
+      },
+      "app": {
+        "platformsLabel": "Plataformes",
+        "platforms": {
+          "options": {
+            "single": "iOS o Android",
+            "multiple": "iOS i Android"
+          }
+        },
+        "auth": "Autenticació d'usuaris"
+      },
+      "name": "Nom",
+      "company": "Empresa",
+      "email": "Email",
+      "submit": "Calcula pressupost",
+      "success": "Dades enviades correctament."
+    },
+    "emailMessage": "Servei: {{service}}\nDetalls: {{details}}\nPressupost: {{price}}€",
+    "result": {
+      "estimated": "Pressupost estimat: {{price}}€",
+      "nextStep": "Si el pressupost et quadra",
+      "contactCta": "Contacta"
+    }
+  },
+  "blog": {
+    "meta": {
+      "title": "Blog de JCT Agency | Recursos per a PIMEs i gestories",
+      "description": "Guies de digitalització, SEO i programari Veri*Factu per fer créixer el teu negoci i millorar la gestió empresarial."
+    },
+    "title": "Blog",
+    "posts": {
+      "seo": {
+        "title": "Optimització SEO per a PIMEs: 5 consells clau",
+        "excerpt": "Aprèn com millorar la visibilitat del teu negoci a Google amb tècniques senzilles i efectives."
+      },
+      "software": {
+        "title": "Beneficis del software a mida per a gestories i PIMEs",
+        "excerpt": "Descobreix per què invertir en solucions personalitzades pot impulsar l'eficiència del teu negoci."
+      },
+      "digital": {
+        "title": "Com digitalitzar la gestió d’una PIME en 5 passos",
+        "excerpt": "Guia pas a pas per modernitzar la teva empresa amb eines digitals accessibles i eficients."
+      },
+      "verifactu": {
+        "title": "Guia pràctica per a gestories sobre Veri*Factu",
+        "excerpt": "Tot el que has de saber sobre la nova normativa de facturació i com adaptar-t’hi sense complicacions."
+      },
+      "saas": {
+        "title": "Per què un SaaS és millor que un software tradicional?",
+        "excerpt": "Comparativa entre models per escollir la solució tecnològica més adequada per al teu negoci."
+      }
+    }
+  },
+  "avero": {
+    "meta": {
+      "title": "Avero – Programa de facturació 100% adaptat a VeriFactu i la Llei Crea y Crece",
+      "description": "Programa de facturació Avero per a autònoms, PIMEs i gestories; compleix Veri*Factu i la Llei Crea y Crece amb una eina senzilla i moderna."
+    },
+    "hero": {
+      "title": "Avero – Programa de facturació 100% adaptat a VeriFactu i la Llei Crea y Crece.*",
+      "description": "La solució més simple i moderna per a autònoms, PIMEs i gestories. Compleix amb la normativa sense complicacions.",
+      "primaryCta": "Prova Avero gratis",
+      "secondaryCta": "Demana una demo",
+      "imageAlt": "Mockup d'Avero",
+      "badge": "Adaptat a Veri*Factu – RD 1007/2023"
+    },
+    "why": {
+      "title": "Per què Avero?",
+      "description": "Avero és el programari de facturació creat per JCT Agency pensat per a cobrir les noves obligacions legals i simplificar la gestió diària de les empreses. Amb VeriFactu en vigor des de 2025 i l’entrada obligatòria al 2026, necessites un sistema segur, modern i validat per l’AEAT.*",
+      "keywords": "Software de facturació VeriFactu · Programa de factures Crea y Crece · Facturació per autònoms i PIMEs"
+    },
+    "features": {
+      "title": "Funcionalitats clau",
+      "blocks": {
+        "billing": {
+          "alt": "Facturació",
+          "title": "Facturació",
+          "items": [
+            "Factures electròniques (creació, enviament, rectificatives, simplificades).",
+            "Gestió de pressupostos i albarans, conversió en factura amb un clic.",
+            "Control de clients i proveïdors amb historial complet.",
+            "Gestió d’articles i productes (preus, categories, stock bàsic).",
+            "Enviament de factures per correu electrònic i PDF professional.",
+            "TPV integrat per a vendes físiques amb emissió de tiquets legals."
+          ]
+        },
+        "utilities": {
+          "alt": "Utilitats premium",
+          "title": "Utilitats premium",
+          "items": [
+            "Quadres de comandament i informes: ingressos, despeses, beneficis, IVA.",
+            "Gestió multiempresa i multiusuari amb rols i permisos.",
+            "Integració amb Stripe i passarel·les de pagament.",
+            "Signatura i certificat digital integrat per a remissió segura."
+          ]
+        },
+        "aeat": {
+          "alt": "AEAT",
+          "title": "AEAT",
+          "items": [
+            "Enviament automàtic a l’AEAT en temps real (modalitat Veri*Factu).",
+            "Còpies de seguretat i conservació de registres (complint el RRSIF).",
+            "Generació de codi QR tributari a les factures."
+          ]
+        }
+      }
+    },
+    "compliance": {
+      "title": "Compliment legal (Veri*Factu i Llei Crea y Crece)",
+      "items": [
+        "Veri*Factu: Avero envia cada factura a l’AEAT amb hash encadenat, registre inalterable i QR tributari.",
+        "Llei Crea y Crece: Factura electrònica obligatòria per a operacions B2B.",
+        "Normativa aplicable: RD 1007/2023, Ordre HAC/1177/2024 i modificacions RD 254/2025."
+      ],
+      "note": "Avero és el programari de facturació certificat i adaptat al reglament Veri*Factu (AEAT) i a la Llei Crea y Crece."
+    },
+    "target": {
+      "title": "Per a qui és Avero",
+      "description": "<strong>Avero</strong> està pensat per a <strong>autònoms, PIMEs i gestories</strong> que necessiten complir la normativa i millorar la seva operativa diària.",
+      "items": [
+        "Gestió completa de factures, pressupostos i clients des d’un únic lloc.",
+        "Control d’accés per rols per coordinar equips interns i gestories.",
+        "API i integracions per connectar Avero amb altres sistemes empresarials."
+      ]
+    },
+    "cta": {
+      "title": "Vols parlar amb un expert d’Avero?",
+      "description": "T’ajudem a adaptar el teu negoci a Veri*Factu i a la Llei Crea y Crece.",
+      "primaryCta": "Crear compte",
+      "secondaryCta": "Contacta amb un assessor"
+    },
+    "testimonials": {
+      "title": "Testimonis / Casos d’ús",
+      "man": {
+        "alt": "Client satisfet",
+        "quote": "“Amb Avero genero les meves factures en segons i sé que estan validades per l’AEAT.”"
+      },
+      "woman": {
+        "alt": "Client satisfet",
+        "quote": "“Hem estalviat hores setmanals en la gestió de clients i IVA.”"
+      }
+    },
+    "gallery": {
+      "title": "Galeria",
+      "description": "Descobreix captures de pantalla i exemples de l'entorn d'Avero."
+    },
+    "video": {
+      "title": "Vídeo explicatiu",
+      "description": "Pròximament disponible: un vídeo que mostra com funciona Avero pas a pas."
+    },
+    "finalCta": {
+      "title": "Adelanta’t a la normativa. Prova Avero avui i compleix amb Veri*Factu sense preocupacions.",
+      "primaryCta": "Crear compte",
+      "secondaryCta": "Contacta amb un assessor"
+    },
+    "footer": {
+      "links": {
+        "verifactu": "Programa de facturació VeriFactu",
+        "aeat": "Factures electròniques AEAT",
+        "software": "Software de facturació per autònoms i gestories"
+      }
+    }
+  },
+  "articles": {
+    "digitalitzarPime": {
+      "meta": {
+        "title": "Com digitalitzar la gestió d’una PIME en 5 passos | JCT Agency",
+        "description": "Passos clau per digitalitzar una PIME amb eines SaaS, estratègies de transformació digital i consells pràctics per millorar l'eficiència."
+      },
+      "title": "Com digitalitzar la gestió d’una PIME en 5 passos",
+      "sections": [
+        {
+          "paragraphs": [
+            "La digitalització ja no és una opció, és una necessitat per a qualsevol PIME que vulgui mantenir-se competitiva. Moltes petites empreses han funcionat durant anys amb processos manuals, documents en paper i eines disperses que compliquen el dia a dia. Aquest article pretén ser una guia detallada perquè qualsevol gestor o propietari pugui iniciar la transformació digital amb confiança. Des de la planificació inicial fins a la implementació d’eines i la formació de l’equip, t’expliquem com fer el pas a un model de gestió més eficient i orientat al futur."
+          ]
+        },
+        {
+          "heading": "1. Analitza l’estat actual i defineix objectius",
+          "paragraphs": [
+            "Abans d’adquirir programari o contractar serveis, és essencial entendre com funciona actualment l’empresa. Fes un inventari de processos: comptabilitat, gestió de clients, control d’estoc, tasques administratives i comunicació interna. Identifica els punts febles i aquelles activitats que generen més feina manual. A continuació, defineix objectius concrets de digitalització, com reduir el temps de facturació, millorar la traçabilitat de les comandes o augmentar la satisfacció del client. Aquests objectius han de ser mesurables i alineats amb l’estratègia global de la companyia. Comptar amb indicadors clau de rendiment permetrà valorar els avenços i ajustar el pla quan sigui necessari."
+          ]
+        },
+        {
+          "heading": "2. Escull les eines adequades",
+          "paragraphs": [
+            "El mercat ofereix una gran varietat d’eines digitals: gestors de facturació, CRMs, plataformes de comunicació, sistemes de gestió de projectes i aplicacions de comerç electrònic, entre d’altres. L’objectiu no és adquirir la solució més cara, sinó aquella que millor s’adapti als processos i pressupost de la PIME. Prioritza les aplicacions en el núvol, que permeten accedir a la informació des de qualsevol lloc i reduir els costos d’infraestructura. Valora també la possibilitat d’utilitzar programes modulars que puguin créixer a mesura que el negoci ho faci. Consulta opinions d’altres usuaris, demana demostracions i assegura’t que l’eina compleix amb la normativa vigent en matèria de protecció de dades i factura electrònica."
+          ]
+        },
+        {
+          "heading": "3. Integra els sistemes i automatitza processos",
+          "paragraphs": [
+            "Un cop seleccionades les eines, el següent pas és garantir que totes treballin de manera coordinada. Les integracions permeten que les dades circulin sense errors ni duplicacions. Per exemple, el CRM pot estar connectat amb el programa de facturació perquè les vendes es reflecteixin automàticament en la comptabilitat. També es poden automatitzar tasques com l’enviament de correus de seguiment, la generació d’informes o la sincronització d’estoc entre la botiga física i l’online. Dedica temps a definir els fluxos d’informació i utilitza APIs o connectors proporcionats pels proveïdors. Una bona integració no només estalvia temps, sinó que ofereix una visió global del negoci, facilitant la presa de decisions basada en dades."
+          ]
+        },
+        {
+          "heading": "4. Forma l’equip i promou la cultura digital",
+          "paragraphs": [
+            "La tecnologia per si sola no garanteix l’èxit. És fonamental que les persones que la utilitzaran se sentin còmodes i entenguin els avantatges del canvi. Organitza sessions de formació adaptades a cada departament i crea materials de suport com manuals o vídeos curts. Promou una cultura digital on l’aprenentatge continu sigui valorat i els errors es considerin una oportunitat de millora. Implica els treballadors en el procés, demanant la seva opinió i permetent-los proposar idees. Quan l’equip veu que la digitalització facilita la seva feina i elimina tasques repetitives, l’adopció és molt més ràpida i natural."
+          ]
+        },
+        {
+          "heading": "5. Mesura resultats i ajusta l’estratègia",
+          "paragraphs": [
+            "La transformació digital és un camí continu. Després d’implantar les eines i formar l’equip, és important establir un sistema de seguiment que permeti mesurar l’impacte. Utilitza indicadors com el temps de resposta als clients, el nombre d’errors en la facturació o el cost de gestió per projecte. Compara aquests valors amb els objectius inicials i detecta àrees de millora. Pot ser que calgui afegir noves funcionalitats, canviar un proveïdor o reforçar la formació en determinats punts. La flexibilitat és clau: la digitalització no és un projecte amb principi i final, sinó una evolució constant que ha d’acompanyar el creixement del negoci."
+          ]
+        },
+        {
+          "heading": "Beneficis addicionals de la digitalització",
+          "paragraphs": [
+            "A més d’optimitzar processos, la digitalització aporta una sèrie de beneficis transversals. Permet treballar de manera col·laborativa, independentment de la ubicació dels membres de l’equip, i facilita l’accés a noves oportunitats de negoci a través d’Internet. La disponibilitat de dades en temps real millora la presa de decisions i redueix els riscos. També contribueix a una imatge de marca més professional i innovadora, fet que pot atreure nous clients i partners. Finalment, moltes eines digitals estan preparades per complir amb normatives com el RGPD o VeriFactu, cosa que simplifica el compliment legal i evita sancions."
+          ]
+        },
+        {
+          "heading": "Conclusió",
+          "paragraphs": [
+            "Digitalitzar una PIME no ha de ser un procés traumàtic. Amb una planificació adequada i el suport de professionals, és possible transformar l’empresa de manera gradual i rendible. L’important és començar amb objectius clars, escollir les eines correctes i implicar tot l’equip en el canvi. A JCT Agency hem ajudat nombroses empreses a donar aquest pas, i sabem que els resultats arriben quan la tecnologia es combina amb una visió estratègica. Si estàs preparat per modernitzar la gestió del teu negoci, la digitalització és el camí que et permetrà créixer i afrontar amb garanties els reptes del futur."
+          ]
+        }
+      ]
+    },
+    "seo": {
+      "meta": {
+        "title": "Optimització SEO per a PIMEs: guia completa | JCT Agency",
+        "description": "Guia SEO per a PIMEs amb tècniques per posicionar la web a Google, atraure clients locals i optimitzar continguts."
+      },
+      "title": "Optimització SEO per a PIMEs: guia completa",
+      "sections": [
+        {
+          "paragraphs": [
+            "El posicionament orgànic en cercadors és un dels pilars per generar trànsit qualificat cap a la teva web sense dependre exclusivament de la publicitat de pagament. Per a una PIME, invertir en SEO significa establir una base sòlida que li permeti competir amb empreses més grans i arribar a nous clients potencials. En aquesta guia aprofundirem en les principals estratègies que pots aplicar avui mateix. L’article està pensat perquè sigui una referència completa: trobaràs recomanacions pràctiques, exemples reals i consells sobre com implementar-les amb recursos limitats. L’objectiu és que puguis entendre cada pas i portar-lo a la pràctica sense necessitat de coneixements tècnics avançats."
+          ]
+        },
+        {
+          "heading": "1. Investigació de paraules clau",
+          "paragraphs": [
+            "Abans de redactar qualsevol peça de contingut és imprescindible saber quins termes utilitzen els teus clients quan busquen informació relacionada amb el teu producte o servei. Comença fent una llista de possibles paraules i expressions, incloent sinònims i consultes de llarga cua. Eines com Google Keyword Planner, Ubersuggest o AnswerThePublic et permeten conèixer el volum de cerques, la dificultat i les tendències. Dedica temps a entendre la intenció de cada cerca: no és el mateix “gestoria per autònoms a Barcelona” que “com portar la comptabilitat d’un autònom”. Aquesta fase et servirà per crear contingut que respongui exactament el que necessita l’usuari, millorant la rellevància i augmentant les opcions d’aparèixer als primers resultats de Google."
+          ]
+        },
+        {
+          "heading": "2. Contingut de qualitat i estratègia editorial",
+          "paragraphs": [
+            "Una vegada identificades les paraules clau, és hora de desenvolupar una estratègia editorial. El contingut ha de ser útil, original i centrat en resoldre problemes reals. Planifica un calendari de publicacions que combini articles informatius, guies i casos d’èxit. És recomanable mantenir una estructura clara amb títols, subtítols i llistes que facilitin la lectura. Inclou imatges optimitzades amb textos alternatius descriptius i, sempre que sigui possible, afegeix exemples propis de la teva activitat empresarial. Recorda que l’actualització periòdica del contingut és clau: Google valora les webs que es mantenen vives i que aporten novetats de forma constant. A més, una bona estratègia editorial afavoreix que altres webs enllacin als teus articles, incrementant l’autoritat del domini."
+          ]
+        },
+        {
+          "heading": "3. SEO local i fitxes de Google Business",
+          "paragraphs": [
+            "Si el teu negoci té una ubicació física o presta serveis en una zona geogràfica concreta, treballar el SEO local és imprescindible. El primer pas és crear i optimitzar la fitxa de Google Business Profile, assegurant-te que la informació de contacte, horaris i categories és correcta. Anima els teus clients a deixar ressenyes i respon-les sempre, ja que són un factor de posicionament i reforcen la confiança. Al web, inclou la teva localització a les pàgines de serveis i al peu de pàgina, utilitzant dades estructurades perquè els cercadors entenguin millor on operes. Publicar contingut relacionat amb la teva ciutat o comarca també ajuda a atraure trànsit qualificat que busca solucions a prop seu."
+          ]
+        },
+        {
+          "heading": "4. Optimització tècnica de la web",
+          "paragraphs": [
+            "Una web ràpida i sense errors és fonamental perquè el teu esforç en continguts doni resultats. Revisa periòdicament la velocitat de càrrega amb eines com PageSpeed Insights o Lighthouse i aplica les millores recomanades: compressió d’imatges, minificació de recursos i implementació de memòria cau. El web ha de ser totalment responsive, adaptant-se a mòbils i tauletes, i utilitzar el protocol HTTPS per garantir la seguretat. També és important disposar d’un mapa del lloc i un fitxer robots.txt correctament configurats perquè Google pugui rastrejar les pàgines sense problemes. Els errors 404 i els enllaços trencats han de solucionar-se ràpidament per evitar penalitzacions i mala experiència d’usuari."
+          ]
+        },
+        {
+          "heading": "5. Estratègia d’enllaçat intern",
+          "paragraphs": [
+            "Crear una xarxa d’enllaços interna coherent facilita que els cercadors entenguin l’estructura del teu lloc i distribueix l’autoritat entre les diferents pàgines. Cada vegada que publiquis un nou article, enllaça’l amb contingut relacionat que ja existeixi al teu web. Això prolonga el temps de sessió dels usuaris i redueix la taxa de rebot. Utilitza textos d’àncora descriptius, evitant frases genèriques com “fes clic aquí”. Les pàgines més importants haurien de rebre més enllaços interns, i és recomanable fer un seguiment regular per detectar oportunitats d’enllaçat que ajudin a posicionar paraules clau concretes. Un bon enllaçat intern també serveix per guiar l’usuari cap a la conversió, ja sigui omplir un formulari, descarregar un recurs o contractar un servei."
+          ]
+        },
+        {
+          "heading": "6. Link building i col·laboracions",
+          "paragraphs": [
+            "Els enllaços que provenen d’altres webs continuen sent un dels factors de posicionament més rellevants. Per a una PIME, la clau és aconseguir backlinks de qualitat sense recórrer a pràctiques dubtoses. Pots col·laborar amb blogs del teu sector, participar en esdeveniments i publicar notes de premsa en mitjans locals. Els directors d’empreses, associacions professionals o proveïdors també poden enllaçar el teu lloc si ofereixes contingut d’interès. Prioritza la qualitat sobre la quantitat: un sol enllaç d’una web amb autoritat pot ser més valuós que desenes de baixa qualitat. A més, diversifica els textos d’àncora i evita un patró artificial que pugui aixecar sospites als algoritmes de Google."
+          ]
+        },
+        {
+          "heading": "7. Experiència d’usuari i Core Web Vitals",
+          "paragraphs": [
+            "Google ha incorporat les Core Web Vitals com a indicador clau de l’experiència d’usuari. Aquests paràmetres mesuren la velocitat de càrrega, l’estabilitat visual i la interactivitat de la pàgina. Per optimitzar-los, redueix els scripts innecessaris, utilitza fonts web eficients i reserva espai per a les imatges per evitar moviments inesperats. Una experiència d’usuari positiva no només ajuda al posicionament, sinó que també augmenta la probabilitat de conversió. Recorda que el SEO i la usabilitat van de la mà: quan l’usuari troba ràpidament allò que busca i navega sense dificultats, és més probable que torni i recomani el teu web."
+          ]
+        },
+        {
+          "heading": "8. Analítica i millora contínua",
+          "paragraphs": [
+            "Ninguna estratègia SEO està completa sense un sistema de mesura que permeti avaluar els resultats. Configura Google Analytics i Google Search Console per monitoritzar el trànsit, les paraules clau que generen visites i el comportament dels usuaris. Estableix objectius clars, com ara conversions o descàrregues, i fes un seguiment periòdic per identificar quines pàgines funcionen millor. L’analítica també serveix per detectar contingut obsolet o paraules clau emergents que val la pena treballar. El SEO és un procés iteratiu: analitza, aprèn i aplica millores constants per mantenir-te per davant de la competència."
+          ]
+        },
+        {
+          "heading": "9. Automatització i eines de suport",
+          "paragraphs": [
+            "Tot i que moltes accions SEO es poden fer manualment, utilitzar eines d’automatització pot estalviar temps i recursos. Plataformes com Screaming Frog, SEMrush o Ahrefs permeten auditar el web, detectar errors tècnics i monitoritzar l’estratègia de link building. També pots programar alertes per conèixer quan un competidor publica nou contingut o quan rep un enllaç rellevant. L’automatització no substitueix la creativitat ni la planificació estratègica, però sí que facilita la gestió del dia a dia i permet concentrar-te en tasques de més valor, com la creació de contingut o el desenvolupament de nous serveis."
+          ]
+        },
+        {
+          "heading": "10. Conclusions i pròxims passos",
+          "paragraphs": [
+            "Implementar una estratègia SEO efectiva requereix constància i una visió a llarg termini. Les PIMEs que aposten per aquesta disciplina aconsegueixen una presència en línia més sòlida, un flux de clients potencials sostingut i una imatge de marca reforçada. Comença pels aspectes bàsics: una bona investigació de paraules clau, contingut rellevant i una web tècnicament optimitzada. A mesura que vagis obtenint resultats, amplia les accions amb estratègies de link building, millores d’experiència d’usuari i automatització. Recorda que el SEO és una carrera de fons: cada acció suma i, amb perseverança, el teu negoci pot destacar en un entorn digital cada vegada més competitiu."
+          ]
+        }
+      ]
+    },
+    "software": {
+      "meta": {
+        "title": "Beneficis del software a mida per a gestories i PIMEs | JCT Agency",
+        "description": "Avantatges del desenvolupament de software a mida per optimitzar processos en gestories i petites empreses."
+      },
+      "title": "Beneficis del software a mida per a gestories i PIMEs",
+      "sections": [
+        {
+          "paragraphs": [
+            "El software a mida s’ha convertit en una eina clau per a gestories i PIMEs que necessiten solucions específiques per als seus processos interns. A diferència de les eines genèriques, el desenvolupament personalitzat permet adaptar les funcionalitats exactes a les necessitats del negoci, integrant-se amb altres sistemes i garantint la seguretat de les dades. En aquest article repassem els principals beneficis i com pot impactar directament en la productivitat de l’empresa."
+          ]
+        },
+        {
+          "heading": "1. Automatització de processos repetitius",
+          "paragraphs": [
+            "Amb un software a mida és possible automatitzar tasques que abans requerien hores de treball manual. Des de la generació de documents fiscals fins a l’enviament d’avisos als clients, la tecnologia permet reduir errors i alliberar temps perquè els equips es focalitzin en tasques de més valor."
+          ]
+        },
+        {
+          "heading": "2. Integració amb altres eines",
+          "paragraphs": [
+            "Les gestories i PIMEs sovint utilitzen múltiples aplicacions: programes de comptabilitat, CRMs, plataformes de facturació o eines de signatura digital. Un software a mida permet integrar totes aquestes solucions en un únic entorn, evitant la duplicació de dades i millorant la traçabilitat de la informació."
+          ]
+        },
+        {
+          "heading": "3. Compliment normatiu assegurat",
+          "paragraphs": [
+            "El marc legal evoluciona constantment i obliga les empreses a mantenir-se al dia. Desenvolupar software a mida garanteix que totes les actualitzacions normatives s’apliquin de manera centralitzada, reduint el risc de sancions i facilitant auditories internes."
+          ]
+        },
+        {
+          "heading": "4. Experiència d’usuari personalitzada",
+          "paragraphs": [
+            "Cada equip treballa de manera diferent. Un software a mida es pot dissenyar perquè l’experiència d’usuari sigui intuïtiva i adaptada al flux de treball de cada departament, incrementant l’adopció i la satisfacció dels treballadors."
+          ]
+        },
+        {
+          "heading": "5. Escalabilitat i flexibilitat",
+          "paragraphs": [
+            "A mesura que la gestoria o la PIME creix, també ho fan les seves necessitats. El software a mida permet afegir noves funcionalitats, perfils d’usuari o integracions sense haver de canviar d’eina, assegurant una inversió a llarg termini."
+          ]
+        },
+        {
+          "heading": "Conclusió",
+          "paragraphs": [
+            "Invertir en software a mida és apostar per una solució que acompanya el creixement del negoci. A JCT Agency dissenyem i desenvolupem aplicacions adaptades a cada projecte, amb un enfocament en la seguretat, la usabilitat i el compliment legal."
+          ]
+        }
+      ]
+    },
+    "verifactu": {
+      "meta": {
+        "title": "Guia pràctica per a gestories sobre Veri*Factu | JCT Agency",
+        "description": "Aspectes clau de Veri*Factu per a gestories: obligacions, terminis i com adaptar-se a la normativa."
+      },
+      "title": "Guia pràctica per a gestories sobre Veri*Factu",
+      "sections": [
+        {
+          "paragraphs": [
+            "Veri*Factu és el sistema que l’AEAT ha impulsat per garantir la integritat i autenticitat dels registres de facturació. Per a les gestories, conèixer-ne els detalls és essencial per assessorar correctament els seus clients i adaptar els processos interns."
+          ]
+        },
+        {
+          "heading": "1. Què és Veri*Factu?",
+          "paragraphs": [
+            "És un marc normatiu que obliga a enviar les factures a l’AEAT en temps real, garantint que no es poden manipular posteriorment. Cada factura genera un codi hash i un registre inalterable."
+          ]
+        },
+        {
+          "heading": "2. Qui ha de complir la normativa?",
+          "paragraphs": [
+            "Totes les empreses i professionals que emeten factures han d’adaptar els seus sistemes a Veri*Factu abans de l’entrada en vigor obligatòria. Les gestories han de preparar-se per oferir eines que compleixin amb aquests requisits."
+          ]
+        },
+        {
+          "heading": "3. Quines funcionalitats ha de tenir el software?",
+          "paragraphs": [
+            "El programa ha de generar codis QR tributaris, conservar registres segurs, evitar la manipulació d’assentaments i permetre l’enviament immediat a l’AEAT. També ha de portar un registre d’esdeveniments i assegurar còpies de seguretat."
+          ]
+        },
+        {
+          "heading": "4. Com pot ajudar una gestoria als seus clients?",
+          "paragraphs": [
+            "Implementant un software certificat com Avero, oferint formació sobre la nova normativa i monitoritzant que totes les factures es transmetin correctament."
+          ]
+        },
+        {
+          "heading": "5. Beneficis d’adaptar-se aviat",
+          "paragraphs": [
+            "Adoptar Veri*Factu amb temps permet evitar sancions, millorar la relació amb els clients i posicionar la gestoria com a referent en compliment normatiu i transformació digital."
+          ]
+        }
+      ]
+    },
+    "saas": {
+      "meta": {
+        "title": "Per què un SaaS és millor que un software tradicional? | JCT Agency",
+        "description": "Comparativa entre software SaaS i solucions tradicionals per decidir la millor opció per al teu negoci."
+      },
+      "title": "Per què un SaaS és millor que un software tradicional?",
+      "sections": [
+        {
+          "paragraphs": [
+            "Escollir entre un software SaaS (Software as a Service) i una solució tradicional instal·lada en servidors propis és una decisió clau per a moltes empreses. A continuació analitzem les diferències principals per ajudar-te a prendre la millor decisió."
+          ]
+        },
+        {
+          "heading": "1. Cost inicial i manteniment",
+          "paragraphs": [
+            "El model SaaS funciona sota subscripció i evita una gran inversió inicial en llicències i infraestructura. El software tradicional requereix equips, instal·lacions i actualitzacions costoses."
+          ]
+        },
+        {
+          "heading": "2. Actualitzacions i seguretat",
+          "paragraphs": [
+            "Amb SaaS, el proveïdor s’encarrega de les actualitzacions automàtiques, millores de seguretat i còpies de seguretat. En un entorn tradicional, l’empresa ha de gestionar aquests processos manualment."
+          ]
+        },
+        {
+          "heading": "3. Escalabilitat",
+          "paragraphs": [
+            "El SaaS permet ampliar o reduir usuaris i funcionalitats amb facilitat. Les solucions tradicionals exigeixen planificació i inversió en maquinari addicional."
+          ]
+        },
+        {
+          "heading": "4. Accessibilitat",
+          "paragraphs": [
+            "Un software SaaS és accessible des de qualsevol dispositiu connectat a Internet, facilitant el teletreball i la col·laboració. El software tradicional sol limitar-se a l’oficina o requereix configuracions VPN complexes."
+          ]
+        },
+        {
+          "heading": "5. Integracions",
+          "paragraphs": [
+            "Moltes solucions SaaS ofereixen APIs i connectors per integrar-se amb altres eines del mercat. Les aplicacions tradicionals poden necessitar desenvolupaments a mida i més temps per aconseguir la mateixa connexió."
+          ]
+        },
+        {
+          "heading": "Conclusió",
+          "paragraphs": [
+            "El model SaaS destaca per la seva flexibilitat, seguretat i rapidesa de desplegament. Tot i això, és important analitzar les necessitats específiques de cada empresa per escollir la solució que aporti més valor a llarg termini."
+          ]
+        }
+      ]
+    }
+  }
+}
