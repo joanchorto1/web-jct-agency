@@ -22,6 +22,7 @@ const Header = () => (
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="main-navbar" />
       <Navbar.Collapse id="main-navbar">
+
         <Nav className="ms-lg-auto nav-main flex-column flex-lg-row align-items-lg-center gap-lg-3">
           {navItems.map((item) => (
             <Nav.Link key={item.href} href={item.href} className="fw-semibold text-nowrap">
@@ -29,17 +30,7 @@ const Header = () => (
             </Nav.Link>
           ))}
         </Nav>
-        <div className="d-flex flex-column flex-lg-row align-items-lg-center gap-3 ms-lg-4 navbar-cta">
-          <a href="/avero" className="btn btn-outline-dark nav-avero-link fw-semibold px-4 py-2 shadow-sm">
-            Avero
-          </a>
-          <InlineCTAGroup
-            size="sm"
-            className="mb-2 mb-lg-0"
-            primaryVariant="primary"
-            secondaryVariant="outline-primary"
-          />
-        </div>
+       
       </Navbar.Collapse>
     </Container>
   </Navbar>
