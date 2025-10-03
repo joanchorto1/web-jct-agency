@@ -1,16 +1,43 @@
+:root {
+  --color-ink-900: #0f172a;
+  --color-ink-700: #1f2a44;
+  --color-ink-600: #334155;
+  --color-ink-500: #475569;
+  --color-ink-300: #94a3b8;
+  --color-neutral-50: #f8fafc;
+  --color-neutral-100: #f1f5f9;
+  --color-neutral-200: #e2e8f0;
+  --color-neutral-300: #cbd5f5;
+  --color-brand-600: #4338ca;
+  --color-brand-500: #6366f1;
+  --color-brand-400: #818cf8;
+  --color-accent-500: #14b8a6;
+  --radius-pill: 999px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-xxl: 40px;
+  --shadow-xl: 0 35px 80px -40px rgba(15, 23, 42, 0.45);
+  --shadow-lg: 0 28px 65px -40px rgba(15, 23, 42, 0.4);
+  --shadow-md: 0 20px 45px -35px rgba(15, 23, 42, 0.35);
+  --shadow-sm: 0 12px 25px -18px rgba(15, 23, 42, 0.28);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f8fafc;
+  color: #0f172a;
+ 
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
 .bg-avero {
   background-color: #ff6600;
   color: white;
@@ -25,60 +52,7 @@ code {
   color: white;
 }
 
-.navbar-custom {
-  background-color: #ffffff;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.navbar-custom .navbar-brand img,
-.footer-custom img {
-  height: 40px;
-  border-radius: 8px;
-}
-
-.navbar-custom .nav-link {
-  color: #0d1b2a;
-  font-weight: 500;
-  margin-left: 1rem;
-}
-
-.navbar-custom .nav-link:hover,
-.navbar-custom .nav-link:focus {
-  color: #0d6efd;
-}
-
-.footer-custom {
-  background-color: #0d1b2a;
-  color: #f8f9fa;
-}
-
-.footer-custom a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.footer-custom a:hover,
-.footer-custom a:focus {
-  text-decoration: underline;
-}
-
-.footer-sub {
-  background-color: #f8f9fa;
-  color: #6c757d;
-  border-top: 1px solid #e5e5e5;
-}
-
-.footer-sub a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.footer-sub a:hover,
-.footer-sub a:focus {
-  text-decoration: underline;
-}
-
-/* Avero button styles */
+/* Legacy button accents kept for existing modules */
 .btn-avero {
   background-color: #ff6600;
   border-color: #ff6600;
@@ -103,7 +77,6 @@ code {
   color: #fff;
 }
 
-/* Avero feature block styles */
 .border-avero {
   border-color: #ff6600 !important;
 }
@@ -112,33 +85,3 @@ code {
   color: #ff6600;
 }
 
-/* Home page layout improvements */
-.home-view section {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-.home-view section + section {
-  margin-top: 3rem;
-}
-
-.home-view a:not(.btn) {
-  color: #0d6efd;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.home-view a:not(.btn):hover,
-.home-view a:not(.btn):focus {
-  text-decoration: underline;
-}
-
-.home-view .btn-link {
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.home-view .btn-link:hover,
-.home-view .btn-link:focus {
-  text-decoration: underline;
-}
