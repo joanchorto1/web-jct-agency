@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import Home from './components/components/home';
 import Contact from './components/components/contact';
 import Avero from './components/components/avero';
 import Blog from './components/components/blog';
@@ -37,21 +36,6 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/avero' element={<Avero/>}/>
-        <Route path='/contacto' element={<Contact/>}/>
-        <Route path='/blog' element={<Blog/>}/>
-        <Route path='/blog/optimitzacio-seo' element={<SeoArticle/>}/>
-        <Route path='/blog/software-a-mida-beneficis' element={<SoftwareArticle/>}/>
-        <Route path='/blog/digitalitzar-pime' element={<DigitalitzarPimeArticle/>}/>
-        <Route path='/blog/verifactu-gestories' element={<VerifactuGestoriesArticle/>}/>
-        <Route path='/blog/saas-vs-tradicional' element={<SaasVsTradicionalArticle/>}/>
-        <Route path='/pressupost' element={<Pressupost/>}/>
-        <Route path='/resultats' element={<ResultsPage/>}/>
-      </Routes>
-
-
       <Suspense fallback={<div className="page-loading">Carregant la nova experiència...</div>}>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -71,6 +55,7 @@ function App() {
           <Route path="/blog/verifactu-gestories" element={<VerifactuGestoriesArticle />} />
           <Route path="/blog/saas-vs-tradicional" element={<SaasVsTradicionalArticle />} />
           <Route path="/pressupost" element={<Pressupost />} />
+          <Route path="/contacto-form" element={<Contact />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
