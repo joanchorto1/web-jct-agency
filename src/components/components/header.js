@@ -1,6 +1,5 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import InlineCTAGroup from '../cta/InlineCTAGroup';
 import logoImage from '../img/LOGO JCTAGENCY.png';
 
 const navItems = [
