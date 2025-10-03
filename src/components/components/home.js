@@ -4,28 +4,139 @@ import { Helmet } from "react-helmet";
 import emailjs from "@emailjs/browser";
 
 import heroImg from "../img/QUI SOM.png";
-import autonomIcon from "../img/AUTONOM.png";
-import pimesIcon from "../img/PYME.png";
-import gestoriesIcon from "../img/GESTORIA.png";
-
-
 import softwareImg from "../img/DESENVOLUPAMENT SOFTWARE.png";
 import consultoriesImg from "../img/CONSULTORIES.png";
-import dissenyWebImg from "../img/DISENY PAGINES WEB.png";
 import suportImg from "../img/SUPORT.png";
-
 import AveroLogo from "../img/AVERO LOGO.png";
-
-import confiancaImg from "../img/CONFIANÇA.png";
-import eficienciaImg from "../img/EFICIENCIA.png";
-import escalabilitatImg from "../img/ESCALABILITAT.png";
-import aliancesImg from "../img/ALIANÇES.png";
-import CTAIMAGE from "../img/CTA_HOME.png";
-
-
 import AjuntamentAldeaLogo from "../img/AJUNTAMENT.jpeg";
 import EGEALogo from "../img/EGEA.png";
 import GERCOLogo from "../img/gerco-serveis-integrals.png";
+
+import "../styles/Home.css";
+
+const HERO_PAIN_POINTS = [
+  "Processos dispersos que compliquen el control financer del dia a dia.",
+  "Normatives Veri*Factu i AEAT canviants que generen incertesa.",
+  "Aplicacions que es queden enrere i obliguen l’equip a dedicar hores de manteniment manual.",
+];
+
+const WORKFLOW_STEPS = [
+  {
+    title: "1. Diagnosi guiada",
+    description:
+      "Auditem fluxos, dades i tecnologia existent per entendre què frena el creixement i el compliment normatiu.",
+  },
+  {
+    title: "2. Implantació iterativa",
+    description:
+      "Dissenyem un full de ruta modular i prioritzem els mòduls que resolen el dolor immediat amb entregues quinzenals.",
+  },
+  {
+    title: "3. Evolució contínua",
+    description:
+      "Monitoritzem KPI, incidències i noves obligacions legals per mantenir el programari sempre al dia.",
+  },
+];
+
+const MODULES = [
+  {
+    title: "Facturació Veri*Factu (Avero)",
+    description:
+      "Suite de facturació SaaS homologada per garantir l’enviament segur a l’AEAT des del primer dia.",
+    bullets: [
+      "Enviament automàtic de factures i registres amb hash verificable.",
+      "Signatura digital, TPV i portal de validació perquè clients i gestors treballin en paral·lel.",
+    ],
+    icon: AveroLogo,
+    iconAlt: "Logotip Avero",
+  },
+  {
+    title: "Integracions i automatitzacions",
+    description:
+      "Connexió amb CRM, ERP, bancs i BI per eliminar tasques manuals i sincronitzar dades en temps real.",
+    bullets: [
+      "APIs i connectores pròpies amb monitoratge 24/7.",
+      "Workflows sense errors humans ni fulls de càlcul dispersos.",
+    ],
+    icon: softwareImg,
+    iconAlt: "Icona desenvolupament de software",
+  },
+  {
+    title: "Portal de clients i equips",
+    description:
+      "Espais digitals perquè els teus clients puguin pujar, aprovar i consultar documentació en qualsevol moment.",
+    bullets: [
+      "Control de rols i permisos granular.",
+      "Alertes automatitzades per reduir incidències i retards.",
+    ],
+    icon: consultoriesImg,
+    iconAlt: "Icona consultoria",
+  },
+  {
+    title: "Quadres de comandament i suport",
+    description:
+      "Visió temps real de KPI crítics i suport proactiu per garantir disponibilitat i millores evolutives.",
+    bullets: [
+      "Dashboards personalitzats per direcció i equips operatius.",
+      "Manteniment continu amb roadmap compartit i sessions de revisió.",
+    ],
+    icon: suportImg,
+    iconAlt: "Icona suport",
+  },
+];
+
+const SECTORS = [
+  {
+    title: "Gestories i despatxos professionals",
+    description:
+      "Digitalitza la relació amb clients, ofereix serveis Veri*Factu i escala sense incrementar equips.",
+  },
+  {
+    title: "PIMEs industrials i serveis B2B",
+    description:
+      "Integra vendes, finances i operacions amb sistemes que asseguren traçabilitat fiscal i productiva.",
+  },
+  {
+    title: "Startups SaaS i equips híbrids",
+    description:
+      "Construeix producte i processos escalables amb mòduls que evolucionen amb el teu roadmap.",
+  },
+];
+
+const EXPECTED_RESULTS = [
+  {
+    metric: "-40%",
+    description: "Temps dedicat a tasques administratives gràcies a l’automatització de fluxos clau.",
+  },
+  {
+    metric: "+99%",
+    description: "Disponibilitat del programari verificada amb monitoratge actiu i alertes proactives.",
+  },
+  {
+    metric: "<30 dies",
+    description: "Desplegament del primer mòdul amb formació i transferència de coneixement.",
+  },
+];
+
+const TRUST_CARDS = [
+  {
+    title: "Credencials Veri*Factu i AEAT",
+    description:
+      "Som proveïdor tecnològic registrat. Els nostres sistemes apliquen la signatura i l’enviament segur requerit per l’AEAT.",
+  },
+  {
+    title: "Manteniment continu i roadmap compartit",
+    description:
+      "Monitoratge 24/7, SLA definits i sessions de revisió perquè el teu software evolucioni amb el negoci.",
+  },
+];
+
+const CLIENT_LOGOS = [
+  { src: AjuntamentAldeaLogo, alt: "Ajuntament de L'Aldea" },
+  { src: EGEALogo, alt: "EGEA Arquitectura" },
+  { src: GERCOLogo, alt: "GERCO Serveis Integrals" },
+];
+
 const Home = () => {
   const [isFormSubmitted, setFormSubmitted] = useState(false);
   const [formFields, setFormFields] = useState({
@@ -53,412 +164,261 @@ const Home = () => {
   return (
     <Layout>
       <Helmet>
-        <title>JCT Agency | Solucions digitals per fer créixer el teu negoci</title>
+        <title>JCT Agency | Programari Veri*Factu amb evolució contínua</title>
         <meta
           name="description"
-          content="Agència digital catalana especialista en software SaaS i solucions tecnològiques per a autònoms, PIMEs i gestories."
+          content="Construïm software SaaS, integracions i portals Veri*Factu per a gestories, PIMEs i startups amb manteniment proactiu i compliment 100% AEAT."
         />
       </Helmet>
 
-      <div className="bg-white text-dark home-view">
-        {/* Hero */}
-        <section className="py-5 bg-white" data-aos="fade-up">
+      <div className="home-view">
+        <section className="home-hero" data-aos="fade-up">
           <div className="container">
-            <div className="row align-items-center g-4 flex-column flex-md-row">
-              <div className="col-md-6">
-                <h1>JCT Agency – Solucions digitals per a autònoms, PIMEs i gestories</h1>
-                <p>
-                  Som una agència tecnològica especialitzada en <strong>software SaaS</strong> i
-                  <strong> programari empresarial</strong> que simplifica la gestió i garanteix el
-                  <strong> compliment legal amb Veri*Factu</strong>.
+            <div className="row align-items-center g-5">
+              <div className="col-lg-6 home-hero-content text-lg-start text-center">
+                <span className="section-eyebrow">Producte digital i compliment fiscal</span>
+                <h1 className="section-heading">
+                  Software Veri*Factu que resol el dolor operatiu i evoluciona amb la teva empresa
+                </h1>
+                <p className="section-subheading">
+                  Co-dissenyem experiències digitals perquè gestories, PIMEs i equips SaaS compleixin la normativa mentre automatitzen processos crítics.
                 </p>
-                <div className="d-flex gap-3 mt-3">
-                  <a href="#serveis" className="btn btn-primary">
-                    Descobreix els nostres serveis
+                <ul className="home-pain-list">
+                  {HERO_PAIN_POINTS.map((pain) => (
+                    <li key={pain}>{pain}</li>
+                  ))}
+                </ul>
+                <div className="d-flex flex-column flex-md-row align-items-md-center gap-3 mt-4 justify-content-md-start justify-content-center">
+                  <a href="#contacte" className="btn btn-brand">
+                    Demana una demo personalitzada
                   </a>
-                  <a href="#contacte" className="btn btn-outline-primary">
-                    Parla amb nosaltres
+                  <a href="#com-funciona" className="btn btn-outline-brand">
+                    Descobreix com funciona
                   </a>
                 </div>
               </div>
-              <div className="col-md-6 text-center">
+              <div className="col-lg-6 text-center">
                 <img
                   src={heroImg}
-                  alt="Handshake"
+                  alt="Equip treballant en software"
                   className="img-fluid"
-                  style={{ maxWidth: "300px" }}
+                  style={{ maxWidth: "420px" }}
                 />
               </div>
             </div>
           </div>
         </section>
 
-        {/* Clients */}
-        <section id="clients" className="py-5 bg-light" data-aos="fade-up">
+        <section id="com-funciona" data-aos="fade-up">
           <div className="container">
-            <h2 className="text-center mb-4">Ajudem empreses com la teva</h2>
-            <p className="text-center">
-              El nostre software està pensat per a <strong>autònoms</strong>, <strong>PIMEs</strong> i
-              <strong> gestories</strong> que volen digitalitzar-se sense complicacions.
-            </p>
-            <div className="row mt-4">
-              <div className="col-md-4 text-center mb-4">
-                <img src={autonomIcon} alt="Autònoms" style={{ width: "60px" }} className="mb-3" />
-                <h5>Autònoms</h5>
-                <p>Solucions adaptades als professionals independents.</p>
+            <div className="row justify-content-between align-items-center g-4 mb-5">
+              <div className="col-lg-7">
+                <span className="section-eyebrow">Com funciona</span>
+                <h2 className="section-heading">Un procés en tres passos perquè el canvi sigui tangible des del primer mes</h2>
+                <p className="section-subheading">
+                  Ens impliquem amb el teu equip per garantir que cada mòdul resol un problema real i queda integrat en l’operativa quotidiana.
+                </p>
               </div>
-              <div className="col-md-4 text-center mb-4">
-                <img src={pimesIcon} alt="PIMEs" style={{ width: "60px" }} className="mb-3" />
-                <h5>PIMEs</h5>
-                <p>Eines modernes per optimitzar la gestió empresarial.</p>
-              </div>
-              <div className="col-md-4 text-center mb-4">
-                <img
-                  src={gestoriesIcon}
-                  alt="Gestories"
-                  style={{ width: "60px" }}
-                  className="mb-3"
-                />
-                <h5>Gestories</h5>
-                <p>Programari que facilita nous serveis digitals als clients.</p>
-              </div>
+            </div>
+            <div className="row row-cols-1 row-cols-md-3 g-4">
+              {WORKFLOW_STEPS.map((step) => (
+                <div className="col" key={step.title}>
+                  <div className="card-surface h-100">
+                    <h3 className="h5 fw-semibold mb-3">{step.title}</h3>
+                    <p className="mb-0 text-muted">{step.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Serveis */}
-        <section id="serveis" className="py-5 bg-white" data-aos="fade-up">
+        <section id="moduls" data-aos="fade-up">
           <div className="container">
-            <h2 className="text-center mb-4">Els nostres serveis</h2>
-            <p className="text-center mb-5">
-              A JCT Agency oferim serveis digitals per impulsar el creixement i l’eficiència del teu
-              negoci.
-            </p>
+            <div className="row justify-content-between align-items-center g-4 mb-5">
+              <div className="col-lg-8">
+                <span className="section-eyebrow">Mòduls que responen al dolor</span>
+                <h2 className="section-heading">Activem només el que necessites, amb components reutilitzables i escalables</h2>
+                <p className="section-subheading">
+                  Cada mòdul està construït amb la mateixa base tecnològica i de disseny perquè la integració sigui ràpida, segura i coherent amb la identitat de la teva marca.
+                </p>
+              </div>
+            </div>
             <div className="row row-cols-1 row-cols-md-2 g-4">
-              <div className="col text-center">
-                <img
-                  src={softwareImg}
-                  alt="Desenvolupament de software empresarial"
-                  style={{ width: "60px" }}
-                  className="mb-3"
-                />
-                <h3>Desenvolupament de software empresarial</h3>
-                <p>
-                  Creem <strong>programari propi</strong>, <strong>solucions SaaS</strong> i
-                  <strong> integracions amb serveis externs</strong> perquè la teva empresa treballi amb
-                  eines modernes i segures.
-                </p>
-                <a href="#contacte" className="btn btn-link">
-                  Més informació
-                </a>
-              </div>
-              <div className="col text-center">
-                <img
-                  src={consultoriesImg}
-                  alt="Consultoria tecnològica i legal"
-                  style={{ width: "60px" }}
-                  className="mb-3"
-                />
-                <h3>Consultoria tecnològica i legal</h3>
-                <p>
-                  T’assessorem en <strong>noves normatives</strong>, <strong>estratègies de digitalització</strong> i
-                  compliment amb <strong>Veri*Factu</strong>, perquè estiguis sempre a l’avantguarda.
-                </p>
-                <a href="#contacte" className="btn btn-link">
-                  Més informació
-                </a>
-              </div>
-              <div className="col text-center">
-                <img
-                  src={dissenyWebImg}
-                  alt="Disseny i manteniment web"
-                  style={{ width: "60px" }}
-                  className="mb-3"
-                />
-                <h3>Disseny i manteniment web</h3>
-                <p>
-                  Creem i gestionem <strong>webs corporatives</strong> modernes, amb <strong>manteniment constant</strong>,
-                  actualitzacions i seguretat garantida.
-                </p>
-                <a href="#contacte" className="btn btn-link">
-                  Més informació
-                </a>
-              </div>
-              <div className="col text-center">
-                <img src={suportImg} alt="Suport continuat" style={{ width: "60px" }} className="mb-3" />
-                <h3>Suport continuat</h3>
-                <p>
-                  Ens involucrem en els teus projectes amb <strong>atenció propera</strong> i
-                  <strong> evolució constant del software</strong>, perquè el teu negoci mai s’aturi.
-                </p>
-                <a href="#contacte" className="btn btn-link">
-                  Més informació
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Avero */}
-        <section id="avero" className="py-5 bg-light" data-aos="fade-up">
-          <div className="container">
-            <div className="row align-items-center g-4">
-              <div className="col-md-6">
-                <h2>Avero – Facturació moderna i segura</h2>
-                <p>
-                  <strong>Avero</strong> és el nostre <strong>software SaaS de facturació</strong>, pensat per a
-                  <strong> autònoms i PIMEs</strong>. Et permet gestionar <strong>factures, pressupostos, albarans i TPV</strong>
-                  de forma simple, amb <strong>enviament automàtic a l’AEAT</strong> i total compliment legal amb
-                  <strong> Veri*Factu</strong>.
-                </p>
-                <ul>
-                  <li>Facturació electrònica completa i segura</li>
-                  <li>Pressupostos, albarans i TPV integrats</li>
-                  <li>Gestió de clients i productes</li>
-                  <li>Compliment normatiu amb Veri*Factu</li>
-                </ul>
-                <div className="d-flex gap-3 mt-3">
-                  <a href="/avero" className="btn btn-primary">Coneix Avero</a>
-                  <a href="https://avero.jctagency.com" className="btn btn-outline-primary">Prova Avero gratis</a>
+              {MODULES.map((module) => (
+                <div className="col" key={module.title}>
+                  <div className="card-surface">
+                    <div className="card-icon">
+                      <img src={module.icon} alt={module.iconAlt} className="img-fluid" />
+                    </div>
+                    <h3 className="h4 fw-semibold mb-3">{module.title}</h3>
+                    <p className="text-muted">{module.description}</p>
+                    <ul className="mt-3 ps-3 text-muted">
+                      {module.bullets.map((bullet) => (
+                        <li key={bullet}>{bullet}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </div>
-              <div className="col-md-6 text-center">
-                <img src={AveroLogo} alt="Avero" className="img-fluid" style={{ maxWidth: "300px" }} />
-              </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* CTA custom software */}
-        <section id="cta-programari" className="py-5 text-center bg-white" data-aos="fade-up">
+        <section id="sectors" data-aos="fade-up">
           <div className="container">
-            <div className="row align-items-center g-4">
-              <div className="col-md-6">
-                <h2 className="mb-3">Necessites un programa específic per la teva empresa?</h2>
-                <p>Vols estalviar temps optimitzant tasques amb un programari a mida!</p>
-                <a href="#contacte" className="btn btn-primary mt-3">Contacta'ns</a>
-              </div>
-              <div className="col-md-6 text-center">
-                <img
-                  src={CTAIMAGE}
-                  alt="Programari a mida"
-                  className="img-fluid"
-                  style={{ maxWidth: "300px" }}
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Beneficis */}
-        <section id="beneficis" className="py-5 bg-light" data-aos="fade-up">
-          <div className="container">
-            <h2 className="text-center mb-4">Què aportem als nostres clients</h2>
-            <div className="row row-cols-2 row-cols-md-4 g-4">
-              <div className="col text-center">
-                <img src={confiancaImg} alt="Confiança" style={{ width: "60px" }} className="mb-3" />
-                <h3>Confiança</h3>
-                <p>
-                  Treballem perquè compleixis amb la normativa sense maldecaps, amb <strong>solucions fiables i segures</strong>.
-                </p>
-              </div>
-              <div className="col text-center">
-                <img src={eficienciaImg} alt="Eficiència" style={{ width: "60px" }} className="mb-3" />
-                <h3>Eficiència</h3>
-                <p>
-                  Optimitza el teu temps amb <strong>processos simplificats</strong> i un software intuïtiu.
-                </p>
-              </div>
-              <div className="col text-center">
-                <img
-                  src={escalabilitatImg}
-                  alt="Escalabilitat"
-                  style={{ width: "60px" }}
-                  className="mb-3"
-                />
-                <h3>Escalabilitat</h3>
-                <p>Les nostres solucions creixen amb el teu negoci, adaptant-se a noves necessitats.</p>
-              </div>
-              <div className="col text-center">
-                <img
-                  src={aliancesImg}
-                  alt="Aliances estratègiques"
-                  style={{ width: "60px" }}
-                  className="mb-3"
-                />
-                <h3>Aliances estratègiques</h3>
-                <p>
-                  Oferim a les <strong>gestories</strong> eines que obren <strong>nous canals d’ingressos</strong> i milloren el servei als seus clients.
+            <div className="row justify-content-between align-items-center g-4 mb-5">
+              <div className="col-lg-7">
+                <span className="section-eyebrow">Sectors</span>
+                <h2 className="section-heading">Experiència en negocis que necessiten complir mentre escalen</h2>
+                <p className="section-subheading">
+                  Treballem amb equips que requereixen traçabilitat, dades fiables i experiències digitals capaces d’oferir nous serveis.
                 </p>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Clients que confien */}
-        <section id="clients-validen" className="py-5 bg-white" data-aos="fade-up">
-          <div className="container">
-            <h2 className="text-center mb-4">Clients que confien en nosaltres</h2>
-            <div className="row text-center align-items-center g-4">
-              <div className="col-md-4">
-                <div className="mb-3" style={{ height: "80px" }}>
-                  <img
-                    src={AjuntamentAldeaLogo}
-                    alt="Ajuntament de L'Aldea"
-                    className="img-fluid h-100"
-                    style={{ objectFit: "contain" }}
-                  />
+            <div className="row row-cols-1 row-cols-md-3 g-4">
+              {SECTORS.map((sector) => (
+                <div className="col" key={sector.title}>
+                  <div className="card-surface h-100">
+                    <span className="badge-soft mb-3">Sector</span>
+                    <h3 className="h5 fw-semibold">{sector.title}</h3>
+                    <p className="mb-0 text-muted">{sector.description}</p>
+                  </div>
                 </div>
-                <p>Ajuntament de L'Aldea</p>
-              </div>
-              <div className="col-md-4">
-                <div className="mb-3" style={{ height: "80px" }}>
-                  <img
-                    src={EGEALogo}
-                    alt="EGEA Arquitectura"
-                    className="img-fluid h-100"
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-                <p>EGEA Arquitectura</p>
-              </div>
-              <div className="col-md-4">
-                <div className="mb-3" style={{ height: "80px" }}>
-                  <img
-                    src={GERCOLogo}
-                    alt="GERCO Serveis Integrals"
-                    className="img-fluid h-100"
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-                <p>GERCO Serveis Integrals</p>
-              </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Valors */}
-        <section id="valors" className="py-5 bg-light" data-aos="fade-up">
+        <section id="resultats" data-aos="fade-up">
           <div className="container">
-            <h2 className="text-center mb-4">Els nostres valors</h2>
-            <p className="text-center">
-              A JCT Agency treballem amb una filosofia clara: oferir <strong>innovació, simplicitat, seguretat i proximitat</strong>.
-            </p>
-            <ul className="list-unstyled row g-4 mt-4">
-              <li className="col-md-3 d-flex align-items-start">
-                <span className="text-primary me-2">•</span>
-                <span>
-                  <strong>Innovació</strong> – sempre a l’avantguarda tecnològica i legal.
-                </span>
-              </li>
-              <li className="col-md-3 d-flex align-items-start">
-                <span className="text-primary me-2">•</span>
-                <span>
-                  <strong>Simplicitat</strong> – software intuïtiu que facilita el treball, no el complica.
-                </span>
-              </li>
-              <li className="col-md-3 d-flex align-items-start">
-                <span className="text-primary me-2">•</span>
-                <span>
-                  <strong>Compliment legal i seguretat</strong> – desenvolupem sistemes totalment adaptats a Veri*Factu i altres normatives.
-                </span>
-              </li>
-              <li className="col-md-3 d-flex align-items-start">
-                <span className="text-primary me-2">•</span>
-                <span>
-                  <strong>Proximitat i suport</strong> – ens involucrem en cada projecte com si fos nostre.
-                </span>
-              </li>
-            </ul>
+            <div className="row justify-content-between align-items-center g-4 mb-5">
+              <div className="col-lg-7">
+                <span className="section-eyebrow">Resultats esperables</span>
+                <h2 className="section-heading">Indicadors tangibles des de la primera iteració</h2>
+                <p className="section-subheading">
+                  Acompanyem la implantació amb mètriques clares perquè el teu equip vegi ràpidament l’impacte en operacions, finances i experiència de client.
+                </p>
+              </div>
+            </div>
+            <div className="row row-cols-1 row-cols-md-3 g-4">
+              {EXPECTED_RESULTS.map((result) => (
+                <div className="col" key={result.metric}>
+                  <div className="metric-card h-100">
+                    <h3>{result.metric}</h3>
+                    <p>{result.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* Blog / Recursos */}
-        <section id="blog" className="py-5 bg-white" data-aos="fade-up">
+        <section id="compliment" data-aos="fade-up">
           <div className="container">
-            <h2 className="text-center mb-4">Recursos i guies útils</h2>
-            <ul className="list-unstyled">
-              <li>
-                <a href="/blog/digitalitzar-pime">Com digitalitzar la gestió d’una PIME en 5 passos</a>
-              </li>
-              <li>
-                <a href="/blog/verifactu-gestories">Guia pràctica per a gestories sobre Veri*Factu</a>
-              </li>
-              <li>
-                <a href="/blog/saas-vs-tradicional">Per què un SaaS és millor que un software tradicional?</a>
-              </li>
-            </ul>
+            <div className="row justify-content-between align-items-center g-4 mb-5">
+              <div className="col-lg-8">
+                <span className="section-eyebrow">Veri*Factu, AEAT i manteniment</span>
+                <h2 className="section-heading">Compliment acreditat i evolució constant del programari</h2>
+                <p className="section-subheading">
+                  El nostre equip combina producte digital, fiscalitat i suport tècnic per garantir que cada mòdul segueixi operatiu i actualitzat.
+                </p>
+              </div>
+            </div>
+            <div className="row row-cols-1 row-cols-md-2 g-4">
+              {TRUST_CARDS.map((card) => (
+                <div className="col" key={card.title}>
+                  <div className="trust-card h-100">
+                    <h3>{card.title}</h3>
+                    <p>{card.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* Pressupost */}
-        <section id="pressupost" className="py-5 bg-light" data-aos="fade-up">
+        <section id="clients" data-aos="fade-up">
           <div className="container text-center">
-            <h2 className="mb-4">Vols una estimació del teu projecte?</h2>
-            <p>Utilitza la nostra calculadora per conèixer el pressupost aproximat.</p>
-            <a href="/pressupost" className="btn btn-outline-primary">Calcula el teu pressupost</a>
+            <span className="section-eyebrow">Clients que confien</span>
+            <h2 className="section-heading">Organitzacions que ja treballen amb JCT Agency</h2>
+            <p className="section-subheading mx-auto">
+              Acompanyem administracions, estudis professionals i empreses privades en la seva transformació digital i adopció de Veri*Factu.
+            </p>
+            <div className="row justify-content-center align-items-center g-4 clients-logos mt-4">
+              {CLIENT_LOGOS.map((logo) => (
+                <div className="col-6 col-md-4" key={logo.alt}>
+                  <img src={logo.src} alt={logo.alt} className="img-fluid" />
+                  <p className="mt-2 text-muted">{logo.alt}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* Contacte */}
-        <section id="contacte" className="py-5 bg-white" data-aos="fade-up">
+        <section id="contacte" data-aos="fade-up">
           <div className="container">
-            <div className="row g-4">
-              <div className="col-md-6">
-                <h2>Parlem del teu projecte?</h2>
-                <p>Si busques un partner tecnològic per digitalitzar la teva empresa, contacta amb nosaltres.</p>
-                <form onSubmit={handleSubmit}>
-                  <input
-                    type="text"
-                    name="nombre"
-                    placeholder="Nom i cognoms"
-                    className="form-control mb-3"
-                    value={formFields.nombre}
-                    onChange={handleChange}
-                    required
-                  />
-                  <input
-                    type="text"
-                    name="empresa"
-                    placeholder="Empresa"
-                    className="form-control mb-3"
-                    value={formFields.empresa}
-                    onChange={handleChange}
-                  />
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    className="form-control mb-3"
-                    value={formFields.email}
-                    onChange={handleChange}
-                    required
-                  />
-                  <textarea
-                    name="mensaje"
-                    placeholder="Missatge"
-                    className="form-control mb-3"
-                    rows="4"
-                    value={formFields.mensaje}
-                    onChange={handleChange}
-                    required
-                  ></textarea>
-                  <button type="submit" className="btn btn-primary">
-                    Enviar missatge
-                  </button>
-                  {isFormSubmitted && <p className="mt-3">¡Missatge enviat!</p>}
-                </form>
-              </div>
-              <div className="col-md-6">
-                <p>
-                  <strong>📧</strong> info@jctagency.com
-                </p>
-                <p>
-                  <strong>📍</strong> Tarragona (Catalunya)
-                </p>
-                <p>
-                  <strong>📱</strong> 633 391 411
-                </p>
+            <div className="home-contact-card">
+              <div className="row g-4 align-items-start">
+                <div className="col-lg-6">
+                  <span className="section-eyebrow">Comencem</span>
+                  <h2 className="section-heading">Explica’ns què vols solucionar i dissenyem la demo</h2>
+                  <p className="section-subheading">
+                    Comparteix els reptes actuals i prepara’t per rebre una proposta modular amb roadmap i pressupost orientatiu.
+                  </p>
+                  <form onSubmit={handleSubmit} className="mt-4">
+                    <input
+                      type="text"
+                      name="nombre"
+                      placeholder="Nom i cognoms"
+                      className="form-control mb-3"
+                      value={formFields.nombre}
+                      onChange={handleChange}
+                      required
+                    />
+                    <input
+                      type="text"
+                      name="empresa"
+                      placeholder="Empresa"
+                      className="form-control mb-3"
+                      value={formFields.empresa}
+                      onChange={handleChange}
+                    />
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email"
+                      className="form-control mb-3"
+                      value={formFields.email}
+                      onChange={handleChange}
+                      required
+                    />
+                    <textarea
+                      name="mensaje"
+                      placeholder="Quin és el principal repte digital que vols resoldre?"
+                      className="form-control mb-3"
+                      rows="4"
+                      value={formFields.mensaje}
+                      onChange={handleChange}
+                      required
+                    ></textarea>
+                    <button type="submit" className="btn btn-brand">
+                      Envia el missatge
+                    </button>
+                    {isFormSubmitted && <p className="mt-3 text-success">Missatge enviat correctament.</p>}
+                  </form>
+                </div>
+                <div className="col-lg-5 offset-lg-1">
+                  <div className="contact-details">
+                    <h3 className="h5 fw-semibold mb-3">Contacte directe</h3>
+                    <p><strong>📧</strong> info@jctagency.com</p>
+                    <p><strong>📍</strong> Tarragona (Catalunya)</p>
+                    <p><strong>📱</strong> 633 391 411</p>
+                    <p className="mb-0 text-muted">
+                      Programem sessions de seguiment quinzenals per garantir que el roadmap evoluciona amb el teu negoci.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -469,4 +429,3 @@ const Home = () => {
 };
 
 export default Home;
-
