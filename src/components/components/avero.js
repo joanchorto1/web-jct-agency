@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../layouts/layout';
 import { Helmet } from 'react-helmet';
+import { trackEvent } from '../../utils/analytics';
 import AveroLogo from '../img/AVERO LOGO.png';
 import facturacioImg from '../img/Facturacio_Avero.png';
 import utilitatsImg from '../img/Funcionalitats_Premium.png';
@@ -30,8 +31,20 @@ const Avero = () => (
               <h1>Avero – Programa de facturació 100% adaptat a VeriFactu i la Llei Crea y Crece.*</h1>
               <p>La solució més simple i moderna per a autònoms, PIMEs i gestories. Compleix amb la normativa sense complicacions.</p>
               <div className="d-flex gap-3 mt-3 flex-column flex-sm-row">
-                <a href="https://avero.jctagency.com" className="btn btn-avero">Prova Avero gratis</a>
-                <a href="/contacto" className="btn btn-outline-avero">Demana una demo</a>
+                <a
+                  href="https://avero.jctagency.com"
+                  className="btn btn-avero"
+                  onClick={() => trackEvent('CTA clic', { etiqueta: 'Avero - Prova gratis (hero)' })}
+                >
+                  Prova Avero gratis
+                </a>
+                <a
+                  href="/contacto"
+                  className="btn btn-outline-avero"
+                  onClick={() => trackEvent('CTA clic', { etiqueta: 'Avero - Demana demo (hero)' })}
+                >
+                  Demana una demo
+                </a>
               </div>
             </div>
             <div className="col-md-6 text-center position-relative">
@@ -227,8 +240,20 @@ const Avero = () => (
         <div className="container">
           <h2>Adelanta’t a la normativa. Prova Avero avui i compleix amb Veri*Factu sense preocupacions.</h2>
           <div className="d-flex gap-3 justify-content-center flex-column flex-sm-row mt-3">
-            <a href="https://avero.jctagency.com" className="btn btn-dark">Crear compte</a>
-            <a href="/contacto" className="btn btn-outline-dark text-dark">Contacta amb un assessor</a>
+            <a
+              href="https://avero.jctagency.com"
+              className="btn btn-dark"
+              onClick={() => trackEvent('CTA clic', { etiqueta: 'Avero - Crear compte (final)' })}
+            >
+              Crear compte
+            </a>
+            <a
+              href="/contacto"
+              className="btn btn-outline-dark text-dark"
+              onClick={() => trackEvent('CTA clic', { etiqueta: 'Avero - Contacta assessor (final)' })}
+            >
+              Contacta amb un assessor
+            </a>
           </div>
         </div>
       </section>

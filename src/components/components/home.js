@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Layout from "../layouts/layout";
 import { Helmet } from "react-helmet";
 import emailjs from "@emailjs/browser";
+import { trackEvent } from "../../utils/analytics";
 
 import heroImg from "../img/QUI SOM.png";
 import autonomIcon from "../img/AUTONOM.png";
@@ -42,6 +43,7 @@ const Home = () => {
       .then(() => {
         setFormSubmitted(true);
         setFormFields({ nombre: "", empresa: "", email: "", mensaje: "" });
+        trackEvent('Formulari enviat', { origen: 'Home contacte' });
       })
       .catch(() => setFormSubmitted(false));
   };
@@ -73,10 +75,18 @@ const Home = () => {
                   <strong> compliment legal amb Veri*Factu</strong>.
                 </p>
                 <div className="d-flex gap-3 mt-3">
-                  <a href="#serveis" className="btn btn-primary">
+                  <a
+                    href="#serveis"
+                    className="btn btn-primary"
+                    onClick={() => trackEvent('CTA clic', { etiqueta: 'Hero - Descobreix serveis' })}
+                  >
                     Descobreix els nostres serveis
                   </a>
-                  <a href="#contacte" className="btn btn-outline-primary">
+                  <a
+                    href="#contacte"
+                    className="btn btn-outline-primary"
+                    onClick={() => trackEvent('CTA clic', { etiqueta: 'Hero - Parla amb nosaltres' })}
+                  >
                     Parla amb nosaltres
                   </a>
                 </div>
@@ -218,8 +228,20 @@ const Home = () => {
                   <li>Compliment normatiu amb Veri*Factu</li>
                 </ul>
                 <div className="d-flex gap-3 mt-3">
-                  <a href="/avero" className="btn btn-primary">Coneix Avero</a>
-                  <a href="https://avero.jctagency.com" className="btn btn-outline-primary">Prova Avero gratis</a>
+                  <a
+                    href="/avero"
+                    className="btn btn-primary"
+                    onClick={() => trackEvent('CTA clic', { etiqueta: 'Avero - Coneix Avero' })}
+                  >
+                    Coneix Avero
+                  </a>
+                  <a
+                    href="https://avero.jctagency.com"
+                    className="btn btn-outline-primary"
+                    onClick={() => trackEvent('CTA clic', { etiqueta: 'Avero - Prova Avero gratis' })}
+                  >
+                    Prova Avero gratis
+                  </a>
                 </div>
               </div>
               <div className="col-md-6 text-center">
@@ -236,7 +258,13 @@ const Home = () => {
               <div className="col-md-6">
                 <h2 className="mb-3">Necessites un programa específic per la teva empresa?</h2>
                 <p>Vols estalviar temps optimitzant tasques amb un programari a mida!</p>
-                <a href="#contacte" className="btn btn-primary mt-3">Contacta'ns</a>
+                <a
+                  href="#contacte"
+                  className="btn btn-primary mt-3"
+                  onClick={() => trackEvent('CTA clic', { etiqueta: 'CTA Programari - Contacta' })}
+                >
+                  Contacta'ns
+                </a>
               </div>
               <div className="col-md-6 text-center">
                 <img
@@ -396,7 +424,13 @@ const Home = () => {
           <div className="container text-center">
             <h2 className="mb-4">Vols una estimació del teu projecte?</h2>
             <p>Utilitza la nostra calculadora per conèixer el pressupost aproximat.</p>
-            <a href="/pressupost" className="btn btn-outline-primary">Calcula el teu pressupost</a>
+            <a
+              href="/pressupost"
+              className="btn btn-outline-primary"
+              onClick={() => trackEvent('CTA clic', { etiqueta: 'Pressupost - Calculadora' })}
+            >
+              Calcula el teu pressupost
+            </a>
           </div>
         </section>
 
@@ -442,7 +476,7 @@ const Home = () => {
                     value={formFields.mensaje}
                     onChange={handleChange}
                     required
-                  ></textarea>
+                  />
                   <button type="submit" className="btn btn-primary">
                     Enviar missatge
                   </button>

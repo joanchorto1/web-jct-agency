@@ -3,6 +3,7 @@ import Layout from '../layouts/layout';
 import { Helmet } from 'react-helmet';
 import emailjs from '@emailjs/browser';
 import { Link } from 'react-router-dom';
+import { trackEvent } from '../../utils/analytics';
 
 const Pressupost = () => {
   const [service, setService] = useState('');
@@ -68,6 +69,7 @@ const Pressupost = () => {
       .then(() => {
         setSent(true);
         setFormData(initialForm);
+        trackEvent('Formulari enviat', { origen: 'Pressupost' });
       })
       .catch(() => setSent(false));
   };
@@ -165,7 +167,11 @@ const Pressupost = () => {
               Pressupost estimat: {price}€
             </div>
             <p>Si el pressupost et quadra</p>
-            <Link to="/contacto" className="btn btn-success">
+            <Link
+              to="/contacto"
+              className="btn btn-success"
+              onClick={() => trackEvent('CTA clic', { etiqueta: 'Pressupost - Contacta' })}
+            >
               Contacta
             </Link>
           </div>

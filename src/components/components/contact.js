@@ -2,6 +2,7 @@ import Layout from "../layouts/layout";
 import emailjs from '@emailjs/browser';
 import React, {useState} from "react";
 import {Helmet} from "react-helmet";
+import { trackEvent } from "../../utils/analytics";
 
 
 const Contact = () => {
@@ -29,6 +30,7 @@ const Contact = () => {
                     email: '',
                     mensaje: '',
                 });
+                trackEvent('Formulari enviat', { origen: 'Contacte general' });
             })
             .catch((error) => {
                 console.log(error.text);
