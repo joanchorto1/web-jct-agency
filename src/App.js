@@ -14,6 +14,7 @@ import SaasVsTradicionalArticle from './components/components/blog/saas-vs-tradi
 import Pressupost from './components/components/pressupost';
 
 
+
 const HomePage = lazy(() => import('./pages/Home'));
 const SectorsPage = lazy(() => import('./pages/Sectors'));
 const SolutionsPage = lazy(() => import('./pages/Solutions'));
@@ -33,6 +34,7 @@ function App() {
 
   return (
     <BrowserRouter>
+
 
       <Suspense fallback={<div className="page-loading">Carregant la nova experiència...</div>}>
         <Routes>
