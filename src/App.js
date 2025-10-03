@@ -1,9 +1,11 @@
 import './App.css';
-import { useEffect, Suspense, lazy } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import React, { lazy, Suspense, useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import Home from './components/components/home';
+import Contact from './components/components/contact';
 import Avero from './components/components/avero';
 import Blog from './components/components/blog';
 import SeoArticle from './components/components/blog/seo';
