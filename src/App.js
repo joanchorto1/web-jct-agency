@@ -15,6 +15,7 @@ import DigitalitzarPimeArticle from "./components/components/blog/digitalitzar-p
 import VerifactuGestoriesArticle from "./components/components/blog/verifactu-gestories";
 import SaasVsTradicionalArticle from "./components/components/blog/saas-vs-tradicional";
 import Pressupost from "./components/components/pressupost";
+import SolutionsPage from "./pages/solutions/SolutionsPage";
 
 function App() {
   useEffect(() => {
@@ -29,6 +30,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/avero' element={<Avero/>}/>
+        <Route path='/solucions' element={<SolutionsPage/>}/>
         <Route path='/contacto' element={<Contact/>}/>
         <Route path='/blog' element={<Blog/>}/>
         <Route path='/blog/optimitzacio-seo' element={<SeoArticle/>}/>
