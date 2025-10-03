@@ -1,16 +1,17 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f8fafc;
+  color: #0f172a;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
 .bg-avero {
   background-color: #ff6600;
   color: white;
@@ -25,60 +26,7 @@ code {
   color: white;
 }
 
-.navbar-custom {
-  background-color: #ffffff;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.navbar-custom .navbar-brand img,
-.footer-custom img {
-  height: 40px;
-  border-radius: 8px;
-}
-
-.navbar-custom .nav-link {
-  color: #0d1b2a;
-  font-weight: 500;
-  margin-left: 1rem;
-}
-
-.navbar-custom .nav-link:hover,
-.navbar-custom .nav-link:focus {
-  color: #0d6efd;
-}
-
-.footer-custom {
-  background-color: #0d1b2a;
-  color: #f8f9fa;
-}
-
-.footer-custom a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.footer-custom a:hover,
-.footer-custom a:focus {
-  text-decoration: underline;
-}
-
-.footer-sub {
-  background-color: #f8f9fa;
-  color: #6c757d;
-  border-top: 1px solid #e5e5e5;
-}
-
-.footer-sub a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.footer-sub a:hover,
-.footer-sub a:focus {
-  text-decoration: underline;
-}
-
-/* Avero button styles */
+/* Legacy button accents kept for existing modules */
 .btn-avero {
   background-color: #ff6600;
   border-color: #ff6600;
@@ -103,42 +51,10 @@ code {
   color: #fff;
 }
 
-/* Avero feature block styles */
 .border-avero {
   border-color: #ff6600 !important;
 }
 
 .feature-list li::marker {
   color: #ff6600;
-}
-
-/* Home page layout improvements */
-.home-view section {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-.home-view section + section {
-  margin-top: 3rem;
-}
-
-.home-view a:not(.btn) {
-  color: #0d6efd;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.home-view a:not(.btn):hover,
-.home-view a:not(.btn):focus {
-  text-decoration: underline;
-}
-
-.home-view .btn-link {
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.home-view .btn-link:hover,
-.home-view .btn-link:focus {
-  text-decoration: underline;
 }
