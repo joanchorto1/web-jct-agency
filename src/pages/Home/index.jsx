@@ -3,11 +3,9 @@ import { Helmet } from 'react-helmet';
 import emailjs from '@emailjs/browser';
 
 import Layout from '../../components/layouts/layout';
-import InlineCTAGroup from '../../components/cta/InlineCTAGroup';
 
 import heroImg from '../../components/img/QUI SOM.png';
 import softwareImg from '../../components/img/DESENVOLUPAMENT SOFTWARE.png';
-import consultoriesImg from '../../components/img/CONSULTORIES.png';
 import suportImg from '../../components/img/SUPORT.png';
 import AveroLogo from '../../components/img/AVERO LOGO.png';
 import AjuntamentAldeaLogo from '../../components/img/AJUNTAMENT.jpeg';
@@ -17,31 +15,31 @@ import GERCOLogo from '../../components/img/gerco-serveis-integrals.png';
 import '../../components/styles/Home.css';
 
 const HERO_PAIN_POINTS = [
-  'Processos dispersos que compliquen el control financer del dia a dia.',
-  'Normatives Veri*Factu i AEAT canviants que generen incertesa.',
-  'Aplicacions que es queden enrere i obliguen l’equip a dedicar hores de manteniment manual.',
+  'Evitem hores perdudes en tasques manuals i quadratures repetitives.',
+  'Traduïm els canvis de normativa en accions concretes per al teu equip.',
+  'Creem un sistema únic perquè dades, finances i operacions estiguin sincronitzades.',
 ];
 
 const SERVICE_PILLARS = [
   {
-    title: 'Estratègia i governança digital',
+    title: 'Diagnosi estratègica i priorització',
     description:
-      'Auditories de maduresa, roadmaps trimestrals i models d’operació compartits per prioritzar inversions i coordinar equips.',
+      'Mapeig de processos, riscos fiscals i dependències tecnològiques per definir un full de ruta assumible i mesurable.',
   },
   {
-    title: 'Producte i experiència d’usuari',
+    title: 'Disseny de processos i experiència',
     description:
-      'Dissenyem fluxos digitals, prototips validats i analítica per assegurar que cada iteració resol un problema real.',
+      'Taller d’operacions, prototips validats amb equips interns i clients, i definició de KPI que demostren l’impacte.',
   },
   {
-    title: 'Tecnologia i dades aplicades',
+    title: 'Tecnologia sense friccions',
     description:
-      'Integració de plataformes SaaS, automatitzacions i quadres de comandament que connecten fonts de dades crítiques.',
+      'Integració de sistemes, automatitzacions i quadres de comandament que connecten la informació crítica sense manteniment manual.',
   },
   {
-    title: 'Operacions i canvi cultural',
+    title: 'Acompanyament i governança',
     description:
-      'Acompanyem equips híbrids amb formació, governança i rituals perquè el software evolucioni amb el negoci.',
+      'Formació, rituals de seguiment i PMO compartida per garantir l’adopció i l’evolució contínua del software.',
   },
 ];
 
@@ -52,61 +50,53 @@ const WORKFLOW_STEPS = [
       'Analitzem fluxos, dades d’ús i normativa aplicable per detectar el que frena el creixement i el compliment fiscal.',
   },
   {
-    title: '2. Co-creació iterativa',
+    title: '2. Full de ruta accionable',
     description:
-      'Dissenyem un full de ruta modular i treballem en squads mixtes per assegurar adopció, documentació i transferència.',
+      'Co-dissenyem el pla amb direcció, finances i operacions per assegurar prioritats clares i responsabilitats compartides.',
   },
   {
-    title: '3. Evolució contínua',
+    title: '3. Execució i evolució contínua',
     description:
-      'Monitoritzem KPI, incidències i noves obligacions legals per mantenir el programari sempre al dia.',
+      'Treballem en iteracions curtes amb equips mixtes, monitoritzem indicadors i adaptem els mòduls a cada canvi de normativa.',
   },
 ];
 
-const MODULES = [
+const SUCCESS_STORIES = [
   {
-    title: 'Facturació Veri*Factu (Avero)',
+    title: 'Empresa de manteniment industrial',
+    result: '-40% temps administratiu',
     description:
-      'Suite de facturació SaaS homologada per garantir l’enviament segur a l’AEAT des del primer dia.',
-    bullets: [
-      'Enviament automàtic de factures i registres amb hash verificable.',
-      'Signatura digital, TPV i portal de validació perquè clients i gestors treballin en paral·lel.',
+      'Vam redissenyar el circuit de parts i factures amb Veri*Factu, integrant el seu ERP i automatitzant l’aprovació de serveis.',
+    learnings: [
+      'Connectem ordres de treball, contractes i facturació en un únic dashboard operatiu.',
+      'Reduïm incidències fiscals amb controls previs i alertes a equips de camp.',
+    ],
+    icon: suportImg,
+    iconAlt: 'Il·lustració suport continu',
+  },
+  {
+    title: 'Gestoria amb 300 clients pimes',
+    result: '300 clients digitalitzats en 3 mesos',
+    description:
+      'Co-creem un onboarding automatitzat, canalitzant la documentació cap a Veri*Factu i establint rituals setmanals de seguiment.',
+    learnings: [
+      'Formem l’equip en scripts i plantilles perquè cada client entri amb la mateixa qualitat.',
+      'Generem quadres de control perquè direcció visualitzi l’estat de compliment en temps real.',
     ],
     icon: AveroLogo,
     iconAlt: 'Logotip Avero',
   },
   {
-    title: 'Integracions i automatitzacions',
+    title: 'PIME industrial familiar',
+    result: '7 fulls d’Excel eliminats',
     description:
-      'Connexió amb CRM, ERP, bancs i BI per eliminar tasques manuals i sincronitzar dades en temps real.',
-    bullets: [
-      'APIs i connectores pròpies amb monitoratge 24/7.',
-      'Workflows sense errors humans ni fulls de càlcul dispersos.',
+      'Implementem integracions a mida entre magatzem, comptabilitat i facturació per tenir traçabilitat completa davant l’AEAT.',
+    learnings: [
+      'Automatitzem conciliacions i informes perquè gerència prengui decisions amb dades fiables.',
+      'Establim un roadmap evolutiu amb revisions trimestrals i suport continu.',
     ],
     icon: softwareImg,
-    iconAlt: 'Icona desenvolupament de software',
-  },
-  {
-    title: 'Portal de clients i equips',
-    description:
-      'Espais digitals perquè els teus clients puguin pujar, aprovar i consultar documentació en qualsevol moment.',
-    bullets: [
-      'Control de rols i permisos granular.',
-      'Alertes automatitzades per reduir incidències i retards.',
-    ],
-    icon: consultoriesImg,
-    iconAlt: 'Icona consultoria',
-  },
-  {
-    title: 'Quadres de comandament i suport',
-    description:
-      'Visió temps real de KPI crítics i suport proactiu per garantir disponibilitat i millores evolutives.',
-    bullets: [
-      'Dashboards personalitzats per direcció i equips operatius.',
-      'Manteniment continu amb roadmap compartit i sessions de revisió.',
-    ],
-    icon: suportImg,
-    iconAlt: 'Icona suport',
+    iconAlt: 'Icona d’integracions',
   },
 ];
 
@@ -114,7 +104,7 @@ const SECTORS = [
   {
     title: 'Gestories i despatxos professionals',
     description:
-      'Digitalitza la relació amb clients, ofereix serveis Veri*Factu i escala sense incrementar equips.',
+      'Digitalitza la relació amb clients, ofereix serveis Veri*Factu i escala sense ampliar l’estructura.',
   },
   {
     title: 'PIMEs industrials i serveis B2B',
@@ -122,9 +112,9 @@ const SECTORS = [
       'Integra vendes, finances i operacions amb sistemes que asseguren traçabilitat fiscal i productiva.',
   },
   {
-    title: 'Startups SaaS i equips híbrids',
+    title: 'Direccions financeres i equips de compliment',
     description:
-      'Construeix producte i processos escalables amb mòduls que evolucionen amb el teu roadmap.',
+      'Impulsa models d’informació fiables, controls interns i informes regulatoris en un únic entorn.',
   },
 ];
 
@@ -163,14 +153,14 @@ const IMPACT_METRICS = [
 
 const TRUST_CARDS = [
   {
-    title: 'Credencials Veri*Factu i AEAT',
+    title: 'Partner digital de confiança',
     description:
-      'Som proveïdor tecnològic registrat. Els nostres sistemes apliquen la signatura i l’enviament segur requerit per l’AEAT.',
+      'Ens involucrem en el disseny, la implementació i l’evolució dels teus sistemes perquè compleixin avui i demà.',
   },
   {
-    title: 'Manteniment continu i roadmap compartit',
+    title: 'Compliment Veri*Factu acreditat',
     description:
-      'Monitoratge 24/7, SLA definits i sessions de revisió perquè el teu software evolucioni amb el negoci.',
+      'Som proveïdor tecnològic registrat i operem amb protocols que asseguren la signatura i l’enviament segur a l’AEAT.',
   },
 ];
 
@@ -207,10 +197,10 @@ const Home = () => {
   return (
     <Layout>
       <Helmet>
-        <title>JCT Agency | Programari Veri*Factu amb evolució contínua</title>
+        <title>JCT Agency | Consultoria Veri*Factu i operacions digitals</title>
         <meta
           name="description"
-          content="Construïm software SaaS, integracions i portals Veri*Factu per a gestories, PIMEs i startups amb manteniment proactiu i compliment 100% AEAT."
+          content="Consultoria estratègica, software Veri*Factu i acompanyament continu per reduir riscos fiscals, automatitzar processos i fer créixer el teu negoci."
         />
       </Helmet>
 
@@ -219,12 +209,13 @@ const Home = () => {
           <div className="container">
             <div className="row align-items-center g-5">
               <div className="col-lg-6 home-hero-content text-lg-start text-center">
-                <span className="section-eyebrow">Producte digital i compliment fiscal</span>
+                <span className="section-eyebrow">Consultoria Veri*Factu end-to-end</span>
                 <h1 className="section-heading">
-                  Software Veri*Factu que resol el dolor operatiu i evoluciona amb la teva empresa
+                  T’ajudem a complir Veri*Factu mentre optimitzes la gestió de la teva empresa
                 </h1>
-                <p className="section-subheading">
-                  Co-dissenyem experiències digitals perquè gestories, PIMEs i equips SaaS compleixin la normativa mentre automatitzen processos crítics.
+                <p className="section-subheading">Estratègia + Software + Acompanyament continu.</p>
+                <p className="hero-description">
+                  Ens impliquem des de la diagnosi fins al manteniment perquè el teu equip treballi amb processos ordenats, dades fiables i tranquil·litat fiscal.
                 </p>
                 <ul className="home-pain-list">
                   {HERO_PAIN_POINTS.map((pain) => (
@@ -233,10 +224,10 @@ const Home = () => {
                 </ul>
                 <div className="d-flex flex-column flex-md-row align-items-md-center gap-3 mt-4 justify-content-md-start justify-content-center">
                   <a href="#contacte" className="btn btn-brand">
-                    Demana una demo personalitzada
+                    Demana diagnòstic gratuït
                   </a>
-                  <a href="#com-funciona" className="btn btn-outline-brand">
-                    Descobreix com funciona
+                  <a href="#assessorem" className="link-arrow">
+                    Coneix el nostre enfocament
                   </a>
                 </div>
               </div>
@@ -252,22 +243,20 @@ const Home = () => {
           </div>
         </section>
 
-        <section data-aos="fade-up">
+        <section id="assessorem" data-aos="fade-up" className="section-assessorem">
           <div className="container">
             <div className="row gy-4">
               <div className="col-lg-4">
-                <span className="section-eyebrow">Com aportem valor</span>
-                <h2 className="section-heading">Pilar a pilar, construïm iniciatives que escalen</h2>
+                <span className="section-eyebrow">Assessorem i executem</span>
+                <h2 className="section-heading">Definim processos, prioritzem iniciatives i els fem realitat amb tu</h2>
                 <p className="section-subheading">
-                  Combinem la visió estratègica amb la capacitat tècnica per fer aterrar projectes tangibles. Treballem amb organitzacions que volen resultat mesurable sense perdre l’atenció pel detall.
+                  No només desenvolupem programari — treballem colze a colze amb direcció, equips operatius i gestories perquè cada decisió tingui impacte directe en els resultats i el compliment fiscal.
                 </p>
-                <InlineCTAGroup
-                  className="mt-4"
-                  primaryLabel="Explora les solucions"
-                  primaryHref="/solucions"
-                  secondaryLabel="Consulta els sectors"
-                  secondaryHref="/sectors"
-                />
+                <div className="consulting-chips mt-4">
+                  <span>Diagnosi i roadmap</span>
+                  <span>Software Veri*Factu i integracions</span>
+                  <span>Governança i suport continu</span>
+                </div>
               </div>
               <div className="col-lg-8">
                 <div className="row g-4">
@@ -289,10 +278,10 @@ const Home = () => {
           <div className="container">
             <div className="row justify-content-between align-items-center g-4 mb-5">
               <div className="col-lg-7">
-                <span className="section-eyebrow">Com funciona</span>
-                <h2 className="section-heading">Un procés en tres passos perquè el canvi sigui tangible des del primer mes</h2>
+                <span className="section-eyebrow">Metodologia</span>
+                <h2 className="section-heading">Del diagnòstic inicial als resultats mesurables en poques setmanes</h2>
                 <p className="section-subheading">
-                  Ens impliquem amb el teu equip per garantir que cada mòdul resol un problema real i queda integrat en l’operativa quotidiana.
+                  Simplifiquem la transformació digital combinant consultoria, desenvolupament i canvi cultural perquè cada iteració redueixi temps, errors i riscos fiscals.
                 </p>
               </div>
             </div>
@@ -309,32 +298,33 @@ const Home = () => {
           </div>
         </section>
 
-        <section id="moduls" data-aos="fade-up">
+        <section id="histories" data-aos="fade-up">
           <div className="container">
             <div className="row justify-content-between align-items-center g-4 mb-5">
               <div className="col-lg-8">
-                <span className="section-eyebrow">Mòduls que responen al dolor</span>
-                <h2 className="section-heading">Activem només el que necessites, amb components reutilitzables i escalables</h2>
+                <span className="section-eyebrow">Solucions reals</span>
+                <h2 className="section-heading">Solucions reals per reduir temps, errors i riscos fiscals</h2>
                 <p className="section-subheading">
-                  Cada mòdul està construït amb la mateixa base tecnològica i de disseny perquè la integració sigui ràpida, segura i coherent amb la identitat de la teva marca.
+                  Expliquem històries perquè visualitzis com combinant consultoria, tecnologia i suport continu podem desbloquejar millores tangibles al teu negoci.
                 </p>
               </div>
             </div>
-            <div className="row row-cols-1 row-cols-md-2 g-4">
-              {MODULES.map((module) => (
-                <div className="col" key={module.title}>
-                  <div className="card-surface">
-                    <div className="card-icon">
-                      <img src={module.icon} alt={module.iconAlt} className="img-fluid" />
+            <div className="row row-cols-1 row-cols-md-3 g-4">
+              {SUCCESS_STORIES.map((story) => (
+                <div className="col" key={story.title}>
+                  <article className="story-card h-100">
+                    <div className="story-icon">
+                      <img src={story.icon} alt={story.iconAlt} className="img-fluid" />
                     </div>
-                    <h3 className="h4 fw-semibold mb-3">{module.title}</h3>
-                    <p className="text-muted">{module.description}</p>
+                    <span className="story-result">{story.result}</span>
+                    <h3 className="h4 fw-semibold">{story.title}</h3>
+                    <p className="text-muted">{story.description}</p>
                     <ul className="mt-3 ps-3 text-muted">
-                      {module.bullets.map((bullet) => (
-                        <li key={bullet}>{bullet}</li>
+                      {story.learnings.map((learning) => (
+                        <li key={learning}>{learning}</li>
                       ))}
                     </ul>
-                  </div>
+                  </article>
                 </div>
               ))}
             </div>
@@ -395,11 +385,16 @@ const Home = () => {
           <div className="container">
             <div className="row justify-content-between align-items-center g-4 mb-5">
               <div className="col-lg-8">
-                <span className="section-eyebrow">Veri*Factu, AEAT i manteniment</span>
-                <h2 className="section-heading">Compliment acreditat i evolució constant del programari</h2>
+                <span className="section-eyebrow">Partner continu</span>
+                <h2 className="section-heading">Som el teu partner digital per dissenyar, implementar i evolucionar Veri*Factu</h2>
                 <p className="section-subheading">
-                  El nostre equip combina producte digital, fiscalitat i suport tècnic per garantir que cada mòdul segueixi operatiu i actualitzat.
+                  Aportem equip multidisciplinari i processos de governança perquè el sistema compleixi avui i demà sense carregar l’organització amb manteniment addicional.
                 </p>
+                <ul className="partner-commitments mt-4">
+                  <li>Sessions quinzenals de seguiment per ajustar roadmap i prioritzar nous requisits.</li>
+                  <li>Indicadors compartits de compliment, adopció i satisfacció de l’usuari final.</li>
+                  <li>Canals directes amb consultors i enginyers per resoldre incidències en hores, no dies.</li>
+                </ul>
               </div>
             </div>
             <div className="row row-cols-1 row-cols-md-2 g-4">
@@ -411,6 +406,11 @@ const Home = () => {
                   </div>
                 </div>
               ))}
+            </div>
+            <div className="text-center mt-5">
+              <a href="#contacte" className="btn btn-brand">
+                Demana diagnòstic gratuït
+              </a>
             </div>
           </div>
         </section>
@@ -439,9 +439,9 @@ const Home = () => {
               <div className="row g-4 align-items-start">
                 <div className="col-lg-6">
                   <span className="section-eyebrow">Proper pas</span>
-                  <h2 className="section-heading">Explica’ns què vols solucionar i dissenyem la demo</h2>
+                  <h2 className="section-heading">Explica’ns què vols solucionar i preparem el teu diagnòstic</h2>
                   <p className="section-subheading">
-                    Comparteix els reptes actuals i prepara’t per rebre una proposta modular amb roadmap, mètriques suggerides i pressupost orientatiu.
+                    Comparteix els reptes actuals i rep un pla inicial amb priorització de processos, mètriques clau i propostes tecnològiques per començar.
                   </p>
                   <form onSubmit={handleSubmit} className="mt-4">
                     <input
@@ -480,7 +480,7 @@ const Home = () => {
                       required
                     ></textarea>
                     <button type="submit" className="btn btn-brand">
-                      Envia el missatge
+                      Demana diagnòstic gratuït
                     </button>
                     {isFormSubmitted && <p className="mt-3 text-success">Missatge enviat correctament.</p>}
                   </form>

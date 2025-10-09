@@ -4,8 +4,8 @@
 }
 
 .home-view section {
-  padding-top: clamp(3.5rem, 7vw, 5.5rem);
-  padding-bottom: clamp(3.5rem, 7vw, 5.5rem);
+  padding-top: clamp(4rem, 8vw, 6rem);
+  padding-bottom: clamp(4rem, 8vw, 6rem);
 }
 
 .section-eyebrow {
@@ -30,6 +30,11 @@
   font-size: 1.1rem;
   color: var(--color-ink-500);
   max-width: 680px;
+}
+
+.hero-description {
+  color: var(--color-ink-600);
+  margin-top: 1rem;
 }
 
 .home-hero {
@@ -109,6 +114,45 @@
   border-color: rgba(99, 102, 241, 0.35);
 }
 
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-brand-600);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link-arrow::after {
+  content: '→';
+  transition: transform 0.2s ease;
+}
+
+.link-arrow:hover::after {
+  transform: translateX(4px);
+}
+
+.section-assessorem {
+  position: relative;
+}
+
+.consulting-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.consulting-chips span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  background: rgba(79, 70, 229, 0.1);
+  color: var(--color-brand-600);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
 .card-surface {
   background: #fff;
   border-radius: var(--radius-lg);
@@ -131,6 +175,45 @@
 .card-icon img {
   max-width: 2.5rem;
   max-height: 2.5rem;
+}
+
+.story-card {
+  background: #fff;
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.story-icon {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 1rem;
+  background: rgba(79, 70, 229, 0.08);
+  display: grid;
+  place-items: center;
+}
+
+.story-icon img {
+  max-width: 42px;
+  max-height: 42px;
+}
+
+.story-result {
+  display: inline-block;
+  margin-top: 0.25rem;
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+  color: var(--color-brand-600);
+  background: rgba(20, 184, 166, 0.12);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
 }
 
 .metric-card {
@@ -184,6 +267,31 @@
 .trust-card p {
   color: var(--color-ink-600);
   margin-bottom: 0;
+}
+
+.partner-commitments {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+  max-width: 720px;
+}
+
+.partner-commitments li {
+  padding-left: 1.75rem;
+  position: relative;
+  color: var(--color-ink-600);
+  font-weight: 500;
+}
+
+.partner-commitments li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-brand-500);
+  font-weight: 700;
 }
 
 .clients-logos img {
@@ -242,5 +350,9 @@
 
   .home-pain-list li {
     text-align: left;
+  }
+
+  .story-card {
+    padding: 2rem;
   }
 }
