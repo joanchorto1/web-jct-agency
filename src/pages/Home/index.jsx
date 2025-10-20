@@ -8,6 +8,7 @@ import heroImg from '../../components/img/QUI SOM.png';
 import softwareImg from '../../components/img/DESENVOLUPAMENT SOFTWARE.png';
 import suportImg from '../../components/img/SUPORT.png';
 import AveroLogo from '../../components/img/AVERO LOGO.png';
+import constructProIcon from '../../components/img/portatilIcon.png';
 import AjuntamentAldeaLogo from '../../components/img/AJUNTAMENT.jpeg';
 import EGEALogo from '../../components/img/EGEA.png';
 import GERCOLogo from '../../components/img/gerco-serveis-integrals.png';
@@ -170,6 +171,29 @@ const CLIENT_LOGOS = [
   { src: GERCOLogo, alt: 'GERCO Serveis Integrals' },
 ];
 
+const PRODUCT_SOLUTIONS = [
+  {
+    eyebrow: 'Facturació Veri*Factu',
+    title: 'Avero',
+    description:
+      'Programa de facturació homologat Veri*Factu perquè gestories, PIMEs i autònoms compleixin la normativa sense friccions.',
+    href: '/avero',
+    ctaLabel: 'Descobreix Avero',
+    icon: AveroLogo,
+    iconAlt: 'Logotip Avero',
+  },
+  {
+    eyebrow: 'ERP per a construcció',
+    title: 'ConstructPro',
+    description:
+      'Centralitza parts, pressupostos i facturació d’obres en temps real per guanyar control sobre marges i equips.',
+    href: '/constructpro',
+    ctaLabel: 'Coneix ConstructPro',
+    icon: constructProIcon,
+    iconAlt: 'Icona ConstructPro',
+  },
+];
+
 const Home = () => {
   const [isFormSubmitted, setFormSubmitted] = useState(false);
   const [formFields, setFormFields] = useState({
@@ -291,6 +315,47 @@ const Home = () => {
                   <div className="card-surface h-100">
                     <h3 className="h5 fw-semibold mb-3">{step.title}</h3>
                     <p className="mb-0 text-muted">{step.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="solucions" data-aos="fade-up" className="section-product-solutions">
+          <div className="container">
+            <div className="row justify-content-between align-items-center g-4 mb-5">
+              <div className="col-lg-7">
+                <span className="section-eyebrow">Solucions pròpies</span>
+                <h2 className="section-heading">Productes que connecten consultoria i execució</h2>
+                <p className="section-subheading">
+                  Acompanyem cada implementació amb roadmap i suport continu. Explora les nostres solucions per a facturació i
+                  operacions de camp.
+                </p>
+              </div>
+            </div>
+            <div className="row row-cols-1 row-cols-md-2 g-4">
+              {PRODUCT_SOLUTIONS.map((solution) => (
+                <div className="col" key={solution.title}>
+                  <div className="card-surface h-100 d-flex flex-column">
+                    <div className="d-flex align-items-center gap-3">
+                      <img
+                        src={solution.icon}
+                        alt={solution.iconAlt}
+                        style={{ width: '56px' }}
+                        className="flex-shrink-0"
+                      />
+                      <div>
+                        <span className="badge bg-primary-subtle text-primary fw-semibold text-uppercase">
+                          {solution.eyebrow}
+                        </span>
+                        <h3 className="h4 fw-semibold mt-2 mb-0">{solution.title}</h3>
+                      </div>
+                    </div>
+                    <p className="text-muted mt-3 flex-grow-1">{solution.description}</p>
+                    <a href={solution.href} className="link-arrow mt-3 align-self-start">
+                      {solution.ctaLabel}
+                    </a>
                   </div>
                 </div>
               ))}

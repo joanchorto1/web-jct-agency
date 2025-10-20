@@ -7,6 +7,8 @@ const navItems = [
   { label: 'Sectors', href: '/sectors' },
   { label: 'Com treballem', href: '/com-treballem' },
   { label: 'Solucions', href: '/solucions' },
+  { label: 'ConstructPro', href: '/constructpro' },
+  { label: 'Avero', href: '/avero' },
   { label: 'Resultats', href: '/resultats' },
   { label: 'Sobre JCT', href: '/sobre-jct' },
   { label: 'Recursos', href: '/recursos' },

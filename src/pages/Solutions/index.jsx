@@ -1,6 +1,8 @@
 import React from 'react';
 import Layout from '../../components/layouts/layout';
 import InlineCTAGroup from '../../components/cta/InlineCTAGroup';
+import AveroLogo from '../../components/img/AVERO LOGO.png';
+import constructProIcon from '../../components/img/portatilIcon.png';
 
 const solutionSuites = [
   {
@@ -38,6 +40,27 @@ const accelerators = [
   },
 ];
 
+const productPages = [
+  {
+    title: 'Avero – Facturació Veri*Factu',
+    description:
+      'Programa de facturació homologat per a gestories, PIMEs i autònoms. Compliment legal, portal de clients i integració amb gestories.',
+    href: '/avero',
+    ctaLabel: 'Explora Avero',
+    icon: AveroLogo,
+    iconAlt: 'Logotip Avero',
+  },
+  {
+    title: 'ConstructPro – ERP per a construcció',
+    description:
+      'Centralitza parts, pressupostos i facturació d’obres connectant oficines i equips de camp amb dashboards de marges.',
+    href: '/constructpro',
+    ctaLabel: 'Coneix ConstructPro',
+    icon: constructProIcon,
+    iconAlt: 'Icona ConstructPro',
+  },
+];
+
 const Solutions = () => (
   <Layout>
     <section className="section-spacing">
@@ -54,6 +77,39 @@ const Solutions = () => (
           primaryHref="/contacte?from=solutions"
           secondaryHref="/contacte#demo"
         />
+      </div>
+    </section>
+
+    <section className="section-spacing bg-white">
+      <div className="container">
+        <div className="row justify-content-between align-items-center mb-5">
+          <div className="col-lg-7">
+            <span className="eyebrow text-uppercase text-primary">Solucions destacades</span>
+            <h2 className="fw-semibold mt-3">Productes propis per a facturació i operacions</h2>
+            <p className="text-muted mt-3 mb-0">
+              Complementem els projectes de consultoria amb software propietari que accelera l’adopció i assegura el compliment.
+              Explora els nostres productes i reserva una demo guiada.
+            </p>
+          </div>
+        </div>
+        <div className="row row-cols-1 row-cols-md-2 g-4">
+          {productPages.map((solution) => (
+            <div className="col" key={solution.title}>
+              <div className="card h-100 border-0 shadow-sm">
+                <div className="card-body p-4 d-flex flex-column">
+                  <div className="d-flex align-items-center gap-3">
+                    <img src={solution.icon} alt={solution.iconAlt} style={{ width: '56px' }} className="flex-shrink-0" />
+                    <h2 className="h5 fw-semibold mb-0">{solution.title}</h2>
+                  </div>
+                  <p className="text-muted mt-3 flex-grow-1">{solution.description}</p>
+                  <a href={solution.href} className="btn btn-link px-0 align-self-start">
+                    {solution.ctaLabel}
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
 

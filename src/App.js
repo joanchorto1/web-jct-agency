@@ -25,6 +25,7 @@ const AboutPage = lazy(() => import('./pages/About'));
 const WorkMethodPage = lazy(() => import('./pages/WorkMethod'));
 const ResourcesPage = lazy(() => import('./pages/Resources'));
 const ContactReservationPage = lazy(() => import('./pages/ContactReservation'));
+const ConstructProPage = lazy(() => import('./pages/ConstructPro'));
 
 function App() {
   useEffect(() => {
@@ -47,6 +48,7 @@ function App() {
           <Route path="/recursos" element={<ResourcesPage />} />
           <Route path="/contacte" element={<ContactReservationPage />} />
           <Route path="/contacto" element={<ContactReservationPage />} />
+          <Route path="/constructpro" element={<ConstructProPage />} />
           <Route path="/avero" element={<Avero />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/optimitzacio-seo" element={<SeoArticle />} />
