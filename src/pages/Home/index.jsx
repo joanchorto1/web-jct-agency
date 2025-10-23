@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
-import emailjs from '@emailjs/browser';
 
 import Layout from '../../components/layouts/layout';
 
@@ -195,29 +194,6 @@ const PRODUCT_SOLUTIONS = [
 ];
 
 const Home = () => {
-  const [isFormSubmitted, setFormSubmitted] = useState(false);
-  const [formFields, setFormFields] = useState({
-    nombre: '',
-    empresa: '',
-    email: '',
-    mensaje: '',
-  });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm('service_uaggcy8', 'template_88m2twe', e.target, 'PrtHsOGCYBrChfJU3')
-      .then(() => {
-        setFormSubmitted(true);
-        setFormFields({ nombre: '', empresa: '', email: '', mensaje: '' });
-      })
-      .catch(() => setFormSubmitted(false));
-  };
-
-  const handleChange = (e) => {
-    setFormFields({ ...formFields, [e.target.name]: e.target.value });
-  };
-
   return (
     <Layout>
       <Helmet>
@@ -247,7 +223,7 @@ const Home = () => {
                   ))}
                 </ul>
                 <div className="d-flex flex-column flex-md-row align-items-md-center gap-3 mt-4 justify-content-md-start justify-content-center">
-                  <a href="#contacte" className="btn btn-brand">
+                  <a href="/contacte" className="btn btn-brand">
                     Demana diagnòstic gratuït
                   </a>
                   <a href="#assessorem" className="link-arrow">
@@ -473,7 +449,7 @@ const Home = () => {
               ))}
             </div>
             <div className="text-center mt-5">
-              <a href="#contacte" className="btn btn-brand">
+              <a href="/contacte" className="btn btn-brand">
                 Demana diagnòstic gratuït
               </a>
             </div>
@@ -508,47 +484,14 @@ const Home = () => {
                   <p className="section-subheading">
                     Comparteix els reptes actuals i rep un pla inicial amb priorització de processos, mètriques clau i propostes tecnològiques per començar.
                   </p>
-                  <form onSubmit={handleSubmit} className="mt-4">
-                    <input
-                      type="text"
-                      name="nombre"
-                      placeholder="Nom i cognoms"
-                      className="form-control mb-3"
-                      value={formFields.nombre}
-                      onChange={handleChange}
-                      required
-                    />
-                    <input
-                      type="text"
-                      name="empresa"
-                      placeholder="Empresa"
-                      className="form-control mb-3"
-                      value={formFields.empresa}
-                      onChange={handleChange}
-                    />
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Email"
-                      className="form-control mb-3"
-                      value={formFields.email}
-                      onChange={handleChange}
-                      required
-                    />
-                    <textarea
-                      name="mensaje"
-                      placeholder="Quin és el principal repte digital que vols resoldre?"
-                      className="form-control mb-3"
-                      rows="4"
-                      value={formFields.mensaje}
-                      onChange={handleChange}
-                      required
-                    ></textarea>
-                    <button type="submit" className="btn btn-brand">
-                      Demana diagnòstic gratuït
-                    </button>
-                    {isFormSubmitted && <p className="mt-3 text-success">Missatge enviat correctament.</p>}
-                  </form>
+                  <div className="mt-4">
+                    <a href="/contacte" className="btn btn-brand">
+                      Vull parlar amb l’equip
+                    </a>
+                    <p className="text-muted mt-3 mb-0">
+                      Et redirigirem al formulari de contacte perquè ens expliquis amb detall el teu projecte.
+                    </p>
+                  </div>
                 </div>
                 <div className="col-lg-5 offset-lg-1">
                   <div className="contact-details">
