@@ -231,7 +231,7 @@ const ConstructProPage = () => (
     <div className="section-spacing bg-white text-dark">
       <section className="section-spacing pb-0">
         <div className="container">
-          <div className="row align-items-center g-5 flex-column-reverse flex-lg-row">
+          <div className="row align-items-center pb-5 g-5 flex-column-reverse flex-lg-row">
             <div className="col-lg-6">
               <span className="eyebrow text-uppercase text-primary">Solució ERP professional</span>
               <h1 className="display-5 fw-bold mt-3">
