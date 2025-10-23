@@ -2,15 +2,124 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import Layout from '../../components/layouts/layout';
 
-import controlIcon from '../../components/img/portatilIcon.png';
-import automationIcon from '../../components/img/EFICIENCIA.png';
-import reportsIcon from '../../components/img/analisis.png';
-import accessIcon from '../../components/img/SUPORT.png';
 import Logo from '../../components/img/apple-touch-icon.png';
 import captura1 from '../../components/img/captura1.png';
 import captura2 from '../../components/img/captura2.png';
 import captura3 from '../../components/img/captura3.png';
 
+const ReliefControlIcon = ({ label }) => (
+  <svg
+    role="img"
+    aria-label={label}
+    width="48"
+    height="48"
+    viewBox="0 0 48 48"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle cx="24" cy="24" r="22" fill="#E7F1FF" />
+    <circle cx="24" cy="24" r="17" stroke="#0D6EFD" strokeWidth="2" />
+    <path
+      d="M24 15v9l6 6"
+      stroke="#0D6EFD"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path d="M15 29h18" stroke="#0D6EFD" strokeWidth="2" strokeLinecap="round" />
+    <circle cx="24" cy="15" r="2" fill="#0D6EFD" />
+  </svg>
+);
+
+const ReliefAutomationIcon = ({ label }) => (
+  <svg
+    role="img"
+    aria-label={label}
+    width="48"
+    height="48"
+    viewBox="0 0 48 48"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle cx="24" cy="24" r="22" fill="#E8FFF2" />
+    <circle cx="24" cy="24" r="13" stroke="#198754" strokeWidth="2" />
+    <path
+      d="M24 13v5M24 30v5M13 24h5M30 24h5"
+      stroke="#198754"
+      strokeWidth="2"
+      strokeLinecap="round"
+    />
+    <path
+      d="M29 19 19 29"
+      stroke="#198754"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <circle cx="24" cy="24" r="4" fill="#198754" />
+  </svg>
+);
+
+const ReliefReportsIcon = ({ label }) => (
+  <svg
+    role="img"
+    aria-label={label}
+    width="48"
+    height="48"
+    viewBox="0 0 48 48"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect x="2" y="2" width="44" height="44" rx="8" fill="#FFF5E6" />
+    <path
+      d="M16 32v-8M24 32V18M32 32V22"
+      stroke="#FD7E14"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M14 36h20"
+      stroke="#FD7E14"
+      strokeWidth="2"
+      strokeLinecap="round"
+    />
+    <path
+      d="M20 14h8l4 4"
+      stroke="#FD7E14"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const ReliefAccessIcon = ({ label }) => (
+  <svg
+    role="img"
+    aria-label={label}
+    width="48"
+    height="48"
+    viewBox="0 0 48 48"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect x="4" y="16" width="40" height="24" rx="12" fill="#F0EDFF" />
+    <path
+      d="M18 20c1.2-4.2 5.1-7 9.6-6.4 4.6.6 8 4.4 8.4 8.9"
+      stroke="#6F42C1"
+      strokeWidth="2"
+      strokeLinecap="round"
+    />
+    <path
+      d="M16 32.5 20.5 37 32 25.5"
+      stroke="#6F42C1"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
 const productScreens = [
   {
     title: 'Pressupostos alineats amb obra',
@@ -46,25 +155,25 @@ const reliefBenefits = [
   {
     title: 'Control total',
     description: 'Obres, clients i costos en temps real amb traçabilitat completa de cada partida.',
-    icon: controlIcon,
-    alt: 'Icona control d\'operacions',
+    icon: ReliefControlIcon,
+    alt: "Icona control d'operacions",
   },
   {
     title: 'Automatització',
-    description: 'Del part aprovat al pressupost i d\'aquest a la factura sense copiar dades ni cometre errors.',
-    icon: automationIcon,
+    description: "Del part aprovat al pressupost i d'aquest a la factura sense copiar dades ni cometre errors.",
+    icon: ReliefAutomationIcon,
     alt: 'Icona automatització',
   },
   {
     title: 'Informes i marges',
     description: 'Coneix el benefici de cada obra amb dashboards i alertes de desviacions.',
-    icon: reportsIcon,
+    icon: ReliefReportsIcon,
     alt: 'Icona informes',
   },
   {
     title: 'Accés des de qualsevol lloc',
     description: 'Oficina, mòbil o obra amb permisos per rols i registre de canvis.',
-    icon: accessIcon,
+    icon: ReliefAccessIcon,
     alt: 'Icona accés remot',
   },
 ];
@@ -220,19 +329,24 @@ const ConstructProPage = () => (
             </div>
           </div>
           <div className="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
-            {reliefBenefits.map((benefit) => (
-              <div className="col" key={benefit.title}>
-                <div className="card h-100 border-0 shadow-sm">
-                  <div className="card-body p-4">
-                    <div className="d-flex align-items-center mb-3">
-                      <img src={benefit.icon} alt={benefit.alt} className="me-3" style={{ width: '48px' }} />
-                      <h3 className="h5 mb-0">{benefit.title}</h3>
+            {reliefBenefits.map((benefit) => {
+              const IconComponent = benefit.icon;
+              return (
+                <div className="col" key={benefit.title}>
+                  <div className="card h-100 border-0 shadow-sm">
+                    <div className="card-body p-4">
+                      <div className="d-flex align-items-center mb-3">
+                        <div className="me-3 flex-shrink-0">
+                          <IconComponent label={benefit.alt} />
+                        </div>
+                        <h3 className="h5 mb-0">{benefit.title}</h3>
+                      </div>
+                      <p className="text-muted mb-0">{benefit.description}</p>
                     </div>
-                    <p className="text-muted mb-0">{benefit.description}</p>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
