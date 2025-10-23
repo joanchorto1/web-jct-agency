@@ -7,6 +7,10 @@ import controlIcon from '../../components/img/portatilIcon.png';
 import automationIcon from '../../components/img/EFICIENCIA.png';
 import reportsIcon from '../../components/img/analisis.png';
 import accessIcon from '../../components/img/SUPORT.png';
+import Logo from '../../components/img/apple-touch-icon.png';
+import captura1 from '../../components/img/captura1.png';
+import captura2 from '../../components/img/captura2.png';
+import captura3 from '../../components/img/captura3.png';
 
 const painPoints = [
   '📋 Els tècnics encara fan parts en paper o Excel.',
@@ -113,7 +117,7 @@ const ConstructProPage = () => (
             </div>
             <div className="col-lg-6 text-center">
               <img
-                src={siteManagerImg}
+                src={Logo}
                 alt="Cap d\'obra consultant l\'estat d\'una obra des d\'una tauleta"
                 className="img-fluid rounded-4 shadow"
                 style={{ maxWidth: '420px' }}
