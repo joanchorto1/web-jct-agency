@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import Layout from '../../components/layouts/layout';
 
-import siteManagerImg from '../../components/img/Man.png';
 import controlIcon from '../../components/img/portatilIcon.png';
 import automationIcon from '../../components/img/EFICIENCIA.png';
 import reportsIcon from '../../components/img/analisis.png';
@@ -11,6 +10,30 @@ import Logo from '../../components/img/apple-touch-icon.png';
 import captura1 from '../../components/img/captura1.png';
 import captura2 from '../../components/img/captura2.png';
 import captura3 from '../../components/img/captura3.png';
+
+const productScreens = [
+  {
+    title: 'Pressupostos alineats amb obra',
+    description:
+      'Configura plantilles de partides, revisions i marges aprovats abans d’enviar qualsevol oferta.',
+    image: captura1,
+    alt: 'Captura del mòdul de pressupostos de ConstructPro',
+  },
+  {
+    title: 'Quadres de comandament executius',
+    description:
+      'Segueix cada projecte amb indicadors en temps real, desviacions i alertes proactives.',
+    image: captura2,
+    alt: 'Dashboard principal de ConstructPro amb indicadors de marge',
+  },
+  {
+    title: 'Facturació sense errors',
+    description:
+      'Automatitza certificacions i factures connectades amb obra i compres per reduir incidències.',
+    image: captura3,
+    alt: 'Vista del sistema de factures integrades de ConstructPro',
+  },
+];
 
 const painPoints = [
   '📋 Els tècnics encara fan parts en paper o Excel.',
@@ -80,6 +103,12 @@ const testimonials = [
   },
 ];
 
+const verifactuHighlights = [
+  'Trazabilitat completa de cada factura amb segell digital i registre d’esdeveniments.',
+  'Generació automàtica dels fitxers XML i justificants requerits pel Reial Decret 1007/2023.',
+  'Connexions amb programari comptable i CRM per evitar manipulacions no autoritzades.',
+];
+
 const ConstructProPage = () => (
   <Layout>
     <Helmet>
@@ -95,16 +124,15 @@ const ConstructProPage = () => (
         <div className="container">
           <div className="row align-items-center g-5 flex-column-reverse flex-lg-row">
             <div className="col-lg-6">
-              <span className="eyebrow text-uppercase text-primary">ConstructPro</span>
+              <span className="eyebrow text-uppercase text-primary">Solució ERP professional</span>
               <h1 className="display-5 fw-bold mt-3">
-                La teva empresa de construcció sense parts en paper ni pèrdua de control
+                Governar l'empresa constructora amb dades fiables i processos integrats
               </h1>
               <p className="lead text-muted mt-3">
-                ConstructPro connecta oficina, obres i facturació en un únic sistema. Sense complicacions, amb fluxos pensats
-                per a caps d\'obra i equips administratius.
+                ConstructPro connecta oficina tècnica, equips d'obra i administració en un únic entorn segur per prendre decisions amb confiança.
               </p>
-              <p className="text-muted">
-                “La teva empresa de construcció perd hores cada setmana entre parts en paper, errors i falta de control. ConstructPro és la solució que connecta oficina, obres i facturació — sense complicacions.”
+              <p className="text-muted fst-italic">
+                “Reduïm paperassa, assegurem marges i automatitzem el cicle pressupost–execució–facturació amb auditories contínues.”
               </p>
               <div className="d-flex flex-column flex-sm-row gap-3 mt-4">
                 <a href="/contacte?from=constructpro" className="btn btn-primary btn-lg">
@@ -123,6 +151,32 @@ const ConstructProPage = () => (
                 style={{ maxWidth: '420px' }}
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-spacing bg-light">
+        <div className="container">
+          <div className="row justify-content-center text-center">
+            <div className="col-lg-8">
+              <h2 className="fw-semibold">Una suite visual per dirigir l'operativa</h2>
+              <p className="text-muted mt-3">
+                Visualitza pressupostos, seguiment de marge i facturació auditada en pantalles dissenyades per a equips directius i caps d'obra.
+              </p>
+            </div>
+          </div>
+          <div className="row g-4 mt-4">
+            {productScreens.map((screen) => (
+              <div className="col-12 col-md-6 col-lg-4" key={screen.title}>
+                <div className="card h-100 border-0 shadow-sm overflow-hidden">
+                  <img src={screen.image} alt={screen.alt} className="card-img-top" />
+                  <div className="card-body p-4">
+                    <h3 className="h5 fw-semibold">{screen.title}</h3>
+                    <p className="text-muted mb-0">{screen.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -202,6 +256,40 @@ const ConstructProPage = () => (
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-spacing bg-dark text-white">
+        <div className="container">
+          <div className="row align-items-center g-5">
+            <div className="col-lg-6">
+              <span className="eyebrow text-uppercase text-primary">Compliment normatiu</span>
+              <h2 className="fw-semibold mt-3 text-white">ConstructPro alinea la teva empresa amb Verifactu</h2>
+              <p className="mt-3 text-white-50">
+                Preparem processos, dades i documents perquè cada factura compleixi les noves obligacions fiscals i es pugui justificar davant l'Agència Tributària.
+              </p>
+              <ul className="list-unstyled d-grid gap-3 mt-4">
+                {verifactuHighlights.map((item) => (
+                  <li key={item} className="bg-opacity-10 bg-white text-white rounded-4 p-3">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <div className="d-flex flex-column flex-sm-row gap-3 mt-4">
+                <a href="/contacte?from=constructpro-verifactu" className="btn btn-outline-light btn-lg">
+                  Planifica el teu full de ruta
+                </a>
+                <span className="text-white-50 align-self-center">Informe de compliment i roadmap d'integració.</span>
+              </div>
+            </div>
+            <div className="col-lg-6 text-center">
+              <img
+                src={captura3}
+                alt="Pantalla de validació de factures conforme a Verifactu"
+                className="img-fluid rounded-4 shadow-lg"
+              />
+            </div>
           </div>
         </div>
       </section>
