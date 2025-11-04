@@ -19,7 +19,8 @@ const Home = () => {
       <div className="home-static">
         <header className="home-static__header">
           <div className="home-static__header-inner">
-            <a href="#" className="home-static__brand">
+            <a href="/" className="home-static__brand">
+
               Joan Chorto <span>Consultor</span>
             </a>
             <nav className="home-static__nav">
