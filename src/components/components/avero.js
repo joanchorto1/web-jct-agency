@@ -30,8 +30,17 @@ const Avero = () => (
               <h1>Avero – Programa de facturació 100% adaptat a VeriFactu i la Llei Crea y Crece.*</h1>
               <p>La solució més simple i moderna per a autònoms, PIMEs i gestories. Compleix amb la normativa sense complicacions.</p>
               <div className="d-flex gap-3 mt-3 flex-column flex-sm-row">
-                <a href="https://avero.joanchorto.com" className="btn btn-avero">Prova Avero gratis</a>
-                <a href="/contacto" className="btn btn-outline-avero">Demana una demo</a>
+                <a href="https://avero.jctagency.com" className="btn btn-avero">Prova Avero gratis</a>
+
+                {/* WhatsApp demo CTA */}
+                <a
+                  href="https://wa.me/34633391411?text=Hola%20Joan%2C%20vull%20una%20demo%20d%27Avero."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-outline-avero"
+                >
+                  Demana una demo (WhatsApp)
+                </a>
               </div>
             </div>
             <div className="col-md-6 text-center position-relative">
@@ -227,8 +236,29 @@ const Avero = () => (
         <div className="container">
           <h2>Adelanta’t a la normativa. Prova Avero avui i compleix amb Veri*Factu sense preocupacions.</h2>
           <div className="d-flex gap-3 justify-content-center flex-column flex-sm-row mt-3">
-            <a href="https://avero.joanchorto.com" className="btn btn-dark">Crear compte</a>
+            <a href="https://avero.jctagency.com" className="btn btn-dark">Crear compte</a>
+
+            {/* WhatsApp create account */}
+            <a
+              href="https://wa.me/34633391411?text=Hola%20Joan%2C%20vull%20crear%20un%20compte%20a%20Avero."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-dark"
+            >
+              Crear compte (WhatsApp)
+            </a>
+
             <a href="/contacto" className="btn btn-outline-dark text-dark">Contacta amb un assessor</a>
+
+            {/* WhatsApp contact advisor */}
+            <a
+              href="https://wa.me/34633391411?text=Hola%20Joan%2C%20necessito%20assessorament%20per%20Avero."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline-dark text-dark"
+            >
+              Contactar (WhatsApp)
+            </a>
           </div>
         </div>
       </section>

@@ -1,10 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Header from '../../components/components/header';
 
 import './HomeStatic.css';
 
 const Home = () => {
   const currentYear = new Date().getFullYear();
+  const waDiagnostic = 'https://wa.me/34633391411?text=Hola%20Joan%2C%20vull%20un%20diagnostic%20gratuit.';
+  const waReserve = 'https://wa.me/34633391411?text=Hola%20Joan%2C%20vull%20reservar%20un%20diagnostic%20per%20la%20meva%20empresa.';
 
   return (
     <>
@@ -17,22 +20,7 @@ const Home = () => {
       </Helmet>
 
       <div className="home-static">
-        <header className="home-static__header">
-          <div className="home-static__header-inner">
-            <a href="/" className="home-static__brand">
-
-              Joan Chorto <span>Consultor</span>
-            </a>
-            <nav className="home-static__nav">
-              <a href="#metodo">Método</a>
-              <a href="#resultados">Resultados</a>
-              <a href="#sobre-mi">Sobre mí</a>
-              <a href="#contacto" className="home-static__cta">
-                Reserva diagnóstico
-              </a>
-            </nav>
-          </div>
-        </header>
+        <Header />
 
         <main>
           <section className="home-static__hero" aria-labelledby="hero-heading">
@@ -47,7 +35,7 @@ const Home = () => {
                     mejor, no más.
                   </p>
                   <div className="home-static__hero-actions">
-                    <a href="#contacto" className="home-static__primary-btn">
+                    <a href={waDiagnostic} target="_blank" rel="noopener noreferrer" className="home-static__primary-btn">
                       Reserva diagnóstico
                     </a>
                     <a href="#metodo" className="home-static__secondary-btn">
@@ -195,9 +183,14 @@ const Home = () => {
                 <p className="home-static__contact-text">
                   Una conversación de 20 minutos para entender cómo trabajas hoy y cuántas horas y costes podrías estar ahorrando.
                 </p>
-                <a href="mailto:joan@joanchorto.com" className="home-static__contact-cta">
-                  joan@joanchorto.com
-                </a>
+                <div className="d-flex gap-2 align-items-center">
+                  <a href="mailto:joan@joanchorto.com" className="home-static__contact-cta">
+                    joan@joanchorto.com
+                  </a>
+                  <a href={waReserve} target="_blank" rel="noopener noreferrer" className="home-static__primary-btn">
+                    Contactar per WhatsApp
+                  </a>
+                </div>
                 <p className="home-static__contact-note">También puedo adaptarme a tu herramienta de videollamada habitual.</p>
               </div>
               <div className="home-static__contact-card" aria-label="Datos de contacto">

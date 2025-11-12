@@ -1,37 +1,39 @@
 import React from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import './header.css';
 import logoImage from '../img/joan-chorto-consultor-logo.svg';
 
-const navItems = [
-  { label: 'Método', href: '/com-treballem' },
-  { label: 'Resultados', href: '/resultats' },
-  { label: 'Sobre mí', href: '/sobre-jct' },
-  { label: 'Reserva diagnóstico', href: '/contacto' },
-  { label: 'Avero', href: '/avero' },
-  { label: 'ConstructPro', href: '/constructpro' },
-];
+const whatsappDiagnostic = 'https://wa.me/34633391411?text=Hola%20Joan%2C%20vull%20un%20diagnostic%20gratuit.';
 
 const Header = () => (
-  <Navbar expand="lg" className="navbar-custom shadow-sm py-3" sticky="top">
-    <Container>
-      <Navbar.Brand href="/">
-        <img src={logoImage} alt="Logotip de Joan Chorto Consultor" className="rounded-circle" />
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="main-navbar" />
-      <Navbar.Collapse id="main-navbar">
+  <header className="home-static__header">
+    <div className="home-static__header-inner">
+      <a href="/" className="home-static__brand">
+        <img
+          src={logoImage}
+          alt="Joan Chorto Consultor"
+          className="home-static__brand-logo"
+        />
+        <span className="home-static__brand-text">Joan Chorto <span>Consultor</span></span>
+      </a>
 
-
-        <Nav className="ms-lg-auto nav-main flex-column flex-lg-row align-items-lg-center gap-lg-3">
-          {navItems.map((item) => (
-            <Nav.Link key={item.href} href={item.href} className="fw-semibold text-nowrap">
-              {item.label}
-            </Nav.Link>
-          ))}
-        </Nav>
-       
-      </Navbar.Collapse>
-    </Container>
-  </Navbar>
+      <nav className="home-static__nav" aria-label="Navegación principal">
+        <a href="#metodo">Método</a>
+        <a href="#resultados">Resultados</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="/avero">Avero</a>
+        <a href="/constructpro">ConstructPro</a>
+        <a
+          href={whatsappDiagnostic}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="home-static__cta"
+          title="Reserva diagnóstico per WhatsApp"
+        >
+          Reserva diagnóstico
+        </a>
+      </nav>
+    </div>
+  </header>
 );
 
 export default Header;
