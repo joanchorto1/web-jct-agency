@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Layout from '../../components/layouts/layout';
+import { WHATSAPP_LINKS } from '../../utils/whatsapp';
 
 import Logo from '../../components/img/apple-touch-icon.png';
 import captura1 from '../../components/img/captura1.png';
@@ -244,8 +245,8 @@ const ConstructProPage = () => (
                 “Reduïm paperassa, assegurem marges i automatitzem el cicle pressupost–execució–facturació amb auditories contínues.”
               </p>
               <div className="d-flex flex-column flex-sm-row gap-3 mt-4">
-                <a href="/contacte?from=constructpro" className="btn btn-primary btn-lg">
-                  Sol·licita una auditoria gratuïta
+                <a href={WHATSAPP_LINKS.constructProInfo} className="btn btn-primary btn-lg">
+                  Sol·licita una auditoria per WhatsApp
                 </a>
                 <span className="text-muted align-self-center">
                   Descobreix quantes hores i diners pots estalviar.
@@ -307,8 +308,8 @@ const ConstructProPage = () => (
                 ))}
               </ul>
               <div className="text-center mt-4">
-                <a href="/contacte?from=constructpro" className="btn btn-outline-primary">
-                  Fem una anàlisi gratuïta del teu procés
+                <a href={WHATSAPP_LINKS.constructProInfo} className="btn btn-outline-primary">
+                  Fem una anàlisi per WhatsApp
                 </a>
               </div>
             </div>
@@ -391,8 +392,8 @@ const ConstructProPage = () => (
                 ))}
               </ul>
               <div className="d-flex flex-column flex-sm-row gap-3 mt-4">
-                <a href="/contacte?from=constructpro-verifactu" className="btn btn-outline-light btn-lg">
-                  Planifica el teu full de ruta
+                <a href={WHATSAPP_LINKS.constructProInfo} className="btn btn-outline-light btn-lg">
+                  Planifica el teu full de ruta per WhatsApp
                 </a>
                 <span className="text-white-50 align-self-center">Informe de compliment i roadmap d'integració.</span>
               </div>
@@ -433,8 +434,8 @@ const ConstructProPage = () => (
             ))}
           </div>
           <div className="text-center mt-5">
-            <a href="/contacte?from=constructpro" className="btn btn-primary btn-lg">
-              Sol·licita una auditoria gratuïta
+            <a href={WHATSAPP_LINKS.constructProInfo} className="btn btn-primary btn-lg">
+              Sol·licita una auditoria per WhatsApp
             </a>
           </div>
         </div>

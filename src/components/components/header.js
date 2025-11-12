@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import logoImage from '../img/LOGO JCTAGENCY.png';
+import { WHATSAPP_LINKS } from '../../utils/whatsapp';
 
 const navItems = [
   { label: 'Home', href: '/' },
@@ -12,7 +13,7 @@ const navItems = [
   { label: 'Resultats', href: '/resultats' },
   { label: 'Sobre JCT', href: '/sobre-jct' },
   { label: 'Recursos', href: '/recursos' },
-  { label: 'Contacte', href: '/contacte' },
+  { label: 'Contacte per WhatsApp', href: WHATSAPP_LINKS.generalInquiry },
 ];
 
 const Header = () => (
