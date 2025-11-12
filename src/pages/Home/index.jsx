@@ -3,19 +3,65 @@ import { Helmet } from 'react-helmet';
 import Header from '../../components/components/header';
 
 import './HomeStatic.css';
+import { getByDisplayValue } from '@testing-library/react';
 
 const Home = () => {
   const currentYear = new Date().getFullYear();
   const waDiagnostic = 'https://wa.me/34633391411?text=Hola%20Joan%2C%20vull%20un%20diagnostic%20gratuit.';
   const waReserve = 'https://wa.me/34633391411?text=Hola%20Joan%2C%20vull%20reservar%20un%20diagnostic%20per%20la%20meva%20empresa.';
 
+  // Estilos en línea para los botones de contacto
+  const btnPrimaryStyle = {
+    background: '#0d6efd',
+    color: '#ffffff',
+    padding: '10px 16px',
+    borderRadius: '12px',
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: '8px',
+    textDecoration: 'none',
+    border: '1px solid rgba(13,110,253,0.15)',
+    boxShadow: '0 4px 10px rgba(13,110,253,0.06)'
+  };
+
+  const btnWhatsStyle = {
+    background: '#25D366',
+    color: '#ffffff',
+    padding: '9px 14px',
+    borderRadius: '12px',
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: '8px',
+    textDecoration: 'none',
+    border: '1px solid rgba(37,211,102,0.15)',
+    boxShadow: '0 3px 8px rgba(37,211,102,0.06)'
+  };
+
+  const contactRowStyle = {
+    display: 'flex',
+    gap: '1rem',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    marginTop: '0.75rem'
+  };
+
+  const doubtCardStyle = {
+    background: '#f8f9fa',
+    padding: '12px',
+    borderRadius: '10px',
+    border: '1px solid #e9ecef',
+    display: 'flex',
+    alignItems: 'center',
+    gap: '0.75rem'
+  };
+
   return (
     <>
       <Helmet>
-        <title>Joan Chorto Consultor — Eficiencia y Automatización</title>
+        <title>Digitalización y automatización para empresas eficaces</title>
         <meta
           name="description"
-          content="Consultoría en eficiencia y automatización de procesos. Diagnóstico, optimización y sistemas que ahorran tiempo y dinero."
+          content="Consultoría especializada en digitalización y automatización para empresas que buscan mejorar la gestión y aumentar la eficiencia operativa. Realizamos diagnósticos prácticos y cuantificables, mapeo de procesos y detección de pérdidas para diseñar soluciones que conectan taller, oficina y obra. Implantamos herramientas adaptadas, automatizaciones seguras y procesos que reducen errors i duplicidades, acceleren la facturació i milloren el control financer. Acompanyem amb formació, documentació i suport per garantir l'adopció i manteniment de les millores en el temps. Treballem amb companyies de manteniment, indústria i serveis, prioritzant intervencions amb impacte real en costos i temps. Si necessites una consultoria pragmàtica que combini criteri de negoci i tecnologia per avançar cap a una empresa més eficient i digitalitzada, reserva una sessió de diagnòstic i rebràs una fulla de ruta amb passos concrets i realistes d'implementació."
         />
       </Helmet>
 
@@ -28,11 +74,11 @@ const Home = () => {
               <div className="home-static__hero-grid">
                 <div>
                   <h1 id="hero-heading" className="home-static__hero-title">
-                    Ayudo a empresas a ganar <span>eficiencia</span> y <span>control</span>
+                    Digitalización y eficiencia para empresas profesionales
                   </h1>
                   <p className="home-static__hero-text">
-                    Analizo procesos, elimino pérdidas y diseño automatizaciones que ahorran horas y reducen errors. Treballa
-                    millor, no més.
+                    Analizo procesos, elimino pérdidas y diseño automatizaciones que ahorran horas y reducen errores. Trabajo para que tu equipo
+                    dedique menos tiempo a tareas administrativas y más tiempo a decisiones que aportan valor.
                   </p>
                   <div className="home-static__hero-actions">
                     <a href={waDiagnostic} target="_blank" rel="noopener noreferrer" className="home-static__primary-btn">
@@ -46,6 +92,7 @@ const Home = () => {
                       Ver método
                     </a>
                   </div>
+
                   <div className="home-static__hero-stats" aria-label="Impacto medio">
                     <div className="home-static__stat-card">
                       <div className="home-static__stat-value">-40%</div>
@@ -67,7 +114,7 @@ const Home = () => {
                   <ul>
                     <li>
                       <span className="home-static__hero-card-bullet" aria-hidden="true" />
-                      Horas perdidas pasando datos de partes a facturación.
+                      Horas perdidas transfiriendo partes a facturación manualmente.
                     </li>
                     <li>
                       <span className="home-static__hero-card-bullet" aria-hidden="true" />
@@ -75,7 +122,7 @@ const Home = () => {
                     </li>
                     <li>
                       <span className="home-static__hero-card-bullet" aria-hidden="true" />
-                      Falta de visibilidad en tiempo real de trabajos, costes y márgenes.
+                      Falta de visibilidad en tiempo real sobre trabajos, costes y márgenes.
                     </li>
                   </ul>
                   <div className="home-static__hero-note">
@@ -89,65 +136,117 @@ const Home = () => {
           <section id="metodo" className="home-static__section" aria-labelledby="metodo-heading">
             <div className="home-static__section-header">
               <h2 id="metodo-heading" className="home-static__section-title">
-                Un método simple, resultados reales
+                Método práctico para digitalizar y automatizar
               </h2>
               <p className="home-static__section-text">
-                Trabajo con un proceso claro para que la mejora no dependa de improvisaciones.
+                Un proceso estructurado reduce la incertidumbre: diagnóstico, priorización, implementación y seguimiento.
               </p>
             </div>
+
             <div className="home-static__cards-grid">
               <article className="home-static__card">
                 <div className="home-static__card-subtitle">1 · Análisis</div>
-                <h3 className="home-static__card-title">Entender cómo trabajas</h3>
+                <h3 className="home-static__card-title">Mapeo detallado de procesos</h3>
                 <p className="home-static__card-text">
-                  Mapeo de procesos, flujos de información y puntos ciegos. Identifico dónde se pierde tiempo y por qué.
+                  Entrevistas con equipos, revisión de registros y medición de tiempos. Identificamos cuellos de botella, tareas repetitivas
+                  y puntos con riesgo de error para proponer soluciones concretas.
                 </p>
               </article>
+
               <article className="home-static__card">
                 <div className="home-static__card-subtitle">2 · Optimización</div>
-                <h3 className="home-static__card-title">Eliminar pérdidas y errores</h3>
+                <h3 className="home-static__card-title">Rediseño orientado al resultado</h3>
                 <p className="home-static__card-text">
-                  Rediseño de tareas, eliminación de duplicidades y definición de controles claros.
+                  Simplificamos flujos, eliminamos duplicidades y establecemos controles que aseguren calidad de datos y continuidad operativa.
                 </p>
               </article>
+
               <article className="home-static__card">
                 <div className="home-static__card-subtitle">3 · Automatización</div>
-                <h3 className="home-static__card-title">Sistemas que trabajan por ti</h3>
+                <h3 className="home-static__card-title">Sistemas que aceleran tu gestión</h3>
                 <p className="home-static__card-text">
-                  Implementación de herramientas y automatizaciones para que la información fluya sola hasta la factura.
+                  Implementamos integraciones y automatizaciones que reducen entradas manuales y sincronizan información hasta la facturación.
                 </p>
               </article>
+            </div>
+
+            <div className="home-static__method-details" style={{ gridArea: "method-details", marginTop: '2rem' }}>
+              <div className="home-static__method-step" style={{ display: 'flex', alignItems: 'center' , gap: '1rem' }}>
+              <h3 className="home-static__section-subtitle">Diagnóstico cuantificable</h3>
+              <svg className="home-static__method-step-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="48" height="48">
+
+                <path fill="#0d6efd" d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm0 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10z"/>
+                <path fill="#0d6efd" d="M16.2 7.8l-5.7 5.7-2.1-2.1-1.4 1.4 3.5 3.5 7.1-7.1z"/>
+              </svg>
+
+              </div>
+              
+              <p className="home-static__section-text">
+                El diagnóstico cuantifica las pérdidas y define prioridades. Proporcionamos un informe claro con mejoras rápidas y proyectos
+                de mayor alcance según impacto y esfuerzo.
+              </p>
+
+
+
+             <div className="home-static__method-step" style={{ display: 'flex', alignItems: 'center' , gap: '1rem' }}>
+              <h3 className="home-static__section-subtitle">Soporte continuo</h3>
+              <svg className="home-static__method-step-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="48" height="48">
+                <path fill="#0d6efd" d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm0 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10z"/>
+                <path fill="#0d6efd" d="M16.2 7.8l-5.7 5.7-2.1-2.1-1.4 1.4 3.5 3.5 7.1-7.1z"/>
+              </svg>
+             </div>
+             
+              <p className="home-static__section-text">
+                Acompañamos en la implantación técnica, formación de usuarios y seguimiento post-implantación. Ajustamos procesos y medimos
+                resultados para asegurar adopción y mejora continua.
+              </p>
+
+              <p className="home-static__section-text">
+                Además, proponemos indicadores de seguimiento (KPIs) para medir eficiencia, reducción de errores y mejoras en la gestión financiera.
+                Estas métricas permiten priorizar nuevas automatizaciones con retorno claro.
+              </p>
             </div>
           </section>
 
           <section id="resultados" className="home-static__section" aria-labelledby="resultados-heading">
             <div className="home-static__section-header">
               <h2 id="resultados-heading" className="home-static__section-title">
-                Resultados
+                Resultados tangibles en gestión y eficiencia
               </h2>
               <p className="home-static__section-text">
-                Algunos impactos reales obtenidos en empresas de mantenimiento, industriales y de servicios.
+                Casos reales muestran reducciones de tiempo y mejoras en control y facturación tras implantar automatizaciones.
               </p>
             </div>
+
             <div className="home-static__cards-grid home-static__cards-grid--results">
               <article className="home-static__card">
                 <div className="home-static__card-large-value">-40%</div>
                 <p className="home-static__card-text">
-                  Reducción del tiempo administrativo eliminando partes en papel y doble entrada.
+                  Reducción del tiempo administrativo al eliminar papel y doble entrada, con ahorro de coste directo.
                 </p>
               </article>
+
               <article className="home-static__card">
                 <div className="home-static__card-large-value">+2 días</div>
                 <p className="home-static__card-text">
-                  Anticipación de la facturación semanal al conectar taller, obra y oficina.
+                  Anticipación de la facturación semanal al unificar datos de taller, obra y oficina.
                 </p>
               </article>
+
               <article className="home-static__card">
                 <div className="home-static__card-large-value">0 errores</div>
                 <p className="home-static__card-text">
-                  En traspasos de información gracias a flujos automatizados y validaciones.
+                  Minimización de errores en trasvases de información mediante validaciones y flujos automáticos.
                 </p>
               </article>
+            </div>
+
+            <div className="home-static__results-details">
+              <p className="home-static__section-text">
+                Publicamos casos de éxito como ConstructPro y Avero que ilustran el antes y después: procesos más rápidos, menos reclamaciones
+                y mejor control financiero. Estos ejemplos sirven para entender el impacto real de la digitalización y la automatización sobre
+                la rentabilidad y la gestión diaria.
+              </p>
             </div>
           </section>
 
@@ -158,23 +257,64 @@ const Home = () => {
                   Sobre mí
                 </h2>
                 <p className="home-static__section-text">
-                  Soy Joan Chorto, consultor en eficiencia y automatización. Ayudo a empresas industriales, de servicios y
-                  construcción a simplificar procesos, reducir errores y ganar control sobre su trabajo diario.
+                  Soy Joan Chorto, consultor en eficiencia, digitalización y automatización. Acompaño a empresas industriales, de servicios y
+                  del sector construcción a simplificar procesos, reducir errores y recuperar tiempo operativo.
                 </p>
                 <p className="home-static__section-text">
-                  Mi enfoque combina criterio de negocio y tecnología. Hablo el lenguaje del taller y el de la oficina. El objetivo
-                  no es cambiar todo lo que haces, sino hacer que funcione mejor.
+                  Mi trabajo combina criterio de negocio y tecnología: no se trata de incorporar herramientas por moda, sino de elegir y
+                  adaptar soluciones que realmente mejoren la gestión y la toma de decisiones.
+                </p>
+
+                <h3 className="home-static__section-subtitle">Experiencia y compromiso</h3>
+                <p className="home-static__section-text">
+                  He trabajado con equipos operativos y mandos intermedios para implantar soluciones prácticas y sostenibles. Mi acompañamiento
+                  incluye diagnóstico, implantación técnica, formación y soporte continuado hasta comprobar resultados medibles.
                 </p>
               </div>
+
               <aside className="home-static__about-card" aria-labelledby="especialidades-heading">
-                <h3 id="especialidades-heading">Especializado en</h3>
+                <h3 id="especialidades-heading">Especialidades</h3>
                 <ul className="home-static__about-list">
                   <li>• Digitalización de procesos operativos</li>
                   <li>• Automatización administrativa y de facturación</li>
                   <li>• Conexión oficina–taller–obra</li>
-                  <li>• Dashboards de control y costes</li>
+                  <li>• Dashboards de control, costes y producción</li>
                 </ul>
               </aside>
+            </div>
+          </section>
+
+          <section id="servicios" className="home-static__section" aria-labelledby="servicios-heading">
+            <div className="home-static__section-header">
+              <h2 id="servicios-heading" className="home-static__section-title">Servicios</h2>
+              <p className="home-static__section-text">
+                Consultoría, proyectos de implantación y soporte para que la digitalización y la automatización se integren en la operativa diaria.
+              </p>
+            </div>
+
+            <div className="home-static__cards-grid">
+              <article className="home-static__card">
+                <h3 className="home-static__card-title">Consultoría y diagnóstico</h3>
+                <p className="home-static__card-text">
+                  Evaluamos procesos, cuantificamos pérdidas y priorizamos iniciativas con mayor retorno. Entregamos un plan claro y medidas
+                  inmediatas para empezar a ahorrar tiempo y costes.
+                </p>
+              </article>
+
+              <article className="home-static__card">
+                <h3 className="home-static__card-title">Implementación técnica</h3>
+                <p className="home-static__card-text">
+                  Integraciones y automatizaciones adaptadas a las herramientas existentes o propuestas de nuevas soluciones si procede.
+                  Implementación y pruebas hasta asegurar funcionamiento en producción.
+                </p>
+              </article>
+
+              <article className="home-static__card">
+                <h3 className="home-static__card-title">Formación y seguimiento</h3>
+                <p className="home-static__card-text">
+                  Formación práctica para usuarios y seguimiento post-implantación. Medimos KPIs y ajustamos procesos para consolidar la mejora.
+                </p>
+              </article>
             </div>
           </section>
 
@@ -185,22 +325,51 @@ const Home = () => {
                   Reserva tu diagnóstico
                 </h2>
                 <p className="home-static__contact-text">
-                  Una conversación de 20 minutos para entender cómo trabajas hoy y cuántas horas y costes podrías estar ahorrando.
+                  Conversación de 20 minutos para entender tu operativa, identificar oportunidades y proponer los primeros pasos hacia la digitalización.
                 </p>
-                <div className="d-flex gap-2 align-items-center">
-                  <a href="mailto:joan@joanchorto.com" className="home-static__contact-cta">
-                    joan@joanchorto.com
-                  </a>
-                  <a href={waReserve} target="_blank" rel="noopener noreferrer" className="home-static__primary-btn">
-                    Contactar per WhatsApp
+
+                <div style={contactRowStyle}>
+
+                  <a
+                    href={waReserve}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={btnPrimaryStyle}
+                    aria-label="Reservar diagnóstico por WhatsApp"
+                  >
+                    Reservar diagnóstico
                     <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" className="ms-2" xmlns="http://www.w3.org/2000/svg" focusable="false">
-                      <path fill="#25D366" d="M12 .5C5.7.5.9 5.3.9 11.6c0 2 .5 3.9 1.5 5.6L.5 23.5l6.5-1.7c1.6.8 3.5 1.3 5.5 1.3 6.3 0 11.1-4.8 11.1-11.1S18.3.5 12 .5z"/>
-                      <path fill="#FFF" d="M17.3 14.1c-.3-.2-2-.9-2.3-.9-.3 0-.4-.1-.6.2-.2.3-.8.9-1 1.1-.2.2-.4.3-.7.1-.3-.2-1.5-.6-2.8-1.7-1-1-1.6-2.1-1.8-2.4-.2-.3 0-.5.1-.7.1-.2.3-.4.4-.6.1-.2.1-.4 0-.6-.1-.2-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4-.2 0-.5 0-.8 0-.3 0-.7.1-1 .4-.3.3-1 1-1 2.5s1 3 1.1 3.2c.1.2 1.9 3 4.6 4.3 3 .1 3.9.2 4.6.1.7-.1 2.4-1 2.8-1.9.4-.9.4-1.6.3-1.8-.1-.2-.4-.3-.7-.5z"/>
+                      <path fill="#fff" d="M12 .5C5.7.5.9 5.3.9 11.6c0 2 .5 3.9 1.5 5.6L.5 23.5l6.5-1.7c1.6.8 3.5 1.3 5.5 1.3 6.3 0 11.1-4.8 11.1-11.1S18.3.5 12 .5z"/>
+                      <path fill="#fff" d="M17.3 14.1c-.3-.2-2-.9-2.3-.9-.3 0-.4-.1-.6.2-.2.3-.8.9-1 1.1-.2.2-.4.3-.7.1-.3-.2-1.5-.6-2.8-1.7-1-1-1.6-2.1-1.8-2.4-.2-.3 0-.5.1-.7.1-.2.3-.4.4-.6.1-.2.1-.4 0-.6-.1-.2-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4-.2 0-.5 0-.8 0-.3 0-.7.1-1 .4-.3.3-1 1-1 2.5s1 3 1.1 3.2c.1.2 1.9 3 4.6 4.3 3 .1 3.9.2 4.6.1.7-.1 2.4-1 2.8-1.9.4-.9.4-1.6.3-1.8-.1-.2-.4-.3-.7-.5z"/>
                     </svg>
                   </a>
+
+                  <div style={doubtCardStyle}>
+                    <div style={{fontSize: '0.95rem'}}>
+                      <strong>¿Dudas?</strong>
+                      <div style={{fontSize:'0.85rem', color:'#495057'}}>Chatea rápido por WhatsApp</div>
+                    </div>
+
+                    <a
+                      href={waDiagnostic}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={btnWhatsStyle}
+                      aria-label="Chatea por WhatsApp"
+                    >
+                      Chatea conmigo
+                      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" className="ms-2" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                        <path fill="#fff" d="M12 .5C5.7.5.9 5.3.9 11.6c0 2 .5 3.9 1.5 5.6L.5 23.5l6.5-1.7c1.6.8 3.5 1.3 5.5 1.3 6.3 0 11.1-4.8 11.1-11.1S18.3.5 12 .5z"/>
+                        <path fill="#fff" d="M17.3 14.1c-.3-.2-2-.9-2.3-.9-.3 0-.4-.1-.6.2-.2.3-.8.9-1 1.1-.2.2-.4.3-.7.1-.3-.2-1.5-.6-2.8-1.7-1-1-1.6-2.1-1.8-2.4-.2-.3 0-.5.1-.7.1-.2.3-.4.4-.6.1-.2.1-.4 0-.6-.1-.2-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4-.2 0-.5 0-.8 0-.3 0-.7.1-1 .4-.3.3-1 1-1 2.5s1 3 1.1 3.2c.1.2 1.9 3 4.6 4.3 3 .1 3.9.2 4.6.1.7-.1 2.4-1 2.8-1.9.4-.9.4-1.6.3-1.8-.1-.2-.4-.3-.7-.5z"/>
+                      </svg>
+                    </a>
+                  </div>
+
                 </div>
-                <p className="home-static__contact-note">También puedo adaptarme a tu herramienta de videollamada habitual.</p>
+
+                <p className="home-static__contact-note">También puedo adaptarme a tu herramienta de videoconferencia habitual.</p>
               </div>
+
               <div className="home-static__contact-card" aria-label="Datos de contacto">
                 <div>
                   <div className="home-static__card-title">Email</div>

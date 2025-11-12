@@ -1,8 +1,8 @@
 const WHATSAPP_PHONE = '34633391411';
 
 export const WHATSAPP_MESSAGES = {
-  constructProInfo: 'Vull saber mes informació sobre constructPRO.',
-  reserveDiagnostic: 'vull reserva un diagnostico',
+  constructProInfo: 'Vull saber més informació sobre constructPRO.',
+  reserveDiagnostic: 'Vull reservar un diagnòstic',
   generalInquiry: 'Hola Joan, tinc una consulta',
 };
 
