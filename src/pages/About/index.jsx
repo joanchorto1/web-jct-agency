@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../../components/layouts/layout';
 import InlineCTAGroup from '../../components/cta/InlineCTAGroup';
+import { WHATSAPP_LINKS } from '../../utils/whatsapp';
 
 const storyHighlights = [
   {
@@ -62,9 +63,10 @@ const About = () => (
         </p>
         <InlineCTAGroup
           className="mt-4"
-          primaryLabel="Coneix-nos en una sessió introductòria"
-          primaryHref="/contacte?from=sobre-jct"
-          secondaryHref="/contacte#demo"
+          primaryLabel="Coneix-nos per WhatsApp"
+          primaryHref={WHATSAPP_LINKS.reserveDiagnostic}
+          secondaryLabel="Contacta per WhatsApp"
+          secondaryHref={WHATSAPP_LINKS.generalInquiry}
         />
       </div>
     </section>
@@ -160,10 +162,10 @@ const About = () => (
         </p>
         <InlineCTAGroup
           className="mt-4"
-          primaryLabel="Agenda una reunió"
-          primaryHref="/contacte?from=sobre-jct"
-          secondaryLabel="Demana una demo específica"
-          secondaryHref="/contacte#demo"
+          primaryLabel="Agenda una reunió per WhatsApp"
+          primaryHref={WHATSAPP_LINKS.reserveDiagnostic}
+          secondaryLabel="Demana una demo per WhatsApp"
+          secondaryHref={WHATSAPP_LINKS.generalInquiry}
         />
       </div>
     </section>

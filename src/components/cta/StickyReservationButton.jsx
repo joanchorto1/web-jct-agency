@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button } from 'react-bootstrap';
+import { WHATSAPP_LINKS } from '../../utils/whatsapp';
 
 const StickyReservationButton = ({
   primaryLabel,
@@ -28,10 +29,10 @@ StickyReservationButton.propTypes = {
 };
 
 StickyReservationButton.defaultProps = {
-  primaryLabel: 'Reserva l’anàlisi gratuïta',
-  primaryHref: '/contacte',
-  secondaryLabel: 'Demana una demo personalitzada',
-  secondaryHref: '/contacte#demo',
+  primaryLabel: 'Reserva diagnòstic per WhatsApp',
+  primaryHref: WHATSAPP_LINKS.reserveDiagnostic,
+  secondaryLabel: 'Contacta per WhatsApp',
+  secondaryHref: WHATSAPP_LINKS.generalInquiry,
 };
 
 export default StickyReservationButton;

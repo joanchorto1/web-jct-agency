@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../../components/layouts/layout';
 import InlineCTAGroup from '../../components/cta/InlineCTAGroup';
+import { WHATSAPP_LINKS } from '../../utils/whatsapp';
 import AveroLogo from '../../components/img/AVERO LOGO.png';
 import constructProIcon from '../../components/img/portatilIcon.png';
 
@@ -73,9 +74,10 @@ const Solutions = () => (
         </p>
         <InlineCTAGroup
           className="mt-4"
-          primaryLabel="Reserva una conversa estratègica"
-          primaryHref="/contacte?from=solutions"
-          secondaryHref="/contacte#demo"
+          primaryLabel="Reserva una conversa per WhatsApp"
+          primaryHref={WHATSAPP_LINKS.reserveDiagnostic}
+          secondaryLabel="Contacta per WhatsApp"
+          secondaryHref={WHATSAPP_LINKS.generalInquiry}
         />
       </div>
     </section>
@@ -164,8 +166,8 @@ const Solutions = () => (
         </p>
         <InlineCTAGroup
           className="mt-4"
-          primaryLabel="Demana una demo de solucions"
-          primaryHref="/contacte?from=solutions"
+          primaryLabel="Demana una demo per WhatsApp"
+          primaryHref={WHATSAPP_LINKS.generalInquiry}
           secondaryLabel="Contacta amb l’equip tècnic"
           secondaryHref="mailto:joan@joanchorto.com?subject=Contacte%20equip%20tecnic"
         />

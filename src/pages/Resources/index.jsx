@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../../components/layouts/layout';
 import InlineCTAGroup from '../../components/cta/InlineCTAGroup';
+import { WHATSAPP_LINKS } from '../../utils/whatsapp';
 
 const resourceCollections = [
   {
@@ -54,9 +55,10 @@ const Resources = () => (
         </p>
         <InlineCTAGroup
           className="mt-4"
-          primaryLabel="Vull rebre els primers recursos"
-          primaryHref="/contacte?from=recursos"
-          secondaryHref="/contacte#demo"
+          primaryLabel="Vull rebre els primers recursos per WhatsApp"
+          primaryHref={WHATSAPP_LINKS.generalInquiry}
+          secondaryLabel="Reserva diagnòstic per WhatsApp"
+          secondaryHref={WHATSAPP_LINKS.reserveDiagnostic}
         />
       </div>
     </section>
