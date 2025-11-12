@@ -196,7 +196,7 @@ const Home = () => {
               <div className="home-static__contact-card" aria-label="Datos de contacto">
                 <div>
                   <div className="home-static__card-title">Email</div>
-                  <a href="mailto:joan@joanchorto.com">joan@joanchorto.com</a>
+                  <a href="mailto:joan@jctagency.com">joan@jctagency.com</a>
                 </div>
                 <div>
                   <div className="home-static__card-title">Teléfono</div>

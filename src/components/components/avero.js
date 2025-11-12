@@ -266,7 +266,7 @@ const Avero = () => (
       {/* Peu de pàgina */}
       <footer className="footer-sub py-4">
         <div className="container text-center text-md-start">
-          <p className="mb-2"><a href="https://avero.joanchorto.com">avero.joanchorto.com</a></p>
+          <p className="mb-2"><a href="https://avero.jctagency.com">avero.jctagency.com</a></p>
           <ul className="list-unstyled mb-0">
             <li><a href="/programa-de-facturacio-verifactu">Programa de facturació VeriFactu</a></li>
             <li><a href="/factures-electroniques-aeat">Factures electròniques AEAT</a></li>
