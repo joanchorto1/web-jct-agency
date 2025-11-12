@@ -23,8 +23,8 @@ const responseSteps = [
 const contactChannels = [
   {
     label: 'Coordinació directa amb Joan',
-    value: 'joan@jctagency.com',
-    href: 'mailto:joan@jctagency.com',
+    value: 'joan@joanchorto.com',
+    href: 'mailto:joan@joanchorto.com',
     helper: 'Responem abans de 24 hores laborables amb els següents passos.',
   },
   {
@@ -73,12 +73,12 @@ const ContactReservation = () => (
           <div className="card-body p-4 p-lg-5">
             <p className="mb-4 text-muted">
               Aviat incorporarem un formulari interactiu. Fins aleshores, escriu-nos a{' '}
-              <a className="fw-semibold" href="mailto:joan@jctagency.com">joan@jctagency.com</a>{' '}
+              <a className="fw-semibold" href="mailto:joan@joanchorto.com">joan@joanchorto.com</a>{' '}
               o truca al <a className="fw-semibold" href="tel:+34633391411">633 391 411</a>.
             </p>
             <InlineCTAGroup
               primaryLabel="Enviar un correu ara"
-              primaryHref="mailto:joan@jctagency.com?subject=Reserva%20anàlisi%20gratuïta"
+              primaryHref="mailto:joan@joanchorto.com?subject=Reserva%20anàlisi%20gratuïta"
               secondaryLabel="Trucar a l'equip"
               secondaryHref="tel:+34633391411"
             />
@@ -185,7 +185,7 @@ const ContactReservation = () => (
         <InlineCTAGroup
           className="mt-4"
           primaryLabel="Confirma la teva sessió"
-          primaryHref="mailto:joan@jctagency.com?subject=Confirmar%20sessio%20JCT"
+          primaryHref="mailto:joan@joanchorto.com?subject=Confirmar%20sessio%20Joan%20Chorto"
           secondaryLabel="Demana que et truquem"
           secondaryHref="tel:+34633391411"
         />

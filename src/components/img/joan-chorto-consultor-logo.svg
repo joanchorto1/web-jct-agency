@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">Joan Chorto Consultor</title>
+  <desc id="desc">Logotip minimalista amb les inicials JC</desc>
+  <rect width="320" height="320" rx="48" fill="#101623" />
+  <g fill="none" stroke="#f4f6fb" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M96 96v96c0 35.346 28.654 64 64 64" />
+    <path d="M208 96h-48c-26.51 0-48 21.49-48 48s21.49 48 48 48h48" />
+  </g>
+  <text x="160" y="276" fill="#f4f6fb" font-family="'Helvetica Neue', 'Segoe UI', sans-serif" font-size="44" text-anchor="middle" letter-spacing="4">JC</text>
+</svg>

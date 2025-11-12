@@ -44,7 +44,7 @@ const posts = [
 const Blog = () => (
   <Layout>
     <Helmet>
-      <title>Blog de JCT Agency | Guia de recursos digitals per a PIMEs</title>
+      <title>Blog de Joan Chorto Consultor | Guia de recursos digitals per a PIMEs</title>
       <meta
         name="description"
         content="Explora articles amb etiquetes sobre digitalització, SEO, Veri*Factu i software a mida per fer créixer la teva PIME."

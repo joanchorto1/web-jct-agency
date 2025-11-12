@@ -75,7 +75,7 @@ const Pressupost = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Calcula el teu pressupost | JCT Agency</title>
+        <title>Calcula el teu pressupost | Joan Chorto Consultor</title>
         <meta name="description" content="Calcula de manera orientativa el cost del teu projecte digital." />
       </Helmet>
       <div className="container py-5">

@@ -195,15 +195,15 @@ const Home = () => {
                 <p className="home-static__contact-text">
                   Una conversación de 20 minutos para entender cómo trabajas hoy y cuántas horas y costes podrías estar ahorrando.
                 </p>
-                <a href="mailto:joan@jctagency.com" className="home-static__contact-cta">
-                  joan@jctagency.com
+                <a href="mailto:joan@joanchorto.com" className="home-static__contact-cta">
+                  joan@joanchorto.com
                 </a>
                 <p className="home-static__contact-note">También puedo adaptarme a tu herramienta de videollamada habitual.</p>
               </div>
               <div className="home-static__contact-card" aria-label="Datos de contacto">
                 <div>
                   <div className="home-static__card-title">Email</div>
-                  <a href="mailto:joan@jctagency.com">joan@jctagency.com</a>
+                  <a href="mailto:joan@joanchorto.com">joan@joanchorto.com</a>
                 </div>
                 <div>
                   <div className="home-static__card-title">Teléfono</div>

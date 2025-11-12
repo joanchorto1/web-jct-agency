@@ -169,7 +169,7 @@ const Solutions = () => (
           primaryLabel="Demana una demo per WhatsApp"
           primaryHref={WHATSAPP_LINKS.generalInquiry}
           secondaryLabel="Contacta amb l’equip tècnic"
-          secondaryHref="mailto:joan@jctagency.com?subject=Contacte%20equip%20tecnic"
+          secondaryHref="mailto:joan@joanchorto.com?subject=Contacte%20equip%20tecnic"
         />
       </div>
     </section>

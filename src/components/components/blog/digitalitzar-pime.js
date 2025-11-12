@@ -5,7 +5,7 @@ import Layout from '../../layouts/layout';
 const DigitalitzarPimeArticle = () => (
   <Layout>
     <Helmet>
-      <title>Com digitalitzar la gestió d’una PIME en 5 passos | JCT Agency</title>
+      <title>Com digitalitzar la gestió d’una PIME en 5 passos | Joan Chorto Consultor</title>
       <meta
         name="description"
         content="Passos clau per digitalitzar una PIME amb eines SaaS, estratègies de transformació digital i consells pràctics per millorar l'eficiència."
@@ -94,8 +94,8 @@ const DigitalitzarPimeArticle = () => (
       <p>
         Digitalitzar una PIME no ha de ser un procés traumàtic. Amb una planificació adequada i el suport
         de professionals, és possible transformar l’empresa de manera gradual i rendible. L’important és
-        començar amb objectius clars, escollir les eines correctes i implicar tot l’equip en el canvi. A JCT
-        Agency hem ajudat nombroses empreses a donar aquest pas, i sabem que els resultats arriben quan la
+        començar amb objectius clars, escollir les eines correctes i implicar tot l’equip en el canvi. A Joan Chorto
+        Consultor hem ajudat nombroses empreses a donar aquest pas, i sabem que els resultats arriben quan la
         tecnologia es combina amb una visió estratègica. Si estàs preparat per modernitzar la gestió del teu
         negoci, la digitalització és el camí que et permetrà créixer i afrontar amb garanties els reptes del
         futur.

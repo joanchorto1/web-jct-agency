@@ -44,7 +44,7 @@ const ContactReservationPage = () => {
   const [status, setStatus] = useState('idle');
 
   const calendlyUrl = useMemo(
-    () => 'https://cal.com/jctagency/20min?embed=1&layout=month_view',
+    () => 'https://cal.com/joanchorto/20min?embed=1&layout=month_view',
     []
   );
 
@@ -109,8 +109,8 @@ const ContactReservationPage = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Reserva la sessió de diagnosi amb JCT Agency</title>
-        <link rel="canonical" href="https://jctagency.com/contacto" />
+        <title>Reserva la sessió de diagnosi amb Joan Chorto Consultor</title>
+        <link rel="canonical" href="https://joanchorto.com/contacte" />
         <meta
           name="description"
           content="Reserva una sessió de 20 minuts per diagnosticar el teu projecte digital i comparteix l'estat actual del teu procés."
@@ -375,7 +375,7 @@ const ContactReservationPage = () => {
                     </li>
                     <li className="mb-3">
                       <strong>Qui assistirà a la trucada?</strong>
-                      <br />Un consultor de JCT Agency especialitzat en processos digitals i integracions SaaS.
+                      <br />Un consultor de Joan Chorto Consultor especialitzat en processos digitals i integracions SaaS.
                     </li>
                     <li className="mb-0">
                       <strong>Quin és el resultat de la sessió?</strong>
