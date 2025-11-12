@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../../components/layouts/layout';
 import InlineCTAGroup from '../../components/cta/InlineCTAGroup';
+import { WHATSAPP_LINKS } from '../../utils/whatsapp';
 
 const methodologySteps = [
   {
@@ -62,9 +63,10 @@ const WorkMethod = () => (
         </p>
         <InlineCTAGroup
           className="mt-4"
-          primaryLabel="Reserva un workshop exploratori"
-          primaryHref="/contacte?from=com-treballem"
-          secondaryHref="/contacte#demo"
+          primaryLabel="Reserva un workshop per WhatsApp"
+          primaryHref={WHATSAPP_LINKS.reserveDiagnostic}
+          secondaryLabel="Contacta per WhatsApp"
+          secondaryHref={WHATSAPP_LINKS.generalInquiry}
         />
       </div>
     </section>
@@ -142,8 +144,8 @@ const WorkMethod = () => (
         </p>
         <InlineCTAGroup
           className="mt-4"
-          primaryLabel="Dissenya el teu workshop"
-          primaryHref="/contacte?from=com-treballem"
+          primaryLabel="Dissenya el teu workshop per WhatsApp"
+          primaryHref={WHATSAPP_LINKS.reserveDiagnostic}
           secondaryLabel="Parla amb la direcció de projectes"
           secondaryHref="mailto:joan@jctagency.com?subject=Direccio%20de%20projectes"
         />

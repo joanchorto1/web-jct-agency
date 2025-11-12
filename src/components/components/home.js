@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Layout from "../layouts/layout";
 import { Helmet } from "react-helmet";
 import emailjs from "@emailjs/browser";
+import { WHATSAPP_LINKS } from "../../utils/whatsapp";
 
 import heroImg from "../img/QUI SOM.png";
 import softwareImg from "../img/DESENVOLUPAMENT SOFTWARE.png";
@@ -189,8 +190,8 @@ const Home = () => {
                   ))}
                 </ul>
                 <div className="d-flex flex-column flex-md-row align-items-md-center gap-3 mt-4 justify-content-md-start justify-content-center">
-                  <a href="#contacte" className="btn btn-brand">
-                    Demana una demo personalitzada
+                  <a href={WHATSAPP_LINKS.generalInquiry} className="btn btn-brand">
+                    Demana una demo per WhatsApp
                   </a>
                   <a href="#com-funciona" className="btn btn-outline-brand">
                     Descobreix com funciona
