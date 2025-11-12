@@ -1,26 +1,21 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import logoImage from '../img/joan-chorto-consultor-logo.svg';
-import { WHATSAPP_LINKS } from '../../utils/whatsapp';
 
 const navItems = [
-  { label: 'Home', href: '/' },
-  { label: 'Sectors', href: '/sectors' },
-  { label: 'Com treballem', href: '/com-treballem' },
-  { label: 'Solucions', href: '/solucions' },
-  { label: 'ConstructPro', href: '/constructpro' },
+  { label: 'Método', href: '/com-treballem' },
+  { label: 'Resultados', href: '/resultats' },
+  { label: 'Sobre mí', href: '/sobre-jct' },
+  { label: 'Reserva diagnóstico', href: '/contacto' },
   { label: 'Avero', href: '/avero' },
-  { label: 'Resultats', href: '/resultats' },
-  { label: 'Sobre Joan', href: '/sobre-jct' },
-  { label: 'Recursos', href: '/recursos' },
-  { label: 'Contacte per WhatsApp', href: WHATSAPP_LINKS.generalInquiry },
+  { label: 'ConstructPro', href: '/constructpro' },
 ];
 
 const Header = () => (
   <Navbar expand="lg" className="navbar-custom shadow-sm py-3" sticky="top">
     <Container>
       <Navbar.Brand href="/">
-        <img src={logoImage} alt="Joan Chorto Consultor" className="rounded-circle" />
+        <img src={logoImage} alt="Logotip de Joan Chorto Consultor" className="rounded-circle" />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="main-navbar" />
       <Navbar.Collapse id="main-navbar">
