@@ -85,7 +85,7 @@ const getCta = (type) => {
 const ResourcesPage = () => (
   <Layout>
     <Helmet>
-      <title>Recursos i guies per a PIMEs | JCT Agency</title>
+      <title>Recursos i guies per a PIMEs | Joan Chorto Consultor</title>
       <meta
         name="description"
         content="Central de recursos amb guies fundacionals, categories per clúster i plantilles per impulsar la digitalització de la teva PIME."

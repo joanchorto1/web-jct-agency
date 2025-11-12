@@ -5,7 +5,7 @@ import Layout from '../../layouts/layout';
 const SoftwareArticle = () => (
   <Layout>
     <Helmet>
-      <title>Beneficis del software a mida per a gestories i PIMEs | JCT Agency</title>
+      <title>Beneficis del software a mida per a gestories i PIMEs | Joan Chorto Consultor</title>
       <meta
         name="description"
         content="Beneficis del software a mida per a gestories i PIMEs: automatitza processos, integra eines i impulsa el creixement empresarial."

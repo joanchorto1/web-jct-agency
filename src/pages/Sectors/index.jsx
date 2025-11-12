@@ -118,7 +118,7 @@ const Sectors = () => (
           primaryLabel="Reserva un workshop sectorial"
           primaryHref="/contacte?from=sectors"
           secondaryLabel="Demana referències del teu sector"
-          secondaryHref="mailto:joan@jctagency.com?subject=Referencies%20sectorials"
+          secondaryHref="mailto:joan@joanchorto.com?subject=Referencies%20sectorials"
         />
       </div>
     </section>

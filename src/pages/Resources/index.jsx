@@ -119,7 +119,7 @@ const Resources = () => (
         <h2 className="fw-semibold mt-3">Vols prioritzar algun d’aquests continguts?</h2>
         <p className="text-muted mt-3">
           Comparteix-nos quin tema t’ajudaria a desbloquejar el teu projecte i li donarem prioritat. Ens agrada co-crear amb
-          la comunitat que confia en JCT Agency.
+          la comunitat que confia en Joan Chorto Consultor.
         </p>
         <ul className="list-group list-group-flush shadow-sm">
           {upcomingTopics.map((topic) => (
@@ -131,7 +131,7 @@ const Resources = () => (
         <InlineCTAGroup
           className="mt-4"
           primaryLabel="Suggerir un tema"
-          primaryHref="mailto:joan@jctagency.com?subject=Suggeriment%20recursos"
+          primaryHref="mailto:joan@joanchorto.com?subject=Suggeriment%20recursos"
           secondaryLabel="Parlem-ne en una trucada"
           secondaryHref="tel:+34633391411"
         />

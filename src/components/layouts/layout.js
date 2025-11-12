@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/header';
 import InlineCTAGroup from '../cta/InlineCTAGroup';
 import StickyReservationButton from '../cta/StickyReservationButton';
-import logoImage from '../img/LOGO JCTAGENCY.png';
+import logoImage from '../img/joan-chorto-consultor-logo.svg';
 import '../styles/Layout.css';
 
 const Layout = ({ children }) => (
@@ -24,25 +24,25 @@ const Layout = ({ children }) => (
         <div className="container py-5">
           <div className="row gy-4 align-items-center">
             <div className="col-md-6 text-center text-md-start">
-              <img src={logoImage} alt="Logo JCT Agency" className="footer-logo mb-3" />
-              <p className="mb-2 fw-semibold">JCT Agency – Solucions digitals i software SaaS.</p>
+              <img src={logoImage} alt="Logotip de Joan Chorto Consultor" className="footer-logo mb-3" />
+              <p className="mb-2 fw-semibold">Joan Chorto Consultor — Optimització operativa i automatització real.</p>
               <p className="mb-0 text-muted small">
-                Treballem amb equips valents per descobrir oportunitats digitals i convertir-les en productes i serveis
-                escalables.
+                Acompanyo equips directius i operacions perquè simplifiquin processos crítics, connectin sistemes i guanyin
+                control sobre resultats i marges.
               </p>
             </div>
             <div className="col-md-6 text-center text-md-end footer-contact">
               <p className="mb-1">
-                <a href="mailto:joan@jctagency.com" className="fw-semibold">joan@jctagency.com</a>
+                <a href="mailto:joan@joanchorto.com" className="fw-semibold">joan@joanchorto.com</a>
               </p>
               <p className="mb-1">
                 <a href="tel:+34633391411" className="fw-semibold">+34 633 391 411</a>
               </p>
-              <p className="mb-0 text-muted small">Segueix-nos ben aviat a LinkedIn i altres canals.</p>
+              <p className="mb-0 text-muted small">Properament compartiré novetats i recursos al meu LinkedIn professional.</p>
             </div>
           </div>
           <div className="footer-sub text-center text-muted small mt-5 pt-3 border-top">
-            © {new Date().getFullYear()} JCT Agency. Tots els drets reservats.
+            © {new Date().getFullYear()} Joan Chorto Consultor. Tots els drets reservats.
           </div>
         </div>
       </footer>

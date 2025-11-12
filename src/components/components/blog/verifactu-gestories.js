@@ -5,7 +5,7 @@ import Layout from '../../layouts/layout';
 const VerifactuGestoriesArticle = () => (
   <Layout>
     <Helmet>
-      <title>Guia pràctica per a gestories sobre Veri*Factu | JCT Agency</title>
+      <title>Guia pràctica per a gestories sobre Veri*Factu | Joan Chorto Consultor</title>
       <meta
         name="description"
         content="Guia per a gestories sobre Veri*Factu: requisits de l'AEAT, passos d'implantació i recomanacions per garantir el compliment legal."
@@ -125,7 +125,7 @@ const VerifactuGestoriesArticle = () => (
         encara més el sector. Amb la preparació adequada, la formació de l’equip i les eines correctes, és
         possible convertir aquesta obligació en un avantatge competitiu. Les gestories que abracin la
         digitalització i incorporin Veri*Factu de manera proactiva demostraran als seus clients que estan
-        compromeses amb la transparència i l’eficiència. A JCT Agency oferim solucions tecnològiques que
+        compromeses amb la transparència i l’eficiència. A Joan Chorto Consultor oferim solucions tecnològiques que
         simplifiquen aquest procés i t’ajudem a fer el pas cap a una gestió més moderna i segura.
       </p>
     </article>

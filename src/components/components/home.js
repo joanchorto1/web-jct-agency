@@ -164,10 +164,10 @@ const Home = () => {
   return (
     <Layout>
       <Helmet>
-        <title>JCT Agency | Programari Veri*Factu amb evolució contínua</title>
+        <title>Joan Chorto Consultor | Programari Veri*Factu amb evolució contínua</title>
         <meta
           name="description"
-          content="Construïm software SaaS, integracions i portals Veri*Factu per a gestories, PIMEs i startups amb manteniment proactiu i compliment 100% AEAT."
+          content="Consultoria i producte digital liderades per Joan Chorto per dissenyar portals Veri*Factu, integracions i SaaS que optimitzen processos i asseguren el compliment AEAT."
         />
       </Helmet>
 
@@ -341,7 +341,7 @@ const Home = () => {
         <section id="clients" data-aos="fade-up">
           <div className="container text-center">
             <span className="section-eyebrow">Clients que confien</span>
-            <h2 className="section-heading">Organitzacions que ja treballen amb JCT Agency</h2>
+            <h2 className="section-heading">Organitzacions que ja treballen amb Joan Chorto Consultor</h2>
             <p className="section-subheading mx-auto">
               Acompanyem administracions, estudis professionals i empreses privades en la seva transformació digital i adopció de Veri*Factu.
             </p>
@@ -411,7 +411,7 @@ const Home = () => {
                 <div className="col-lg-5 offset-lg-1">
                   <div className="contact-details">
                     <h3 className="h5 fw-semibold mb-3">Contacte directe</h3>
-                    <p><strong>📧</strong> info@jctagency.com</p>
+                    <p><strong>📧</strong> info@joanchorto.com</p>
                     <p><strong>📍</strong> Tarragona (Catalunya)</p>
                     <p><strong>📱</strong> 633 391 411</p>
                     <p className="mb-0 text-muted">

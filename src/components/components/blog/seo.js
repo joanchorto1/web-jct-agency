@@ -5,7 +5,7 @@ import Layout from '../../layouts/layout';
 const SeoArticle = () => (
   <Layout>
     <Helmet>
-      <title>Optimització SEO per a PIMEs: guia completa | JCT Agency</title>
+      <title>Optimització SEO per a PIMEs: guia completa | Joan Chorto Consultor</title>
       <meta
         name="description"
         content="Guia SEO per a PIMEs amb tècniques per posicionar la web a Google, atraure clients locals i optimitzar continguts."

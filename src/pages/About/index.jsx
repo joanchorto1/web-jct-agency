@@ -54,7 +54,7 @@ const About = () => (
   <Layout>
     <section className="section-spacing">
       <div className="container narrow-container">
-        <span className="eyebrow text-uppercase">Sobre JCT</span>
+        <span className="eyebrow text-uppercase">Sobre Joan</span>
         <h1 className="display-6 fw-bold mt-3">Un equip híbrid d'estratègia, producte i tecnologia</h1>
         <p className="text-muted mt-3">
           Estem actualitzant la nostra història, els valors i la manera com col·laborem amb partners i clients. Trobaràs

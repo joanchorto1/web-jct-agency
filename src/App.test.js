@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders JCT Agency heading', () => {
+test('renders Joan Chorto Consultor brand link', async () => {
   render(<App />);
-  const heading = screen.getByRole('heading', { name: /JCT Agency/i });
-  expect(heading).toBeInTheDocument();
+  const brandLink = await screen.findByRole('link', { name: /Joan Chorto Consultor/i });
+  expect(brandLink).toBeInTheDocument();
 });

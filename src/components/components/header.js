@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import logoImage from '../img/LOGO JCTAGENCY.png';
+import logoImage from '../img/joan-chorto-consultor-logo.svg';
 
 const navItems = [
   { label: 'Home', href: '/' },
@@ -10,7 +10,7 @@ const navItems = [
   { label: 'ConstructPro', href: '/constructpro' },
   { label: 'Avero', href: '/avero' },
   { label: 'Resultats', href: '/resultats' },
-  { label: 'Sobre JCT', href: '/sobre-jct' },
+  { label: 'Sobre Joan', href: '/sobre-jct' },
   { label: 'Recursos', href: '/recursos' },
   { label: 'Contacte', href: '/contacte' },
 ];
@@ -19,7 +19,7 @@ const Header = () => (
   <Navbar expand="lg" className="navbar-custom shadow-sm py-3" sticky="top">
     <Container>
       <Navbar.Brand href="/">
-        <img src={logoImage} alt="JCT Agency" className="rounded-circle" />
+        <img src={logoImage} alt="Joan Chorto Consultor" className="rounded-circle" />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="main-navbar" />
       <Navbar.Collapse id="main-navbar">

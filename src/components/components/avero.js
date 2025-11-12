@@ -30,7 +30,7 @@ const Avero = () => (
               <h1>Avero – Programa de facturació 100% adaptat a VeriFactu i la Llei Crea y Crece.*</h1>
               <p>La solució més simple i moderna per a autònoms, PIMEs i gestories. Compleix amb la normativa sense complicacions.</p>
               <div className="d-flex gap-3 mt-3 flex-column flex-sm-row">
-                <a href="https://avero.jctagency.com" className="btn btn-avero">Prova Avero gratis</a>
+                <a href="https://avero.joanchorto.com" className="btn btn-avero">Prova Avero gratis</a>
                 <a href="/contacto" className="btn btn-outline-avero">Demana una demo</a>
               </div>
             </div>
@@ -46,7 +46,7 @@ const Avero = () => (
       <section className="py-5" data-aos="fade-up">
         <div className="container">
           <h2>Per què Avero?</h2>
-          <p>Avero és el programari de facturació creat per JCT Agency pensat per a cobrir les noves obligacions legals i simplificar la gestió diària de les empreses. Amb VeriFactu en vigor des de 2025 i l’entrada obligatòria al 2026, necessites un sistema segur, modern i validat per l’AEAT.*</p>
+          <p>Avero és el programari de facturació creat per Joan Chorto Consultor pensat per a cobrir les noves obligacions legals i simplificar la gestió diària de les empreses. Amb VeriFactu en vigor des de 2025 i l’entrada obligatòria al 2026, necessites un sistema segur, modern i validat per l’AEAT.*</p>
           <p className="text-muted">Software de facturació VeriFactu · Programa de factures Crea y Crece · Facturació per autònoms i PIMEs</p>
         </div>
       </section>
@@ -218,7 +218,7 @@ const Avero = () => (
       {/*        </tr>*/}
       {/*      </tbody>*/}
       {/*    </table>*/}
-      {/*    <a href="https://avero.jctagency.com" className="btn btn-avero">Consulta els nostres plans</a>*/}
+      {/*    <a href="https://avero.joanchorto.com" className="btn btn-avero">Consulta els nostres plans</a>*/}
       {/*  </div>*/}
       {/*</section>*/}
 
@@ -227,7 +227,7 @@ const Avero = () => (
         <div className="container">
           <h2>Adelanta’t a la normativa. Prova Avero avui i compleix amb Veri*Factu sense preocupacions.</h2>
           <div className="d-flex gap-3 justify-content-center flex-column flex-sm-row mt-3">
-            <a href="https://avero.jctagency.com" className="btn btn-dark">Crear compte</a>
+            <a href="https://avero.joanchorto.com" className="btn btn-dark">Crear compte</a>
             <a href="/contacto" className="btn btn-outline-dark text-dark">Contacta amb un assessor</a>
           </div>
         </div>
@@ -236,7 +236,7 @@ const Avero = () => (
       {/* Peu de pàgina */}
       <footer className="footer-sub py-4">
         <div className="container text-center text-md-start">
-          <p className="mb-2"><a href="https://avero.jctagency.com">avero.jctagency.com</a></p>
+          <p className="mb-2"><a href="https://avero.joanchorto.com">avero.joanchorto.com</a></p>
           <ul className="list-unstyled mb-0">
             <li><a href="/programa-de-facturacio-verifactu">Programa de facturació VeriFactu</a></li>
             <li><a href="/factures-electroniques-aeat">Factures electròniques AEAT</a></li>

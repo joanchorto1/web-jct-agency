@@ -145,7 +145,7 @@ const WorkMethod = () => (
           primaryLabel="Dissenya el teu workshop"
           primaryHref="/contacte?from=com-treballem"
           secondaryLabel="Parla amb la direcció de projectes"
-          secondaryHref="mailto:joan@jctagency.com?subject=Direccio%20de%20projectes"
+          secondaryHref="mailto:joan@joanchorto.com?subject=Direccio%20de%20projectes"
         />
       </div>
     </section>

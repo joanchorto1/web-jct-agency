@@ -40,7 +40,7 @@ const measurementPractices = [
 
 const testimonial = {
   quote:
-    'Amb JCT Agency vam aconseguir visibilitat setmanal dels resultats i vam accelerar decisions que abans trigaven mesos. Han estat un partner que combina rigor i empatia.',
+    'Amb Joan Chorto Consultor vam aconseguir visibilitat setmanal dels resultats i vam accelerar decisions que abans trigaven mesos. Ha estat un partner que combina rigor i empatia.',
   author: 'COO d’empresa SaaS de serveis professionals',
 };
 

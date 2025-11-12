@@ -11,7 +11,7 @@ import roadmapIcon from '../../components/img/ESCALABILITAT.png';
 const SolutionsPage = () => (
   <Layout>
     <Helmet>
-      <title>Solucions de gestió empresarial | JCT Agency</title>
+      <title>Solucions de gestió empresarial | Joan Chorto Consultor</title>
       <meta
         name="description"
         content="Centralitza parts de treball, planifica equips i integra la facturació amb comptabilitat des d'una única plataforma SaaS dissenyada per a PIMEs, gestories i serveis industrials."

@@ -5,7 +5,7 @@ import Layout from '../../layouts/layout';
 const SaasVsTradicionalArticle = () => (
   <Layout>
     <Helmet>
-      <title>Per què un SaaS és millor que un software tradicional? | JCT Agency</title>
+      <title>Per què un SaaS és millor que un software tradicional? | Joan Chorto Consultor</title>
       <meta
         name="description"
         content="Comparativa entre SaaS i software tradicional per escollir la millor opció en costos, escalabilitat i seguretat per al teu negoci."
