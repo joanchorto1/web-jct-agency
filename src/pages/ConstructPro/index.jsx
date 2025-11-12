@@ -123,57 +123,57 @@ const ReliefAccessIcon = ({ label }) => (
 );
 const productScreens = [
   {
-    title: 'Pressupostos alineats amb obra',
+    title: 'Presupuestos alineados con obra',
     description:
-      'Configura plantilles de partides, revisions i marges aprovats abans d’enviar qualsevol oferta.',
+      'Configura plantillas de partidas, validaciones y márgenes aprobados antes de enviar cualquier presupuesto de construcción.',
     image: captura1,
-    alt: 'Captura del mòdul de pressupostos de ConstructPro',
+    alt: 'Captura del módulo de presupuestos de ConstructPro',
   },
   {
-    title: 'Quadres de comandament executius',
+    title: 'Cuadros de mando ejecutivos',
     description:
-      'Segueix cada projecte amb indicadors en temps real, desviacions i alertes proactives.',
+      'Sigue cada proyecto con indicadores en tiempo real, desviaciones y alertas proactivas para el control de obras.',
     image: captura2,
-    alt: 'Dashboard principal de ConstructPro amb indicadors de marge',
+    alt: 'Dashboard principal de ConstructPro con indicadores de margen',
   },
   {
-    title: 'Facturació sense errors',
+    title: 'Facturación sin errores',
     description:
-      'Automatitza certificacions i factures connectades amb obra i compres per reduir incidències.',
+      'Automatiza certificaciones, partes y facturas conectadas a obra y compras para reducir incidencias en la facturación para constructoras.',
     image: captura3,
-    alt: 'Vista del sistema de factures integrades de ConstructPro',
+    alt: 'Vista del sistema de facturas integradas de ConstructPro',
   },
 ];
 
 const painPoints = [
-  '📋 Els tècnics encara fan parts en paper o Excel.',
-  '🧾 Les dades es perden entre obres i facturació.',
-  '🕒 No saps exactament què costa cada projecte.',
-  '📉 Falta control sobre marges i beneficis.',
+  '📋 Los técnicos siguen usando papeles o Excel para partes.',
+  '🧾 Los datos se pierden entre obra y facturación.',
+  '🕒 No se conoce el coste real por proyecto.',
+  '📉 Falta control sobre márgenes y beneficios.',
 ];
 
 const reliefBenefits = [
   {
     title: 'Control total',
-    description: 'Obres, clients i costos en temps real amb traçabilitat completa de cada partida.',
+    description: 'Obras, clientes y costes en tiempo real con trazabilidad completa de cada partida para un control de obras fiable.',
     icon: ReliefControlIcon,
-    alt: "Icona control d'operacions",
+    alt: "Icono control de operaciones",
   },
   {
-    title: 'Automatització',
-    description: "Del part aprovat al pressupost i d'aquest a la factura sense copiar dades ni cometre errors.",
+    title: 'Automatización',
+    description: "Del parte aprobado al presupuesto y de ahí a la factura sin copiar datos, reduciendo errores y tiempos administrativos.",
     icon: ReliefAutomationIcon,
     alt: 'Icona automatització',
   },
   {
-    title: 'Informes i marges',
-    description: 'Coneix el benefici de cada obra amb dashboards i alertes de desviacions.',
+    title: 'Informes y márgenes',
+    description: 'Conoce el beneficio de cada obra con dashboards, alertas de desviaciones y reportes para la toma de decisiones.',
     icon: ReliefReportsIcon,
     alt: 'Icona informes',
   },
   {
-    title: 'Accés des de qualsevol lloc',
-    description: 'Oficina, mòbil o obra amb permisos per rols i registre de canvis.',
+    title: 'Acceso desde cualquier lugar',
+    description: 'Oficina, mòbil u obra amb permisos per rols i registre de canvis per mantenir la seguretat i traçabilitat.',
     icon: ReliefAccessIcon,
     alt: 'Icona accés remot',
   },
@@ -181,35 +181,35 @@ const reliefBenefits = [
 
 const processPhases = [
   {
-    title: 'Diagnòstic gratuït',
-    description: 'Analitzem com treballes ara, quins sistemes utilitzes i on es produeixen els colls d\'ampolla.',
+    title: 'Diagnóstico gratuito',
+    description: 'Analizamos cómo trabajas, qué herramientas usas y dónde se producen los cuellos de botella.',
   },
   {
-    title: 'Mini projecte',
-    description: 'Fase pilot amb l\'equip clau per validar fluxos, permisos i informes en poques setmanes.',
+    title: 'Proyecto piloto',
+    description: 'Fase piloto amb l\'equip clau per validar fluxos, permisos i informes en poques setmanes.',
   },
   {
-    title: 'Implementació completa',
-    description: 'ERP modular amb mòduls de parts, pressupostos, compres i facturació adaptats al teu negoci.',
+    title: 'Implementación completa',
+    description: 'ERP modular amb mòduls de parts, pressupostos, compres i facturació adaptat al teu negoci.',
   },
   {
-    title: 'Manteniment i evolució',
-    description: 'Suport continu, revisions periòdiques i noves funcionalitats segons els requisits de camp.',
+    title: 'Mantenimiento y evolución',
+    description: 'Suport continu, revisions periòdiques i noves funcionalitats segons necessitats de obra.',
   },
 ];
 
 const testimonials = [
   {
-    quote: '“Hem reduït un 60% el temps administratiu.”',
-    detail: 'Digitalització completa dels parts i automatització de factures.',
+    quote: '“Reducimos un 60% el tiempo administrativo.”',
+    detail: 'Digitalización de parts i automatització de factures per a empreses de obra.',
   },
   {
-    quote: '“Ara sé exactament quin marge tenim a cada obra.”',
-    detail: 'Quadres de comandament amb costos actualitzats i alarmes de desviacions.',
+    quote: '“Ahora sé exactamente el margen de cada proyecto.”',
+    detail: 'Quadres de comandament amb costos actualitzats i alertes de desviació.',
   },
   {
-    quote: '“Tot l’equip treballa amb la mateixa informació.”',
-    detail: 'Portal compartit amb oficines, cap d\'obra i subcontractistes.',
+    quote: '“Todo el equipo trabaja con la misma información.”',
+    detail: 'Portal compartit entre oficina, cap d\'obra i subcontractes.',
   },
 ];
 
@@ -222,10 +222,10 @@ const verifactuHighlights = [
 const ConstructProPage = () => (
   <Layout>
     <Helmet>
-      <title>ConstructPro | ERP de construcció per coordinar obres i facturació</title>
+      <title>ConstructPro | Software de gestión de obras, control de obras y presupuestos</title>
       <meta
         name="description"
-        content="Connecta oficina, obres i facturació amb ConstructPro. Auditories gratuïtes, fluxos automatitzats i control de marges en temps real per empreses de construcció."
+        content="ConstructPro es un ERP para empresas de construcción: gestión de obras, control de presupuestos, certificaciones de obra y facturación para constructoras con auditoría continua."
       />
     </Helmet>
 
@@ -234,33 +234,33 @@ const ConstructProPage = () => (
         <div className="container">
           <div className="row align-items-center pb-5 g-5 flex-column-reverse flex-lg-row">
             <div className="col-lg-6">
-              <span className="eyebrow text-uppercase text-primary">Solució ERP professional</span>
+              <span className="eyebrow text-uppercase text-primary">Solución ERP profesional</span>
               <h1 className="display-5 fw-bold mt-3">
-                Governar l'empresa constructora amb dades fiables i processos integrats
+                Gestiona tu empresa de construcción con datos fiables y procesos integrados
               </h1>
               <p className="lead text-muted mt-3">
-                ConstructPro connecta oficina tècnica, equips d'obra i administració en un únic entorn segur per prendre decisions amb confiança.
+                ConstructPro conecta oficina técnica, equipos de obra y administración en un único entorno seguro para decisiones basadas en datos.
               </p>
               <p className="text-muted fst-italic">
-                “Reduïm paperassa, assegurem marges i automatitzem el cicle pressupost–execució–facturació amb auditories contínues.”
+                “Reducimos papeleo, aseguramos márgenes y automatizamos el ciclo presupuesto–ejecución–facturación amb auditories contínues.”
               </p>
               <div className="d-flex flex-column flex-sm-row gap-3 mt-4">
                 <a href={WHATSAPP_LINKS.constructProInfo} className="btn btn-primary btn-lg">
-                  Sol·licita una auditoria per WhatsApp
+                  Solicitar auditoría
                   <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" className="ms-2" xmlns="http://www.w3.org/2000/svg" focusable="false">
                     <path fill="#25D366" d="M12 .5C5.7.5.9 5.3.9 11.6c0 2 .5 3.9 1.5 5.6L.5 23.5l6.5-1.7c1.6.8 3.5 1.3 5.5 1.3 6.3 0 11.1-4.8 11.1-11.1S18.3.5 12 .5z"/>
                     <path fill="#FFF" d="M17.3 14.1c-.3-.2-2-.9-2.3-.9-.3 0-.4-.1-.6.2-.2.3-.8.9-1 1.1-.2.2-.4.3-.7.1-.3-.2-1.5-.6-2.8-1.7-1-1-1.6-2.1-1.8-2.4-.2-.3 0-.5.1-.7.1-.2.3-.4.4-.6.1-.2.1-.4 0-.6-.1-.2-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4-.2 0-.5 0-.8 0-.3 0-.7.1-1 .4-.3.3-1 1-1 2.5s1 3 1.1 3.2c.1.2 1.9 3 4.6 4.3 3 .1 3.9.2 4.6.1.7-.1 2.4-1 2.8-1.9.4-.9.4-1.6.3-1.8-.1-.2-.4-.3-.7-.5z"/>
                   </svg>
                 </a>
                 <span className="text-muted align-self-center">
-                  Descobreix quantes hores i diners pots estalviar.
+                  Descubre cuánto puedes ahorrar en tiempo y costes.
                 </span>
               </div>
             </div>
             <div className="col-lg-6 text-center">
               <img
                 src={Logo}
-                alt="Cap d\'obra consultant l\'estat d\'una obra des d\'una tauleta"
+                alt="Jefe de obra consultando el estado de una obra desde una tablet"
                 className="img-fluid rounded-4 shadow"
                 style={{ maxWidth: '420px' }}
               />
@@ -273,9 +273,9 @@ const ConstructProPage = () => (
         <div className="container">
           <div className="row justify-content-center text-center">
             <div className="col-lg-8">
-              <h2 className="fw-semibold">Una suite visual per dirigir l'operativa</h2>
+              <h2 className="fw-semibold">Una suite visual para dirigir la operativa</h2>
               <p className="text-muted mt-3">
-                Visualitza pressupostos, seguiment de marge i facturació auditada en pantalles dissenyades per a equips directius i caps d'obra.
+                Visualiza presupuestos de construcción, seguimiento de márgenes y facturación auditada en pantallas diseñadas para directivos y capataces.
               </p>
             </div>
           </div>
@@ -299,7 +299,7 @@ const ConstructProPage = () => (
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-8 text-center">
-              <h2 className="fw-semibold">Si et reconeixes en algun d’aquests punts, és hora de canviar</h2>
+              <h2 className="fw-semibold">Si te identificas con alguno de estos puntos, es hora de cambiar</h2>
             </div>
           </div>
           <div className="row justify-content-center mt-4">
@@ -313,7 +313,7 @@ const ConstructProPage = () => (
               </ul>
               <div className="text-center mt-4">
                 <a href={WHATSAPP_LINKS.constructProInfo} className="btn btn-outline-primary">
-                  Fem una anàlisi per WhatsApp
+                  Solicitar análisis
                   <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" className="ms-2" xmlns="http://www.w3.org/2000/svg" focusable="false">
                     <path fill="#25D366" d="M12 .5C5.7.5.9 5.3.9 11.6c0 2 .5 3.9 1.5 5.6L.5 23.5l6.5-1.7c1.6.8 3.5 1.3 5.5 1.3 6.3 0 11.1-4.8 11.1-11.1S18.3.5 12 .5z"/>
                     <path fill="#FFF" d="M17.3 14.1c-.3-.2-2-.9-2.3-.9-.3 0-.4-.1-.6.2-.2.3-.8.9-1 1.1-.2.2-.4.3-.7.1-.3-.2-1.5-.6-2.8-1.7-1-1-1.6-2.1-1.8-2.4-.2-.3 0-.5.1-.7.1-.2.3-.4.4-.6.1-.2.1-.4 0-.6-.1-.2-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4-.2 0-.5 0-.8 0-.3 0-.7.1-1 .4-.3.3-1 1-1 2.5s1 3 1.1 3.2c.1.2 1.9 3 4.6 4.3 3 .1 3.9.2 4.6.1.7-.1 2.4-1 2.8-1.9.4-.9.4-1.6.3-1.8-.1-.2-.4-.3-.7-.5z"/>
@@ -329,11 +329,10 @@ const ConstructProPage = () => (
         <div className="container">
           <div className="row justify-content-between align-items-center mb-5">
             <div className="col-lg-5">
-              <span className="eyebrow text-uppercase text-primary">Alleujament</span>
-              <h2 className="fw-semibold mt-3">Centralitza-ho tot amb ConstructPro</h2>
+              <span className="eyebrow text-uppercase text-primary">Alivio</span>
+              <h2 className="fw-semibold mt-3">Centraliza todo con ConstructPro</h2>
               <p className="text-muted mt-3">
-                Gestió d’obres, pressupostos, parts i facturació en un únic sistema connectat. Cada equip treballa amb la mateixa
-                informació i cada decisió es basa en dades actualitzades.
+                Gestión de obras, presupuestos, partes y facturación en un único sistema conectado. Cada equipo trabaja con la misma información y cada decisión se basa en datos actualizados.
               </p>
             </div>
           </div>
@@ -364,8 +363,8 @@ const ConstructProPage = () => (
         <div className="container">
           <div className="row justify-content-center text-center">
             <div className="col-lg-8">
-              <h2 className="fw-semibold">D’una auditoria gratuïta a una solució feta a mida</h2>
-              <p className="text-muted mt-3">No venem programes. Construïm solucions amb tu, fase a fase.</p>
+              <h2 className="fw-semibold">De una auditoría gratuita a una solución a medida</h2>
+              <p className="text-muted mt-3">No vendemos software: diseñamos soluciones para gestión de obras y control de proyecto, fase a fase.</p>
             </div>
           </div>
           <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mt-4">
@@ -387,10 +386,10 @@ const ConstructProPage = () => (
         <div className="container">
           <div className="row align-items-center g-5">
             <div className="col-lg-6">
-              <span className="eyebrow text-uppercase text-primary">Compliment normatiu</span>
-              <h2 className="fw-semibold mt-3 text-white">ConstructPro alinea la teva empresa amb Verifactu</h2>
+              <span className="eyebrow text-uppercase text-primary">Cumplimiento normativo</span>
+              <h2 className="fw-semibold mt-3 text-white">ConstructPro alinea tu empresa con VeriFactu</h2>
               <p className="mt-3 text-white-50">
-                Preparem processos, dades i documents perquè cada factura compleixi les noves obligacions fiscals i es pugui justificar davant l'Agència Tributària.
+                Preparamos procesos, datos y documentos para que cada factura cumpla las nuevas obligaciones fiscales y se pueda justificar ante la Agencia Tributaria.
               </p>
               <ul className="list-unstyled d-grid gap-3 mt-4">
                 {verifactuHighlights.map((item) => (
@@ -401,19 +400,19 @@ const ConstructProPage = () => (
               </ul>
               <div className="d-flex flex-column flex-sm-row gap-3 mt-4">
                 <a href={WHATSAPP_LINKS.constructProInfo} className="btn btn-outline-light btn-lg">
-                  Planifica el teu full de ruta per WhatsApp
+                  Planificar hoja de ruta
                   <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" className="ms-2" xmlns="http://www.w3.org/2000/svg" focusable="false">
                     <path fill="#25D366" d="M12 .5C5.7.5.9 5.3.9 11.6c0 2 .5 3.9 1.5 5.6L.5 23.5l6.5-1.7c1.6.8 3.5 1.3 5.5 1.3 6.3 0 11.1-4.8 11.1-11.1S18.3.5 12 .5z"/>
                     <path fill="#FFF" d="M17.3 14.1c-.3-.2-2-.9-2.3-.9-.3 0-.4-.1-.6.2-.2.3-.8.9-1 1.1-.2.2-.4.3-.7.1-.3-.2-1.5-.6-2.8-1.7-1-1-1.6-2.1-1.8-2.4-.2-.3 0-.5.1-.7.1-.2.3-.4.4-.6.1-.2.1-.4 0-.6-.1-.2-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4-.2 0-.5 0-.8 0-.3 0-.7.1-1 .4-.3.3-1 1-1 2.5s1 3 1.1 3.2c.1.2 1.9 3 4.6 4.3 3 .1 3.9.2 4.6.1.7-.1 2.4-1 2.8-1.9.4-.9.4-1.6.3-1.8-.1-.2-.4-.3-.7-.5z"/>
                   </svg>
                 </a>
-                <span className="text-white-50 align-self-center">Informe de compliment i roadmap d'integració.</span>
+                <span className="text-white-50 align-self-center">Informe de cumplimiento y roadmap de integración.</span>
               </div>
             </div>
             <div className="col-lg-6 text-center">
               <img
                 src={captura3}
-                alt="Pantalla de validació de factures conforme a Verifactu"
+                alt="Pantalla de validación de facturas conforme a VeriFactu"
                 className="img-fluid rounded-4 shadow-lg"
               />
             </div>
@@ -425,11 +424,10 @@ const ConstructProPage = () => (
         <div className="container">
           <div className="row justify-content-between align-items-center mb-5">
             <div className="col-lg-6">
-              <span className="eyebrow text-uppercase text-primary">Casos i resultats</span>
-              <h2 className="fw-semibold mt-3">Empreses com la teva ja han recuperat desenes d’hores setmanals</h2>
+              <span className="eyebrow text-uppercase text-primary">Casos y resultados</span>
+              <h2 className="fw-semibold mt-3">Empresas como la tuya ya han recuperado horas semanales</h2>
               <p className="text-muted mt-3">
-                Validem resultats amb dades i testimonis. Ens integrem amb el teu equip i compartim indicadors d’estalvi en temps
-                real.
+                Validamos resultados con datos y testimonios. Nos integramos con tu equipo y compartimos indicadores de ahorro en tiempo real.
               </p>
             </div>
           </div>
@@ -447,7 +445,7 @@ const ConstructProPage = () => (
           </div>
           <div className="text-center mt-5">
             <a href={WHATSAPP_LINKS.constructProInfo} className="btn btn-primary btn-lg">
-              Sol·licita una auditoria per WhatsApp
+              Solicitar auditoría
               <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" className="ms-2" xmlns="http://www.w3.org/2000/svg" focusable="false">
                 <path fill="#25D366" d="M12 .5C5.7.5.9 5.3.9 11.6c0 2 .5 3.9 1.5 5.6L.5 23.5l6.5-1.7c1.6.8 3.5 1.3 5.5 1.3 6.3 0 11.1-4.8 11.1-11.1S18.3.5 12 .5z"/>
                 <path fill="#FFF" d="M17.3 14.1c-.3-.2-2-.9-2.3-.9-.3 0-.4-.1-.6.2-.2.3-.8.9-1 1.1-.2.2-.4.3-.7.1-.3-.2-1.5-.6-2.8-1.7-1-1-1.6-2.1-1.8-2.4-.2-.3 0-.5.1-.7.1-.2.3-.4.4-.6.1-.2.1-.4 0-.6-.1-.2-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4-.2 0-.5 0-.8 0-.3 0-.7.1-1 .4-.3.3-1 1-1 2.5s1 3 1.1 3.2c.1.2 1.9 3 4.6 4.3 3 .1 3.9.2 4.6.1.7-.1 2.4-1 2.8-1.9.4-.9.4-1.6.3-1.8-.1-.2-.4-.3-.7-.5z"/>

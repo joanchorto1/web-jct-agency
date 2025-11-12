@@ -15,10 +15,10 @@ import woman from '../img/Woman.png';
 const Avero = () => (
   <Layout>
     <Helmet>
-      <title>Avero – Programa de facturació 100% adaptat a VeriFactu i la Llei Crea y Crece</title>
+      <title>Avero — Software de facturación VeriFactu y cumplimiento AEAT</title>
       <meta
         name="description"
-        content="Programa de facturació Avero per a autònoms, PIMEs i gestories; compleix Veri*Factu i la Llei Crea y Crece amb una eina senzilla i moderna."
+        content="Avero es un software de facturación homologado para autónomos, pymes y gestorías. Cumple VeriFactu y requisitos AEAT, gestiona facturas electrónicas y automatiza procesos fiscales."
       />
     </Helmet>
     <div className="bg-white text-dark">
@@ -27,10 +27,10 @@ const Avero = () => (
         <div className="container">
           <div className="row align-items-center g-4 flex-column flex-md-row">
             <div className="col-md-6">
-              <h1>Avero – Programa de facturació 100% adaptat a VeriFactu i la Llei Crea y Crece.*</h1>
-              <p>La solució més simple i moderna per a autònoms, PIMEs i gestories. Compleix amb la normativa sense complicacions.</p>
+              <h1>Avero — Software de facturación compatible con VeriFactu y AEAT</h1>
+              <p>La solución más sencilla y moderna para autónomos, pymes y gestorías. Gestiona facturas electrónicas AEAT, genera archivos Verifactu y automatiza tu cumplimiento fiscal.</p>
               <div className="d-flex gap-3 mt-3 flex-column flex-sm-row">
-                <a href="https://avero.jctagency.com" className="btn btn-avero">Prova Avero gratis</a>
+                <a href="https://avero.jctagency.com" className="btn btn-avero">Prueba Avero gratis</a>
 
                 {/* WhatsApp demo CTA */}
                 <a
@@ -39,7 +39,7 @@ const Avero = () => (
                   rel="noopener noreferrer"
                   className="btn btn-outline-avero"
                 >
-                  Demana una demo (WhatsApp)
+                  Solicitar demo
                   <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" className="ms-2" xmlns="http://www.w3.org/2000/svg" focusable="false">
                     <path fill="#25D366" d="M12 .5C5.7.5.9 5.3.9 11.6c0 2 .5 3.9 1.5 5.6L.5 23.5l6.5-1.7c1.6.8 3.5 1.3 5.5 1.3 6.3 0 11.1-4.8 11.1-11.1S18.3.5 12 .5z"/>
                     <path fill="#FFF" d="M17.3 14.1c-.3-.2-2-.9-2.3-.9-.3 0-.4-.1-.6.2-.2.3-.8.9-1 1.1-.2.2-.4.3-.7.1-.3-.2-1.5-.6-2.8-1.7-1-1-1.6-2.1-1.8-2.4-.2-.3 0-.5.1-.7.1-.2.3-.4.4-.6.1-.2.1-.4 0-.6-.1-.2-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4-.2 0-.5 0-.8 0-.3 0-.7.1-1 .4-.3.3-1 1-1 2.5s1 3 1.1 3.2c.1.2 1.9 3 4.6 4.3 3 .1 3.9.2 4.6.1.7-.1 2.4-1 2.8-1.9.4-.9.4-1.6.3-1.8-.1-.2-.4-.3-.7-.5z"/>
@@ -49,7 +49,7 @@ const Avero = () => (
             </div>
             <div className="col-md-6 text-center position-relative">
               <img src={AveroLogo} alt="Mockup Avero" className="img-fluid" style={{ maxWidth: '400px' }} />
-              <span className="badge bg-avero position-absolute top-0 start-50 translate-middle-x mt-2">Adaptat a Veri*Factu – RD 1007/2023</span>
+              <span className="badge bg-avero position-absolute top-0 start-50 translate-middle-x mt-2">Adaptado a Veri*Factu – RD 1007/2023</span>
             </div>
           </div>
         </div>
@@ -58,29 +58,29 @@ const Avero = () => (
       {/* Per què Avero */}
       <section className="py-5" data-aos="fade-up">
         <div className="container">
-          <h2>Per què Avero?</h2>
-          <p>Avero és el programari de facturació creat per Joan Chorto Consultor pensat per a cobrir les noves obligacions legals i simplificar la gestió diària de les empreses. Amb VeriFactu en vigor des de 2025 i l’entrada obligatòria al 2026, necessites un sistema segur, modern i validat per l’AEAT.*</p>
-          <p className="text-muted">Software de facturació VeriFactu · Programa de factures Crea y Crece · Facturació per autònoms i PIMEs</p>
+          <h2>¿Por qué Avero?</h2>
+          <p>Avero es un programa de facturación homologado diseñado para cumplir VeriFactu y la Ley Crea y Crece. Facilita la emisión de facturas electrónicas AEAT, el control de registros fiscales y la generación automática de XML y justificantes.</p>
+          <p className="text-muted">Software de facturación VeriFactu · Facturas electrónicas AEAT · Programa de facturación homologado · Cumplimiento VeriFactu</p>
         </div>
       </section>
 
       {/* Funcionalitats clau */}
       <section className="py-5 bg-light" data-aos="fade-up">
         <div className="container">
-          <h2 className="mb-4">Funcionalitats clau</h2>
+          <h2 className="mb-4">Funcionalidades clave</h2>
           <div className="row">
             {/* Facturació */}
             <div className="col-md-4 mb-4">
               <div className="p-4 border-top border-4 border-avero text-center">
-                <img src={facturacioImg} alt="Facturació" style={{ width: '60px' }} className="mb-3" />
-                <h3>Facturació</h3>
+                <img src={facturacioImg} alt="Facturación" style={{ width: '60px' }} className="mb-3" />
+                <h3>Facturación</h3>
                 <ul className="feature-list mb-0 mt-3 text-start">
-                  <li className="mb-2">Factures electròniques (creació, enviament, rectificatives, simplificades).</li>
-                  <li className="mb-2">Gestió de pressupostos i albarans, conversió en factura amb un clic.</li>
-                  <li className="mb-2">Control de clients i proveïdors amb historial complet.</li>
-                  <li className="mb-2">Gestió d’articles i productes (preus, categories, stock bàsic).</li>
-                  <li className="mb-2">Enviament de factures per correu electrònic i PDF professional.</li>
-                  <li className="mb-0">TPV integrat per a vendes físiques amb emissió de tiquets legals.</li>
+                  <li className="mb-2">Facturas electrónicas (creación, envío y rectificativas) compatibles con AEAT.</li>
+                  <li className="mb-2">Presupuestos y albaranes convertibles en factura con un clic.</li>
+                  <li className="mb-2">Gestión de clientes y proveedores con historial fiscal completo.</li>
+                  <li className="mb-2">Catálogo de artículos y control básico de stock.</li>
+                  <li className="mb-2">Envío profesional por correo y descarga de PDF fiscal.</li>
+                  <li className="mb-0">TPV integrado para ventas físicas con tickets legales.</li>
                 </ul>
               </div>
             </div>
@@ -88,13 +88,13 @@ const Avero = () => (
             {/* Utilitats premium */}
             <div className="col-md-4 mb-4">
               <div className="p-4 border-top border-4 border-avero text-center">
-                <img src={utilitatsImg} alt="Utilitats premium" style={{ width: '60px' }} className="mb-3" />
-                <h3>Utilitats premium</h3>
+                <img src={utilitatsImg} alt="Utilidades premium" style={{ width: '60px' }} className="mb-3" />
+                <h3>Utilidades premium</h3>
                 <ul className="feature-list mb-0 mt-3 text-start">
-                  <li className="mb-2">Quadres de comandament i informes: ingressos, despeses, beneficis, IVA.</li>
-                  <li className="mb-2">Gestió multiempresa i multiusuari amb rols i permisos.</li>
-                  <li className="mb-2">Integració amb Stripe i passarel·les de pagament.</li>
-                  <li className="mb-0">Signatura i certificat digital integrat per a remissió segura.</li>
+                  <li className="mb-2">Cuadros de mando e informes: ingresos, gastos, beneficios e IVA.</li>
+                  <li className="mb-2">Multiempresa y control de usuarios con roles y permisos.</li>
+                  <li className="mb-2">Integraciones con pasarelas de pago como Stripe.</li>
+                  <li className="mb-0">Firma y certificado digital para remisión segura a terceros y AEAT.</li>
                 </ul>
               </div>
             </div>
@@ -103,11 +103,11 @@ const Avero = () => (
             <div className="col-md-4 mb-4">
               <div className="p-4 border-top border-4 border-avero text-center">
                 <img src={aeatImg} alt="AEAT" style={{ width: '60px' }} className="mb-3" />
-                <h3>AEAT</h3>
+                <h3>AEAT y cumplimiento</h3>
                 <ul className="feature-list mb-0 mt-3 text-start">
-                  <li className="mb-2">Enviament automàtic a l’AEAT en temps real (modalitat Veri*Factu).</li>
-                  <li className="mb-2">Còpies de seguretat i conservació de registres (complint el RRSIF).</li>
-                  <li className="mb-0">Generació de codi QR tributari a les factures.</li>
+                  <li className="mb-2">Envío automático y verificado a la AEAT (modalidad VeriFactu).</li>
+                  <li className="mb-2">Copias de seguridad y conservación de registros conforme a normativa.</li>
+                  <li className="mb-0">Generación de código QR tributario en facturas electrónicas.</li>
                 </ul>
               </div>
             </div>
@@ -118,22 +118,21 @@ const Avero = () => (
       {/* Compliment legal */}
       <section className="py-5" data-aos="fade-up">
         <div className="container">
-          <h2>Compliment legal (Veri*Factu i Llei Crea y Crece)</h2>
-          <p>Veri*Factu: Avero envia cada factura a l’AEAT amb hash encadenat, registre inalterable i QR tributari.</p>
-          <p>Llei Crea y Crece: Factura electrònica obligatòria per a operacions B2B.</p>
-          <p>Normativa aplicable: RD 1007/2023, Ordre HAC/1177/2024 i modificacions RD 254/2025.</p>
-          <p className="text-muted">Avero és el programari de facturació certificat i adaptat al reglament Veri*Factu (AEAT) i a la Llei Crea y Crece.</p>
+          <h2>Cumplimiento legal (VeriFactu y Ley Crea y Crece)</h2>
+          <p>Avero envía cada factura con hash encadenado, conserva un registro inalterable y añade el QR tributario exigido por la normativa.</p>
+          <p>Normativa aplicable: RD 1007/2023, Orden HAC/1177/2024 y actualizaciones posteriores.</p>
+          <p className="text-muted">Programa de facturación homologado y diseñado para el cumplimiento fiscal automatizado.</p>
         </div>
       </section>
 
       {/* Per a qui és Avero */}
       <section className="py-5 bg-light" data-aos="fade-up">
         <div className="container">
-          <h2>Per a qui és Avero</h2>
+          <h2>¿Para quién es Avero?</h2>
           <ul className="list-unstyled">
-            <li><strong>Autònoms</strong> → compleix obligacions fiscals sense coneixements tècnics.</li>
-            <li><strong>PIMEs</strong> → controla la facturació, clients i informes.</li>
-            <li><strong>Gestories</strong> → ofereix Avero als clients com a servei extra i guanya en eficiència.</li>
+            <li><strong>Autónomos</strong> → emite facturas electrónicas AEAT sin complejidad técnica.</li>
+            <li><strong>Pymes</strong> → controla facturación, clientes e informes fiscales en tiempo real.</li>
+            <li><strong>Gestorías</strong> → ofrece Avero a clientes y automatiza la gestión fiscal.</li>
           </ul>
         </div>
       </section>
@@ -141,18 +140,18 @@ const Avero = () => (
       {/* Testimonis */}
       <section className="py-5" data-aos="fade-up">
         <div className="container">
-          <h2 className="text-center mb-4">Testimonis / Casos d’ús</h2>
+          <h2 className="text-center mb-4">Testimonios y casos de uso</h2>
           <div className="row g-4 justify-content-center">
             <div className="col-md-6 col-lg-5">
               <div className="p-4 bg-light h-100 text-center rounded">
                 <img
                   src={man}
-                  alt="Client satisfet"
+                  alt="Cliente satisfecho"
                   className="img-fluid rounded-circle mb-3"
                   style={{ width: '120px', height: '120px', objectFit: 'cover' }}
                 />
                 <blockquote className="blockquote mb-0">
-                  “Amb Avero genero les meves factures en segons i sé que estan validades per l’AEAT.”
+                  “Con Avero emito mis facturas en segundos y sé que están validadas por la AEAT.”
                 </blockquote>
               </div>
             </div>
@@ -160,12 +159,12 @@ const Avero = () => (
               <div className="p-4 bg-light h-100 text-center rounded">
                 <img
                   src={woman}
-                  alt="Client satisfet"
+                  alt="Cliente satisfecho"
                   className="img-fluid rounded-circle mb-3"
                   style={{ width: '120px', height: '120px', objectFit: 'cover' }}
                 />
                 <blockquote className="blockquote mb-0">
-                  “Hem estalviat hores setmanals en la gestió de clients i IVA.”
+                  “Hemos ahorrado horas semanales en la gestión de clientes y el IVA.”
                 </blockquote>
               </div>
             </div>
@@ -173,11 +172,11 @@ const Avero = () => (
         </div>
       </section>
 
-      {/* Galeria d'imatges */}
+      {/* Galería d'imatges */}
       <section className="py-5 bg-light" data-aos="fade-up">
         <div className="container">
-          <h2>Galeria</h2>
-          <p>Descobreix captures de pantalla i exemples de l'entorn d'Avero.</p>
+          <h2>Galería</h2>
+          <p>Capturas y ejemplos del entorno de Avero. (Próximamente más imágenes reales).</p>
           {/* TODO: Afegir imatges reals de la galeria quan estiguin disponibles.
           <div className="row g-3">
             <div className="col-md-4">
@@ -195,8 +194,8 @@ const Avero = () => (
       {/* Vídeo explicatiu */}
       <section className="py-5" data-aos="fade-up">
         <div className="container">
-          <h2>Vídeo explicatiu</h2>
-          <p>Pròximament disponible: un vídeo que mostra com funciona Avero pas a pas.</p>
+          <h2>Vídeo explicativo</h2>
+          <p>Próximamente: un vídeo que muestra Avero paso a paso y cómo automatiza la facturación AEAT y VeriFactu.</p>
           {/* TODO: Incrustar el vídeo explicatiu quan estigui llest.
           <div className="ratio ratio-16x9">
             <video src={DemoVideo} controls></video>
@@ -205,42 +204,12 @@ const Avero = () => (
         </div>
       </section>
 
-      {/*/!* Plans i preus *!/*/}
-      {/*<section className="py-5 bg-light">*/}
-      {/*  <div className="container">*/}
-      {/*    <h2 className="mb-4">Plans i preus</h2>*/}
-      {/*    <table className="table">*/}
-      {/*      <thead>*/}
-      {/*        <tr>*/}
-      {/*          <th>Pla</th>*/}
-      {/*          <th>Preu</th>*/}
-      {/*        </tr>*/}
-      {/*      </thead>*/}
-      {/*      <tbody>*/}
-      {/*        <tr>*/}
-      {/*          <td>Autònoms</td>*/}
-      {/*          <td>des de XX €/mes</td>*/}
-      {/*        </tr>*/}
-      {/*        <tr>*/}
-      {/*          <td>PIME</td>*/}
-      {/*          <td>des de XX €/mes</td>*/}
-      {/*        </tr>*/}
-      {/*        <tr>*/}
-      {/*          <td>Gestories</td>*/}
-      {/*          <td>pla especial amb múltiples empreses vinculades</td>*/}
-      {/*        </tr>*/}
-      {/*      </tbody>*/}
-      {/*    </table>*/}
-      {/*    <a href="https://avero.joanchorto.com" className="btn btn-avero">Consulta els nostres plans</a>*/}
-      {/*  </div>*/}
-      {/*</section>*/}
-
       {/* CTA final */}
       <section className="py-5 text-center" style={{ backgroundColor: '#ff8c00' }} data-aos="fade-up">
         <div className="container">
-          <h2>Adelanta’t a la normativa. Prova Avero avui i compleix amb Veri*Factu sense preocupacions.</h2>
+          <h2>Adelántate a la normativa. Prueba Avero hoy y cumple VeriFactu sin preocupaciones.</h2>
           <div className="d-flex gap-3 justify-content-center flex-column flex-sm-row mt-3">
-            <a href="https://avero.jctagency.com" className="btn btn-dark">Crear compte</a>
+            <a href="https://avero.jctagency.com" className="btn btn-dark">Crear cuenta</a>
 
             {/* WhatsApp create account */}
             <a
@@ -249,14 +218,14 @@ const Avero = () => (
               rel="noopener noreferrer"
               className="btn btn-dark"
             >
-              Crear compte (WhatsApp)
+              Crear cuenta
               <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" className="ms-2" xmlns="http://www.w3.org/2000/svg" focusable="false">
                 <path fill="#25D366" d="M12 .5C5.7.5.9 5.3.9 11.6c0 2 .5 3.9 1.5 5.6L.5 23.5l6.5-1.7c1.6.8 3.5 1.3 5.5 1.3 6.3 0 11.1-4.8 11.1-11.1S18.3.5 12 .5z"/>
                 <path fill="#FFF" d="M17.3 14.1c-.3-.2-2-.9-2.3-.9-.3 0-.4-.1-.6.2-.2.3-.8.9-1 1.1-.2.2-.4.3-.7.1-.3-.2-1.5-.6-2.8-1.7-1-1-1.6-2.1-1.8-2.4-.2-.3 0-.5.1-.7.1-.2.3-.4.4-.6.1-.2.1-.4 0-.6-.1-.2-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4-.2 0-.5 0-.8 0-.3 0-.7.1-1 .4-.3.3-1 1-1 2.5s1 3 1.1 3.2c.1.2 1.9 3 4.6 4.3 3 .1 3.9.2 4.6.1.7-.1 2.4-1 2.8-1.9.4-.9.4-1.6.3-1.8-.1-.2-.4-.3-.7-.5z"/>
               </svg>
             </a>
 
-            <a href="/contacto" className="btn btn-outline-dark text-dark">Contacta amb un assessor</a>
+            <a href="/contacto" className="btn btn-outline-dark text-dark">Contacta con un asesor</a>
 
             {/* WhatsApp contact advisor */}
             <a
@@ -265,7 +234,7 @@ const Avero = () => (
               rel="noopener noreferrer"
               className="btn btn-outline-dark text-dark"
             >
-              Contactar (WhatsApp)
+              Contactar
               <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" className="ms-2" xmlns="http://www.w3.org/2000/svg" focusable="false">
                 <path fill="#25D366" d="M12 .5C5.7.5.9 5.3.9 11.6c0 2 .5 3.9 1.5 5.6L.5 23.5l6.5-1.7c1.6.8 3.5 1.3 5.5 1.3 6.3 0 11.1-4.8 11.1-11.1S18.3.5 12 .5z"/>
                 <path fill="#FFF" d="M17.3 14.1c-.3-.2-2-.9-2.3-.9-.3 0-.4-.1-.6.2-.2.3-.8.9-1 1.1-.2.2-.4.3-.7.1-.3-.2-1.5-.6-2.8-1.7-1-1-1.6-2.1-1.8-2.4-.2-.3 0-.5.1-.7.1-.2.3-.4.4-.6.1-.2.1-.4 0-.6-.1-.2-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4-.2 0-.5 0-.8 0-.3 0-.7.1-1 .4-.3.3-1 1-1 2.5s1 3 1.1 3.2c.1.2 1.9 3 4.6 4.3 3 .1 3.9.2 4.6.1.7-.1 2.4-1 2.8-1.9.4-.9.4-1.6.3-1.8-.1-.2-.4-.3-.7-.5z"/>
@@ -280,9 +249,9 @@ const Avero = () => (
         <div className="container text-center text-md-start">
           <p className="mb-2"><a href="https://avero.jctagency.com">avero.jctagency.com</a></p>
           <ul className="list-unstyled mb-0">
-            <li><a href="/programa-de-facturacio-verifactu">Programa de facturació VeriFactu</a></li>
-            <li><a href="/factures-electroniques-aeat">Factures electròniques AEAT</a></li>
-            <li><a href="/software-facturacio-autonoms-gestories">Software de facturació per autònoms i gestories</a></li>
+            <li><a href="/programa-de-facturacio-verifactu">Programa de facturación VeriFactu</a></li>
+            <li><a href="/factures-electroniques-aeat">Facturas electrónicas AEAT</a></li>
+            <li><a href="/software-facturacio-autonoms-gestories">Software de facturación para autónomos y gestorías</a></li>
           </ul>
         </div>
       </footer>
