@@ -3,8 +3,6 @@ import { Helmet } from 'react-helmet';
 import Header from '../../components/components/header';
 
 import './HomeStatic.css';
-import { getByDisplayValue } from '@testing-library/react';
-
 const Home = () => {
   const currentYear = new Date().getFullYear();
   const waDiagnostic = 'https://wa.me/34633391411?text=Hola%20Joan%2C%20vull%20un%20diagnostic%20gratuit.';
