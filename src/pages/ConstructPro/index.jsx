@@ -302,6 +302,12 @@ const ConstructProPage = () => (
                 emailLabel="Solicitar auditoría per correu"
                 whatsappLabel="Parlar per WhatsApp"
               />
+              <a
+                href="#demo-constructpro"
+                className="btn btn-outline-secondary btn-lg mt-3"
+              >
+                Ver demo guiada en 3 minutos
+              </a>
               <span className="text-muted d-block mt-2">
                 Descubre cuánto puedes ahorrar en tiempo y costes.
               </span>
@@ -313,6 +319,40 @@ const ConstructProPage = () => (
                 className="img-fluid rounded-4 shadow"
                 style={{ maxWidth: '420px' }}
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="demo-constructpro" className="section-spacing py-5 bg-white border-top">
+        <div className="container">
+          <div className="row align-items-center g-5">
+            <div className="col-lg-6">
+              <span className="eyebrow text-uppercase text-primary">Demo guiada</span>
+              <h2 className="fw-semibold mt-3">Recorrido visual en solo 3 minutos</h2>
+              <p className="text-muted mt-3">
+                Mira cómo se conectan presupuestos, partes y facturas en ConstructPro con un flujo real de obra. El vídeo
+                muestra cómo se actualizan los márgenes y cómo auditamos cada paso.
+              </p>
+              <a
+                className="btn btn-primary btn-lg mt-3"
+                href="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Ver demo guiada en 3 minutos
+              </a>
+            </div>
+            <div className="col-lg-6">
+              <div className="ratio ratio-16x9 rounded-4 overflow-hidden shadow">
+                <iframe
+                  src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+                  title="Demo guiada de ConstructPro"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </div>
