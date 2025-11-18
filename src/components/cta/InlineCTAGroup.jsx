@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button } from 'react-bootstrap';
 import { WHATSAPP_LINKS } from '../../utils/whatsapp';
+import { EMAIL_LINKS } from '../../utils/email';
 
 const InlineCTAGroup = ({
   primaryLabel,
@@ -45,8 +46,8 @@ InlineCTAGroup.propTypes = {
 };
 
 InlineCTAGroup.defaultProps = {
-  primaryLabel: 'Reserva diagnòstic per WhatsApp',
-  primaryHref: WHATSAPP_LINKS.reserveDiagnostic,
+  primaryLabel: 'Contacta per correu',
+  primaryHref: EMAIL_LINKS.generalInquiry,
   secondaryLabel: 'Contacta per WhatsApp',
   secondaryHref: WHATSAPP_LINKS.generalInquiry,
   primaryVariant: 'primary',

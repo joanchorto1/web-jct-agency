@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import Layout from '../../components/layouts/layout';
 import { WHATSAPP_LINKS } from '../../utils/whatsapp';
+import { EMAIL_LINKS } from '../../utils/email';
 
 import Logo from '../../components/img/apple-touch-icon.png';
 import captura1 from '../../components/img/captura1.png';
@@ -219,6 +220,48 @@ const verifactuHighlights = [
   'Connexions amb programari comptable i CRM per evitar manipulacions no autoritzades.',
 ];
 
+const WhatsAppIcon = () => (
+  <svg
+    aria-hidden="true"
+    width="18"
+    height="18"
+    viewBox="0 0 24 24"
+    className="ms-2"
+    xmlns="http://www.w3.org/2000/svg"
+    focusable="false"
+  >
+    <path
+      fill="#25D366"
+      d="M12 .5C5.7.5.9 5.3.9 11.6c0 2 .5 3.9 1.5 5.6L.5 23.5l6.5-1.7c1.6.8 3.5 1.3 5.5 1.3 6.3 0 11.1-4.8 11.1-11.1S18.3.5 12 .5z"
+    />
+    <path
+      fill="#FFF"
+      d="M17.3 14.1c-.3-.2-2-.9-2.3-.9-.3 0-.4-.1-.6.2-.2.3-.8.9-1 1.1-.2.2-.4.3-.7.1-.3-.2-1.5-.6-2.8-1.7-1-1-1.6-2.1-1.8-2.4-.2-.3 0-.5.1-.7.1-.2.3-.4.4-.6.1-.2.1-.4 0-.6-.1-.2-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4-.2 0-.5 0-.8 0-.3 0-.7.1-1 .4-.3.3-1 1-1 2.5s1 3 1.1 3.2c.1.2 1.9 3 4.6 4.3 3 .1 3.9.2 4.6.1.7-.1 2.4-1 2.8-1.9.4-.9.4-1.6.3-1.8-.1-.2-.4-.3-.7-.5z"
+    />
+  </svg>
+);
+
+const ContactActionGroup = ({
+  emailHref,
+  whatsappHref,
+  emailLabel,
+  whatsappLabel,
+  variant = 'primary',
+  whatsappVariant = 'outline-primary',
+  size = 'lg',
+  className = '',
+}) => (
+  <div className={`d-flex flex-column flex-sm-row gap-3 ${className}`}>
+    <a href={emailHref} className={`btn btn-${variant} btn-${size}`}>
+      {emailLabel}
+    </a>
+    <a href={whatsappHref} className={`btn btn-${whatsappVariant} btn-${size}`}>
+      {whatsappLabel}
+      <WhatsAppIcon />
+    </a>
+  </div>
+);
+
 const ConstructProPage = () => (
   <Layout>
     <Helmet>
@@ -244,18 +287,16 @@ const ConstructProPage = () => (
               <p className="text-muted fst-italic">
                 “Reducimos papeleo, aseguramos márgenes y automatizamos el ciclo presupuesto–ejecución–facturación amb auditories contínues.”
               </p>
-              <div className="d-flex flex-column flex-sm-row gap-3 mt-4">
-                <a href={WHATSAPP_LINKS.constructProInfo} className="btn btn-primary btn-lg">
-                  Solicitar auditoría
-                  <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" className="ms-2" xmlns="http://www.w3.org/2000/svg" focusable="false">
-                    <path fill="#25D366" d="M12 .5C5.7.5.9 5.3.9 11.6c0 2 .5 3.9 1.5 5.6L.5 23.5l6.5-1.7c1.6.8 3.5 1.3 5.5 1.3 6.3 0 11.1-4.8 11.1-11.1S18.3.5 12 .5z"/>
-                    <path fill="#FFF" d="M17.3 14.1c-.3-.2-2-.9-2.3-.9-.3 0-.4-.1-.6.2-.2.3-.8.9-1 1.1-.2.2-.4.3-.7.1-.3-.2-1.5-.6-2.8-1.7-1-1-1.6-2.1-1.8-2.4-.2-.3 0-.5.1-.7.1-.2.3-.4.4-.6.1-.2.1-.4 0-.6-.1-.2-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4-.2 0-.5 0-.8 0-.3 0-.7.1-1 .4-.3.3-1 1-1 2.5s1 3 1.1 3.2c.1.2 1.9 3 4.6 4.3 3 .1 3.9.2 4.6.1.7-.1 2.4-1 2.8-1.9.4-.9.4-1.6.3-1.8-.1-.2-.4-.3-.7-.5z"/>
-                  </svg>
-                </a>
-                <span className="text-muted align-self-center">
-                  Descubre cuánto puedes ahorrar en tiempo y costes.
-                </span>
-              </div>
+              <ContactActionGroup
+                className="mt-4"
+                emailHref={EMAIL_LINKS.constructProInfo}
+                whatsappHref={WHATSAPP_LINKS.constructProInfo}
+                emailLabel="Solicitar auditoría per correu"
+                whatsappLabel="Parlar per WhatsApp"
+              />
+              <span className="text-muted d-block mt-2">
+                Descubre cuánto puedes ahorrar en tiempo y costes.
+              </span>
             </div>
             <div className="col-lg-6 text-center">
               <img
@@ -295,6 +336,44 @@ const ConstructProPage = () => (
         </div>
       </section>
 
+      <section className="section-spacing bg-dark text-white">
+        <div className="container">
+          <div className="row align-items-center g-5">
+            <div className="col-lg-6">
+              <span className="eyebrow text-uppercase text-primary">Cumplimiento normativo</span>
+              <h2 className="fw-semibold mt-3 text-white">ConstructPro alinea tu empresa con VeriFactu</h2>
+              <p className="mt-3 text-white-50">
+                Preparamos procesos, datos y documentos para que cada factura cumpla las nuevas obligaciones fiscales y se pueda justificar ante la Agencia Tributaria.
+              </p>
+              <ul className="list-unstyled d-grid gap-3 mt-4">
+                {verifactuHighlights.map((item) => (
+                  <li key={item} className="bg-opacity-10 bg-white text-white rounded-4 p-3">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <ContactActionGroup
+                className="mt-4"
+                emailHref={EMAIL_LINKS.constructProInfo}
+                whatsappHref={WHATSAPP_LINKS.constructProInfo}
+                emailLabel="Planificar per correu"
+                whatsappLabel="Planificar per WhatsApp"
+                variant="light"
+                whatsappVariant="outline-light"
+              />
+              <p className="text-white-50 mt-2">Informe de cumplimiento y roadmap de integración.</p>
+            </div>
+            <div className="col-lg-6 text-center">
+              <img
+                src={captura3}
+                alt="Pantalla de validación de facturas conforme a VeriFactu"
+                className="img-fluid rounded-4 shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section-spacing bg-light">
         <div className="container">
           <div className="row justify-content-center">
@@ -311,15 +390,15 @@ const ConstructProPage = () => (
                   </li>
                 ))}
               </ul>
-              <div className="text-center mt-4">
-                <a href={WHATSAPP_LINKS.constructProInfo} className="btn btn-outline-primary">
-                  Solicitar análisis
-                  <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" className="ms-2" xmlns="http://www.w3.org/2000/svg" focusable="false">
-                    <path fill="#25D366" d="M12 .5C5.7.5.9 5.3.9 11.6c0 2 .5 3.9 1.5 5.6L.5 23.5l6.5-1.7c1.6.8 3.5 1.3 5.5 1.3 6.3 0 11.1-4.8 11.1-11.1S18.3.5 12 .5z"/>
-                    <path fill="#FFF" d="M17.3 14.1c-.3-.2-2-.9-2.3-.9-.3 0-.4-.1-.6.2-.2.3-.8.9-1 1.1-.2.2-.4.3-.7.1-.3-.2-1.5-.6-2.8-1.7-1-1-1.6-2.1-1.8-2.4-.2-.3 0-.5.1-.7.1-.2.3-.4.4-.6.1-.2.1-.4 0-.6-.1-.2-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4-.2 0-.5 0-.8 0-.3 0-.7.1-1 .4-.3.3-1 1-1 2.5s1 3 1.1 3.2c.1.2 1.9 3 4.6 4.3 3 .1 3.9.2 4.6.1.7-.1 2.4-1 2.8-1.9.4-.9.4-1.6.3-1.8-.1-.2-.4-.3-.7-.5z"/>
-                  </svg>
-                </a>
-              </div>
+              <ContactActionGroup
+                className="justify-content-center mt-4"
+                emailHref={EMAIL_LINKS.constructProInfo}
+                whatsappHref={WHATSAPP_LINKS.constructProInfo}
+                emailLabel="Solicitar anàlisi per correu"
+                whatsappLabel="Sol·licitar per WhatsApp"
+                variant="outline-primary"
+                whatsappVariant="outline-primary"
+              />
             </div>
           </div>
         </div>
@@ -382,44 +461,6 @@ const ConstructProPage = () => (
         </div>
       </section>
 
-      <section className="section-spacing bg-dark text-white">
-        <div className="container">
-          <div className="row align-items-center g-5">
-            <div className="col-lg-6">
-              <span className="eyebrow text-uppercase text-primary">Cumplimiento normativo</span>
-              <h2 className="fw-semibold mt-3 text-white">ConstructPro alinea tu empresa con VeriFactu</h2>
-              <p className="mt-3 text-white-50">
-                Preparamos procesos, datos y documentos para que cada factura cumpla las nuevas obligaciones fiscales y se pueda justificar ante la Agencia Tributaria.
-              </p>
-              <ul className="list-unstyled d-grid gap-3 mt-4">
-                {verifactuHighlights.map((item) => (
-                  <li key={item} className="bg-opacity-10 bg-white text-white rounded-4 p-3">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <div className="d-flex flex-column flex-sm-row gap-3 mt-4">
-                <a href={WHATSAPP_LINKS.constructProInfo} className="btn btn-outline-light btn-lg">
-                  Planificar hoja de ruta
-                  <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" className="ms-2" xmlns="http://www.w3.org/2000/svg" focusable="false">
-                    <path fill="#25D366" d="M12 .5C5.7.5.9 5.3.9 11.6c0 2 .5 3.9 1.5 5.6L.5 23.5l6.5-1.7c1.6.8 3.5 1.3 5.5 1.3 6.3 0 11.1-4.8 11.1-11.1S18.3.5 12 .5z"/>
-                    <path fill="#FFF" d="M17.3 14.1c-.3-.2-2-.9-2.3-.9-.3 0-.4-.1-.6.2-.2.3-.8.9-1 1.1-.2.2-.4.3-.7.1-.3-.2-1.5-.6-2.8-1.7-1-1-1.6-2.1-1.8-2.4-.2-.3 0-.5.1-.7.1-.2.3-.4.4-.6.1-.2.1-.4 0-.6-.1-.2-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4-.2 0-.5 0-.8 0-.3 0-.7.1-1 .4-.3.3-1 1-1 2.5s1 3 1.1 3.2c.1.2 1.9 3 4.6 4.3 3 .1 3.9.2 4.6.1.7-.1 2.4-1 2.8-1.9.4-.9.4-1.6.3-1.8-.1-.2-.4-.3-.7-.5z"/>
-                  </svg>
-                </a>
-                <span className="text-white-50 align-self-center">Informe de cumplimiento y roadmap de integración.</span>
-              </div>
-            </div>
-            <div className="col-lg-6 text-center">
-              <img
-                src={captura3}
-                alt="Pantalla de validación de facturas conforme a VeriFactu"
-                className="img-fluid rounded-4 shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="section-spacing">
         <div className="container">
           <div className="row justify-content-between align-items-center mb-5">
@@ -444,14 +485,14 @@ const ConstructProPage = () => (
             ))}
           </div>
           <div className="text-center mt-5">
-            <a href={WHATSAPP_LINKS.constructProInfo} className="btn btn-primary btn-lg">
-              Solicitar auditoría
-              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" className="ms-2" xmlns="http://www.w3.org/2000/svg" focusable="false">
-                <path fill="#25D366" d="M12 .5C5.7.5.9 5.3.9 11.6c0 2 .5 3.9 1.5 5.6L.5 23.5l6.5-1.7c1.6.8 3.5 1.3 5.5 1.3 6.3 0 11.1-4.8 11.1-11.1S18.3.5 12 .5z"/>
-                <path fill="#FFF" d="M17.3 14.1c-.3-.2-2-.9-2.3-.9-.3 0-.4-.1-.6.2-.2.3-.8.9-1 1.1-.2.2-.4.3-.7.1-.3-.2-1.5-.6-2.8-1.7-1-1-1.6-2.1-1.8-2.4-.2-.3 0-.5.1-.7.1-.2.3-.4.4-.6.1-.2.1-.4 0-.6-.1-.2-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4-.2 0-.5 0-.8 0-.3 0-.7.1-1 .4-.3.3-1 1-1 2.5s1 3 1.1 3.2c.1.2 1.9 3 4.6 4.3 3 .1 3.9.2 4.6.1.7-.1 2.4-1 2.8-1.9.4-.9.4-1.6.3-1.8-.1-.2-.4-.3-.7-.5z"/>
-              </svg>
-              </a>
-            </div>
+            <ContactActionGroup
+              className="justify-content-center"
+              emailHref={EMAIL_LINKS.constructProInfo}
+              whatsappHref={WHATSAPP_LINKS.constructProInfo}
+              emailLabel="Solicitar auditoría per correu"
+              whatsappLabel="Parlar per WhatsApp"
+            />
+          </div>
         </div>
       </section>
     </div>
