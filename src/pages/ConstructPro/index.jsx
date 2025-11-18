@@ -544,11 +544,10 @@ const ConstructProPage = () => (
                     <div className="mt-4">
                       <div className="fw-semibold">{item.name}</div>
                       <div className="text-muted">{item.role} · {item.company}</div>
-                      {item.metric && (
                         <span className="badge bg-light text-primary mt-3" aria-label={item.metric}>
                           {item.metric}
                         </span>
-                      )}
+                      
                     </div>
                   </div>
                 </div>
