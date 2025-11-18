@@ -124,7 +124,7 @@ const ReliefAccessIcon = ({ label }) => (
 );
 const productScreens = [
   {
-    title: 'Presupuestos alineados con obra',
+    title: 'Presupuestos alineados con la obra',
     description:
       'Configura plantillas de partidas, validaciones y márgenes aprobados antes de enviar cualquier presupuesto de construcción.',
     image: captura1,
@@ -133,22 +133,22 @@ const productScreens = [
   {
     title: 'Cuadros de mando ejecutivos',
     description:
-      'Sigue cada proyecto con indicadores en tiempo real, desviaciones y alertas proactivas para el control de obras.',
+      'Sigue cada proyecto con indicadores en tiempo real, desviaciones y alertas proactivas para mantener el control de las obras.',
     image: captura2,
-    alt: 'Dashboard principal de ConstructPro con indicadores de margen',
+    alt: 'Panel principal de ConstructPro con indicadores de margen',
   },
   {
     title: 'Facturación sin errores',
     description:
-      'Automatiza certificaciones, partes y facturas conectadas a obra y compras para reducir incidencias en la facturación de constructoras.',
+      'Automatiza certificaciones, partes y facturas conectadas con obra y compras para reducir incidencias en la facturación de constructoras.',
     image: captura3,
     alt: 'Vista del sistema de facturas integradas de ConstructPro',
   },
 ];
 
 const painPoints = [
-  '📋 Los técnicos siguen usando papeles o Excel para partes.',
-  '🧾 Los datos se pierden entre obra y facturación.',
+  '📋 Los técnicos siguen usando papeles o Excel para los partes de obra.',
+  '🧾 Los datos se pierden entre la obra y la facturación.',
   '🕒 No se conoce el coste real por proyecto.',
   '📉 Falta control sobre márgenes y beneficios.',
 ];
@@ -156,25 +156,29 @@ const painPoints = [
 const reliefBenefits = [
   {
     title: 'Control total',
-    description: 'Obras, clientes y costes en tiempo real con trazabilidad completa de cada partida para un control de obras fiable.',
+    description:
+      'Obras, clientes y costes en tiempo real con trazabilidad completa de cada partida para un control de obras fiable.',
     icon: ReliefControlIcon,
     alt: "Icono control de operaciones",
   },
   {
     title: 'Automatización',
-    description: "Del parte aprobado al presupuesto y de ahí a la factura sin copiar datos, reduciendo errores y tiempos administrativos.",
+    description:
+      "Del parte aprobado al presupuesto y de ahí a la factura sin copiar datos, reduciendo errores y tiempos administrativos.",
     icon: ReliefAutomationIcon,
     alt: 'Icono automatización',
   },
   {
     title: 'Informes y márgenes',
-    description: 'Conoce el beneficio de cada obra con dashboards, alertas de desviaciones y reportes para la toma de decisiones.',
+    description:
+      'Conoce el beneficio de cada obra con paneles, alertas de desviaciones y reportes para la toma de decisiones.',
     icon: ReliefReportsIcon,
     alt: 'Icono informes',
   },
   {
     title: 'Acceso desde cualquier lugar',
-    description: 'Oficina, móvil u obra con permisos por roles y registro de cambios para mantener la seguridad y trazabilidad.',
+    description:
+      'Oficina, móvil u obra con permisos por roles y registro de cambios para mantener la seguridad y la trazabilidad.',
     icon: ReliefAccessIcon,
     alt: 'Icono acceso remoto',
   },
@@ -191,18 +195,18 @@ const processPhases = [
     title: 'Proyecto piloto',
     duration: '3-4 semanas',
     description: 'Fase piloto con el equipo clave para validar flujos, permisos e informes en pocas semanas.',
-    outcome: 'Proceso validado con métricas de adopción y checklist de puesta en marcha.',
+    outcome: 'Proceso validado con métricas de adopción y lista de verificación de puesta en marcha.',
   },
   {
     title: 'Implementación completa',
     duration: '6-8 semanas',
-    description: 'ERP modular con módulos de partes, presupuestos, compras y facturación adaptado a tu negocio.',
+    description: 'ERP modular con partes, presupuestos, compras y facturación adaptado a tu negocio.',
     outcome: 'Suite configurada, datos migrados y formación para equipos de oficina y obra.',
   },
   {
     title: 'Mantenimiento y evolución',
     duration: 'Seguimiento mensual',
-    description: 'Soporte continuo, revisiones periódicas y nuevas funcionalidades según necesidades de obra.',
+    description: 'Soporte continuo, revisiones periódicas y nuevas funcionalidades según las necesidades de la obra.',
     outcome: 'Hoja de ruta compartida, mejoras trimestrales y revisión de indicadores de margen.',
   },
 ];
@@ -210,26 +214,26 @@ const processPhases = [
 const testimonials = [
   {
     quote: '“Hemos reducido un 60% el tiempo administrativo semanal.”',
-    detail: 'Digitalización de partes y automatización de facturas para pasar de 10 a 4 horas de tareas manuales cada semana.',
+    detail: 'Digitalizamos los partes y automatizamos las facturas para pasar de 10 a 4 horas de tareas manuales cada semana.',
     name: 'Jordi Riba',
     role: 'Director de operaciones',
-    company: 'Obres Mediterrània',
+    company: 'Obras Mediterránea',
     metric: '60% menos tiempo administrativo',
   },
   {
     quote: '“Veo el margen de cada proyecto con desviaciones inferiores al 2,5%.”',
-    detail: 'Cuadros de mando con costes actualizados y alertas que mantienen 18 obras por debajo del 2,5% de desviación presupuestaria.',
+    detail: 'Paneles de control con costes actualizados y alertas que mantienen 18 obras por debajo del 2,5% de desviación presupuestaria.',
     name: 'Núria Villalonga',
     role: 'Directora financiera',
-    company: 'Construccions Delta',
+    company: 'Construcciones Delta',
     metric: '18 obras controladas con <2,5% de desviación',
   },
   {
     quote: '“Todo el equipo trabaja con la misma información y sin errores duplicados.”',
-    detail: 'Portal compartido entre oficina, jefes de obra y subcontratas que ha reducido un 40% las incidencias de versiones en planos y partes.',
+    detail: 'Portal compartido entre oficina, jefes de obra y subcontratas que ha reducido un 40% las incidencias por versiones duplicadas en planos y partes.',
     name: 'Laia Casellas',
     role: 'Responsable de proyectos',
-    company: 'Grup Tirrena',
+    company: 'Grupo Tirrena',
     metric: '40% menos incidencias por versiones duplicadas',
   },
 ];
@@ -302,10 +306,10 @@ const ConstructProPage = () => (
                 Gestiona tu empresa de construcción con datos fiables y procesos integrados
               </h1>
               <p className="lead text-muted mt-3">
-                ConstructPro conecta oficina técnica, equipos de obra y administración en un único entorno seguro para decisiones basadas en datos.
+                ConstructPro conecta la oficina técnica, los equipos de obra y la administración en un único entorno seguro para tomar decisiones basadas en datos.
               </p>
               <p className="text-muted fst-italic">
-                “Reducimos papeleo, aseguramos márgenes y automatizamos el ciclo presupuesto–ejecución–facturación con auditorías continuas.”
+                “Reducimos el papeleo, aseguramos los márgenes y automatizamos el ciclo presupuesto–ejecución–facturación con auditorías continuas.”
               </p>
               <ContactActionGroup
                 className="mt-4"
@@ -343,7 +347,7 @@ const ConstructProPage = () => (
               <span className="eyebrow text-uppercase text-primary">Demo guiada</span>
               <h2 className="fw-semibold mt-3">Recorrido visual en solo 3 minutos</h2>
               <p className="text-muted mt-3">
-                Mira cómo se conectan presupuestos, partes y facturas en ConstructPro con un flujo real de obra. El vídeo
+                Comprueba cómo se conectan presupuestos, partes y facturas en ConstructPro con un flujo real de obra. El vídeo
                 muestra cómo se actualizan los márgenes y cómo auditamos cada paso.
               </p>
               <a
@@ -421,7 +425,7 @@ const ConstructProPage = () => (
                 variant="light"
                 whatsappVariant="outline-light"
               />
-              <p className="text-white-50 mt-2">Informe de cumplimiento y roadmap de integración.</p>
+              <p className="text-white-50 mt-2">Informe de cumplimiento y hoja de ruta de integración.</p>
             </div>
             <div className="col-lg-6 text-center">
               <img
