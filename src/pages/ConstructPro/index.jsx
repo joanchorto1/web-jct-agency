@@ -183,19 +183,27 @@ const reliefBenefits = [
 const processPhases = [
   {
     title: 'Diagnóstico gratuito',
+    duration: '1 semana',
     description: 'Analizamos cómo trabajas, qué herramientas usas y dónde se producen los cuellos de botella.',
+    outcome: 'Informe de cuellos de botella y plan rápido de mejoras.',
   },
   {
     title: 'Proyecto piloto',
-    description: 'Fase piloto amb l\'equip clau per validar fluxos, permisos i informes en poques setmanes.',
+    duration: '3-4 setmanes',
+    description: 'Fase pilot amb l\'equip clau per validar fluxos, permisos i informes en poques setmanes.',
+    outcome: 'Procés validat amb mètriques d\'adopció i checklist de GO-LIVE.',
   },
   {
     title: 'Implementación completa',
+    duration: '6-8 setmanes',
     description: 'ERP modular amb mòduls de parts, pressupostos, compres i facturació adaptat al teu negoci.',
+    outcome: 'Suite configurada, dades migrades i formació per equips d\'oficina i obra.',
   },
   {
     title: 'Mantenimiento y evolución',
+    duration: 'Seguiment mensual',
     description: 'Suport continu, revisions periòdiques i noves funcionalitats segons necessitats de obra.',
+    outcome: 'Roadmap compartit, millores trimestrals i revisió d\'indicadors de marge.',
   },
 ];
 
@@ -452,7 +460,9 @@ const ConstructProPage = () => (
                 <div className="card h-100 border-0 shadow-sm">
                   <div className="card-body p-4">
                     <h3 className="h5 fw-semibold">{phase.title}</h3>
-                    <p className="text-muted mt-3 mb-0">{phase.description}</p>
+                    <p className="text-primary fw-semibold mb-2">{phase.duration}</p>
+                    <p className="text-muted mb-2">{phase.description}</p>
+                    <p className="mb-0 fw-medium">Resultado tangible: {phase.outcome}</p>
                   </div>
                 </div>
               </div>
