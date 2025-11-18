@@ -8,6 +8,63 @@ const Home = () => {
   const waDiagnostic = 'https://wa.me/34633391411?text=Hola%20Joan%2C%20vull%20un%20diagnostic%20gratuit.';
   const waReserve = 'https://wa.me/34633391411?text=Hola%20Joan%2C%20vull%20reservar%20un%20diagnostic%20per%20la%20meva%20empresa.';
 
+  const valuePillars = [
+    {
+      label: 'Sin burocracia',
+      title: 'Operativa sin fricción',
+      description:
+        'Unifico la información de oficina, taller y obra para que los partes, costes y facturas fluyan sin esperas ni duplicidades.',
+    },
+    {
+      label: 'Automatizaciones seguras',
+      title: 'Procesos a prueba de errores',
+      description:
+        'Diseño validaciones y flujos automáticos que evitan olvidos y re-trabajos. Menos incidencias, más control y trazabilidad real.',
+    },
+    {
+      label: 'Acompañamiento',
+      title: 'Adopción con personas en mente',
+      description:
+        'Trabajo mano a mano con los equipos para que la tecnología se use de verdad. Formación, guías y seguimiento para mantener los resultados.',
+    },
+  ];
+
+  const quickWins = [
+    {
+      step: 'Semana 1',
+      title: 'Diagnóstico accionable',
+      detail: 'Reviso flujos críticos, mido pérdidas y priorizo iniciativas con retorno claro. Obtienes un mapa de acciones inmediato.',
+    },
+    {
+      step: 'Semanas 2-3',
+      title: 'Implantación ágil',
+      detail: 'Pruebo automatizaciones en un entorno seguro, conecto herramientas y valido datos con tu equipo antes de escalar.',
+    },
+    {
+      step: 'Semana 4',
+      title: 'Arranque y soporte',
+      detail: 'Formación práctica, checklist de adopción y seguimiento de KPIs. Ajustamos hasta que los ahorros se vean en horas y facturación.',
+    },
+  ];
+
+  const faqs = [
+    {
+      question: '¿Qué necesito tener preparado para el diagnóstico?',
+      answer:
+        'Solo una conversación de 20 minutos y acceso a tus flujos actuales (partes, órdenes de trabajo, facturación y seguimiento de costes). Yo me encargo del análisis.',
+    },
+    {
+      question: '¿Trabajas con mis herramientas actuales o propones nuevas?',
+      answer:
+        'Parto de lo que ya utilizas y solo incorporo nuevas soluciones si aportan valor claro. El objetivo es simplificar, no sumar complejidad.',
+    },
+    {
+      question: '¿Cómo aseguras que el equipo adopte los cambios?',
+      answer:
+        'Preparo guías sencillas, sesiones de formación y acompañamiento durante las primeras semanas. Medimos uso y resolvemos dudas rápido.',
+    },
+  ];
+
   // Estilos en línea para los botones de contacto
   const btnPrimaryStyle = {
     background: '#0d6efd',
@@ -84,6 +141,7 @@ const Home = () => {
             <div className="home-static__section home-static__hero-content">
               <div className="home-static__hero-grid">
                 <div>
+                  <div className="home-static__eyebrow">Digitalización + Automatización + Gestión</div>
                   <h1 id="hero-heading" className="home-static__hero-title">
                     Digitalización y eficiencia para empresas profesionales
                   </h1>
@@ -91,6 +149,20 @@ const Home = () => {
                     Analizo procesos, elimino pérdidas y diseño automatizaciones que ahorran horas y reducen errores. Trabajo para que tu equipo
                     dedique menos tiempo a tareas administrativas y más tiempo a decisiones que aportan valor.
                   </p>
+                  <div className="home-static__hero-badges" aria-label="Garantías del servicio">
+                    <div className="home-static__pill">
+                      <span className="home-static__pill-dot" aria-hidden="true" />
+                      <span>Sesiones sin tecnicismos</span>
+                    </div>
+                    <div className="home-static__pill">
+                      <span className="home-static__pill-dot" aria-hidden="true" />
+                      <span>Plan de acción en 72h</span>
+                    </div>
+                    <div className="home-static__pill">
+                      <span className="home-static__pill-dot" aria-hidden="true" />
+                      <span>Resultados medibles</span>
+                    </div>
+                  </div>
                   <div className="home-static__hero-actions">
                     <a href={waDiagnostic} target="_blank" rel="noopener noreferrer" className="home-static__primary-btn">
                       Reserva diagnóstico
@@ -141,6 +213,25 @@ const Home = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </section>
+
+          <section className="home-static__section" aria-labelledby="pilares-heading">
+            <div className="home-static__section-header home-static__section-header--compact">
+              <h2 id="pilares-heading" className="home-static__section-title">Un enfoque ejecutivo y práctico</h2>
+              <p className="home-static__section-text">
+                Aporto una mirada de negocio y tecnología para reducir fricción operativa. Cada entrega incluye documentación clara y decisiones respaldadas por datos.
+              </p>
+            </div>
+
+            <div className="home-static__pillars-grid">
+              {valuePillars.map((pillar) => (
+                <article key={pillar.title} className="home-static__pillar-card">
+                  <div className="home-static__card-label">{pillar.label}</div>
+                  <h3 className="home-static__card-title">{pillar.title}</h3>
+                  <p className="home-static__card-text">{pillar.description}</p>
+                </article>
+              ))}
             </div>
           </section>
 
@@ -219,6 +310,33 @@ const Home = () => {
             </div>
           </section>
 
+          <section className="home-static__section" aria-labelledby="plan-heading">
+            <div className="home-static__section-header home-static__section-header--compact">
+              <h2 id="plan-heading" className="home-static__section-title">Qué pasa en el primer mes</h2>
+              <p className="home-static__section-text">
+                Un plan corto, con entregables semanales y sin promesas vagas. Te digo qué haremos, cuándo y con qué indicador mediremos el resultado.
+              </p>
+            </div>
+
+            <div className="home-static__timeline">
+              {quickWins.map((item) => (
+                <article key={item.title} className="home-static__timeline-card">
+                  <div className="home-static__timeline-step">{item.step}</div>
+                  <h3 className="home-static__timeline-title">{item.title}</h3>
+                  <p className="home-static__timeline-text">{item.detail}</p>
+                </article>
+              ))}
+            </div>
+
+            <div className="home-static__quote" aria-label="Compromiso con la ejecución">
+              <div className="home-static__quote-mark" aria-hidden="true">“</div>
+              <p>
+                No vendo software ni licencias. Mi trabajo es que tus procesos funcionen, que el equipo los use y que la dirección vea el impacto en horas y facturación.
+              </p>
+              <div className="home-static__quote-author">Joan Chorto, Consultor</div>
+            </div>
+          </section>
+
           <section id="resultados" className="home-static__section" aria-labelledby="resultados-heading">
             <div className="home-static__section-header">
               <h2 id="resultados-heading" className="home-static__section-title">
@@ -258,6 +376,11 @@ const Home = () => {
                 y mejor control financiero. Estos ejemplos sirven para entender el impacto real de la digitalización y la automatización sobre
                 la rentabilidad y la gestión diaria.
               </p>
+              <ul className="home-static__compact-list" aria-label="Entregables habituales">
+                <li>Checklists de adopción y guías de uso para equipos operativos.</li>
+                <li>Dashboards con KPIs de tiempos, costes y facturación para dirección.</li>
+                <li>Protocolos de calidad de datos y alertas para evitar desviaciones.</li>
+              </ul>
             </div>
           </section>
 
@@ -276,16 +399,30 @@ const Home = () => {
                   adaptar soluciones que realmente mejoren la gestión y la toma de decisiones.
                 </p>
 
-                <h3 className="home-static__section-subtitle">Experiencia y compromiso</h3>
-                <p className="home-static__section-text">
-                  He trabajado con equipos operativos y mandos intermedios para implantar soluciones prácticas y sostenibles. Mi acompañamiento
-                  incluye diagnóstico, implantación técnica, formación y soporte continuado hasta comprobar resultados medibles.
-                </p>
+              <h3 className="home-static__section-subtitle">Experiencia y compromiso</h3>
+              <p className="home-static__section-text">
+                He trabajado con equipos operativos y mandos intermedios para implantar soluciones prácticas y sostenibles. Mi acompañamiento
+                incluye diagnóstico, implantación técnica, formación y soporte continuado hasta comprobar resultados medibles.
+              </p>
+              <div className="home-static__about-highlights" aria-label="Garantías de colaboración">
+                <div className="home-static__pill">
+                  <span className="home-static__pill-dot" aria-hidden="true" />
+                  Roadmap priorizado con ROI estimado.
+                </div>
+                <div className="home-static__pill">
+                  <span className="home-static__pill-dot" aria-hidden="true" />
+                  Sesiones de seguimiento con métricas claras.
+                </div>
+                <div className="home-static__pill">
+                  <span className="home-static__pill-dot" aria-hidden="true" />
+                  Entrega de documentación y procesos versionados.
+                </div>
               </div>
+            </div>
 
-              <aside className="home-static__about-card" aria-labelledby="especialidades-heading">
-                <h3 id="especialidades-heading">Especialidades</h3>
-                <ul className="home-static__about-list">
+            <aside className="home-static__about-card" aria-labelledby="especialidades-heading">
+              <h3 id="especialidades-heading">Especialidades</h3>
+              <ul className="home-static__about-list">
                   <li>• Digitalización de procesos operativos</li>
                   <li>• Automatización administrativa y de facturación</li>
                   <li>• Conexión oficina–taller–obra</li>
@@ -326,6 +463,24 @@ const Home = () => {
                   Formación práctica para usuarios y seguimiento post-implantación. Medimos KPIs y ajustamos procesos para consolidar la mejora.
                 </p>
               </article>
+            </div>
+          </section>
+
+          <section className="home-static__section" aria-labelledby="faq-heading">
+            <div className="home-static__section-header home-static__section-header--compact">
+              <h2 id="faq-heading" className="home-static__section-title">Preguntas frecuentes</h2>
+              <p className="home-static__section-text">
+                Transparencia desde el inicio: esto es lo que suelo resolver antes de empezar a trabajar juntos.
+              </p>
+            </div>
+
+            <div className="home-static__faq-grid">
+              {faqs.map((item) => (
+                <article key={item.question} className="home-static__faq-card">
+                  <h3 className="home-static__faq-question">{item.question}</h3>
+                  <p className="home-static__faq-answer">{item.answer}</p>
+                </article>
+              ))}
             </div>
           </section>
 
