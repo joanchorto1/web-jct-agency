@@ -348,7 +348,7 @@ const ConstructProPage = () => (
               </p>
               <a
                 className="btn btn-primary btn-lg mt-3"
-                href="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+                href="https://www.youtube.com/embed/g4gTtl5RCB4?si=uUp_lK_wTj_CixmK"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -358,9 +358,10 @@ const ConstructProPage = () => (
             <div className="col-lg-6">
               <div className="ratio ratio-16x9 rounded-4 overflow-hidden shadow">
                 <iframe
-                  src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+                  src="https://www.youtube.com/embed/g4gTtl5RCB4?si=uUp_lK_wTj_CixmK"
                   title="Demo guiada de ConstructPro"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
                   allowFullScreen
                   loading="lazy"
                 />
