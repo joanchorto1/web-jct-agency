@@ -209,16 +209,28 @@ const processPhases = [
 
 const testimonials = [
   {
-    quote: '“Reducimos un 60% el tiempo administrativo.”',
-    detail: 'Digitalización de parts i automatització de factures per a empreses de obra.',
+    quote: '“Hem reduït un 60% el temps administratiu setmanal.”',
+    detail: 'Digitalització de parts i automatització de factures per passar de 10 a 4 hores de tasques manuals cada setmana.',
+    name: 'Jordi Riba',
+    role: "Director d'operacions",
+    company: 'Obres Mediterrània',
+    metric: '60% menys temps administratiu',
   },
   {
-    quote: '“Ahora sé exactamente el margen de cada proyecto.”',
-    detail: 'Quadres de comandament amb costos actualitzats i alertes de desviació.',
+    quote: '“Veig el marge de cada projecte amb desviacions inferiors al 2,5%.”',
+    detail: 'Quadres de comandament amb costos actualitzats i alertes que mantenen 18 obres sota el 2,5% de desviació pressupostària.',
+    name: 'Núria Villalonga',
+    role: 'Directora financera',
+    company: 'Construccions Delta',
+    metric: '18 obres controlades amb <2,5% de desviació',
   },
   {
-    quote: '“Todo el equipo trabaja con la misma información.”',
-    detail: 'Portal compartit entre oficina, cap d\'obra i subcontractes.',
+    quote: '“Tot l\'equip treballa amb la mateixa informació i sense errors duplicats.”',
+    detail: 'Portal compartit entre oficina, cap d\'obra i subcontractes que ha reduït un 40% les incidències de versions en plànols i parts.',
+    name: 'Laia Casellas',
+    role: 'Responsable de projectes',
+    company: 'Grup Tirrena',
+    metric: '40% menys incidències per versions duplicades',
   },
 ];
 
@@ -529,6 +541,15 @@ const ConstructProPage = () => (
                   <div className="card-body p-4 d-flex flex-column">
                     <p className="fs-5 fw-semibold">{item.quote}</p>
                     <p className="text-muted mt-3 mb-0">{item.detail}</p>
+                    <div className="mt-4">
+                      <div className="fw-semibold">{item.name}</div>
+                      <div className="text-muted">{item.role} · {item.company}</div>
+                      {item.metric && (
+                        <span className="badge bg-light text-primary mt-3" aria-label={item.metric}>
+                          {item.metric}
+                        </span>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
