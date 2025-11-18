@@ -164,19 +164,19 @@ const reliefBenefits = [
     title: 'Automatización',
     description: "Del parte aprobado al presupuesto y de ahí a la factura sin copiar datos, reduciendo errores y tiempos administrativos.",
     icon: ReliefAutomationIcon,
-    alt: 'Icona automatització',
+    alt: 'Icono automatización',
   },
   {
     title: 'Informes y márgenes',
     description: 'Conoce el beneficio de cada obra con dashboards, alertas de desviaciones y reportes para la toma de decisiones.',
     icon: ReliefReportsIcon,
-    alt: 'Icona informes',
+    alt: 'Icono informes',
   },
   {
     title: 'Acceso desde cualquier lugar',
-    description: 'Oficina, mòbil u obra amb permisos per rols i registre de canvis per mantenir la seguretat i traçabilitat.',
+    description: 'Oficina, móvil u obra con permisos por roles y registro de cambios para mantener la seguridad y trazabilidad.',
     icon: ReliefAccessIcon,
-    alt: 'Icona accés remot',
+    alt: 'Icono acceso remoto',
   },
 ];
 
@@ -187,37 +187,37 @@ const processPhases = [
   },
   {
     title: 'Proyecto piloto',
-    description: 'Fase piloto amb l\'equip clau per validar fluxos, permisos i informes en poques setmanes.',
+    description: 'Fase piloto con el equipo clave para validar flujos, permisos e informes en pocas semanas.',
   },
   {
     title: 'Implementación completa',
-    description: 'ERP modular amb mòduls de parts, pressupostos, compres i facturació adaptat al teu negoci.',
+    description: 'ERP modular con módulos de partes, presupuestos, compras y facturación adaptado a tu negocio.',
   },
   {
     title: 'Mantenimiento y evolución',
-    description: 'Suport continu, revisions periòdiques i noves funcionalitats segons necessitats de obra.',
+    description: 'Soporte continuo, revisiones periódicas y nuevas funcionalidades según necesidades de obra.',
   },
 ];
 
 const testimonials = [
   {
     quote: '“Reducimos un 60% el tiempo administrativo.”',
-    detail: 'Digitalización de parts i automatització de factures per a empreses de obra.',
+    detail: 'Digitalización de partes y automatización de facturas para empresas de obra.',
   },
   {
     quote: '“Ahora sé exactamente el margen de cada proyecto.”',
-    detail: 'Quadres de comandament amb costos actualitzats i alertes de desviació.',
+    detail: 'Cuadros de mando con costes actualizados y alertas de desviación.',
   },
   {
     quote: '“Todo el equipo trabaja con la misma información.”',
-    detail: 'Portal compartit entre oficina, cap d\'obra i subcontractes.',
+    detail: 'Portal compartido entre oficina, jefe de obra y subcontratas.',
   },
 ];
 
 const verifactuHighlights = [
-  'Trazabilitat completa de cada factura amb segell digital i registre d’esdeveniments.',
-  'Generació automàtica dels fitxers XML i justificants requerits pel Reial Decret 1007/2023.',
-  'Connexions amb programari comptable i CRM per evitar manipulacions no autoritzades.',
+  'Trazabilidad completa de cada factura con sello digital y registro de eventos.',
+  'Generación automática de los ficheros XML y justificantes requeridos por el Real Decreto 1007/2023.',
+  'Conexiones con software contable y CRM para evitar manipulaciones no autorizadas.',
 ];
 
 const WhatsAppIcon = () => (
@@ -285,14 +285,14 @@ const ConstructProPage = () => (
                 ConstructPro conecta oficina técnica, equipos de obra y administración en un único entorno seguro para decisiones basadas en datos.
               </p>
               <p className="text-muted fst-italic">
-                “Reducimos papeleo, aseguramos márgenes y automatizamos el ciclo presupuesto–ejecución–facturación amb auditories contínues.”
+                “Reducimos papeleo, aseguramos márgenes y automatizamos el ciclo presupuesto–ejecución–facturación con auditorías continuas.”
               </p>
               <ContactActionGroup
                 className="mt-4"
                 emailHref={EMAIL_LINKS.constructProInfo}
                 whatsappHref={WHATSAPP_LINKS.constructProInfo}
-                emailLabel="Solicitar auditoría per correu"
-                whatsappLabel="Parlar per WhatsApp"
+                emailLabel="Solicitar auditoría por correo"
+                whatsappLabel="Hablar por WhatsApp"
               />
               <span className="text-muted d-block mt-2">
                 Descubre cuánto puedes ahorrar en tiempo y costes.
@@ -356,8 +356,8 @@ const ConstructProPage = () => (
                 className="mt-4"
                 emailHref={EMAIL_LINKS.constructProInfo}
                 whatsappHref={WHATSAPP_LINKS.constructProInfo}
-                emailLabel="Planificar per correu"
-                whatsappLabel="Planificar per WhatsApp"
+                emailLabel="Planificar por correo"
+                whatsappLabel="Planificar por WhatsApp"
                 variant="light"
                 whatsappVariant="outline-light"
               />
@@ -394,8 +394,8 @@ const ConstructProPage = () => (
                 className="justify-content-center mt-4"
                 emailHref={EMAIL_LINKS.constructProInfo}
                 whatsappHref={WHATSAPP_LINKS.constructProInfo}
-                emailLabel="Solicitar anàlisi per correu"
-                whatsappLabel="Sol·licitar per WhatsApp"
+                emailLabel="Solicitar análisis por correo"
+                whatsappLabel="Solicitar por WhatsApp"
                 variant="outline-primary"
                 whatsappVariant="outline-primary"
               />
@@ -489,8 +489,8 @@ const ConstructProPage = () => (
               className="justify-content-center"
               emailHref={EMAIL_LINKS.constructProInfo}
               whatsappHref={WHATSAPP_LINKS.constructProInfo}
-              emailLabel="Solicitar auditoría per correu"
-              whatsappLabel="Parlar per WhatsApp"
+              emailLabel="Solicitar auditoría por correo"
+              whatsappLabel="Hablar por WhatsApp"
             />
           </div>
         </div>
