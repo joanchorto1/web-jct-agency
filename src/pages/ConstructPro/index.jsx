@@ -140,7 +140,7 @@ const productScreens = [
   {
     title: 'Facturación sin errores',
     description:
-      'Automatiza certificaciones, partes y facturas conectadas a obra y compras para reducir incidencias en la facturación para constructoras.',
+      'Automatiza certificaciones, partes y facturas conectadas a obra y compras para reducir incidencias en la facturación de constructoras.',
     image: captura3,
     alt: 'Vista del sistema de facturas integradas de ConstructPro',
   },
@@ -164,19 +164,19 @@ const reliefBenefits = [
     title: 'Automatización',
     description: "Del parte aprobado al presupuesto y de ahí a la factura sin copiar datos, reduciendo errores y tiempos administrativos.",
     icon: ReliefAutomationIcon,
-    alt: 'Icona automatització',
+    alt: 'Icono automatización',
   },
   {
     title: 'Informes y márgenes',
     description: 'Conoce el beneficio de cada obra con dashboards, alertas de desviaciones y reportes para la toma de decisiones.',
     icon: ReliefReportsIcon,
-    alt: 'Icona informes',
+    alt: 'Icono informes',
   },
   {
     title: 'Acceso desde cualquier lugar',
-    description: 'Oficina, mòbil u obra amb permisos per rols i registre de canvis per mantenir la seguretat i traçabilitat.',
+    description: 'Oficina, móvil u obra con permisos por roles y registro de cambios para mantener la seguridad y trazabilidad.',
     icon: ReliefAccessIcon,
-    alt: 'Icona accés remot',
+    alt: 'Icono acceso remoto',
   },
 ];
 
@@ -189,55 +189,55 @@ const processPhases = [
   },
   {
     title: 'Proyecto piloto',
-    duration: '3-4 setmanes',
-    description: 'Fase pilot amb l\'equip clau per validar fluxos, permisos i informes en poques setmanes.',
-    outcome: 'Procés validat amb mètriques d\'adopció i checklist de GO-LIVE.',
+    duration: '3-4 semanas',
+    description: 'Fase piloto con el equipo clave para validar flujos, permisos e informes en pocas semanas.',
+    outcome: 'Proceso validado con métricas de adopción y checklist de puesta en marcha.',
   },
   {
     title: 'Implementación completa',
-    duration: '6-8 setmanes',
-    description: 'ERP modular amb mòduls de parts, pressupostos, compres i facturació adaptat al teu negoci.',
-    outcome: 'Suite configurada, dades migrades i formació per equips d\'oficina i obra.',
+    duration: '6-8 semanas',
+    description: 'ERP modular con módulos de partes, presupuestos, compras y facturación adaptado a tu negocio.',
+    outcome: 'Suite configurada, datos migrados y formación para equipos de oficina y obra.',
   },
   {
     title: 'Mantenimiento y evolución',
-    duration: 'Seguiment mensual',
-    description: 'Suport continu, revisions periòdiques i noves funcionalitats segons necessitats de obra.',
-    outcome: 'Roadmap compartit, millores trimestrals i revisió d\'indicadors de marge.',
+    duration: 'Seguimiento mensual',
+    description: 'Soporte continuo, revisiones periódicas y nuevas funcionalidades según necesidades de obra.',
+    outcome: 'Hoja de ruta compartida, mejoras trimestrales y revisión de indicadores de margen.',
   },
 ];
 
 const testimonials = [
   {
-    quote: '“Hem reduït un 60% el temps administratiu setmanal.”',
-    detail: 'Digitalització de parts i automatització de factures per passar de 10 a 4 hores de tasques manuals cada setmana.',
+    quote: '“Hemos reducido un 60% el tiempo administrativo semanal.”',
+    detail: 'Digitalización de partes y automatización de facturas para pasar de 10 a 4 horas de tareas manuales cada semana.',
     name: 'Jordi Riba',
-    role: "Director d'operacions",
+    role: 'Director de operaciones',
     company: 'Obres Mediterrània',
-    metric: '60% menys temps administratiu',
+    metric: '60% menos tiempo administrativo',
   },
   {
-    quote: '“Veig el marge de cada projecte amb desviacions inferiors al 2,5%.”',
-    detail: 'Quadres de comandament amb costos actualitzats i alertes que mantenen 18 obres sota el 2,5% de desviació pressupostària.',
+    quote: '“Veo el margen de cada proyecto con desviaciones inferiores al 2,5%.”',
+    detail: 'Cuadros de mando con costes actualizados y alertas que mantienen 18 obras por debajo del 2,5% de desviación presupuestaria.',
     name: 'Núria Villalonga',
-    role: 'Directora financera',
+    role: 'Directora financiera',
     company: 'Construccions Delta',
-    metric: '18 obres controlades amb <2,5% de desviació',
+    metric: '18 obras controladas con <2,5% de desviación',
   },
   {
-    quote: '“Tot l\'equip treballa amb la mateixa informació i sense errors duplicats.”',
-    detail: 'Portal compartit entre oficina, cap d\'obra i subcontractes que ha reduït un 40% les incidències de versions en plànols i parts.',
+    quote: '“Todo el equipo trabaja con la misma información y sin errores duplicados.”',
+    detail: 'Portal compartido entre oficina, jefes de obra y subcontratas que ha reducido un 40% las incidencias de versiones en planos y partes.',
     name: 'Laia Casellas',
-    role: 'Responsable de projectes',
+    role: 'Responsable de proyectos',
     company: 'Grup Tirrena',
-    metric: '40% menys incidències per versions duplicades',
+    metric: '40% menos incidencias por versiones duplicadas',
   },
 ];
 
 const verifactuHighlights = [
-  'Trazabilitat completa de cada factura amb segell digital i registre d’esdeveniments.',
-  'Generació automàtica dels fitxers XML i justificants requerits pel Reial Decret 1007/2023.',
-  'Connexions amb programari comptable i CRM per evitar manipulacions no autoritzades.',
+  'Trazabilidad completa de cada factura con sello digital y registro de eventos.',
+  'Generación automática de los archivos XML y justificantes requeridos por el Real Decreto 1007/2023.',
+  'Conexiones con software contable y CRM para evitar manipulaciones no autorizadas.',
 ];
 
 const WhatsAppIcon = () => (
@@ -305,14 +305,14 @@ const ConstructProPage = () => (
                 ConstructPro conecta oficina técnica, equipos de obra y administración en un único entorno seguro para decisiones basadas en datos.
               </p>
               <p className="text-muted fst-italic">
-                “Reducimos papeleo, aseguramos márgenes y automatizamos el ciclo presupuesto–ejecución–facturación amb auditories contínues.”
+                “Reducimos papeleo, aseguramos márgenes y automatizamos el ciclo presupuesto–ejecución–facturación con auditorías continuas.”
               </p>
               <ContactActionGroup
                 className="mt-4"
                 emailHref={EMAIL_LINKS.constructProInfo}
                 whatsappHref={WHATSAPP_LINKS.constructProInfo}
-                emailLabel="Solicitar auditoría per correu"
-                whatsappLabel="Parlar per WhatsApp"
+                emailLabel="Solicitar auditoría por correo"
+                whatsappLabel="Hablar por WhatsApp"
               />
               <a
                 href="#demo-constructpro"
@@ -416,8 +416,8 @@ const ConstructProPage = () => (
                 className="mt-4"
                 emailHref={EMAIL_LINKS.constructProInfo}
                 whatsappHref={WHATSAPP_LINKS.constructProInfo}
-                emailLabel="Planificar per correu"
-                whatsappLabel="Planificar per WhatsApp"
+                emailLabel="Planificar por correo"
+                whatsappLabel="Planificar por WhatsApp"
                 variant="light"
                 whatsappVariant="outline-light"
               />
@@ -454,8 +454,8 @@ const ConstructProPage = () => (
                 className="justify-content-center mt-4"
                 emailHref={EMAIL_LINKS.constructProInfo}
                 whatsappHref={WHATSAPP_LINKS.constructProInfo}
-                emailLabel="Solicitar anàlisi per correu"
-                whatsappLabel="Sol·licitar per WhatsApp"
+                emailLabel="Solicitar análisis por correo"
+                whatsappLabel="Solicitar por WhatsApp"
                 variant="outline-primary"
                 whatsappVariant="outline-primary"
               />
@@ -560,8 +560,8 @@ const ConstructProPage = () => (
               className="justify-content-center"
               emailHref={EMAIL_LINKS.constructProInfo}
               whatsappHref={WHATSAPP_LINKS.constructProInfo}
-              emailLabel="Solicitar auditoría per correu"
-              whatsappLabel="Parlar per WhatsApp"
+              emailLabel="Solicitar auditoría por correo"
+              whatsappLabel="Hablar por WhatsApp"
             />
           </div>
         </div>
