@@ -238,12 +238,6 @@ const testimonials = [
   },
 ];
 
-const verifactuHighlights = [
-  'Trazabilidad completa de cada factura con sello digital y registro de eventos.',
-  'Generación automática de los archivos XML y justificantes requeridos por el Real Decreto 1007/2023.',
-  'Conexiones con software contable y CRM para evitar manipulaciones no autorizadas.',
-];
-
 const WhatsAppIcon = () => (
   <svg
     aria-hidden="true"
@@ -301,22 +295,24 @@ const ConstructProPage = () => (
         <div className="container">
           <div className="row align-items-center pb-5 g-5 flex-column-reverse flex-lg-row">
             <div className="col-lg-6">
-              <span className="eyebrow text-uppercase text-primary">Solución ERP profesional</span>
+              <span className="eyebrow text-uppercase text-primary">
+                VeriFactu para empresas de construcción
+              </span>
               <h1 className="display-5 fw-bold mt-3">
-                Gestiona tu empresa de construcción con datos fiables y procesos integrados
+                Adapta tu empresa de construcción a VeriFactu sin perder el control de la obra
               </h1>
               <p className="lead text-muted mt-3">
-                ConstructPro conecta la oficina técnica, los equipos de obra y la administración en un único entorno seguro para tomar decisiones basadas en datos.
+                ConstructPro conecta certificaciones, obra y facturación para que cada factura salga lista para la AEAT, sin hojas sueltas ni copias manuales.
               </p>
               <p className="text-muted fst-italic">
-                “Reducimos el papeleo, aseguramos los márgenes y automatizamos el ciclo presupuesto–ejecución–facturación con auditorías continuas.”
+                “Unificamos obra, márgenes y facturación en un solo flujo: del parte de obra a la factura VeriFactu, con auditoría continua del proceso.”
               </p>
               <ContactActionGroup
                 className="mt-4"
                 emailHref={EMAIL_LINKS.constructProInfo}
                 whatsappHref={WHATSAPP_LINKS.constructProInfo}
-                emailLabel="Solicitar auditoría por correo"
-                whatsappLabel="Hablar por WhatsApp"
+                emailLabel="Revisar si cumplo VeriFactu (email)"
+                whatsappLabel="Revisar por WhatsApp"
               />
               <a
                 href="#demo-constructpro"
@@ -325,7 +321,7 @@ const ConstructProPage = () => (
                 Ver demo guiada en 3 minutos
               </a>
               <span className="text-muted d-block mt-2">
-                Descubre cuánto puedes ahorrar en tiempo y costes.
+                Recibe un diagnóstico rápido sobre riesgos de sanción y cómo adaptar tu empresa en pocas semanas.
               </span>
             </div>
             <div className="col-lg-6 text-center">
@@ -334,6 +330,71 @@ const ConstructProPage = () => (
                 alt="Jefe de obra consultando el estado de una obra desde una tablet"
                 className="img-fluid rounded-4 shadow"
                 style={{ maxWidth: '420px' }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-spacing py-4 bg-light border-top">
+        <div className="container">
+          <div className="row justify-content-center text-center">
+            <div className="col-lg-8">
+              <p className="text-muted mb-2">¿Vienes desde el anuncio de Instagram sobre VeriFactu?</p>
+              <h2 className="h4 fw-semibold">
+                En menos de 30 minutos revisamos si tu empresa de construcción está preparada.
+              </h2>
+              <p className="text-muted mt-2">
+                Analizamos tu forma actual de certificar, facturar y enviar a la AEAT, y te decimos qué tendrías que adaptar sin cambiar todo tu sistema de trabajo.
+              </p>
+              <ContactActionGroup
+                className="justify-content-center mt-3"
+                emailHref={EMAIL_LINKS.constructProInfo}
+                whatsappHref={WHATSAPP_LINKS.constructProInfo}
+                emailLabel="Quiero revisar mi situación"
+                whatsappLabel="Prefiero WhatsApp"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-spacing bg-dark text-white">
+        <div className="container">
+          <div className="row align-items-center g-5">
+            <div className="col-lg-6">
+              <span className="eyebrow text-uppercase text-primary">Cumplimiento normativo</span>
+              <h2 className="fw-semibold mt-3 text-white">ConstructPro alinea tu empresa con VeriFactu</h2>
+              <p className="mt-3 text-white-50">
+                Si ya trabajas con certificaciones y facturas, el problema no es generar más documentos: el problema es que cada factura cumpla VeriFactu sin rehacer el trabajo tres veces.
+              </p>
+              <ul className="list-unstyled d-grid gap-3 mt-4">
+                <li className="bg-opacity-10 bg-white text-white rounded-4 p-3">
+                  ✔ Cada factura con huella, registro de eventos y trazabilidad completa.
+                </li>
+                <li className="bg-opacity-10 bg-white text-white rounded-4 p-3">
+                  ✔ XML generados automáticamente según el Real Decreto 1007/2023.
+                </li>
+                <li className="bg-opacity-10 bg-white text-white rounded-4 p-3">
+                  ✔ Preparado para integrarse con tu contabilidad sin manipulaciones manuales.
+                </li>
+              </ul>
+              <ContactActionGroup
+                className="mt-4"
+                emailHref={EMAIL_LINKS.constructProInfo}
+                whatsappHref={WHATSAPP_LINKS.constructProInfo}
+                emailLabel="Revisar cumplimiento por correo"
+                whatsappLabel="Revisar por WhatsApp"
+                variant="light"
+                whatsappVariant="outline-light"
+              />
+              <p className="text-white-50 mt-2">Diagnóstico de cumplimiento y hoja de ruta de integración.</p>
+            </div>
+            <div className="col-lg-6 text-center">
+              <img
+                src={captura3}
+                alt="Pantalla de validación de facturas conforme a VeriFactu"
+                className="img-fluid rounded-4 shadow-lg"
               />
             </div>
           </div>
@@ -397,44 +458,6 @@ const ConstructProPage = () => (
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-spacing bg-dark text-white">
-        <div className="container">
-          <div className="row align-items-center g-5">
-            <div className="col-lg-6">
-              <span className="eyebrow text-uppercase text-primary">Cumplimiento normativo</span>
-              <h2 className="fw-semibold mt-3 text-white">ConstructPro alinea tu empresa con VeriFactu</h2>
-              <p className="mt-3 text-white-50">
-                Preparamos procesos, datos y documentos para que cada factura cumpla las nuevas obligaciones fiscales y se pueda justificar ante la Agencia Tributaria.
-              </p>
-              <ul className="list-unstyled d-grid gap-3 mt-4">
-                {verifactuHighlights.map((item) => (
-                  <li key={item} className="bg-opacity-10 bg-white text-white rounded-4 p-3">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <ContactActionGroup
-                className="mt-4"
-                emailHref={EMAIL_LINKS.constructProInfo}
-                whatsappHref={WHATSAPP_LINKS.constructProInfo}
-                emailLabel="Planificar por correo"
-                whatsappLabel="Planificar por WhatsApp"
-                variant="light"
-                whatsappVariant="outline-light"
-              />
-              <p className="text-white-50 mt-2">Informe de cumplimiento y hoja de ruta de integración.</p>
-            </div>
-            <div className="col-lg-6 text-center">
-              <img
-                src={captura3}
-                alt="Pantalla de validación de facturas conforme a VeriFactu"
-                className="img-fluid rounded-4 shadow-lg"
-              />
-            </div>
           </div>
         </div>
       </section>
