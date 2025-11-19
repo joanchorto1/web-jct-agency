@@ -287,7 +287,7 @@ const ContactActionGroup = ({
 );
 
 const ConstructProPage = () => (
-  <Layout>
+  <Layout stickyVisibility="desktop-only">
     <Helmet>
       <title>ConstructPro | Software de gestión de obras, control de obras y presupuestos</title>
       <meta

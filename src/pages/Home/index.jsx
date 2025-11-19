@@ -65,6 +65,30 @@ const Home = () => {
     },
   ];
 
+  const implementationHighlights = [
+    {
+      label: 'Paso 1',
+      title: 'Diagnóstico cuantificable',
+      description:
+        'El diagnóstico cuantifica las pérdidas y define prioridades. Recibes un informe claro con mejoras rápidas y proyectos de mayor alcance según impacto y esfuerzo.',
+      bullets: ['Mapa de pérdidas en tiempo y coste real.', 'Priorización por impacto y esfuerzo.'],
+    },
+    {
+      label: 'Paso 2',
+      title: 'Soporte continuo',
+      description:
+        'Acompañamos en la implantación técnica, formación de usuarios y seguimiento post-implantación. Ajustamos procesos y medimos resultados para asegurar adopción.',
+      bullets: ['Formación a equipos clave.', 'Seguimiento y ajustes tras el lanzamiento.'],
+    },
+    {
+      label: 'Paso 3',
+      title: 'KPIs accionables',
+      description:
+        'Proponemos indicadores de seguimiento para medir eficiencia, reducción de errores y mejoras financieras. Así priorizamos nuevas automatizaciones con retorno claro.',
+      bullets: ['Indicadores de eficiencia y calidad.', 'Prioridad sobre nuevas automatizaciones.'],
+    },
+  ];
+
   // Estilos en línea para los botones de contacto
   const btnPrimaryStyle = {
     background: '#0d6efd',
@@ -272,41 +296,21 @@ const Home = () => {
               </article>
             </div>
 
-            <div className="home-static__method-details" style={{ gridArea: "method-details", marginTop: '2rem' }}>
-              <div className="home-static__method-step" style={{ display: 'flex', alignItems: 'center' , gap: '1rem' }}>
-              <h3 className="home-static__section-subtitle">Diagnóstico cuantificable</h3>
-              <svg className="home-static__method-step-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="48" height="48">
-
-                <path fill="#0d6efd" d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm0 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10z"/>
-                <path fill="#0d6efd" d="M16.2 7.8l-5.7 5.7-2.1-2.1-1.4 1.4 3.5 3.5 7.1-7.1z"/>
-              </svg>
-
+            <div className="home-static__method-details" style={{ gridArea: 'method-details', marginTop: '2rem' }}>
+              <div className="home-static__insight-grid" role="list">
+                {implementationHighlights.map((item) => (
+                  <article key={item.title} className="home-static__insight-card" role="listitem">
+                    <div className="home-static__insight-label">{item.label}</div>
+                    <h3 className="home-static__section-subtitle home-static__insight-title">{item.title}</h3>
+                    <p className="home-static__section-text home-static__insight-text">{item.description}</p>
+                    <ul className="home-static__insight-list">
+                      {item.bullets.map((bullet) => (
+                        <li key={bullet}>{bullet}</li>
+                      ))}
+                    </ul>
+                  </article>
+                ))}
               </div>
-              
-              <p className="home-static__section-text">
-                El diagnóstico cuantifica las pérdidas y define prioridades. Proporcionamos un informe claro con mejoras rápidas y proyectos
-                de mayor alcance según impacto y esfuerzo.
-              </p>
-
-
-
-             <div className="home-static__method-step" style={{ display: 'flex', alignItems: 'center' , gap: '1rem' }}>
-              <h3 className="home-static__section-subtitle">Soporte continuo</h3>
-              <svg className="home-static__method-step-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="48" height="48">
-                <path fill="#0d6efd" d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm0 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10z"/>
-                <path fill="#0d6efd" d="M16.2 7.8l-5.7 5.7-2.1-2.1-1.4 1.4 3.5 3.5 7.1-7.1z"/>
-              </svg>
-             </div>
-             
-              <p className="home-static__section-text">
-                Acompañamos en la implantación técnica, formación de usuarios y seguimiento post-implantación. Ajustamos procesos y medimos
-                resultados para asegurar adopción y mejora continua.
-              </p>
-
-              <p className="home-static__section-text">
-                Además, proponemos indicadores de seguimiento (KPIs) para medir eficiencia, reducción de errores y mejoras en la gestión financiera.
-                Estas métricas permiten priorizar nuevas automatizaciones con retorno claro.
-              </p>
             </div>
           </section>
 
