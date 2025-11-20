@@ -9,6 +9,7 @@ import Capture1 from '../../components/img/captura1.png';
 import Capture2 from '../../components/img/captura2.png';
 import Capture3 from '../../components/img/captura3.png';
 
+
 const WhatsAppIcon = () => (
   <svg
     aria-hidden="true"
@@ -89,6 +90,7 @@ const ConstructProPage = () => (
         <div className="container position-relative">
           <div className="row align-items-center g-5 flex-column-reverse flex-lg-row">
             <div className="col-lg-6 position-relative">
+
               <span className="eyebrow text-uppercase text-primary">ConstructPro para constructoras</span>
               <h1 className="display-5 fw-bold mt-3">
                 Evita sanciones VeriFactu y controla tus obras en un único sistema.
@@ -96,6 +98,7 @@ const ConstructProPage = () => (
               <p className="lead text-muted mt-3">
                 Para empresas de construcción que trabajan con partes, certificaciones y facturas y no quieren duplicar trabajo con la nueva normativa.
               </p>
+
               <div className="d-flex flex-column gap-3">
                 <ContactActionGroup
                   className="mt-1"
@@ -139,6 +142,7 @@ const ConstructProPage = () => (
                   <span className="small">Cómo conectar obra, compras y facturas sin duplicar trabajo.</span>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -198,6 +202,7 @@ const ConstructProPage = () => (
                       </div>
                     </div>
                   </div>
+
                 </div>
               </div>
             </div>
@@ -255,6 +260,7 @@ const ConstructProPage = () => (
                   </li>
                 </ul>
               </div>
+
             </div>
           </div>
         </div>
@@ -294,6 +300,7 @@ const ConstructProPage = () => (
                     <div className="rounded-4 overflow-hidden border shadow-sm h-100">
                       <img src={src} alt={`Captura ConstructPro ${index + 1}`} className="img-fluid w-100" />
                     </div>
+
                   </div>
                 ))}
               </div>
@@ -340,6 +347,7 @@ const ConstructProPage = () => (
                   <span className="text-muted">sorpresas cuando llegue la inspección.</span>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
