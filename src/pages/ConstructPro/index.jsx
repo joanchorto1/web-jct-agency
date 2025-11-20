@@ -86,7 +86,7 @@ const ConstructProPage = () => (
     </Helmet>
 
     <div className="bg-white text-dark">
-      <section className="section-spacing pb-0 position-relative overflow-hidden">
+      <section className="section-spacing pb-5 position-relative overflow-hidden">
         <div className="container position-relative">
           <div className="row align-items-center g-5 flex-column-reverse flex-lg-row">
             <div className="col-lg-6 position-relative">
@@ -148,7 +148,7 @@ const ConstructProPage = () => (
         </div>
       </section>
 
-      <section className="section-spacing pt-4 pb-0">
+      <section className="section-spacing pt-4 pb-5">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10 col-xl-9">
@@ -210,7 +210,7 @@ const ConstructProPage = () => (
         </div>
       </section>
 
-      <section className="section-spacing pt-4 pb-0 bg-dark text-white">
+      <section className="section-spacing pt-4 pb-4 bg-dark text-white">
         <div className="container">
           <div className="row g-4 align-items-center">
             <div className="col-lg-6">
@@ -266,7 +266,7 @@ const ConstructProPage = () => (
         </div>
       </section>
 
-      <section className="section-spacing pt-4 pb-0">
+      <section className="section-spacing pt-4 pb-4">
         <div className="container">
           <div className="row g-4 align-items-center">
             <div className="col-lg-6">
@@ -309,7 +309,7 @@ const ConstructProPage = () => (
         </div>
       </section>
 
-      <section className="section-spacing pt-4 pb-0 bg-light">
+      <section className="section-spacing pt-4 pb-5 bg-light">
         <div className="container">
           <div className="row g-4">
             <div className="col-lg-4">
@@ -353,7 +353,7 @@ const ConstructProPage = () => (
         </div>
       </section>
 
-      <section className="section-spacing pt-4 pb-0">
+      <section className="section-spacing pt-4 pb-5">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10 col-xl-8">
