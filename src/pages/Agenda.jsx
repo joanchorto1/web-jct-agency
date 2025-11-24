@@ -149,7 +149,7 @@ const Agenda = () => {
                 prefieres confirmar la cita: por WhatsApp o por correo.
               </p>
 
-              <div className="bg-white shadow-sm rounded-3 p-4">
+              <div className="bg-white shadow-sm rounded-3 p-4" id="formulario-contacto">
                 <h2 className="h5 mb-3">Datos de contacto y cita</h2>
                 <form onSubmit={handleSubmit} noValidate>
                   <div className="mb-3">
@@ -285,10 +285,24 @@ const Agenda = () => {
             <div className="col-lg-6">
               <div className="bg-white shadow-sm rounded-3 p-4 h-100">
                 <h2 className="h5 mb-3">Fechas disponibles</h2>
-                <p className="text-muted">
-                  Consulta las fechas libres y reserva tu franja horaria en un clic. El calendario muestra la disponibilidad
-                  actualizada en tiempo real.
+                <p className="text-muted mb-3">
+                  Consulta las fechas libres y reserva tu franja horaria en un clic. Atiendo consultas de diagnóstico de
+                  marketing, sesiones tácticas de captación y revisiones de funnels para equipos que quieren ejecutar rápido.
                 </p>
+                <div className="mb-3">
+                  <ul className="text-muted mb-2">
+                    <li><strong>Consultas exprés (20 min):</strong> aclaramos dudas concretas de estrategia o campañas.</li>
+                    <li><strong>Mentoría 1:1:</strong> trabajamos en vivo sobre tu caso y definimos próximos pasos accionables.</li>
+                    <li><strong>Sesiones con equipo:</strong> alineamos objetivos, KPIs y backlog de experimentación.</li>
+                  </ul>
+                  <p className="text-muted mb-0">
+                    Las citas se abren de lunes a miércoles, de 9:00 a 20:00 en intervalos de 1 hora. Cada slot está pensado
+                    para una conversación de 20 minutos y se confirma en cuanto completas el formulario.
+                  </p>
+                  <a className="d-inline-block mt-2 fw-semibold" href="#formulario-contacto">
+                    Ir al formulario para reservar
+                  </a>
+                </div>
                 <div className="ratio ratio-4x3 rounded overflow-hidden">
                   <iframe
                     src={calendarUrl}
