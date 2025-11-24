@@ -523,6 +523,8 @@ const Home = () => {
                     </a>
                   </div>
 
+                </div>
+
                 <p className="home-static__contact-note">También puedo adaptarme a tu herramienta de videoconferencia habitual.</p>
               </div>
 
