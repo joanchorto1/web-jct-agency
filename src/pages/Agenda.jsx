@@ -14,6 +14,28 @@ const initialFormState = {
   envio: 'whatsapp',
 };
 
+const weekdayErrorMessage = 'Selecciona un día laborable (lunes a miércoles).';
+
+const isAllowedWeekday = (value) => {
+  if (!value) return false;
+
+  const selectedDate = new Date(`${value}T00:00:00`);
+  if (Number.isNaN(selectedDate.getTime())) return false;
+
+  const day = selectedDate.getUTCDay();
+  return day >= 1 && day <= 3;
+};
+
+const isAllowedHour = (value) => {
+  const [hour, minute] = value.split(':').map(Number);
+
+  if (Number.isNaN(hour) || Number.isNaN(minute)) return false;
+  const isOnTheHour = minute === 0;
+  const withinRange = hour >= 9 && hour <= 20;
+
+  return isOnTheHour && withinRange;
+};
+
 const validators = {
   nombre: (value) => (value.trim().length >= 2 ? '' : 'Introduce tu nombre completo.'),
   correo: (value) =>
@@ -23,8 +45,16 @@ const validators = {
       ? ''
       : 'Introduce un teléfono de contacto válido (incluye prefijo si aplica).',
   asunto: (value) => (value.trim().length >= 4 ? '' : 'Cuéntanos brevemente el motivo de la reunión.'),
-  fecha: (value) => (value ? '' : 'Selecciona una fecha disponible.'),
-  hora: (value) => (value ? '' : 'Selecciona la hora de la cita.'),
+  fecha: (value) => {
+    if (!value) return 'Selecciona una fecha disponible.';
+    return isAllowedWeekday(value) ? '' : weekdayErrorMessage;
+  },
+  hora: (value) => {
+    if (!value) return 'Selecciona la hora de la cita.';
+    return isAllowedHour(value)
+      ? ''
+      : 'Selecciona una hora en punto entre las 09:00 y las 20:00.';
+  },
 };
 
 const Agenda = () => {
@@ -59,6 +89,21 @@ const Agenda = () => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
+
+    if (name === 'fecha' && value) {
+      if (!isAllowedWeekday(value)) {
+        setFormData((prev) => ({
+          ...prev,
+          [name]: '',
+        }));
+        setErrors((prev) => ({
+          ...prev,
+          [name]: weekdayErrorMessage,
+        }));
+        return;
+      }
+    }
+
     setFormData((prev) => ({
       ...prev,
       [name]: value,
@@ -241,6 +286,9 @@ const Agenda = () => {
                         type="time"
                         className={`form-control ${errors.hora ? 'is-invalid' : ''}`}
                         value={formData.hora}
+                        step="3600"
+                        min="09:00"
+                        max="20:00"
                         onChange={handleChange}
                       />
                       {errors.hora && <div className="invalid-feedback d-block">{errors.hora}</div>}
