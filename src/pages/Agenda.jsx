@@ -9,6 +9,9 @@ const initialFormState = {
   correo: '',
   telefono: '',
   asunto: '',
+  fecha: '',
+  hora: '',
+  envio: 'whatsapp',
 };
 
 const validators = {
@@ -20,12 +23,15 @@ const validators = {
       ? ''
       : 'Introduce un teléfono de contacto válido (incluye prefijo si aplica).',
   asunto: (value) => (value.trim().length >= 4 ? '' : 'Cuéntanos brevemente el motivo de la reunión.'),
+  fecha: (value) => (value ? '' : 'Selecciona una fecha disponible.'),
+  hora: (value) => (value ? '' : 'Selecciona la hora de la cita.'),
 };
 
 const Agenda = () => {
   const [formData, setFormData] = useState(initialFormState);
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState('idle');
+  const [confirmationMethod, setConfirmationMethod] = useState(initialFormState.envio);
 
   const calendarUrl = useMemo(
     () => 'https://cal.com/joanchorto/20min?embed=1&layout=month_view',
@@ -66,6 +72,20 @@ const Agenda = () => {
     }
   };
 
+  const buildSlotMessage = () => {
+    if (!formData.fecha || !formData.hora) return '';
+
+    const selectedDate = new Date(`${formData.fecha}T${formData.hora}`);
+    return selectedDate.toLocaleString('es-ES', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+    });
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     setStatus('idle');
@@ -77,16 +97,33 @@ const Agenda = () => {
     setStatus('sending');
 
     try {
-      await emailjs.send('service_uaggcy8', 'template_88m2twe', {
-        ...formData,
-        message: `Nombre: ${formData.nombre}\nCorreo: ${formData.correo}\nTeléfono: ${formData.telefono}\nAsunto: ${formData.asunto}`,
-      });
-      setStatus('success');
+      const slotText = buildSlotMessage();
+      const message = `Nombre: ${formData.nombre}\nCorreo: ${formData.correo}\nTeléfono: ${formData.telefono}\nAsunto: ${formData.asunto}\nFecha y hora: ${slotText}`;
+
+      if (formData.envio === 'whatsapp') {
+        const whatsappText = `Hola, soy ${formData.nombre}. Quisiera reservar una reunión el ${slotText}. Puedes escribirme a ${formData.correo} o llamarme al ${formData.telefono}. Asunto: ${formData.asunto}.`;
+        const whatsappUrl = `https://wa.me/34613147480?text=${encodeURIComponent(whatsappText)}`;
+        window.open(whatsappUrl, '_blank');
+        setStatus('success');
+        setConfirmationMethod(formData.envio);
+      } else {
+        await emailjs.send('service_uaggcy8', 'template_88m2twe', {
+          ...formData,
+          message,
+          to_email: 'info@jctagency.com',
+        });
+        setStatus('success');
+        setConfirmationMethod(formData.envio);
+      }
+
       setFormData(initialFormState);
       setErrors({});
     } catch (error) {
       console.error('Error enviando la solicitud de agenda', error);
       setStatus('error');
+
+      const fallbackBody = `Hola, soy ${formData.nombre}.\nMe gustaría confirmar una reunión el ${buildSlotMessage()}.\nCorreo: ${formData.correo}\nTeléfono: ${formData.telefono}\nAsunto: ${formData.asunto}`;
+      window.location.href = `mailto:info@jctagency.com?subject=Solicitud%20de%20cita&body=${encodeURIComponent(fallbackBody)}`;
     }
   };
 
@@ -108,12 +145,12 @@ const Agenda = () => {
               <span className="section-eyebrow">Agenda abierta</span>
               <h1 className="mb-3">Reserva una fecha que te encaje</h1>
               <p className="text-muted mb-4">
-                Revisa la disponibilidad real de mi agenda y reserva tu hueco. Déjame tus datos básicos y confirma la cita
-                directamente en el calendario.
+                Revisa la disponibilidad real de mi agenda y reserva tu hueco. Elige la fecha y hora que te encaja y dime cómo
+                prefieres confirmar la cita: por WhatsApp o por correo.
               </p>
 
               <div className="bg-white shadow-sm rounded-3 p-4">
-                <h2 className="h5 mb-3">Datos de contacto</h2>
+                <h2 className="h5 mb-3">Datos de contacto y cita</h2>
                 <form onSubmit={handleSubmit} noValidate>
                   <div className="mb-3">
                     <label htmlFor="nombre" className="form-label fw-semibold">
@@ -179,13 +216,61 @@ const Agenda = () => {
                     {errors.asunto && <div className="invalid-feedback d-block">{errors.asunto}</div>}
                   </div>
 
+                  <div className="row g-3 mb-4">
+                    <div className="col-sm-6">
+                      <label htmlFor="fecha" className="form-label fw-semibold">
+                        Fecha
+                      </label>
+                      <input
+                        id="fecha"
+                        name="fecha"
+                        type="date"
+                        className={`form-control ${errors.fecha ? 'is-invalid' : ''}`}
+                        value={formData.fecha}
+                        onChange={handleChange}
+                      />
+                      {errors.fecha && <div className="invalid-feedback d-block">{errors.fecha}</div>}
+                    </div>
+                    <div className="col-sm-6">
+                      <label htmlFor="hora" className="form-label fw-semibold">
+                        Hora
+                      </label>
+                      <input
+                        id="hora"
+                        name="hora"
+                        type="time"
+                        className={`form-control ${errors.hora ? 'is-invalid' : ''}`}
+                        value={formData.hora}
+                        onChange={handleChange}
+                      />
+                      {errors.hora && <div className="invalid-feedback d-block">{errors.hora}</div>}
+                    </div>
+                  </div>
+
+                  <div className="mb-4">
+                    <label htmlFor="envio" className="form-label fw-semibold">
+                      Cómo quieres confirmar la cita
+                    </label>
+                    <select
+                      id="envio"
+                      name="envio"
+                      className="form-select"
+                      value={formData.envio}
+                      onChange={handleChange}
+                    >
+                      <option value="whatsapp">Abrir WhatsApp con mensaje prellenado</option>
+                      <option value="email">Enviar por correo a info@jctagency.com</option>
+                    </select>
+                  </div>
+
                   <button type="submit" className="btn btn-dark w-100" disabled={status === 'sending'}>
                     {status === 'sending' ? 'Enviando solicitud...' : 'Enviar y reservar'}
                   </button>
 
                   {status === 'success' && (
                     <div className="alert alert-success mt-3 mb-0" role="alert">
-                      ¡Gracias! Hemos recibido tus datos. Ahora selecciona el día y hora que mejor te vayan en el calendario.
+                      ¡Gracias! Hemos registrado tu selección. Abre el calendario para verificar la disponibilidad y confirma
+                      tu reserva desde {confirmationMethod === 'whatsapp' ? 'WhatsApp' : 'correo electrónico'}.
                     </div>
                   )}
                   {status === 'error' && (
