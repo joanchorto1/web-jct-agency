@@ -1,10 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import Header from '../../components/components/header';
+import Layout from '../../components/layouts/layout';
 
 import './HomeStatic.css';
 const Home = () => {
-  const currentYear = new Date().getFullYear();
   const waDiagnostic = 'https://wa.me/34633391411?text=Hola%20Joan%2C%20vull%20un%20diagnostic%20gratuit.';
   const waReserve = 'https://wa.me/34633391411?text=Hola%20Joan%2C%20vull%20reservar%20un%20diagnostic%20per%20la%20meva%20empresa.';
 
@@ -157,10 +156,8 @@ const Home = () => {
         />
       </Helmet>
 
-      <div className="home-static">
-        <Header />
-
-        <main>
+      <Layout>
+        <div className="home-static">
           <section className="home-static__hero" aria-labelledby="hero-heading">
             <div className="home-static__section home-static__hero-content">
               <div className="home-static__hero-grid">
@@ -403,26 +400,26 @@ const Home = () => {
                   adaptar soluciones que realmente mejoren la gestión y la toma de decisiones.
                 </p>
 
-              <h3 className="home-static__section-subtitle">Experiencia y compromiso</h3>
-              <p className="home-static__section-text">
-                He trabajado con equipos operativos y mandos intermedios para implantar soluciones prácticas y sostenibles. Mi acompañamiento
-                incluye diagnóstico, implantación técnica, formación y soporte continuado hasta comprobar resultados medibles.
-              </p>
-              <div className="home-static__about-highlights" aria-label="Garantías de colaboración">
-                <div className="home-static__pill">
-                  <span className="home-static__pill-dot" aria-hidden="true" />
-                  Roadmap priorizado con ROI estimado.
-                </div>
-                <div className="home-static__pill">
-                  <span className="home-static__pill-dot" aria-hidden="true" />
-                  Sesiones de seguimiento con métricas claras.
-                </div>
-                <div className="home-static__pill">
-                  <span className="home-static__pill-dot" aria-hidden="true" />
-                  Entrega de documentación y procesos versionados.
+                <h3 className="home-static__section-subtitle">Experiencia y compromiso</h3>
+                <p className="home-static__section-text">
+                  He trabajado con equipos operativos y mandos intermedios para implantar soluciones prácticas y sostenibles. Mi acompañamiento
+                  incluye diagnóstico, implantación técnica, formación y soporte continuado hasta comprobar resultados medibles.
+                </p>
+                <div className="home-static__about-highlights" aria-label="Garantías de colaboración">
+                  <div className="home-static__pill">
+                    <span className="home-static__pill-dot" aria-hidden="true" />
+                    Roadmap priorizado con ROI estimado.
+                  </div>
+                  <div className="home-static__pill">
+                    <span className="home-static__pill-dot" aria-hidden="true" />
+                    Sesiones de seguimiento con métricas claras.
+                  </div>
+                  <div className="home-static__pill">
+                    <span className="home-static__pill-dot" aria-hidden="true" />
+                    Entrega de documentación y procesos versionados.
+                  </div>
                 </div>
               </div>
-            </div>
 
             <aside className="home-static__about-card" aria-labelledby="especialidades-heading">
               <h3 id="especialidades-heading">Especialidades</h3>
@@ -569,20 +566,8 @@ const Home = () => {
               </div>
             </div>
           </section>
-        </main>
-
-        <footer className="home-static__footer">
-          <div className="home-static__footer-inner">
-            <p>© {currentYear} Joan Chorto Consultor. Todos los derechos reservados.</p>
-            <nav className="home-static__footer-nav" aria-label="Enlaces principales">
-              <a href="#metodo">Método</a>
-              <a href="#resultados">Resultados</a>
-              <a href="#sobre-mi">Sobre mí</a>
-              <a href="#contacto">Contacto</a>
-            </nav>
-          </div>
-        </footer>
-      </div>
+        </div>
+      </Layout>
     </>
   );
 };
