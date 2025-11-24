@@ -62,6 +62,7 @@ const Agenda = () => {
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState('idle');
   const [confirmationMethod, setConfirmationMethod] = useState(initialFormState.envio);
+  const [persistenceError, setPersistenceError] = useState('');
 
   const calendarUrl = useMemo(
     () => 'https://cal.com/joanchorto/20min?embed=1&layout=month_view',
@@ -117,6 +118,55 @@ const Agenda = () => {
     }
   };
 
+  const persistLocalRecord = async () => {
+    const recordLine = `${formData.nombre} | ${formData.correo} | ${formData.telefono} | ${formData.asunto} | ${formData.fecha} ${formData.hora}`;
+
+    try {
+      let existingContent = '';
+
+      try {
+        const existingResponse = await fetch('/agenda-registros.txt', { cache: 'no-store' });
+        if (existingResponse.ok) {
+          existingContent = await existingResponse.text();
+        }
+      } catch (readError) {
+        console.warn('No se pudo leer el archivo de registros', readError);
+      }
+
+      const hasDuplicate = existingContent
+        .split(/\r?\n/)
+        .map((line) => line.trim())
+        .filter(Boolean)
+        .some((line) => line.endsWith(`${formData.fecha} ${formData.hora}`));
+
+      if (hasDuplicate) {
+        setPersistenceError('Ya existe una cita registrada para esa fecha y hora. Elige otro horario disponible.');
+        return { success: false, duplicated: true };
+      }
+
+      const trimmedContent = existingContent.trim();
+      const updatedContent = trimmedContent ? `${trimmedContent}\n${recordLine}` : recordLine;
+
+      const saveResponse = await fetch('/agenda-registros.txt', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8',
+        },
+        body: updatedContent,
+      });
+
+      if (!saveResponse.ok) {
+        throw new Error('No se pudo escribir el archivo de registros');
+      }
+
+      return { success: true };
+    } catch (writeError) {
+      console.error('Error en la persistencia local de la agenda', writeError);
+      setPersistenceError('No se pudo registrar tu cita en el archivo local. Inténtalo de nuevo más tarde.');
+      return { success: false };
+    }
+  };
+
   const buildSlotMessage = () => {
     if (!formData.fecha || !formData.hora) return '';
 
@@ -134,6 +184,7 @@ const Agenda = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setStatus('idle');
+    setPersistenceError('');
     const validationResult = validateForm();
     if (Object.keys(validationResult).length > 0) {
       return;
@@ -143,6 +194,13 @@ const Agenda = () => {
 
     try {
       const slotText = buildSlotMessage();
+      const persistenceResult = await persistLocalRecord();
+
+      if (!persistenceResult.success) {
+        setStatus('error');
+        return;
+      }
+
       const message = `Nombre: ${formData.nombre}\nCorreo: ${formData.correo}\nTeléfono: ${formData.telefono}\nAsunto: ${formData.asunto}\nFecha y hora: ${slotText}`;
 
       if (formData.envio === 'whatsapp') {
@@ -161,6 +219,7 @@ const Agenda = () => {
         setConfirmationMethod(formData.envio);
       }
 
+      setPersistenceError('');
       setFormData(initialFormState);
       setErrors({});
     } catch (error) {
@@ -319,6 +378,11 @@ const Agenda = () => {
                     <div className="alert alert-success mt-3 mb-0" role="alert">
                       ¡Gracias! Hemos registrado tu selección. Abre el calendario para verificar la disponibilidad y confirma
                       tu reserva desde {confirmationMethod === 'whatsapp' ? 'WhatsApp' : 'correo electrónico'}.
+                    </div>
+                  )}
+                  {persistenceError && (
+                    <div className="alert alert-warning mt-3 mb-0" role="alert">
+                      {persistenceError}
                     </div>
                   )}
                   {status === 'error' && (
