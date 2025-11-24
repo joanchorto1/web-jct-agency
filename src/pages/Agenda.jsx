@@ -102,7 +102,7 @@ const Agenda = () => {
 
       if (formData.envio === 'whatsapp') {
         const whatsappText = `Hola, soy ${formData.nombre}. Quisiera reservar una reunión el ${slotText}. Puedes escribirme a ${formData.correo} o llamarme al ${formData.telefono}. Asunto: ${formData.asunto}.`;
-        const whatsappUrl = `https://wa.me/34613147480?text=${encodeURIComponent(whatsappText)}`;
+        const whatsappUrl = `https://wa.me/34633391411?text=${encodeURIComponent(whatsappText)}`;
         window.open(whatsappUrl, '_blank');
         setStatus('success');
         setConfirmationMethod(formData.envio);
