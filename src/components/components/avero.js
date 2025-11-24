@@ -12,13 +12,21 @@ import woman from '../img/Woman.png';
 // import GalleryImg2 from '../img/avero-gallery-2.png';
 // import DemoVideo from '../videos/avero-demo.mp4';
 
-const WhatsAppIcon = () => (
-  <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" className="ms-2" xmlns="http://www.w3.org/2000/svg" focusable="false">
-    <path fill="#25D366" d="M12 .5C5.7.5.9 5.3.9 11.6c0 2 .5 3.9 1.5 5.6L.5 23.5l6.5-1.7c1.6.8 3.5 1.3 5.5 1.3 6.3 0 11.1-4.8 11.1-11.1S18.3.5 12 .5z" />
-    <path
-      fill="#FFF"
-      d="M17.3 14.1c-.3-.2-2-.9-2.3-.9-.3 0-.4-.1-.6.2-.2.3-.8.9-1 1.1-.2.2-.4.3-.7.1-.3-.2-1.5-.6-2.8-1.7-1-1-1.6-2.1-1.8-2.4-.2-.3 0-.5.1-.7.1-.2.3-.4.4-.6.1-.2.1-.4 0-.6-.1-.2-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4-.2 0-.5 0-.8 0-.3 0-.7.1-1 .4-.3.3-1 1-1 2.5s1 3 1.1 3.2c.1.2 1.9 3 4.6 4.3 3 .1 3.9.2 4.6.1.7-.1 2.4-1 2.8-1.9.4-.9.4-1.6.3-1.8-.1-.2-.4-.3-.7-.5z"
-    />
+const agendaHref = '/agenda';
+
+const CalendarIcon = () => (
+  <svg
+    aria-hidden="true"
+    width="18"
+    height="18"
+    viewBox="0 0 24 24"
+    className="ms-2"
+    xmlns="http://www.w3.org/2000/svg"
+    focusable="false"
+    fill="currentColor"
+  >
+    <path d="M7 2a1 1 0 0 0-1 1v1H5a3 3 0 0 0-3 3v11a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3h-1V3a1 1 0 0 0-2 0v1H9V3a1 1 0 0 0-1-1Zm12 6H5v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1Z" />
+    <path d="M9 13h6v3H9z" />
   </svg>
 );
 
@@ -44,13 +52,11 @@ const Avero = () => (
                 <div className="d-flex gap-3 flex-column flex-sm-row">
                   <a href="https://avero.jctagency.com" className="btn btn-avero btn-lg">Prueba Avero gratis</a>
                   <a
-                    href="https://wa.me/34633391411?text=Hola%20Joan%2C%20vull%20una%20demo%20d%27Avero."
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={agendaHref}
                     className="btn btn-outline-avero btn-lg"
                   >
-                    Solicitar demo
-                    <WhatsAppIcon />
+                    Agendar demo
+                    <CalendarIcon />
                   </a>
                 </div>
                 <div className="d-flex gap-3 align-items-center flex-wrap">
@@ -113,13 +119,11 @@ const Avero = () => (
               <div className="d-flex gap-3 flex-column flex-sm-row">
                 <a href="https://avero.jctagency.com" className="btn btn-dark">Crear cuenta</a>
                 <a
-                  href="https://wa.me/34633391411?text=Hola%20Joan%2C%20vull%20crear%20un%20compte%20a%20Avero."
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={agendaHref}
                   className="btn btn-outline-dark"
                 >
                   Agenda tu onboarding
-                  <WhatsAppIcon />
+                  <CalendarIcon />
                 </a>
               </div>
             </div>
@@ -210,13 +214,11 @@ const Avero = () => (
                 <div className="d-flex flex-column gap-2">
                   <a href="https://avero.jctagency.com" className="btn btn-light text-dark">Probar gratis</a>
                   <a
-                    href="https://wa.me/34633391411?text=Hola%20Joan%2C%20vull%20una%20demo%20d%27Avero."
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={agendaHref}
                     className="btn btn-outline-light text-white"
                   >
                     Reservar con un asesor
-                    <WhatsAppIcon />
+                    <CalendarIcon />
                   </a>
                 </div>
               </div>
@@ -346,13 +348,11 @@ const Avero = () => (
               <div className="d-flex gap-3 flex-column flex-sm-row mt-3">
                 <a href="https://avero.jctagency.com" className="btn btn-avero">Probar ahora</a>
                 <a
-                  href="https://wa.me/34633391411?text=Hola%20Joan%2C%20necessito%20assessorament%20per%20Avero."
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={agendaHref}
                   className="btn btn-outline-avero"
                 >
                   Hablar con un asesor
-                  <WhatsAppIcon />
+                  <CalendarIcon />
                 </a>
               </div>
             </div>
@@ -380,26 +380,22 @@ const Avero = () => (
 
             {/* WhatsApp create account */}
             <a
-              href="https://wa.me/34633391411?text=Hola%20Joan%2C%20vull%20crear%20un%20compte%20a%20Avero."
-              target="_blank"
-              rel="noopener noreferrer"
+              href={agendaHref}
               className="btn btn-dark"
             >
               Crear cuenta
-              <WhatsAppIcon />
+              <CalendarIcon />
             </a>
 
-            <a href="/contacto" className="btn btn-outline-dark text-dark">Contacta con un asesor</a>
+            <a href={agendaHref} className="btn btn-outline-dark text-dark">Contacta con un asesor</a>
 
             {/* WhatsApp contact advisor */}
             <a
-              href="https://wa.me/34633391411?text=Hola%20Joan%2C%20necessito%20assessorament%20per%20Avero."
-              target="_blank"
-              rel="noopener noreferrer"
+              href={agendaHref}
               className="btn btn-outline-dark text-dark"
             >
               Contactar
-              <WhatsAppIcon />
+              <CalendarIcon />
             </a>
           </div>
         </div>

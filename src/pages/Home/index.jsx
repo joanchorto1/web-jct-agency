@@ -4,8 +4,7 @@ import Layout from '../../components/layouts/layout';
 
 import './HomeStatic.css';
 const Home = () => {
-  const waDiagnostic = 'https://wa.me/34633391411?text=Hola%20Joan%2C%20vull%20un%20diagnostic%20gratuit.';
-  const waReserve = 'https://wa.me/34633391411?text=Hola%20Joan%2C%20vull%20reservar%20un%20diagnostic%20per%20la%20meva%20empresa.';
+  const agendaHref = '/agenda';
 
   const valuePillars = [
     {
@@ -185,12 +184,8 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="home-static__hero-actions">
-                    <a href={waDiagnostic} target="_blank" rel="noopener noreferrer" className="home-static__primary-btn">
+                    <a href={agendaHref} className="home-static__primary-btn">
                       Reserva diagnóstico
-                      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" className="ms-2" xmlns="http://www.w3.org/2000/svg" focusable="false">
-                        <path fill="#25D366" d="M12 .5C5.7.5.9 5.3.9 11.6c0 2 .5 3.9 1.5 5.6L.5 23.5l6.5-1.7c1.6.8 3.5 1.3 5.5 1.3 6.3 0 11.1-4.8 11.1-11.1S18.3.5 12 .5z"/>
-                        <path fill="#FFF" d="M17.3 14.1c-.3-.2-2-.9-2.3-.9-.3 0-.4-.1-.6.2-.2.3-.8.9-1 1.1-.2.2-.4.3-.7.1-.3-.2-1.5-.6-2.8-1.7-1-1-1.6-2.1-1.8-2.4-.2-.3 0-.5.1-.7.1-.2.3-.4.4-.6.1-.2.1-.4 0-.6-.1-.2-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4-.2 0-.5 0-.8 0-.3 0-.7.1-1 .4-.3.3-1 1-1 2.5s1 3 1.1 3.2c.1.2 1.9 3 4.6 4.3 3 .1 3.9.2 4.6.1.7-.1 2.4-1 2.8-1.9.4-.9.4-1.6.3-1.8-.1-.2-.4-.3-.7-.5z"/>
-                      </svg>
                     </a>
                     <a href="#metodo" className="home-static__secondary-btn">
                       Ver método
@@ -498,55 +493,35 @@ const Home = () => {
                 <div style={contactRowStyle}>
 
                   <a
-                    href={waReserve}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={agendaHref}
                     style={btnPrimaryStyle}
-                    aria-label="Reservar diagnóstico por WhatsApp"
+                    aria-label="Reservar diagnóstico en la agenda"
                   >
                     Reservar diagnóstico
-                    <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" className="ms-2" xmlns="http://www.w3.org/2000/svg" focusable="false">
-                      <path fill="#fff" d="M12 .5C5.7.5.9 5.3.9 11.6c0 2 .5 3.9 1.5 5.6L.5 23.5l6.5-1.7c1.6.8 3.5 1.3 5.5 1.3 6.3 0 11.1-4.8 11.1-11.1S18.3.5 12 .5z"/>
-                      <path fill="#fff" d="M17.3 14.1c-.3-.2-2-.9-2.3-.9-.3 0-.4-.1-.6.2-.2.3-.8.9-1 1.1-.2.2-.4.3-.7.1-.3-.2-1.5-.6-2.8-1.7-1-1-1.6-2.1-1.8-2.4-.2-.3 0-.5.1-.7.1-.2.3-.4.4-.6.1-.2.1-.4 0-.6-.1-.2-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4-.2 0-.5 0-.8 0-.3 0-.7.1-1 .4-.3.3-1 1-1 2.5s1 3 1.1 3.2c.1.2 1.9 3 4.6 4.3 3 .1 3.9.2 4.6.1.7-.1 2.4-1 2.8-1.9.4-.9.4-1.6.3-1.8-.1-.2-.4-.3-.7-.5z"/>
-                    </svg>
                   </a>
 
                   <a
-                    href="mailto:joan@jctagency.com?subject=Reserva%20diagn%C3%B3stico"
+                    href={agendaHref}
                     style={btnSecondaryStyle}
-                    aria-label="Reservar diagnóstico por email"
+                    aria-label="Consultar horarios disponibles"
                   >
-                    Reservar por email
-                    <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" className="ms-2" xmlns="http://www.w3.org/2000/svg" focusable="false">
-                      <path
-                        fill="#0d6efd"
-                        d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.4 2-7.6 5-7.6-5h15.2zM4 18V8.7l7.1 4.7c.3.2.5.3.8.3s.5-.1.8-.3L20 8.7V18H4z"
-                      />
-                    </svg>
+                    Ver agenda
                   </a>
 
                   <div style={doubtCardStyle}>
                     <div style={{fontSize: '0.95rem'}}>
                       <strong>¿Dudas?</strong>
-                      <div style={{fontSize:'0.85rem', color:'#495057'}}>Chatea rápido por WhatsApp</div>
+                      <div style={{fontSize:'0.85rem', color:'#495057'}}>Gestiona tu cita desde la agenda</div>
                     </div>
 
                     <a
-                      href={waDiagnostic}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href={agendaHref}
                       style={btnWhatsStyle}
-                      aria-label="Chatea por WhatsApp"
+                      aria-label="Abrir agenda"
                     >
-                      Chatea conmigo
-                      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" className="ms-2" xmlns="http://www.w3.org/2000/svg" focusable="false">
-                        <path fill="#fff" d="M12 .5C5.7.5.9 5.3.9 11.6c0 2 .5 3.9 1.5 5.6L.5 23.5l6.5-1.7c1.6.8 3.5 1.3 5.5 1.3 6.3 0 11.1-4.8 11.1-11.1S18.3.5 12 .5z"/>
-                        <path fill="#fff" d="M17.3 14.1c-.3-.2-2-.9-2.3-.9-.3 0-.4-.1-.6.2-.2.3-.8.9-1 1.1-.2.2-.4.3-.7.1-.3-.2-1.5-.6-2.8-1.7-1-1-1.6-2.1-1.8-2.4-.2-.3 0-.5.1-.7.1-.2.3-.4.4-.6.1-.2.1-.4 0-.6-.1-.2-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4-.2 0-.5 0-.8 0-.3 0-.7.1-1 .4-.3.3-1 1-1 2.5s1 3 1.1 3.2c.1.2 1.9 3 4.6 4.3 3 .1 3.9.2 4.6.1.7-.1 2.4-1 2.8-1.9.4-.9.4-1.6.3-1.8-.1-.2-.4-.3-.7-.5z"/>
-                      </svg>
+                      Ir a la agenda
                     </a>
                   </div>
-
-                </div>
 
                 <p className="home-static__contact-note">También puedo adaptarme a tu herramienta de videoconferencia habitual.</p>
               </div>

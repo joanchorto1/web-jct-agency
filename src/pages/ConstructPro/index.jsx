@@ -1,8 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Layout from '../../components/layouts/layout';
-import { WHATSAPP_LINKS } from '../../utils/whatsapp';
-import { EMAIL_LINKS } from '../../utils/email';
 import Logo from '../../components/img/apple-touch-icon.png';
 import HeroLogo from '../../components/img/LOGO(Fondo Transparent).png';
 import Capture1 from '../../components/img/captura1.png';
@@ -10,7 +8,7 @@ import Capture2 from '../../components/img/captura2.png';
 import Capture3 from '../../components/img/captura3.png';
 
 
-const WhatsAppIcon = () => (
+const CalendarIcon = () => (
   <svg
     aria-hidden="true"
     width="18"
@@ -19,35 +17,30 @@ const WhatsAppIcon = () => (
     className="ms-2"
     xmlns="http://www.w3.org/2000/svg"
     focusable="false"
+    fill="currentColor"
   >
-    <path
-      fill="#25D366"
-      d="M12 .5C5.7.5.9 5.3.9 11.6c0 2 .5 3.9 1.5 5.6L.5 23.5l6.5-1.7c1.6.8 3.5 1.3 5.5 1.3 6.3 0 11.1-4.8 11.1-11.1S18.3 .5 12 .5z"
-    />
-    <path
-      fill="#FFF"
-      d="M17.3 14.1c-.3-.2-2-.9-2.3-.9-.3 0-.4-.1-.6.2-.2.3-.8.9-1 1.1-.2.2-.4.3-.7.1-.3-.2-1.5-.6-2.8-1.7-1-1-1.6-2.1-1.8-2.4-.2-.3 0-.5.1-.7.1-.2.3-.4.6-.1.2.1.4 0 .6-.1.2-.6 1.4-.8 1.9-.2.5.4.4.6.4.2 0 .5 0 .8 0 .3 0 .7.1 1 .4.3.3 1 1 1 2.5s1 3 1.1 3.2c.1.2 1.9 3 4.6 4.3 3 .1 3.9.2 4.6.1.7-.1 2.4-1 2.8-1.9.4-.9.4-1.6.3-1.8-.1-.2-.4-.3-.7-.5z"
-    />
+    <path d="M7 2a1 1 0 0 0-1 1v1H5a3 3 0 0 0-3 3v11a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3h-1V3a1 1 0 0 0-2 0v1H9V3a1 1 0 0 0-1-1Zm12 6H5v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1Z" />
+    <path d="M9 13h6v3H9z" />
   </svg>
 );
 
 const ContactActionGroup = ({
-  emailHref,
-  whatsappHref,
-  emailLabel,
-  whatsappLabel,
+  primaryHref,
+  secondaryHref,
+  primaryLabel,
+  secondaryLabel,
   variant = 'primary',
-  whatsappVariant = 'outline-primary',
+  secondaryVariant = 'outline-primary',
   size = 'lg',
   className = '',
 }) => (
   <div className={`d-flex flex-column flex-sm-row gap-3 ${className}`}>
-    <a href={emailHref} className={`btn btn-${variant} btn-${size}`}>
-      {emailLabel}
+    <a href={primaryHref} className={`btn btn-${variant} btn-${size}`}>
+      {primaryLabel}
     </a>
-    <a href={whatsappHref} className={`btn btn-${whatsappVariant} btn-${size}`}>
-      {whatsappLabel}
-      <WhatsAppIcon />
+    <a href={secondaryHref} className={`btn btn-${secondaryVariant} btn-${size}`}>
+      {secondaryLabel}
+      <CalendarIcon />
     </a>
   </div>
 );
@@ -74,6 +67,8 @@ const quickNumbers = [
   { value: '80%', label: 'menos errores en facturas' },
   { value: '3', label: 'semanas para tener el flujo controlado' },
 ];
+
+const agendaHref = '/agenda';
 
 const ConstructProPage = () => (
   <Layout stickyVisibility="desktop-only">
@@ -102,10 +97,10 @@ const ConstructProPage = () => (
               <div className="d-flex flex-column gap-3">
                 <ContactActionGroup
                   className="mt-1"
-                  emailHref={EMAIL_LINKS.constructProInfo}
-                  whatsappHref={WHATSAPP_LINKS.constructProInfo}
-                  emailLabel="Reserva diagnóstico gratuito"
-                  whatsappLabel="Hablar por WhatsApp"
+                  primaryHref={agendaHref}
+                  secondaryHref={agendaHref}
+                  primaryLabel="Reserva diagnóstico gratuito"
+                  secondaryLabel="Abrir agenda"
                 />
                 <div className="d-flex gap-3 align-items-center flex-wrap">
                   {quickNumbers.map((item) => (
@@ -328,12 +323,12 @@ const ConstructProPage = () => (
                 <ContactActionGroup
                   className="mt-3"
                   size="md"
-                  emailHref={EMAIL_LINKS.constructProInfo}
-                  whatsappHref={WHATSAPP_LINKS.constructProInfo}
-                  emailLabel="Reserva diagnóstico"
-                  whatsappLabel="WhatsApp"
+                  primaryHref={agendaHref}
+                  secondaryHref={agendaHref}
+                  primaryLabel="Reserva diagnóstico"
+                  secondaryLabel="Abrir agenda"
                   variant="outline-primary"
-                  whatsappVariant="primary"
+                  secondaryVariant="primary"
                 />
               </div>
             </div>
@@ -400,12 +395,12 @@ const ConstructProPage = () => (
               <p className="text-muted">Dolor fuerte → solución simple → acción inmediata. Un solo objetivo: tu diagnóstico gratuito.</p>
               <ContactActionGroup
                 className="justify-content-center mt-3"
-                emailHref={EMAIL_LINKS.constructProInfo}
-                whatsappHref={WHATSAPP_LINKS.constructProInfo}
-                emailLabel="Reserva diagnóstico gratuito"
-                whatsappLabel="Hablar por WhatsApp"
+                primaryHref={agendaHref}
+                secondaryHref={agendaHref}
+                primaryLabel="Reserva diagnóstico gratuito"
+                secondaryLabel="Abrir agenda"
                 variant="primary"
-                whatsappVariant="outline-primary"
+                secondaryVariant="outline-primary"
               />
             </div>
           </div>
