@@ -15,6 +15,8 @@ const initialFormState = {
 };
 
 const weekdayErrorMessage = 'Selecciona un día laborable (lunes a miércoles).';
+const defaultAvailabilityWindow = { start: '09:00', end: '20:00' };
+const defaultAvailability = { window: defaultAvailabilityWindow, busy: [] };
 
 const isAllowedWeekday = (value) => {
   if (!value) return false;
@@ -26,14 +28,13 @@ const isAllowedWeekday = (value) => {
   return day >= 1 && day <= 3;
 };
 
-const isAllowedHour = (value) => {
+const formatHour = (dateString) => dateString.padStart(5, '0');
+
+const parseHourToMinutes = (value) => {
   const [hour, minute] = value.split(':').map(Number);
+  if (Number.isNaN(hour) || Number.isNaN(minute)) return null;
 
-  if (Number.isNaN(hour) || Number.isNaN(minute)) return false;
-  const isOnTheHour = minute === 0;
-  const withinRange = hour >= 9 && hour <= 20;
-
-  return isOnTheHour && withinRange;
+  return hour * 60 + minute;
 };
 
 const validators = {
@@ -49,12 +50,6 @@ const validators = {
     if (!value) return 'Selecciona una fecha disponible.';
     return isAllowedWeekday(value) ? '' : weekdayErrorMessage;
   },
-  hora: (value) => {
-    if (!value) return 'Selecciona la hora de la cita.';
-    return isAllowedHour(value)
-      ? ''
-      : 'Selecciona una hora en punto entre las 09:00 y las 20:00.';
-  },
 };
 
 const Agenda = () => {
@@ -63,13 +58,83 @@ const Agenda = () => {
   const [status, setStatus] = useState('idle');
   const [confirmationMethod, setConfirmationMethod] = useState(initialFormState.envio);
   const [persistenceError, setPersistenceError] = useState('');
+  const [availability, setAvailability] = useState(defaultAvailability);
+  const [availabilityStatus, setAvailabilityStatus] = useState('idle');
+  const [availabilityError, setAvailabilityError] = useState('');
 
   const calendarUrl = useMemo(
     () => 'https://cal.com/joanchorto/20min?embed=1&layout=month_view',
     []
   );
 
+  const isAllowedHour = (value) => {
+    const minutes = parseHourToMinutes(value);
+    if (minutes === null) return false;
+
+    const { window, busy } = availability;
+    const startMinutes = parseHourToMinutes(window.start);
+    const endMinutes = parseHourToMinutes(window.end);
+    const isOnTheHour = minutes % 60 === 0;
+    const withinRange = minutes >= startMinutes && minutes <= endMinutes;
+    const isBusy = busy.includes(formatHour(value));
+
+    return isOnTheHour && withinRange && !isBusy;
+  };
+
+  const buildHourOptions = () => {
+    const { window, busy } = availability;
+    const startMinutes = parseHourToMinutes(window.start);
+    const endMinutes = parseHourToMinutes(window.end);
+
+    const options = [];
+    for (let current = startMinutes; current <= endMinutes; current += 60) {
+      const hour = String(Math.floor(current / 60)).padStart(2, '0');
+      const minutes = String(current % 60).padStart(2, '0');
+      const value = `${hour}:${minutes}`;
+      options.push({ value, disabled: busy.includes(value) });
+    }
+
+    const availableOptions = options.filter((option) => !option.disabled);
+    return { options, availableOptions };
+  };
+
+  const fetchAvailability = async (date) => {
+    setAvailabilityStatus('loading');
+    setAvailabilityError('');
+
+    try {
+      const response = await fetch(`/api/appointments/availability?date=${date}`, {
+        credentials: 'include',
+      });
+
+      if (!response.ok) {
+        throw new Error('No se pudo obtener la disponibilidad');
+      }
+
+      const data = await response.json();
+      const availableStart = formatHour(data?.available?.start ?? defaultAvailabilityWindow.start);
+      const availableEnd = formatHour(data?.available?.end ?? defaultAvailabilityWindow.end);
+      const busySlots = Array.isArray(data?.busy) ? data.busy.map(formatHour) : [];
+
+      setAvailability({ window: { start: availableStart, end: availableEnd }, busy: busySlots });
+      setAvailabilityStatus('loaded');
+    } catch (availabilityError) {
+      console.error('Error obteniendo disponibilidad', availabilityError);
+      setAvailability(defaultAvailability);
+      setAvailabilityError('No se pudo cargar la disponibilidad para esa fecha. Inténtalo de nuevo más tarde.');
+      setAvailabilityStatus('error');
+    }
+  };
+
   const validateField = (name, value) => {
+    if (name === 'hora') {
+      if (!value) return 'Selecciona la hora de la cita.';
+
+      return isAllowedHour(value)
+        ? ''
+        : `Selecciona una hora disponible entre las ${availability.window.start} y las ${availability.window.end}.`;
+    }
+
     const validator = validators[name];
     if (!validator) return '';
     return validator(value);
@@ -91,17 +156,33 @@ const Agenda = () => {
   const handleChange = (event) => {
     const { name, value } = event.target;
 
-    if (name === 'fecha' && value) {
-      if (!isAllowedWeekday(value)) {
-        setFormData((prev) => ({
-          ...prev,
-          [name]: '',
-        }));
-        setErrors((prev) => ({
-          ...prev,
-          [name]: weekdayErrorMessage,
-        }));
-        return;
+    if (name === 'fecha') {
+      setFormData((prev) => ({
+        ...prev,
+        hora: '',
+      }));
+
+      if (value) {
+        if (!isAllowedWeekday(value)) {
+          setFormData((prev) => ({
+            ...prev,
+            [name]: '',
+          }));
+          setErrors((prev) => ({
+            ...prev,
+            hora: '',
+            [name]: weekdayErrorMessage,
+          }));
+          setAvailability(defaultAvailability);
+          setAvailabilityStatus('idle');
+          return;
+        }
+
+        setAvailabilityStatus('loading');
+        fetchAvailability(value);
+      } else {
+        setAvailability(defaultAvailability);
+        setAvailabilityStatus('idle');
       }
     }
 
@@ -231,6 +312,9 @@ const Agenda = () => {
     }
   };
 
+  const { options: hourOptions, availableOptions } = buildHourOptions();
+  const hasNoAvailableOptions = availabilityStatus === 'loaded' && availableOptions.length === 0;
+
   return (
     <Layout stickyVisibility="desktop-only">
       <Helmet>
@@ -339,17 +423,32 @@ const Agenda = () => {
                       <label htmlFor="hora" className="form-label fw-semibold">
                         Hora
                       </label>
-                      <input
+                      <select
                         id="hora"
                         name="hora"
-                        type="time"
-                        className={`form-control ${errors.hora ? 'is-invalid' : ''}`}
+                        className={`form-select ${errors.hora ? 'is-invalid' : ''}`}
                         value={formData.hora}
-                        step="3600"
-                        min="09:00"
-                        max="20:00"
                         onChange={handleChange}
-                      />
+                        disabled={availabilityStatus === 'loading' || !formData.fecha}
+                      >
+                        <option value="" disabled>
+                          {availabilityStatus === 'loading'
+                            ? 'Cargando horarios...'
+                            : 'Selecciona una hora disponible'}
+                        </option>
+                        {hourOptions.map((option) => (
+                          <option key={option.value} value={option.value} disabled={option.disabled}>
+                            {option.value}
+                            {option.disabled ? ' — Ocupado' : ''}
+                          </option>
+                        ))}
+                      </select>
+                      {availabilityStatus === 'loaded' && hasNoAvailableOptions && (
+                        <div className="form-text text-warning">No hay horarios disponibles para esta fecha.</div>
+                      )}
+                      {availabilityError && (
+                        <div className="form-text text-warning">{availabilityError}</div>
+                      )}
                       {errors.hora && <div className="invalid-feedback d-block">{errors.hora}</div>}
                     </div>
                   </div>
