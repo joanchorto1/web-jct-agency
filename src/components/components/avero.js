@@ -12,7 +12,7 @@ import woman from '../img/Woman.png';
 // import GalleryImg2 from '../img/avero-gallery-2.png';
 // import DemoVideo from '../videos/avero-demo.mp4';
 
-const agendaHref = '/agenda';
+const contactHref = '/contacte';
 
 const CalendarIcon = () => (
   <svg
@@ -52,10 +52,10 @@ const Avero = () => (
                 <div className="d-flex gap-3 flex-column flex-sm-row">
                   <a href="https://avero.jctagency.com" className="btn btn-avero btn-lg">Prueba Avero gratis</a>
                   <a
-                    href={agendaHref}
+                    href={contactHref}
                     className="btn btn-outline-avero btn-lg"
                   >
-                    Agendar demo
+                    Solicitar demo
                     <CalendarIcon />
                   </a>
                 </div>
@@ -119,10 +119,10 @@ const Avero = () => (
               <div className="d-flex gap-3 flex-column flex-sm-row">
                 <a href="https://avero.jctagency.com" className="btn btn-dark">Crear cuenta</a>
                 <a
-                  href={agendaHref}
+                  href={contactHref}
                   className="btn btn-outline-dark"
                 >
-                  Agenda tu onboarding
+                  Solicita tu onboarding
                   <CalendarIcon />
                 </a>
               </div>
@@ -214,7 +214,7 @@ const Avero = () => (
                 <div className="d-flex flex-column gap-2">
                   <a href="https://avero.jctagency.com" className="btn btn-light text-dark">Probar gratis</a>
                   <a
-                    href={agendaHref}
+                    href={contactHref}
                     className="btn btn-outline-light text-white"
                   >
                     Reservar con un asesor
@@ -348,7 +348,7 @@ const Avero = () => (
               <div className="d-flex gap-3 flex-column flex-sm-row mt-3">
                 <a href="https://avero.jctagency.com" className="btn btn-avero">Probar ahora</a>
                 <a
-                  href={agendaHref}
+                  href={contactHref}
                   className="btn btn-outline-avero"
                 >
                   Hablar con un asesor
@@ -380,18 +380,18 @@ const Avero = () => (
 
             {/* WhatsApp create account */}
             <a
-              href={agendaHref}
+              href={contactHref}
               className="btn btn-dark"
             >
               Crear cuenta
               <CalendarIcon />
             </a>
 
-            <a href={agendaHref} className="btn btn-outline-dark text-dark">Contacta con un asesor</a>
+            <a href={contactHref} className="btn btn-outline-dark text-dark">Contacta con un asesor</a>
 
             {/* WhatsApp contact advisor */}
             <a
-              href={agendaHref}
+              href={contactHref}
               className="btn btn-outline-dark text-dark"
             >
               Contactar

@@ -68,7 +68,7 @@ const quickNumbers = [
   { value: '3', label: 'semanas para tener el flujo controlado' },
 ];
 
-const agendaHref = '/agenda';
+const contactHref = '/contacte';
 
 const ConstructProPage = () => (
   <Layout stickyVisibility="desktop-only">
@@ -97,10 +97,10 @@ const ConstructProPage = () => (
               <div className="d-flex flex-column gap-3">
                 <ContactActionGroup
                   className="mt-1"
-                  primaryHref={agendaHref}
-                  secondaryHref={agendaHref}
+                  primaryHref={contactHref}
+                  secondaryHref={contactHref}
                   primaryLabel="Reserva diagnóstico gratuito"
-                  secondaryLabel="Abrir agenda"
+                  secondaryLabel="Solicitar llamada"
                 />
                 <div className="d-flex gap-3 align-items-center flex-wrap">
                   {quickNumbers.map((item) => (
@@ -114,7 +114,7 @@ const ConstructProPage = () => (
                   ))}
                 </div>
                 <p className="text-muted small mb-0">
-                  Beneficio + urgencia + acción: agenda ahora y evita rehacer la facturación a última hora.
+                  Beneficio + urgencia + acción: solicita la llamada y evita rehacer la facturación a última hora.
                 </p>
               </div>
             </div>
@@ -323,10 +323,10 @@ const ConstructProPage = () => (
                 <ContactActionGroup
                   className="mt-3"
                   size="md"
-                  primaryHref={agendaHref}
-                  secondaryHref={agendaHref}
+                  primaryHref={contactHref}
+                  secondaryHref={contactHref}
                   primaryLabel="Reserva diagnóstico"
-                  secondaryLabel="Abrir agenda"
+                  secondaryLabel="Solicitar llamada"
                   variant="outline-primary"
                   secondaryVariant="primary"
                 />
@@ -395,10 +395,10 @@ const ConstructProPage = () => (
               <p className="text-muted">Dolor fuerte → solución simple → acción inmediata. Un solo objetivo: tu diagnóstico gratuito.</p>
               <ContactActionGroup
                 className="justify-content-center mt-3"
-                primaryHref={agendaHref}
-                secondaryHref={agendaHref}
+                primaryHref={contactHref}
+                secondaryHref={contactHref}
                 primaryLabel="Reserva diagnóstico gratuito"
-                secondaryLabel="Abrir agenda"
+                secondaryLabel="Solicitar llamada"
                 variant="primary"
                 secondaryVariant="outline-primary"
               />
