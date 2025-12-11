@@ -119,50 +119,74 @@ const Agenda = () => {
   };
 
   const persistLocalRecord = async () => {
-    const recordLine = `${formData.nombre} | ${formData.correo} | ${formData.telefono} | ${formData.asunto} | ${formData.fecha} ${formData.hora}`;
-
     try {
-      let existingContent = '';
-
-      try {
-        const existingResponse = await fetch('/agenda-registros.txt', { cache: 'no-store' });
-        if (existingResponse.ok) {
-          existingContent = await existingResponse.text();
-        }
-      } catch (readError) {
-        console.warn('No se pudo leer el archivo de registros', readError);
-      }
-
-      const hasDuplicate = existingContent
-        .split(/\r?\n/)
-        .map((line) => line.trim())
-        .filter(Boolean)
-        .some((line) => line.endsWith(`${formData.fecha} ${formData.hora}`));
-
-      if (hasDuplicate) {
-        setPersistenceError('Ya existe una cita registrada para esa fecha y hora. Elige otro horario disponible.');
-        return { success: false, duplicated: true };
-      }
-
-      const trimmedContent = existingContent.trim();
-      const updatedContent = trimmedContent ? `${trimmedContent}\n${recordLine}` : recordLine;
-
-      const saveResponse = await fetch('/agenda-registros.txt', {
-        method: 'POST',
+      await fetch('/sanctum/csrf-cookie', {
+        credentials: 'include',
         headers: {
-          'Content-Type': 'text/plain;charset=utf-8',
+          'X-Requested-With': 'XMLHttpRequest',
         },
-        body: updatedContent,
       });
 
-      if (!saveResponse.ok) {
-        throw new Error('No se pudo escribir el archivo de registros');
+      const response = await fetch('/api/appointments', {
+        method: 'POST',
+        credentials: 'include',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest',
+        },
+        body: JSON.stringify({
+          scheduled_date: formData.fecha,
+          scheduled_time: formData.hora,
+          user_id: 1,
+          guest_name: formData.nombre,
+          subject: formData.asunto,
+          notes: `Correo: ${formData.correo}. Teléfono: ${formData.telefono}.`,
+        }),
+      });
+
+      if (response.status === 422) {
+        const data = await response.json();
+        const apiErrors = data?.errors ?? {};
+        const fieldMap = {
+          scheduled_date: 'fecha',
+          scheduled_time: 'hora',
+          guest_name: 'nombre',
+          subject: 'asunto',
+          notes: 'asunto',
+          user_id: 'correo',
+          email: 'correo',
+          phone: 'telefono',
+        };
+
+        const mappedErrors = Object.entries(apiErrors).reduce((acc, [key, value]) => {
+          const targetField = fieldMap[key];
+          if (targetField) {
+            acc[targetField] = Array.isArray(value) ? value[0] : String(value);
+          }
+          return acc;
+        }, {});
+
+        setErrors((prev) => ({ ...prev, ...mappedErrors }));
+        return { success: false, validation: true };
       }
 
-      return { success: true };
+      if (response.status === 409) {
+        const data = await response.json().catch(() => ({}));
+        setPersistenceError(
+          data?.message || 'Ya existe una cita registrada para esa fecha y hora. Elige otro horario disponible.'
+        );
+        return { success: false, conflict: true };
+      }
+
+      if (!response.ok) {
+        throw new Error('No se pudo registrar la cita');
+      }
+
+      const responseData = await response.json().catch(() => null);
+      return { success: true, status: response.status, data: responseData };
     } catch (writeError) {
-      console.error('Error en la persistencia local de la agenda', writeError);
-      setPersistenceError('No se pudo registrar tu cita en el archivo local. Inténtalo de nuevo más tarde.');
+      console.error('Error en la persistencia remota de la agenda', writeError);
+      setPersistenceError('No se pudo registrar tu cita en el sistema. Inténtalo de nuevo más tarde.');
       return { success: false };
     }
   };
@@ -197,6 +221,11 @@ const Agenda = () => {
       const persistenceResult = await persistLocalRecord();
 
       if (!persistenceResult.success) {
+        setStatus(persistenceResult.validation || persistenceResult.conflict ? 'idle' : 'error');
+        return;
+      }
+
+      if (persistenceResult.status !== 201) {
         setStatus('error');
         return;
       }
