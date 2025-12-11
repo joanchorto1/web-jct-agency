@@ -2,3 +2,8 @@
   command = "npm run build"
   publish = "build"
 
+[build.environment]
+  # Use a stable, generally available Python version to avoid 503 errors when
+  # Netlify installs runtime dependencies via mise.
+  PYTHON_VERSION = "3.12"
+
