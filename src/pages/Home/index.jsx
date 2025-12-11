@@ -4,7 +4,8 @@ import Layout from '../../components/layouts/layout';
 
 import './HomeStatic.css';
 const Home = () => {
-  const agendaHref = '/agenda';
+  const contactHref = '/contacte';
+  const whatsappHref = 'https://wa.me/34633391411?text=Hola%20Joan%2C%20vull%20un%20diagnostic%20gratuit.';
 
   const valuePillars = [
     {
@@ -184,7 +185,7 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="home-static__hero-actions">
-                    <a href={agendaHref} className="home-static__primary-btn">
+                    <a href={contactHref} className="home-static__primary-btn">
                       Reserva diagnóstico
                     </a>
                     <a href="#metodo" className="home-static__secondary-btn">
@@ -493,33 +494,35 @@ const Home = () => {
                 <div style={contactRowStyle}>
 
                   <a
-                    href={agendaHref}
+                    href={contactHref}
                     style={btnPrimaryStyle}
-                    aria-label="Reservar diagnóstico en la agenda"
+                    aria-label="Solicitar diagnóstico"
                   >
-                    Reservar diagnóstico
+                    Solicitar diagnóstico
                   </a>
 
                   <a
-                    href={agendaHref}
+                    href={contactHref}
                     style={btnSecondaryStyle}
-                    aria-label="Consultar horarios disponibles"
+                    aria-label="Contactar para reservar horarios"
                   >
-                    Ver agenda
+                    Coordinar por email
                   </a>
 
                   <div style={doubtCardStyle}>
                     <div style={{fontSize: '0.95rem'}}>
-                      <strong>¿Dudas?</strong>
-                      <div style={{fontSize:'0.85rem', color:'#495057'}}>Gestiona tu cita desde la agenda</div>
+                      <strong>¿Prefieres WhatsApp?</strong>
+                      <div style={{fontSize:'0.85rem', color:'#495057'}}>Respondo en menos de 24h</div>
                     </div>
 
                     <a
-                      href={agendaHref}
+                      href={whatsappHref}
                       style={btnWhatsStyle}
-                      aria-label="Abrir agenda"
+                      aria-label="Abrir conversación en WhatsApp"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      Ir a la agenda
+                      Hablar por WhatsApp
                     </a>
                   </div>
 
