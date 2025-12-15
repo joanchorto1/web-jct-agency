@@ -41,7 +41,14 @@ const Home = () => {
                     <li>✔ Enfoque práctico</li>
                     <li>✔ Resultados medibles en semanas, no en años</li>
                   </ul>
+
                 </div>
+                <ul className="home-static__micro-list" aria-label="Garantías del servicio">
+                  <li>✔ Sin compromiso</li>
+                  <li>✔ Enfoque práctico</li>
+                  <li>✔ Resultados medibles en semanas, no en años</li>
+                </ul>
+              </div>
 
                 <div className="home-static__note-card" aria-label="Diagnóstico gratuito">
                   <div className="home-static__note-pill">CTA único, claro</div>
@@ -57,6 +64,7 @@ const Home = () => {
                   </a>
                   <p className="home-static__note-subtext">Sin compromiso, solo claridad.</p>
                 </div>
+
               </div>
             </div>
           </section>
