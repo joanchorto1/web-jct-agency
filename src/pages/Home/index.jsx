@@ -19,21 +19,29 @@ const Home = () => {
 
       <Layout>
         <div className="home-static">
-          <section className="home-static__hero home-static__section" aria-labelledby="hero-heading">
-            <div className="home-static__hero-grid">
-              <div>
-                <div className="home-static__eyebrow">Digitalización sin humo</div>
-                <h1 id="hero-heading" className="home-static__hero-title">
-                  Ayudo a empresas a eliminar horas perdidas en gestión, errores y procesos manuales.
-                </h1>
-                <p className="home-static__hero-text">
-                  Nada de transformación digital genérica. Digitalización práctica para empresas de servicios, construcción e industria.
-                  Menos Excel, menos caos, más control real.
-                </p>
-                <div className="home-static__hero-actions">
-                  <a href={contactHref} className="home-static__primary-btn" aria-label="Solicitar diagnóstico gratuito">
-                    Solicitar diagnóstico gratuito
-                  </a>
+          <section className="home-static__hero" aria-labelledby="hero-heading">
+            <div className="home-static__hero-inner">
+              <div className="home-static__hero-grid">
+                <div>
+                  <div className="home-static__eyebrow">Digitalización sin humo</div>
+                  <h1 id="hero-heading" className="home-static__hero-title">
+                    Ayudo a empresas a eliminar horas perdidas en gestión, errores y procesos manuales.
+                  </h1>
+                  <p className="home-static__hero-text">
+                    Nada de transformación digital genérica. Digitalización práctica para empresas de servicios, construcción e industria.
+                    Menos Excel, menos caos, más control real.
+                  </p>
+                  <div className="home-static__hero-actions">
+                    <a href={contactHref} className="home-static__primary-btn" aria-label="Solicitar diagnóstico gratuito">
+                      Solicitar diagnóstico gratuito
+                    </a>
+                  </div>
+                  <ul className="home-static__micro-list" aria-label="Garantías del servicio">
+                    <li>✔ Sin compromiso</li>
+                    <li>✔ Enfoque práctico</li>
+                    <li>✔ Resultados medibles en semanas, no en años</li>
+                  </ul>
+
                 </div>
                 <ul className="home-static__micro-list" aria-label="Garantías del servicio">
                   <li>✔ Sin compromiso</li>
@@ -42,10 +50,21 @@ const Home = () => {
                 </ul>
               </div>
 
-              <div className="home-static__note-card" aria-label="Mensaje clave">
-                <p className="home-static__note-text">
-                  CTA único, claro. No pongas cinco botones. La gente no es tan lista como cree.
-                </p>
+                <div className="home-static__note-card" aria-label="Diagnóstico gratuito">
+                  <div className="home-static__note-pill">CTA único, claro</div>
+                  <p className="home-static__note-text">
+                    En una llamada rápida vemos dónde se pierden horas, qué automatizar y cómo empezar sin líos.
+                  </p>
+                  <a
+                    href={contactHref}
+                    className="home-static__contact-btn"
+                    aria-label="Reservar diagnóstico gratuito"
+                  >
+                    Reservar diagnóstico gratuito
+                  </a>
+                  <p className="home-static__note-subtext">Sin compromiso, solo claridad.</p>
+                </div>
+
               </div>
             </div>
           </section>
