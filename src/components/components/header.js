@@ -78,6 +78,7 @@ const Header = () => {
               <a href="#sobre-mi" onClick={closeMenu}>Sobre mí</a>
             </>
           )}
+          <a href="/consultoria" onClick={closeMenu}>Consultoría</a>
           <a href="/avero" onClick={closeMenu}>Avero</a>
           <a href="/constructpro" onClick={closeMenu}>ConstructPro</a>
           <a
