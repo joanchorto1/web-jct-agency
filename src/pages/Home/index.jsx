@@ -212,21 +212,6 @@ const Home = () => {
             </div>
           </section>
 
-          <footer className="home-static__footer" aria-label="Información de contacto">
-            <div className="home-static__footer-inner">
-              <div>
-                <strong>Joan Chorto – Consultor en digitalización empresarial</strong>
-                <p className="home-static__footer-text">Barcelona · Proyectos en toda España</p>
-              </div>
-              <div className="home-static__footer-links">
-                <a href="mailto:joan@jctagency.com">Contacto</a>
-                <span aria-hidden="true">·</span>
-                <a href="/legal">Aviso legal</a>
-                <span aria-hidden="true">·</span>
-                <a href="/privacidad">Política de privacidad</a>
-              </div>
-            </div>
-          </footer>
         </div>
       </Layout>
     </>
