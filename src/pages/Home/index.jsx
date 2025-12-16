@@ -22,7 +22,7 @@ const Home = () => {
           <section className="home-static__hero" aria-labelledby="hero-heading">
             <div className="home-static__hero-inner">
               <div className="home-static__hero-grid">
-                <div>
+                <div className="home-static__hero-copy">
                   <div className="home-static__eyebrow">Digitalización sin humo</div>
                   <h1 id="hero-heading" className="home-static__hero-title">
                     Ayudo a empresas a eliminar horas perdidas en gestión, errores y procesos manuales.
@@ -36,25 +36,20 @@ const Home = () => {
                       Solicitar diagnóstico gratuito
                     </a>
                   </div>
-                  <ul className="home-static__micro-list" aria-label="Garantías del servicio">
-                    <li>✔ Sin compromiso</li>
-                    <li>✔ Enfoque práctico</li>
-                    <li>✔ Resultados medibles en semanas, no en años</li>
+                  <ul className="home-static__checklist" aria-label="Garantías del servicio">
+                    <li>Sin compromiso</li>
+                    <li>Enfoque práctico</li>
+                    <li>Resultados medibles en semanas, no en años</li>
                   </ul>
-
                 </div>
-                <ul className="home-static__micro-list" aria-label="Garantías del servicio">
-                  <li>✔ Sin compromiso</li>
-                  <li>✔ Enfoque práctico</li>
-                  <li>✔ Resultados medibles en semanas, no en años</li>
-                </ul>
-              </div>
 
-                <div className="home-static__note-card" aria-label="Diagnóstico gratuito">
+                <aside className="home-static__hero-panel" aria-label="Diagnóstico gratuito">
                   <div className="home-static__note-pill">CTA único, claro</div>
                   <p className="home-static__note-text">
                     En una llamada rápida vemos dónde se pierden horas, qué automatizar y cómo empezar sin líos.
                   </p>
+                  <div className="home-static__panel-divider" aria-hidden="true"></div>
+                  <p className="home-static__note-subtext">Sin compromiso, solo claridad.</p>
                   <a
                     href={contactHref}
                     className="home-static__contact-btn"
@@ -62,9 +57,7 @@ const Home = () => {
                   >
                     Reservar diagnóstico gratuito
                   </a>
-                  <p className="home-static__note-subtext">Sin compromiso, solo claridad.</p>
-                </div>
-
+                </aside>
               </div>
             </div>
           </section>
@@ -74,22 +67,29 @@ const Home = () => {
               <h2 id="problema-heading" className="home-static__section-title">
                 ¿Te suena alguna de estas situaciones?
               </h2>
+              <p className="home-static__section-subtitle">
+                Las ineficiencias se repiten: facturación manual, información duplicada y procesos que dependen de una sola persona.
+                Si te reconoces aquí, es el momento de ordenar la operativa.
+              </p>
             </div>
-            <div className="home-static__cards-grid">
+            <div className="home-static__cards-grid home-static__cards-grid--columns">
               <article className="home-static__card home-static__card--list">
                 <ul>
                   <li>Facturas hechas en Excel, Word o programas que no se adaptan a tu realidad.</li>
                   <li>Horas perdidas cada semana en tareas que no aportan valor.</li>
                   <li>Información duplicada, desactualizada o directamente incorrecta.</li>
+                </ul>
+              </article>
+              <article className="home-static__card home-static__card--list">
+                <ul>
                   <li>Procesos que dependen de “la persona que sabe cómo va”.</li>
                   <li>Miedo a cambios legales como VeriFactu, pero sin tiempo para entenderlo.</li>
                   <li>Sensación constante de desorden aunque trabajes mucho.</li>
                 </ul>
-                <p className="home-static__card-text">Casi nadie lee todo, pero el que se queda aquí está cualificado.</p>
-                <div className="home-static__quote-note">
-                  Si tu empresa funciona “porque siempre se ha hecho así”, el problema no es el software. Es el sistema.
-                </div>
               </article>
+            </div>
+            <div className="home-static__quote-note">
+              Si tu empresa funciona “porque siempre se ha hecho así”, el problema no es el software. Es el sistema.
             </div>
           </section>
 
@@ -98,7 +98,7 @@ const Home = () => {
               <h2 id="solucion-heading" className="home-static__section-title">No vendo software. Diseño sistemas que funcionan.</h2>
             </div>
             <div className="home-static__cards-grid home-static__cards-grid--split">
-              <article className="home-static__card home-static__card--wide">
+              <article className="home-static__card home-static__card--wide home-static__card--elevated">
                 <p className="home-static__card-text">
                   Mi trabajo no consiste en instalar herramientas porque sí. Consiste en entender cómo funciona tu empresa,
                   detectar dónde se pierde tiempo y dinero, y construir una solución digital adaptada a tu realidad, no al revés.
@@ -209,8 +209,7 @@ const Home = () => {
             <div className="home-static__cards-grid">
               <article className="home-static__card home-static__card--wide">
                 <p className="home-static__card-text">
-                  Trabajo con empresas reales, con problemas reales y plazos reales. He desarrollado e implementado sistemas de
-                  facturación, gestión y automatización usados a diario por empresas y administraciones públicas.
+                  Trabajo con empresas reales, con problemas reales y plazos reales. He desarrollado e implementado sistemas de facturación, gestión y automatización usados a diario por empresas y administraciones públicas.
                 </p>
                 <p className="home-static__card-text">No vendo promesas. Trabajo con datos, procesos y resultados.</p>
                 <p className="home-static__card-text">(Aquí luego puedes añadir logos, casos o cifras cuando quieras)</p>
