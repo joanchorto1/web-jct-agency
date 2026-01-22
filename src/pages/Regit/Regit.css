@@ -1,0 +1,41 @@
+.regit-page {
+  background-color: #ffffff;
+}
+
+.regit-hero {
+  background: linear-gradient(120deg, #ffffff 0%, #f4f4f4 100%);
+}
+
+.regit-hero__logo {
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.regit-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  background-color: #111111;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.regit-hero__badge img {
+  width: 36px;
+  height: 36px;
+}
+
+.regit-card {
+  background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .regit-hero__logo {
+    padding: 1.5rem;
+  }
+}

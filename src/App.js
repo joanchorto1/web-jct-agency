@@ -27,6 +27,7 @@ const ResourcesPage = lazy(() => import('./pages/Resources'));
 const ContactReservationPage = lazy(() => import('./pages/ContactReservation'));
 const ConstructProPage = lazy(() => import('./pages/ConstructPro'));
 const ConsultingPage = lazy(() => import('./pages/Consultoria'));
+const RegitPage = lazy(() => import('./pages/Regit'));
 
 function App() {
   useEffect(() => {
@@ -50,6 +51,7 @@ function App() {
           <Route path="/contacte" element={<ContactReservationPage />} />
           <Route path="/contacto" element={<ContactReservationPage />} />
           <Route path="/constructpro" element={<ConstructProPage />} />
+          <Route path="/regit" element={<RegitPage />} />
           <Route path="/consultoria" element={<ConsultingPage />} />
           <Route path="/avero" element={<Avero />} />
           <Route path="/blog" element={<Blog />} />

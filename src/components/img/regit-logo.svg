@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Regit logo">
+  <rect width="240" height="240" rx="32" fill="#111111"/>
+  <path d="M70 60h52c36 0 62 24 62 60 0 36-26 60-62 60H70V60zm48 40H104v80h14c22 0 38-16 38-40 0-24-16-40-38-40z" fill="#ffffff"/>
+  <circle cx="168" cy="140" r="20" fill="#ffffff"/>
+</svg>
