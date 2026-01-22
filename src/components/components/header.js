@@ -71,13 +71,6 @@ const Header = () => {
           className={`home-static__nav${isMenuOpen ? ' is-open' : ''}`}
           aria-label="Navegación principal"
         >
-          {isHomeRoute && (
-            <>
-              <a href="#metodo" onClick={closeMenu}>Método</a>
-              <a href="#resultados" onClick={closeMenu}>Resultados</a>
-              <a href="#sobre-mi" onClick={closeMenu}>Sobre mí</a>
-            </>
-          )}
           <a href="/consultoria" onClick={closeMenu}>Consultoría</a>
           <a href="/avero" onClick={closeMenu}>Avero</a>
           <a href="/constructpro" onClick={closeMenu}>ConstructPro</a>
