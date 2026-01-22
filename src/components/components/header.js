@@ -6,24 +6,10 @@ const whatsappDiagnostic = 'https://wa.me/34633391411?text=Hola%20Joan%2C%20vull
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isHomeRoute, setIsHomeRoute] = useState(() => {
-    if (typeof window === 'undefined') {
-      return false;
-    }
-
-    const { pathname, hash } = window.location;
-    return pathname === '/' || hash === '#';
-  });
-
   useEffect(() => {
     if (typeof window === 'undefined') {
       return undefined;
     }
-
-    const handleLocationChange = () => {
-      const { pathname, hash } = window.location;
-      setIsHomeRoute(pathname === '/' || hash === '#');
-    };
 
     const handleResize = () => {
       if (window.innerWidth > 992) {
@@ -31,12 +17,8 @@ const Header = () => {
       }
     };
 
-    window.addEventListener('hashchange', handleLocationChange);
-    window.addEventListener('popstate', handleLocationChange);
     window.addEventListener('resize', handleResize);
     return () => {
-      window.removeEventListener('hashchange', handleLocationChange);
-      window.removeEventListener('popstate', handleLocationChange);
       window.removeEventListener('resize', handleResize);
     };
   }, []);
