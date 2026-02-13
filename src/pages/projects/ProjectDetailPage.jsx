@@ -29,7 +29,7 @@ function ProjectDetailPage() {
       </Helmet>
 
       <div className="site-container">
-        <article className="seo-detail-card">
+        <article className="seo-detail-card" data-aos="fade-up">
           <p className="eyebrow">Caso real · {project.sector}</p>
           <h1>{project.title}</h1>
 

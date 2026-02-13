@@ -22,7 +22,7 @@ function ConsultingPage() {
   return (
     <section className="section page-headroom">
       <div className="site-container">
-        <div className="section-title-row">
+        <div className="section-title-row" data-aos="fade-up">
           <p className="eyebrow">Consultoría estratégica</p>
           <h1>Intervención de alto nivel para empresas que quieren escalar con orden</h1>
           <p>
@@ -32,7 +32,7 @@ function ConsultingPage() {
         </div>
 
         <div className="consulting-layout">
-          <article className="consulting-card">
+          <article className="consulting-card" data-aos="fade-up">
             <h2>Cuándo necesitas consultoría estratégica</h2>
             <ul>
               {moments.map((item) => (
@@ -41,7 +41,7 @@ function ConsultingPage() {
             </ul>
           </article>
 
-          <article className="consulting-card">
+          <article className="consulting-card" data-aos="fade-up">
             <h2>Transformaciones que se pueden ejecutar</h2>
             <ul>
               {transformations.map((item) => (
@@ -50,7 +50,7 @@ function ConsultingPage() {
             </ul>
           </article>
 
-          <article className="consulting-card">
+          <article className="consulting-card" data-aos="fade-up">
             <h2>Impacto esperado en negocio</h2>
             <ul>
               {impact.map((item) => (
@@ -60,7 +60,7 @@ function ConsultingPage() {
           </article>
         </div>
 
-        <div className="cta-box cta-box--consulting">
+        <div className="cta-box cta-box--consulting" data-aos="fade-up">
           <h2>Si estás en fase de crecimiento, necesitas estructura para sostenerlo.</h2>
           <a href="/contacto#reserva" className="btn-primary">
             Solicita reunión estratégica

@@ -44,14 +44,14 @@ function ContactPage() {
   return (
     <section className="section page-headroom">
       <div className="site-container">
-        <div className="section-title-row">
+        <div className="section-title-row" data-aos="fade-up">
           <p className="eyebrow">Contacto</p>
           <h1>Hablemos de tu siguiente fase empresarial</h1>
           <p>Cuéntame tu contexto y revisamos cómo transformar operaciones, gestión y resultados.</p>
         </div>
 
         <div className="contact-grid">
-          <article className="contact-card">
+          <article className="contact-card" data-aos="fade-up">
             <h2>Formulario</h2>
             <form onSubmit={onSubmit} className="contact-form">
               <label htmlFor="nombre">Nombre y apellidos</label>
@@ -90,7 +90,7 @@ function ContactPage() {
             </form>
           </article>
 
-          <article className="contact-card" id="reserva">
+          <article className="contact-card" id="reserva" data-aos="fade-up">
             <h2>Reserva de sesión</h2>
             <p>
               Agenda una sesión estratégica de 20 minutos para revisar prioridades, bloqueos operativos y margen de

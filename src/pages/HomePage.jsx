@@ -42,7 +42,7 @@ function HomePage() {
       <div className="site-container">
         <div className="welcome-frame">
           <section className="welcome-hero" style={{ backgroundImage: `url(${heroBackground})` }}>
-            <div className="welcome-hero__content">
+            <div className="welcome-hero__content" data-aos="fade-up">
               <h1>Consultoría Estratégica para Empresas</h1>
               <p>
                 Ayudo a empresarios de pymes industriales, construcción y servicios a mejorar procesos, reducir costes
@@ -59,7 +59,7 @@ function HomePage() {
             </div>
           </section>
 
-          <section className="welcome-logos">
+          <section className="welcome-logos" data-aos="fade-up">
             <h2>Empresas con las que he trabajado</h2>
             <div className="welcome-logos__list">
               {partnerLogos.map((logo) => (
@@ -68,13 +68,14 @@ function HomePage() {
             </div>
           </section>
 
-          <section className="welcome-services">
+          <section className="welcome-services" data-aos="fade-up">
             <h2>Servicios de Consultoría</h2>
             <div className="welcome-services__grid">
               {serviceCards.map((service) => (
                 <article
                   key={service.title}
                   className="welcome-service-card"
+                  data-aos="zoom-in-up"
                   style={{ backgroundImage: `linear-gradient(180deg, rgba(12, 12, 12, 0.2), rgba(10, 10, 10, 0.86)), url(${service.image})` }}
                 >
                   <h3>{service.title}</h3>
@@ -86,11 +87,11 @@ function HomePage() {
             </a>
           </section>
 
-          <section className="welcome-testimonials">
+          <section className="welcome-testimonials" data-aos="fade-up">
             <h2>Opiniones de Clientes</h2>
             <div className="welcome-testimonials__grid">
               {testimonials.map((item) => (
-                <article key={item.author} className="welcome-testimonial-card">
+                <article key={item.author} className="welcome-testimonial-card" data-aos="fade-up">
                   <span className="welcome-testimonial-card__quote">“</span>
                   <p>{item.quote}</p>
                   <div className="welcome-testimonial-card__stars">★★★★★</div>
@@ -101,7 +102,7 @@ function HomePage() {
             </div>
           </section>
 
-          <section className="welcome-metrics">
+          <section className="welcome-metrics" data-aos="fade-up">
             {metrics.map((metric) => (
               <article key={metric.label}>
                 <span>{metric.value}</span>

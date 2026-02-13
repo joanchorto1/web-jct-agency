@@ -29,7 +29,7 @@ function ServiceDetailPage() {
       </Helmet>
 
       <div className="site-container">
-        <article className="seo-detail-card">
+        <article className="seo-detail-card" data-aos="fade-up">
           <p className="eyebrow">Servicio especializado</p>
           <h1>{service.title}</h1>
           <p className="seo-detail-intro">{service.intro}</p>
@@ -47,7 +47,7 @@ function ServiceDetailPage() {
           <h2>Preguntas frecuentes</h2>
           <div className="seo-faq-grid">
             {service.faqs.map((faq) => (
-              <article key={faq.q} className="seo-faq-item">
+              <article key={faq.q} className="seo-faq-item" data-aos="fade-up">
                 <h3>{faq.q}</h3>
                 <p>{faq.a}</p>
               </article>

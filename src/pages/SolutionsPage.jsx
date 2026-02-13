@@ -15,7 +15,7 @@ function SolutionsPage() {
       </Helmet>
 
       <div className="site-container">
-        <div className="section-title-row">
+        <div className="section-title-row" data-aos="fade-up">
           <p className="eyebrow">Soluciones</p>
           <h1>Servicios especializados para transformar gestión y eficiencia</h1>
           <p>
@@ -27,7 +27,7 @@ function SolutionsPage() {
 
         <div className="solution-grid">
           {services.map((service) => (
-            <article key={service.slug} className="solution-card">
+            <article key={service.slug} className="solution-card" data-aos="fade-up">
               <h2>{service.shortTitle}</h2>
               <p>{service.excerpt}</p>
               <Link to={`/soluciones/${service.slug}`} className="seo-link-button">

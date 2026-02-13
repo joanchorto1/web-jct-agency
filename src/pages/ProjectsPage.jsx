@@ -15,7 +15,7 @@ function ProjectsPage() {
       </Helmet>
 
       <div className="site-container">
-        <div className="section-title-row">
+        <div className="section-title-row" data-aos="fade-up">
           <p className="eyebrow">Casos reales</p>
           <h1>Proyectos ejecutados con impacto medible</h1>
           <p>
@@ -26,7 +26,7 @@ function ProjectsPage() {
 
         <div className="project-list">
           {projects.map((project) => (
-            <article key={project.slug} className="project-card">
+            <article key={project.slug} className="project-card" data-aos="fade-up">
               <h2>{project.title}</h2>
               <ul>
                 <li>
