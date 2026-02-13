@@ -1,47 +1,38 @@
 import React from 'react';
-
-const solutions = [
-  {
-    name: 'Avero',
-    description:
-      'Sistema de control operativo para ordenar tareas, validar ejecución y reducir trabajo administrativo duplicado.',
-  },
-  {
-    name: 'ConstructPro',
-    description:
-      'Entorno para seguimiento de obra, control de costes y coordinación técnica con información consolidada en tiempo real.',
-  },
-  {
-    name: 'RegIT',
-    description:
-      'Plataforma para trazabilidad documental, cumplimiento y estandarización de procesos críticos en equipos exigentes.',
-  },
-  {
-    name: 'Proyectos a medida',
-    description:
-      'Desarrollo de herramientas específicas cuando la operación requiere flujos, reglas y paneles adaptados al negocio.',
-  },
-];
+import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
+import { services } from '../data/seoContent';
 
 function SolutionsPage() {
   return (
     <section className="section page-headroom">
+      <Helmet>
+        <title>Soluciones de consultoría para pymes | Joan Chorto Consultor</title>
+        <meta
+          name="description"
+          content="Soluciones de consultoría para pymes industriales, construcción y servicios: optimización de procesos, sistemas digitales, ERP y desarrollo a medida."
+        />
+      </Helmet>
+
       <div className="site-container">
         <div className="section-title-row">
           <p className="eyebrow">Soluciones</p>
-          <h1>Herramientas integradas en una estrategia empresarial</h1>
+          <h1>Servicios especializados para transformar gestión y eficiencia</h1>
           <p>
-            No se trata de vender software. Se trata de implantar sistemas que sostengan decisiones, ejecución y
-            rentabilidad en cada área de la empresa.
+            Cada solución tiene una landing específica para resolver necesidades concretas en industria, construcción
+            y servicios.
           </p>
           <p className="key-message">Cada empresa necesita un sistema diferente.</p>
         </div>
 
         <div className="solution-grid">
-          {solutions.map((solution) => (
-            <article key={solution.name} className="solution-card">
-              <h2>{solution.name}</h2>
-              <p>{solution.description}</p>
+          {services.map((service) => (
+            <article key={service.slug} className="solution-card">
+              <h2>{service.shortTitle}</h2>
+              <p>{service.excerpt}</p>
+              <Link to={`/soluciones/${service.slug}`} className="seo-link-button">
+                Ver servicio
+              </Link>
             </article>
           ))}
         </div>

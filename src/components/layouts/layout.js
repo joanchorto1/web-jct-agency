@@ -55,12 +55,12 @@ const Layout = ({ children, stickyVisibility = 'all' }) => {
               </div>
               <div className="col-md-6 text-center text-md-end footer-contact">
                 <p className="mb-1">
-                  <a href="mailto:joan@joanchorto.com" className="fw-semibold">joan@joanchorto.com</a>
+                  <a href="mailto:joan@jctagency.com" className="fw-semibold">joan@jctagency.com</a>
                 </p>
                 <p className="mb-1">
-                  <a href="tel:+34633391411" className="fw-semibold">+34 633 391 411</a>
+                  <a href="tel:+34633391411" className="fw-semibold">633391411</a>
                 </p>
-                <p className="mb-0 text-muted small">Properament compartiré novetats i recursos al meu LinkedIn professional.</p>
+                <p className="mb-0 text-muted small">L'Aldea Tarragona 43896</p>
               </div>
             </div>
             <div className="footer-sub text-center text-muted small mt-5 pt-3 border-top">

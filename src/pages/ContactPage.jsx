@@ -101,8 +101,10 @@ function ContactPage() {
             </a>
 
             <div className="contact-direct">
-              <h3>Email directo</h3>
-              <a href="mailto:joan@joanchorto.com">joan@joanchorto.com</a>
+              <h3>Contacto directo</h3>
+              <a href="mailto:joan@jctagency.com">joan@jctagency.com</a>
+              <a href="tel:+34633391411">633391411</a>
+              <span>L'Aldea Tarragona 43896</span>
             </div>
           </article>
         </div>

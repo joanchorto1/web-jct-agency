@@ -95,6 +95,12 @@ a {
   gap: 12px;
 }
 
+.site-brand__logo {
+  width: 42px;
+  height: 42px;
+  display: block;
+}
+
 .site-brand__mark {
   width: 42px;
   height: 42px;
@@ -348,6 +354,72 @@ a {
   line-height: 1.6;
 }
 
+.seo-link-button {
+  margin-top: 14px;
+  display: inline-flex;
+  text-decoration: none;
+  color: var(--gold-400);
+  border: 1px solid var(--line);
+  padding: 9px 14px;
+  border-radius: 8px;
+}
+
+.seo-detail-card {
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(22, 22, 26, 0.86), rgba(14, 14, 18, 0.9));
+  padding: clamp(22px, 3.8vw, 44px);
+  display: grid;
+  gap: 14px;
+}
+
+.seo-detail-card h1 {
+  font-size: clamp(1.9rem, 3.2vw, 3rem);
+}
+
+.seo-detail-card h2 {
+  margin-top: 10px;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+}
+
+.seo-detail-card p,
+.seo-detail-card li {
+  color: var(--text-200);
+  line-height: 1.7;
+}
+
+.seo-detail-card ul {
+  margin: 0;
+  padding-left: 22px;
+  display: grid;
+  gap: 8px;
+}
+
+.seo-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.seo-faq-item {
+  border: 1px solid var(--line-soft);
+  border-radius: 12px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.seo-faq-item h3 {
+  font-size: 1.02rem;
+  margin-bottom: 8px;
+}
+
+.seo-detail-actions {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 .key-message {
   color: var(--gold-400) !important;
   font-size: 1.1rem;
@@ -397,6 +469,11 @@ a {
 
 .contact-direct a {
   color: var(--gold-400);
+}
+
+.contact-direct span {
+  color: var(--text-200);
+  font-size: 0.95rem;
 }
 
 .form-status {
@@ -731,7 +808,8 @@ a {
 
   .welcome-services__grid,
   .welcome-testimonials__grid,
-  .welcome-metrics {
+  .welcome-metrics,
+  .seo-faq-grid {
     grid-template-columns: 1fr;
   }
 }

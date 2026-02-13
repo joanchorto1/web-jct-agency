@@ -1,11 +1,12 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
+import jcLogo from './img/joan-chorto-consultor-logo.svg';
 
 const navItems = [
   { label: 'Inicio', to: '/' },
-  { label: 'Sobre mí', to: '/consultoria' },
-  { label: 'Servicios', to: '/soluciones' },
   { label: 'Proyectos', to: '/proyectos' },
+  { label: 'Soluciones', to: '/soluciones' },
+  { label: 'Consultoría', to: '/consultoria' },
   { label: 'Contacto', to: '/contacto' },
 ];
 
@@ -17,7 +18,7 @@ function SiteLayout() {
       <header className="site-header">
         <div className="site-container site-header__inner">
           <NavLink to="/" className="site-brand" aria-label="Joan Chorto Consultor, inicio">
-            <span className="site-brand__mark">JC</span>
+            <img src={jcLogo} alt="Logo JC" className="site-brand__logo" />
             <span className="site-brand__name">Joan Chorto Consultor</span>
           </NavLink>
 
@@ -48,7 +49,7 @@ function SiteLayout() {
         <div className="site-container site-footer__inner">
           <div>
             <div className="site-brand site-brand--footer">
-              <span className="site-brand__mark">JC</span>
+              <img src={jcLogo} alt="Logo JC" className="site-brand__logo" />
               <span className="site-brand__name">Joan Chorto Consultor</span>
             </div>
             <p>
@@ -57,9 +58,9 @@ function SiteLayout() {
             </p>
           </div>
           <div className="site-footer__contact">
-            <a href="mailto:joan@joanchorto.com">joan@joanchorto.com</a>
-            <a href="tel:+34633391411">+34 633 391 411</a>
-            <span>Barcelona · Consultoría para toda España</span>
+            <a href="mailto:joan@jctagency.com">joan@jctagency.com</a>
+            <a href="tel:+34633391411">633391411</a>
+            <span>L'Aldea Tarragona 43896</span>
           </div>
         </div>
       </footer>

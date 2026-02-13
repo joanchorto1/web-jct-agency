@@ -5,7 +5,7 @@ import serviceTwo from '../components/img/captura2.png';
 import serviceThree from '../components/img/captura3.png';
 import serviceFour from '../components/img/fondoHome.jpg';
 
-const partnerLogos = ['FICOSA', 'Rankta', 'CaixaBank', 'Damm', 'Cosentino', 'DKV'];
+const partnerLogos = ['EGEA Arquitectura', 'VIM House', "Ajuntament de L'Aldea", 'Curmac Elevacions'];
 
 const serviceCards = [
   { title: 'Implantación de nuevos sistemas digitales', image: serviceOne },

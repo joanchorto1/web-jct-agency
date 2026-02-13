@@ -1,4 +1,4 @@
-const EMAIL_ADDRESS = 'joan@joanchorto.com';
+const EMAIL_ADDRESS = 'joan@jctagency.com';
 
 const EMAIL_SUBJECTS = {
   constructProInfo: 'Auditoria ConstructPro',

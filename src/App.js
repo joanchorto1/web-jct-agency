@@ -6,6 +6,8 @@ import ProjectsPage from './pages/ProjectsPage';
 import SolutionsPage from './pages/SolutionsPage';
 import ConsultingPage from './pages/ConsultingPage';
 import ContactPage from './pages/ContactPage';
+import ServiceDetailPage from './pages/services/ServiceDetailPage';
+import ProjectDetailPage from './pages/projects/ProjectDetailPage';
 import './site.css';
 
 function App() {
@@ -18,9 +20,13 @@ function App() {
           <Route path="/projectes" element={<ProjectsPage />} />
           <Route path="/soluciones" element={<SolutionsPage />} />
           <Route path="/solucions" element={<SolutionsPage />} />
+          <Route path="/soluciones/:slug" element={<ServiceDetailPage />} />
+          <Route path="/solucions/:slug" element={<ServiceDetailPage />} />
           <Route path="/consultoria" element={<ConsultingPage />} />
           <Route path="/contacto" element={<ContactPage />} />
           <Route path="/contacte" element={<ContactPage />} />
+          <Route path="/proyectos/:slug" element={<ProjectDetailPage />} />
+          <Route path="/projectes/:slug" element={<ProjectDetailPage />} />
         </Route>
 
         <Route path="/home" element={<Navigate to="/" replace />} />
