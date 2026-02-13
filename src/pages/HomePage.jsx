@@ -1,113 +1,120 @@
 import React from 'react';
+import heroImage from '../components/img/Man.png';
+import serviceOne from '../components/img/captura1.png';
+import serviceTwo from '../components/img/captura2.png';
+import serviceThree from '../components/img/captura3.png';
+import serviceFour from '../components/img/fondoHome.jpg';
 
-const metrics = [
-  { value: '+34%', label: 'Mejora media de eficiencia operativa en 12 meses' },
-  { value: '150M€', label: 'Volumen gestionado en proyectos de transformación' },
-  { value: '+200', label: 'Empresas asesoradas en industria, construcción y servicios' },
-];
+const partnerLogos = ['FICOSA', 'Rankta', 'CaixaBank', 'Damm', 'Cosentino', 'DKV'];
 
-const services = [
-  'Optimización de procesos',
-  'Implantación de sistemas digitales',
-  'ERP y herramientas propias',
-  'Desarrollo a medida',
+const serviceCards = [
+  { title: 'Implantación de nuevos sistemas digitales', image: serviceOne },
+  { title: 'Optimización de procesos de producción', image: serviceTwo },
+  { title: 'Reestructuración organizativa', image: serviceThree },
+  { title: 'Optimización integral de procesos', image: serviceFour },
 ];
 
 const testimonials = [
   {
     quote:
-      'En 5 meses redujimos un 29% los tiempos de cierre administrativo y mejoramos el control de costes de obra.',
-    author: 'Director General · Empresa constructora (65 empleados)',
+      'JC Consultor nos ayudó a optimizar procesos clave de producción, logrando mejoras significativas en eficiencia y control.',
+    author: 'Marta Gómez',
+    role: 'Dirección Operativa · Damm',
   },
   {
     quote:
-      'Pasamos de gestión reactiva a control diario de márgenes. La mejora fue inmediata y medible desde el primer trimestre.',
-    author: 'Gerencia · Pyme industrial (42 empleados)',
+      'Gracias a su enfoque estratégico implantamos una transformación digital efectiva que mejoró la coordinación de toda la empresa.',
+    author: 'Lluís Ferrer',
+    role: 'Dirección General · CaixaBank',
   },
+];
+
+const metrics = [
+  { value: '+76%', label: 'Incremento en eficiencia' },
+  { value: '+150M€', label: 'Facturación impulsada' },
+  { value: '+200', label: 'Empresas asesoradas' },
+  { value: '+200', label: 'Proyectos implementados' },
 ];
 
 function HomePage() {
   return (
-    <>
-      <section className="hero">
-        <div className="site-container hero__grid">
-          <div>
-            <p className="eyebrow">Transformación empresarial para pymes</p>
-            <h1>Mejoramos procesos. Reducimos costes. Digitalizamos empresas.</h1>
-            <p className="lead">
-              Ayudo a empresarios a recuperar control sobre su operación, acelerar la toma de decisiones y convertir la
-              gestión en una ventaja competitiva real.
-            </p>
-            <a href="/contacto#reserva" className="btn-primary">
-              Reserva una sesión
-            </a>
-          </div>
-          <aside className="hero__panel">
-            <h2>Qué obtienes</h2>
-            <ul>
-              <li>Diagnóstico directo de cuellos de botella críticos.</li>
-              <li>Plan de transformación por fases y prioridades.</li>
-              <li>Implantación con foco en retorno económico.</li>
-            </ul>
-          </aside>
-        </div>
-      </section>
+    <section className="welcome">
+      <div className="site-container">
+        <div className="welcome-frame">
+          <section className="welcome-hero">
+            <div className="welcome-hero__content">
+              <h1>Consultoría Estratégica para Empresas</h1>
+              <p>
+                Ayudo a empresarios de pymes industriales, construcción y servicios a mejorar procesos, reducir costes
+                y escalar con una gestión más eficiente.
+              </p>
+              <a href="/contacto#reserva" className="btn-primary">
+                Reserva una sesión
+              </a>
+              <ul>
+                <li>Análisis y diagnóstico empresarial</li>
+                <li>Estrategias personalizadas</li>
+                <li>Gestión del cambio</li>
+              </ul>
+            </div>
+            <div className="welcome-hero__image">
+              <img src={heroImage} alt="Consultor trabajando en estrategia empresarial" />
+            </div>
+          </section>
 
-      <section className="section">
-        <div className="site-container">
-          <div className="metrics-grid">
+          <section className="welcome-logos">
+            <h2>Empresas con las que he trabajado</h2>
+            <div className="welcome-logos__list">
+              {partnerLogos.map((logo) => (
+                <span key={logo}>{logo}</span>
+              ))}
+            </div>
+          </section>
+
+          <section className="welcome-services">
+            <h2>Servicios de Consultoría</h2>
+            <div className="welcome-services__grid">
+              {serviceCards.map((service) => (
+                <article
+                  key={service.title}
+                  className="welcome-service-card"
+                  style={{ backgroundImage: `linear-gradient(180deg, rgba(12, 12, 12, 0.2), rgba(10, 10, 10, 0.86)), url(${service.image})` }}
+                >
+                  <h3>{service.title}</h3>
+                </article>
+              ))}
+            </div>
+            <a className="welcome-secondary-cta" href="/proyectos">
+              Ver más proyectos
+            </a>
+          </section>
+
+          <section className="welcome-testimonials">
+            <h2>Opiniones de Clientes</h2>
+            <div className="welcome-testimonials__grid">
+              {testimonials.map((item) => (
+                <article key={item.author} className="welcome-testimonial-card">
+                  <span className="welcome-testimonial-card__quote">“</span>
+                  <p>{item.quote}</p>
+                  <div className="welcome-testimonial-card__stars">★★★★★</div>
+                  <strong>{item.author}</strong>
+                  <span>{item.role}</span>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="welcome-metrics">
             {metrics.map((metric) => (
-              <article key={metric.label} className="metric-card">
+              <article key={metric.label}>
                 <span>{metric.value}</span>
                 <p>{metric.label}</p>
               </article>
             ))}
-          </div>
+          </section>
         </div>
-      </section>
-
-      <section className="section">
-        <div className="site-container">
-          <div className="section-title-row">
-            <h2>Servicios principales</h2>
-            <p>Intervenciones ejecutadas para eliminar fricción operativa y profesionalizar la gestión.</p>
-          </div>
-          <div className="service-grid">
-            {services.map((service) => (
-              <article key={service} className="service-card">
-                {service}
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="site-container">
-          <div className="section-title-row">
-            <h2>Resultados que ya han conseguido otros equipos</h2>
-            <p>Sin teoría vacía. Sin presentaciones decorativas. Solo mejoras aplicadas y medibles.</p>
-          </div>
-          <div className="testimonial-grid">
-            {testimonials.map((item) => (
-              <article key={item.author} className="testimonial-card">
-                <p>“{item.quote}”</p>
-                <span>{item.author}</span>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section section--cta">
-        <div className="site-container cta-box">
-          <h2>Si quieres crecer sin perder control, este es el siguiente paso.</h2>
-          <a href="/contacto#reserva" className="btn-primary">
-            Reserva una sesión
-          </a>
-        </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
 

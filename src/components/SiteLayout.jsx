@@ -2,10 +2,10 @@ import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 
 const navItems = [
-  { label: 'Home', to: '/' },
+  { label: 'Inicio', to: '/' },
+  { label: 'Sobre mí', to: '/consultoria' },
+  { label: 'Servicios', to: '/soluciones' },
   { label: 'Proyectos', to: '/proyectos' },
-  { label: 'Soluciones', to: '/soluciones' },
-  { label: 'Consultoría', to: '/consultoria' },
   { label: 'Contacto', to: '/contacto' },
 ];
 
@@ -35,7 +35,7 @@ function SiteLayout() {
           </nav>
 
           <a href="/contacto#reserva" className="site-header__cta">
-            Reserva una sesión
+            Contactar
           </a>
         </div>
       </header>
@@ -63,10 +63,6 @@ function SiteLayout() {
           </div>
         </div>
       </footer>
-
-      <a href="/contacto#reserva" className="site-fixed-cta">
-        Reserva una sesión
-      </a>
     </div>
   );
 }
