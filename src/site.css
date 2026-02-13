@@ -466,17 +466,29 @@ a {
 }
 
 .welcome-hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  position: relative;
   min-height: 560px;
   border-bottom: 1px solid var(--line-soft);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.welcome-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(8, 8, 10, 0.86) 0%, rgba(8, 8, 10, 0.58) 45%, rgba(8, 8, 10, 0.22) 100%);
 }
 
 .welcome-hero__content {
+  position: relative;
+  z-index: 1;
   padding: 56px 42px 40px;
   display: grid;
   align-content: center;
   gap: 18px;
+  max-width: 56%;
 }
 
 .welcome-hero__content h1 {
@@ -510,26 +522,6 @@ a {
   position: absolute;
   left: 0;
   top: 0;
-}
-
-.welcome-hero__image {
-  position: relative;
-  overflow: hidden;
-}
-
-.welcome-hero__image::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 16% 20%, rgba(228, 209, 164, 0.25), transparent 52%),
-    linear-gradient(90deg, rgba(11, 11, 13, 0.6), rgba(11, 11, 13, 0.1));
-}
-
-.welcome-hero__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
 }
 
 .welcome-logos,
@@ -717,16 +709,13 @@ a {
   }
 
   .welcome-hero {
-    grid-template-columns: 1fr;
     min-height: auto;
+    background-position: 66% center;
   }
 
   .welcome-hero__content {
     padding: 34px 22px 20px;
-  }
-
-  .welcome-hero__image {
-    min-height: 330px;
+    max-width: 100%;
   }
 
   .welcome-logos,

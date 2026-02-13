@@ -1,5 +1,5 @@
 import React from 'react';
-import heroImage from '../components/img/Man.png';
+import heroBackground from '../components/img/hero_section-jc.png';
 import serviceOne from '../components/img/captura1.png';
 import serviceTwo from '../components/img/captura2.png';
 import serviceThree from '../components/img/captura3.png';
@@ -41,7 +41,7 @@ function HomePage() {
     <section className="welcome">
       <div className="site-container">
         <div className="welcome-frame">
-          <section className="welcome-hero">
+          <section className="welcome-hero" style={{ backgroundImage: `url(${heroBackground})` }}>
             <div className="welcome-hero__content">
               <h1>Consultoría Estratégica para Empresas</h1>
               <p>
@@ -56,9 +56,6 @@ function HomePage() {
                 <li>Estrategias personalizadas</li>
                 <li>Gestión del cambio</li>
               </ul>
-            </div>
-            <div className="welcome-hero__image">
-              <img src={heroImage} alt="Consultor trabajando en estrategia empresarial" />
             </div>
           </section>
 
