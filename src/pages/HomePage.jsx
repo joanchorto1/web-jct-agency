@@ -1,17 +1,13 @@
 import React from 'react';
 import heroBackground from '../components/img/hero_section-jc.png';
-import serviceOne from '../components/img/captura1.png';
-import serviceTwo from '../components/img/captura2.png';
-import serviceThree from '../components/img/captura3.png';
-import serviceFour from '../components/img/fondoHome.jpg';
 
 const partnerLogos = ['EGEA Arquitectura', 'VIM House', "Ajuntament de L'Aldea", 'Curmac Elevacions'];
 
 const serviceCards = [
-  { title: 'Implantación de nuevos sistemas digitales', image: serviceOne },
-  { title: 'Optimización de procesos de producción', image: serviceTwo },
-  { title: 'Reestructuración organizativa', image: serviceThree },
-  { title: 'Optimización integral de procesos', image: serviceFour },
+  { title: 'Implantación de nuevos sistemas digitales' },
+  { title: 'Optimización de procesos de producción' },
+  { title: 'Reestructuración organizativa' },
+  { title: 'Optimización integral de procesos' },
 ];
 
 const testimonials = [
@@ -72,12 +68,7 @@ function HomePage() {
             <h2>Servicios de Consultoría</h2>
             <div className="welcome-services__grid">
               {serviceCards.map((service) => (
-                <article
-                  key={service.title}
-                  className="welcome-service-card"
-                  data-aos="zoom-in-up"
-                  style={{ backgroundImage: `linear-gradient(180deg, rgba(12, 12, 12, 0.2), rgba(10, 10, 10, 0.86)), url(${service.image})` }}
-                >
+                <article key={service.title} className="welcome-service-card" data-aos="zoom-in-up">
                   <h3>{service.title}</h3>
                 </article>
               ))}
