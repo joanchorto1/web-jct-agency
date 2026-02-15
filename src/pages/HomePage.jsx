@@ -15,13 +15,13 @@ const testimonials = [
     quote:
       'JC Consultor nos ayudó a optimizar procesos clave de producción, logrando mejoras significativas en eficiencia y control.',
     author: 'Marta Gómez',
-    role: 'Dirección Operativa · Damm',
+    role: 'Dirección Operativa',
   },
   {
     quote:
       'Gracias a su enfoque estratégico implantamos una transformación digital efectiva que mejoró la coordinación de toda la empresa.',
     author: 'Lluís Ferrer',
-    role: 'Dirección General · CaixaBank',
+    role: 'Dirección General',
   },
 ];
 
