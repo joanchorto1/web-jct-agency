@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import { Link, NavLink, Outlet } from 'react-router-dom';
 import jcLogo from './img/joan-chorto-consultor-logo.svg';
 
 const navItems = [
@@ -56,6 +56,9 @@ function SiteLayout() {
               Consultoría empresarial para pymes industriales, construcción y servicios. Transformación operativa con
               foco en resultados medibles.
             </p>
+            <div className="site-footer__legal">
+              <Link to="/politica-privacidad">Política de privacidad / Privacy Policy</Link>
+            </div>
           </div>
           <div className="site-footer__contact">
             <a href="mailto:joan@jctagency.com">joan@jctagency.com</a>

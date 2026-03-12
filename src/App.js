@@ -10,6 +10,7 @@ import ConsultingPage from './pages/ConsultingPage';
 import ContactPage from './pages/ContactPage';
 import ServiceDetailPage from './pages/services/ServiceDetailPage';
 import ProjectDetailPage from './pages/projects/ProjectDetailPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import './site.css';
 
 function ScrollAnimator() {
@@ -47,6 +48,8 @@ function App() {
           <Route path="/consultoria" element={<ConsultingPage />} />
           <Route path="/contacto" element={<ContactPage />} />
           <Route path="/contacte" element={<ContactPage />} />
+          <Route path="/politica-privacidad" element={<PrivacyPolicyPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
           <Route path="/proyectos/:slug" element={<ProjectDetailPage />} />
           <Route path="/projectes/:slug" element={<ProjectDetailPage />} />
         </Route>
