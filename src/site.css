@@ -600,8 +600,8 @@ a {
 
 .home-premium__hero-title {
   max-width: 1180px;
-  font-size: clamp(4rem, 8.5vw, 7.4rem);
-  line-height: 0.98;
+  font-size: clamp(3rem, 6.9vw, 5.9rem);
+  line-height: 1.02;
   letter-spacing: -0.05em;
 }
 
@@ -613,7 +613,7 @@ a {
 .home-premium__hero-copy {
   max-width: 900px;
   color: var(--text-200);
-  font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+  font-size: clamp(1.1rem, 1.9vw, 1.45rem);
   line-height: 1.5;
 }
 
@@ -676,8 +676,8 @@ a {
 
 .home-premium__problem-inner h2,
 .home-premium__section-head h2 {
-  font-size: clamp(3rem, 6.1vw, 5.8rem);
-  line-height: 1.03;
+  font-size: clamp(2.3rem, 4.8vw, 4.4rem);
+  line-height: 1.08;
   letter-spacing: -0.04em;
 }
 
@@ -686,7 +686,7 @@ a {
 .home-premium__case-card p,
 .home-premium__phase-card p {
   color: var(--text-200);
-  font-size: clamp(1.18rem, 2vw, 1.55rem);
+  font-size: clamp(1rem, 1.5vw, 1.22rem);
   line-height: 1.65;
 }
 
@@ -725,7 +725,7 @@ a {
 .home-premium__reason-card h3,
 .home-premium__case-card h3,
 .home-premium__phase-content h3 {
-  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-size: clamp(1.55rem, 2.2vw, 2.15rem);
   margin-bottom: 20px;
   letter-spacing: -0.03em;
 }
@@ -763,7 +763,7 @@ a {
 .home-premium__case-metric {
   color: var(--gold-500);
   font-family: 'Sora', 'Segoe UI', sans-serif;
-  font-size: clamp(4.2rem, 7vw, 6.8rem);
+  font-size: clamp(3.2rem, 5.5vw, 5.3rem);
   letter-spacing: -0.06em;
   line-height: 1;
 }
@@ -903,7 +903,7 @@ a {
   .home-premium__hero-title,
   .home-premium__problem-inner h2,
   .home-premium__section-head h2 {
-    font-size: clamp(2.7rem, 13vw, 4.4rem);
+    font-size: clamp(2.2rem, 10vw, 3.4rem);
   }
 
   .home-premium__hero-copy,
@@ -911,7 +911,7 @@ a {
   .home-premium__reason-card p,
   .home-premium__case-card p,
   .home-premium__phase-card p {
-    font-size: 1.08rem;
+    font-size: 1rem;
   }
 
   .home-premium__partners-row {
@@ -940,7 +940,7 @@ a {
   }
 
   .home-premium__case-metric {
-    font-size: clamp(3.4rem, 16vw, 5.2rem);
+    font-size: clamp(2.8rem, 13vw, 4.1rem);
   }
 
   .seo-faq-grid {

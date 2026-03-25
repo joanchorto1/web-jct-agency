@@ -2,13 +2,7 @@ import React from 'react';
 import { Link, NavLink, Outlet } from 'react-router-dom';
 import jcLogo from './img/joan-chorto-consultor-logo.svg';
 
-const navItems = [
-  { label: 'Inicio', to: '/' },
-  { label: 'Proyectos', to: '/proyectos' },
-  { label: 'Soluciones', to: '/soluciones' },
-  { label: 'Consultoría', to: '/consultoria' },
-  { label: 'Contacto', to: '/contacto' },
-];
+const navItems = [{ label: 'Inicio', to: '/' }];
 
 function SiteLayout() {
   return (
