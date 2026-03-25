@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link, NavLink, Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import jcLogo from './img/joan-chorto-consultor-logo.svg';
-
-const navItems = [{ label: 'Inicio', to: '/' }];
 
 function SiteLayout() {
   return (
@@ -11,23 +9,10 @@ function SiteLayout() {
 
       <header className="site-header">
         <div className="site-container site-header__inner">
-          <NavLink to="/" className="site-brand" aria-label="Joan Chorto Consultor, inicio">
+          <div className="site-brand" aria-label="Joan Chorto Consultor">
             <img src={jcLogo} alt="Logo JC" className="site-brand__logo" />
             <span className="site-brand__name">Joan Chorto Consultor</span>
-          </NavLink>
-
-          <nav className="site-nav" aria-label="Navegación principal">
-            {navItems.map((item) => (
-              <NavLink
-                key={item.to}
-                to={item.to}
-                end={item.to === '/'}
-                className={({ isActive }) => `site-nav__link${isActive ? ' is-active' : ''}`}
-              >
-                {item.label}
-              </NavLink>
-            ))}
-          </nav>
+          </div>
 
           <a href="/contacto#reserva" className="site-header__cta">
             Contactar
