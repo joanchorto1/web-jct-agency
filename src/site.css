@@ -104,7 +104,7 @@ a {
   width: 52px;
   height: 52px;
   display: block;
-  filter: brightness(0) saturate(100%) invert(94%) sepia(15%) saturate(220%) hue-rotate(356deg) brightness(102%) contrast(94%);
+  border-radius: 999px;
 }
 
 .site-brand__mark {

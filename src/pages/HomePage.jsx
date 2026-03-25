@@ -90,7 +90,7 @@ function HomePage() {
         <div className="site-container home-premium__hero-inner" data-aos="fade-up">
           <p className="home-premium__eyebrow">Consultoría estratégica para pymes que necesitan ordenar y escalar</p>
           <h1 className="home-premium__hero-title">
-            Milloramos procesos. Reducimos costes. <span>Implantamos sistemas que funcionan.</span>
+            Mejoramos procesos. Reducimos costes. <span>Implantamos sistemas que funcionan.</span>
           </h1>
           <p className="home-premium__hero-copy">
             Consultoría para empresas industriales, construcción y servicios que quieren ganar control, rentabilidad y
