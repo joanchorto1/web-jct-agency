@@ -482,6 +482,17 @@ a {
   gap: 8px;
 }
 
+.contact-grid--single {
+  grid-template-columns: minmax(0, 720px);
+  justify-content: center;
+}
+
+.contact-direct--open {
+  margin: 0 0 24px;
+  padding-top: 0;
+  border-top: 0;
+}
+
 .contact-direct h3 {
   font-size: 1rem;
 }
