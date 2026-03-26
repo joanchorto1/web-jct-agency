@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './header.css';
-import logoImage from '../img/joan-chorto-consultor-logo.svg';
 
 const whatsappDiagnostic = 'https://wa.me/34633391411?text=Hola%20Joan%2C%20vull%20un%20diagnostic%20gratuit.';
+const logoImage = 'https://jcmanager.jctagency.com/logo_JC.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

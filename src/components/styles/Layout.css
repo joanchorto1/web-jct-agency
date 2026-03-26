@@ -74,9 +74,53 @@ body {
 }
 
 .layout-shell {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 14%, rgba(37, 99, 235, 0.22), transparent 24rem),
+    radial-gradient(circle at 86% 12%, rgba(34, 211, 238, 0.2), transparent 20rem),
+    radial-gradient(circle at 72% 42%, rgba(59, 130, 246, 0.12), transparent 22rem),
+    linear-gradient(180deg, #f7fbff 0%, #edf6ff 38%, #f8fbff 100%);
+  isolation: isolate;
+}
+
+.layout-shell::before,
+.layout-shell::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.layout-shell::before {
+  background:
+    radial-gradient(circle at 14% 22%, transparent 0 7.25rem, rgba(37, 99, 235, 0.16) 7.5rem 8.15rem, transparent 8.5rem),
+    radial-gradient(circle at 84% 20%, transparent 0 6.5rem, rgba(6, 182, 212, 0.18) 6.8rem 7.55rem, transparent 8rem),
+    radial-gradient(circle at 78% 72%, transparent 0 9rem, rgba(96, 165, 250, 0.14) 9.35rem 10rem, transparent 10.5rem),
+    radial-gradient(circle at 24% 86%, transparent 0 8rem, rgba(29, 78, 216, 0.12) 8.35rem 9rem, transparent 9.5rem);
+  filter: blur(10px);
+  opacity: 0.95;
+}
+
+.layout-shell::after {
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.38) 46%, rgba(255, 255, 255, 0) 100%),
+    linear-gradient(rgba(37, 99, 235, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 165, 233, 0.04) 1px, transparent 1px);
+  background-size: auto, 100% 118px, 118px 100%;
+  background-position: 0 0, center top, center top;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.22));
+  opacity: 0.8;
+}
+
+.layout-main,
+.layout-cta-band,
+.site-footer {
+  position: relative;
+  z-index: 1;
 }
 
 .layout-main {
@@ -109,7 +153,8 @@ body {
 }
 
 .site-footer {
-  background-color: #ffffff;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.92));
+  backdrop-filter: blur(14px);
 }
 
 .site-footer a {

@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Header from '../components/header';
 import InlineCTAGroup from '../cta/InlineCTAGroup';
 import StickyReservationButton from '../cta/StickyReservationButton';
-import logoImage from '../img/joan-chorto-consultor-logo.svg';
 import '../styles/Layout.css';
+
+const logoImage = 'https://jcmanager.jctagency.com/logo_JC.png';
 
 const Layout = ({ children, stickyVisibility = 'all' }) => {
   const [isDesktop, setIsDesktop] = useState(() =>
