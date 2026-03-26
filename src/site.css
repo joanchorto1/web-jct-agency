@@ -86,7 +86,7 @@ a {
 }
 
 .site-header__inner {
-  height: 92px;
+  min-height: 92px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -101,10 +101,12 @@ a {
 }
 
 .site-brand__logo {
-  width: 52px;
+  width: auto;
   height: 52px;
+  max-width: 154px;
   display: block;
-  border-radius: 999px;
+  border-radius: 0;
+  object-fit: contain;
 }
 
 .site-brand__mark {
@@ -124,6 +126,37 @@ a {
   font-weight: 600;
   font-size: 0.96rem;
   letter-spacing: 0.01em;
+}
+
+.site-brand__name span {
+  color: var(--text-200);
+  font-weight: 500;
+}
+
+.site-header__brand-link:hover .site-brand__name,
+.site-header__brand-link:hover .site-brand__name span {
+  color: var(--gold-400);
+}
+
+.site-header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin-left: auto;
+}
+
+.site-header__nav a {
+  color: var(--text-200);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease;
+}
+
+.site-header__nav a:hover {
+  color: var(--gold-400);
 }
 
 .site-header__cta,
@@ -1062,6 +1095,15 @@ a {
     flex-wrap: wrap;
   }
 
+  .site-header__nav {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 16px;
+    padding-bottom: 6px;
+    overflow-x: auto;
+  }
+
   .home-premium__partners-row,
   .home-premium__reason-grid,
   .home-premium__cases-grid {
@@ -1111,6 +1153,11 @@ a {
 
   .seo-article__sidebar {
     position: static;
+  }
+
+  .site-header__nav a {
+    font-size: 0.84rem;
+    white-space: nowrap;
   }
 
   .home-premium__hero {

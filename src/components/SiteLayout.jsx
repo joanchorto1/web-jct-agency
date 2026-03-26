@@ -22,13 +22,22 @@ function SiteLayout() {
 
       <header className="site-header">
         <div className="site-container site-header__inner">
-          <div className="site-brand" aria-label="Joan Chorto Consultor">
+          <Link to="/" className="site-brand site-header__brand-link" aria-label="Ir al inicio de Joan Chorto Consultor">
             <img src={jcLogo} alt="Logo JC" className="site-brand__logo" />
-            <span className="site-brand__name">Joan Chorto Consultor</span>
-          </div>
+            <span className="site-brand__name">
+              Joan Chorto <span>Consultor</span>
+            </span>
+          </Link>
+
+          <nav className="site-header__nav" aria-label="Navegación principal">
+            <Link to="/consultoria">Consultoría</Link>
+            <Link to="/soluciones">Soluciones</Link>
+            <Link to="/guias">Guías</Link>
+            <Link to="/contacto">Contacto</Link>
+          </nav>
 
           <a href="/contacto#reserva" className="site-header__cta">
-            Contactar
+            Reservar diagnóstico
           </a>
         </div>
       </header>
