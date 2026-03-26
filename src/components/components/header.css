@@ -25,12 +25,16 @@
 }
 
 .home-static__brand-logo {
-  width: 48px;
-  height: 48px;
-  border-radius: 9999px; /* rounded-full */
-  object-fit: cover;
+  width: auto;
+  height: 52px;
+  max-width: 164px;
+  border-radius: 0;
+  object-fit: contain;
   display: inline-block;
   margin-right: 12px;
+  mix-blend-mode: normal;
+  filter: none;
+  background: transparent;
 }
 
 .home-static__brand-text {

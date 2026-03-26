@@ -19,10 +19,13 @@ body {
 
 .navbar-custom .navbar-brand img,
 .footer-logo {
-  height: 48px;
-  width: 48px;
-  border-radius: 12px;
-  object-fit: cover;
+  width: auto;
+  height: 56px;
+  max-width: 180px;
+  border-radius: 0;
+  object-fit: contain;
+  background: transparent;
+  filter: none;
 }
 
 .nav-main .nav-link {
@@ -124,7 +127,36 @@ body {
 }
 
 .layout-main {
+  position: relative;
   flex: 1 1 auto;
+  overflow: hidden;
+}
+
+.layout-main::before,
+.layout-main::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.layout-main::before {
+  background:
+    radial-gradient(circle at 8% 18%, rgba(29, 78, 216, 0.3), transparent 0 12rem, rgba(37, 99, 235, 0.28) 13.5rem 14.4rem, transparent 15.4rem),
+    radial-gradient(circle at 88% 12%, rgba(6, 182, 212, 0.24), transparent 0 10rem, rgba(34, 211, 238, 0.24) 11.25rem 12rem, transparent 13rem),
+    radial-gradient(circle at 86% 72%, rgba(14, 165, 233, 0.18), transparent 0 13rem, rgba(96, 165, 250, 0.24) 14.5rem 15.5rem, transparent 16.5rem),
+    radial-gradient(circle at 18% 82%, rgba(37, 99, 235, 0.18), transparent 0 11rem, rgba(59, 130, 246, 0.2) 12.2rem 13rem, transparent 14rem);
+  filter: blur(18px);
+  opacity: 1;
+}
+
+.layout-main::after {
+  inset: 1.5rem;
+  border-radius: 2rem;
+  background:
+    repeating-linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0, rgba(37, 99, 235, 0.08) 1px, transparent 1px, transparent 24px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.04));
+  opacity: 0.75;
 }
 
 .section-spacing {
