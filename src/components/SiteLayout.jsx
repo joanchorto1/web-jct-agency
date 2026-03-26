@@ -1,6 +1,11 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import jcLogo from './img/joan-chorto-consultor-logo.svg';
+import { featuredSeoSlugs, seoArticlesWithContent } from '../data/seoArticles';
+
+const featuredSeoArticles = featuredSeoSlugs
+  .map((slug) => seoArticlesWithContent.find((article) => article.slug === slug))
+  .filter(Boolean);
 
 function SiteLayout() {
   return (
@@ -37,6 +42,19 @@ function SiteLayout() {
             </p>
             <div className="site-footer__legal">
               <Link to="/politica-privacidad">Política de privacidad / Privacy Policy</Link>
+            </div>
+          </div>
+          <div className="site-footer__seo">
+            <p className="site-footer__heading">Guías SEO</p>
+            <Link to="/guias" className="site-footer__all-guides">
+              Ver todas las guías
+            </Link>
+            <div className="site-footer__seo-links">
+              {featuredSeoArticles.map((article) => (
+                <Link key={article.slug} to={`/guias/${article.slug}`}>
+                  {article.title}
+                </Link>
+              ))}
             </div>
           </div>
           <div className="site-footer__contact">
