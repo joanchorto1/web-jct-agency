@@ -88,7 +88,6 @@ function HomePage() {
   const [formData, setFormData] = useState({
     name: '',
     company: '',
-    phone: '',
     email: '',
   });
   const [submitState, setSubmitState] = useState({
@@ -161,9 +160,9 @@ function HomePage() {
       setFormData({
         name: '',
         company: '',
-        phone: '',
         email: '',
       });
+      setIsLeadModalOpen(false);
     } catch (error) {
       setSubmitState({
         status: 'error',
@@ -195,29 +194,18 @@ function HomePage() {
             <div className="lead-modal__content">
               <div className="lead-modal__copy">
                 <p className="lead-modal__eyebrow">Diagnóstico operativo</p>
-                <h2 id="lead-modal-title">¿Sientes que tu empresa podría ir mejor… pero no sabes exactamente dónde falla?</h2>
-                <p className="lead-modal__intro">
-                  En muchas empresas el problema no es el trabajo, es la forma en la que se gestiona.
-                </p>
-                <p className="lead-modal__intro">
-                  Se pierde tiempo, hay desorden y nadie tiene una visión clara de lo que está pasando.
-                </p>
+                <h2 id="lead-modal-title">¿Tu empresa está funcionando todo lo bien que podría?</h2>
 
                 <div className="lead-modal__highlight">
-                  <p className="lead-modal__highlight-label">Responde rápido:</p>
                   <ul>
-                    <li>¿Dependes de WhatsApp para organizar el trabajo?</li>
-                    <li>¿Usáis Excel para tareas clave del día a día?</li>
-                    <li>¿Sientes que se pierde tiempo en cosas que deberían ser simples?</li>
+                    <li>Hay desorden o falta de control en el día a día</li>
+                    <li>Se pierde tiempo en procesos que deberían ser simples</li>
+                    <li>Sientes que podrías mejorar resultados pero no sabes por dónde empezar</li>
                   </ul>
-                  <p>Si has pensado “sí” en alguna… hay margen de mejora.</p>
                 </div>
 
                 <p className="lead-modal__proposal">
-                  Estoy analizando empresas para detectar puntos donde se pierde tiempo y dinero en la operativa diaria.
-                </p>
-                <p className="lead-modal__proposal">
-                  En una sesión breve reviso tu caso y te digo, sin compromiso, dónde tienes margen real de mejora.
+                  Si te identificas, deja tus datos y vemos cómo ayudarte.
                 </p>
               </div>
 
@@ -235,12 +223,6 @@ function HomePage() {
                   <span>Empresa</span>
                   <input type="text" name="company" value={formData.company} onChange={handleInputChange} required />
                 </label>
-
-                <label className="lead-modal__field">
-                  <span>Teléfono</span>
-                  <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} />
-                </label>
-
                 <label className="lead-modal__field">
                   <span>Email</span>
                   <input type="email" name="email" value={formData.email} onChange={handleInputChange} required />
