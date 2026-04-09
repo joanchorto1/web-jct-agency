@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
+const LEAD_MODAL_STORAGE_KEY = 'jctagency_lead_modal_submitted';
+
 const partners = ['EGEA Arquitectura', 'VIM House', "Ajuntament de L'Aldea", 'Curmac Elevacions'];
 
 const reasons = [
@@ -84,7 +86,7 @@ const phases = [
 ];
 
 function HomePage() {
-  const [isLeadModalOpen, setIsLeadModalOpen] = useState(true);
+  const [isLeadModalOpen, setIsLeadModalOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -94,6 +96,14 @@ function HomePage() {
     status: 'idle',
     message: '',
   });
+
+  useEffect(() => {
+    const hasSubmittedLead = window.localStorage.getItem(LEAD_MODAL_STORAGE_KEY) === 'true';
+
+    if (!hasSubmittedLead) {
+      setIsLeadModalOpen(true);
+    }
+  }, []);
 
   useEffect(() => {
     if (!isLeadModalOpen) {
@@ -157,6 +167,7 @@ function HomePage() {
         status: 'success',
         message: data?.message || 'Lead guardado correctamente.',
       });
+      window.localStorage.setItem(LEAD_MODAL_STORAGE_KEY, 'true');
       setFormData({
         name: '',
         company: '',
