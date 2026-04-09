@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const partners = ['EGEA Arquitectura', 'VIM House', "Ajuntament de L'Aldea", 'Curmac Elevacions'];
 
@@ -84,8 +84,183 @@ const phases = [
 ];
 
 function HomePage() {
+  const [isLeadModalOpen, setIsLeadModalOpen] = useState(true);
+  const [formData, setFormData] = useState({
+    name: '',
+    company: '',
+    phone: '',
+    email: '',
+  });
+  const [submitState, setSubmitState] = useState({
+    status: 'idle',
+    message: '',
+  });
+
+  useEffect(() => {
+    if (!isLeadModalOpen) {
+      return undefined;
+    }
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    const handleEscape = (event) => {
+      if (event.key === 'Escape') {
+        setIsLeadModalOpen(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleEscape);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', handleEscape);
+    };
+  }, [isLeadModalOpen]);
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormData((current) => ({
+      ...current,
+      [name]: value,
+    }));
+  };
+
+  const handleLeadSubmit = async (event) => {
+    event.preventDefault();
+
+    setSubmitState({
+      status: 'submitting',
+      message: '',
+    });
+
+    try {
+      const response = await fetch('https://jcmanager.jctagency.com/api/leads', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name.trim(),
+          company: formData.company.trim(),
+          email: formData.email.trim(),
+        }),
+      });
+
+      const data = await response.json().catch(() => null);
+
+      if (!response.ok) {
+        throw new Error(data?.message || 'No se ha podido guardar el lead.');
+      }
+
+      setSubmitState({
+        status: 'success',
+        message: data?.message || 'Lead guardado correctamente.',
+      });
+      setFormData({
+        name: '',
+        company: '',
+        phone: '',
+        email: '',
+      });
+    } catch (error) {
+      setSubmitState({
+        status: 'error',
+        message: error.message || 'Ha ocurrido un error al enviar el formulario.',
+      });
+    }
+  };
+
   return (
     <div className="home-premium">
+      {isLeadModalOpen && (
+        <div className="lead-modal" role="dialog" aria-modal="true" aria-labelledby="lead-modal-title">
+          <button
+            type="button"
+            className="lead-modal__backdrop"
+            aria-label="Cerrar modal"
+            onClick={() => setIsLeadModalOpen(false)}
+          />
+          <div className="lead-modal__panel">
+            <button
+              type="button"
+              className="lead-modal__close"
+              aria-label="Cerrar modal"
+              onClick={() => setIsLeadModalOpen(false)}
+            >
+              ×
+            </button>
+
+            <div className="lead-modal__content">
+              <div className="lead-modal__copy">
+                <p className="lead-modal__eyebrow">Diagnóstico operativo</p>
+                <h2 id="lead-modal-title">¿Sientes que tu empresa podría ir mejor… pero no sabes exactamente dónde falla?</h2>
+                <p className="lead-modal__intro">
+                  En muchas empresas el problema no es el trabajo, es la forma en la que se gestiona.
+                </p>
+                <p className="lead-modal__intro">
+                  Se pierde tiempo, hay desorden y nadie tiene una visión clara de lo que está pasando.
+                </p>
+
+                <div className="lead-modal__highlight">
+                  <p className="lead-modal__highlight-label">Responde rápido:</p>
+                  <ul>
+                    <li>¿Dependes de WhatsApp para organizar el trabajo?</li>
+                    <li>¿Usáis Excel para tareas clave del día a día?</li>
+                    <li>¿Sientes que se pierde tiempo en cosas que deberían ser simples?</li>
+                  </ul>
+                  <p>Si has pensado “sí” en alguna… hay margen de mejora.</p>
+                </div>
+
+                <p className="lead-modal__proposal">
+                  Estoy analizando empresas para detectar puntos donde se pierde tiempo y dinero en la operativa diaria.
+                </p>
+                <p className="lead-modal__proposal">
+                  En una sesión breve reviso tu caso y te digo, sin compromiso, dónde tienes margen real de mejora.
+                </p>
+              </div>
+
+              <form className="lead-modal__form" onSubmit={handleLeadSubmit}>
+                <div>
+                  <p className="lead-modal__form-title">Déjame tus datos y vemos si tiene sentido ayudarte.</p>
+                </div>
+
+                <label className="lead-modal__field">
+                  <span>Nombre</span>
+                  <input type="text" name="name" value={formData.name} onChange={handleInputChange} required />
+                </label>
+
+                <label className="lead-modal__field">
+                  <span>Empresa</span>
+                  <input type="text" name="company" value={formData.company} onChange={handleInputChange} required />
+                </label>
+
+                <label className="lead-modal__field">
+                  <span>Teléfono</span>
+                  <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} />
+                </label>
+
+                <label className="lead-modal__field">
+                  <span>Email</span>
+                  <input type="email" name="email" value={formData.email} onChange={handleInputChange} required />
+                </label>
+
+                <button type="submit" className="lead-modal__submit" disabled={submitState.status === 'submitting'}>
+                  {submitState.status === 'submitting' ? 'Enviando…' : 'Quiero revisar mi caso'}
+                </button>
+
+                <p className="lead-modal__microcopy">Sin compromiso. Sin venta agresiva. Solo claridad.</p>
+
+                {submitState.message && (
+                  <p className={`lead-modal__feedback lead-modal__feedback--${submitState.status}`}>{submitState.message}</p>
+                )}
+              </form>
+            </div>
+          </div>
+        </div>
+      )}
+
       <section className="home-premium__hero">
         <div className="site-container home-premium__hero-inner" data-aos="fade-up">
           <p className="home-premium__eyebrow">Consultoría estratégica para pymes que necesitan ordenar y escalar</p>
