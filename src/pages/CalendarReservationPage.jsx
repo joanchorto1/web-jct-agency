@@ -46,7 +46,23 @@ const getSlotLabel = (slot) => {
   return endLabel ? `${startLabel} - ${endLabel}` : startLabel;
 };
 
-const normalizeSlots = (data) => {
+const getSlotDate = (selectedDate, start) => {
+  if (!start) return null;
+  const value = start.includes('T') ? start : `${selectedDate}T${start.slice(0, 5)}:00`;
+  const date = new Date(value);
+
+  return Number.isNaN(date.getTime()) ? null : date;
+};
+
+const isInsideReservationNotice = (selectedDate, start) => {
+  const slotDate = getSlotDate(selectedDate, start);
+  if (!slotDate) return true;
+
+  const earliestBookableDate = new Date(Date.now() + 24 * 60 * 60 * 1000);
+  return slotDate < earliestBookableDate;
+};
+
+const normalizeSlots = (data, selectedDate) => {
   const rawSlots =
     data?.available_slots ||
     data?.availableSlots ||
@@ -67,6 +83,7 @@ const normalizeSlots = (data) => {
     .map((slot) => ({
       value: getSlotStart(slot),
       label: getSlotLabel(slot),
+      disabled: isInsideReservationNotice(selectedDate, getSlotStart(slot)),
     }))
     .filter((slot) => slot.value && slot.label);
 };
@@ -114,7 +131,7 @@ function CalendarReservationPage() {
           throw new Error(data?.message || 'No se ha podido cargar la disponibilidad.');
         }
 
-        setSlots(normalizeSlots(data));
+        setSlots(normalizeSlots(data, selectedDate));
         setAvailabilityStatus('loaded');
       } catch (error) {
         if (error.name === 'AbortError') return;
@@ -146,6 +163,11 @@ function CalendarReservationPage() {
     try {
       if (!selectedSlot) {
         throw new Error('Selecciona una hora disponible.');
+      }
+
+      const slot = slots.find((item) => item.value === selectedSlot);
+      if (!slot || slot.disabled) {
+        throw new Error('Las reuniones deben reservarse con al menos 24 horas de antelación.');
       }
 
       const response = await fetch(`${API_BASE_URL}/events`, {
@@ -245,9 +267,12 @@ function CalendarReservationPage() {
                       type="button"
                       key={`${slot.value}-${slot.label}`}
                       className={selectedSlot === slot.value ? 'is-selected' : ''}
+                      disabled={slot.disabled}
                       onClick={() => setSelectedSlot(slot.value)}
+                      title={slot.disabled ? 'Reserva disponible solo con 24 horas de antelación' : undefined}
                     >
                       {slot.label}
+                      {slot.disabled ? ' · no disponible' : ''}
                     </button>
                   ))}
                 </div>
