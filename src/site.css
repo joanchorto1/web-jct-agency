@@ -959,8 +959,8 @@ a {
   width: fit-content;
   padding: 8px 12px;
   border-radius: 999px;
-  background: var(--gold-300);
-  color: var(--gold-400);
+  background: #f2f2f2;
+  color: #5f5f5f;
   font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -968,9 +968,13 @@ a {
 }
 
 .seo-hub__link {
-  color: var(--gold-400);
+  color: #111111;
   font-weight: 700;
   text-decoration: none;
+}
+
+.seo-hub__link:hover {
+  text-decoration: underline;
 }
 
 .seo-article__layout {
