@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
-import analysisImage from '../components/img/mano_grafica.png';
 
 const reviewBlocks = [
   { title: 'Captación y gestión de clientes', icon: 'clients' },
@@ -85,13 +84,14 @@ function AnalysisPage() {
               Analizar mi empresa
             </Link>
           </div>
-          <img
-            src={analysisImage}
-            alt="Análisis operativo con gráficos"
-            className="analysis-hero__image"
-            data-aos="zoom-in"
-            data-aos-delay="120"
-          />
+          <div className="analysis-hero__icon" aria-hidden="true" data-aos="zoom-in" data-aos-delay="120">
+            <svg viewBox="0 0 120 120" focusable="false">
+              <circle cx="52" cy="52" r="30" />
+              <path d="M74 74 102 102" />
+              <path d="M39 52h26" />
+              <path d="M52 39v26" />
+            </svg>
+          </div>
         </div>
       </section>
 

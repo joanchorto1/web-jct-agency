@@ -1286,12 +1286,24 @@ a {
   fill: none;
 }
 
-.analysis-hero__image {
-  width: min(560px, 100%);
+.analysis-hero__icon {
+  width: min(300px, 100%);
+  aspect-ratio: 1;
   justify-self: center;
+  display: grid;
+  place-items: center;
+  color: #111111;
+}
+
+.analysis-hero__icon svg {
+  width: 76%;
+  height: 76%;
   display: block;
-  object-fit: contain;
-  filter: drop-shadow(0 28px 38px rgba(0, 0, 0, 0.1));
+  stroke: currentColor;
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
 }
 
 .light-page__screen-stack {
