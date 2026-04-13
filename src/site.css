@@ -1286,6 +1286,14 @@ a {
   fill: none;
 }
 
+.analysis-hero__image {
+  width: min(560px, 100%);
+  justify-self: center;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 28px 38px rgba(0, 0, 0, 0.1));
+}
+
 .light-page__screen-stack {
   display: grid;
   gap: 16px;
@@ -1399,6 +1407,39 @@ a {
   display: grid;
   align-content: start;
   gap: 18px;
+}
+
+.analysis-review {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 42px;
+}
+
+.analysis-review__item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+  padding: 8px 0;
+}
+
+.analysis-review__item h3 {
+  margin: 0;
+}
+
+.analysis-review__icon {
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: 1px solid var(--home-line);
+  border-radius: 8px;
+  background: #ffffff;
+  color: #111111;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
 }
 
 .light-page__timeline {
@@ -2191,6 +2232,7 @@ a {
   .light-page__before-after,
   .light-page__card-grid,
   .light-page__card-grid--three,
+  .analysis-review,
   .home-premium__reason-grid,
   .home-premium__cases-grid {
     grid-template-columns: 1fr;
