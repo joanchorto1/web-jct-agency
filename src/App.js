@@ -35,8 +35,17 @@ function ScrollAnimator() {
   }, []);
 
   useEffect(() => {
+    if (location.hash) {
+      window.setTimeout(() => {
+        document.querySelector(location.hash)?.scrollIntoView({ block: 'start' });
+        AOS.refreshHard();
+      }, 0);
+      return;
+    }
+
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
     AOS.refreshHard();
-  }, [location.pathname]);
+  }, [location.pathname, location.hash]);
 
   return null;
 }

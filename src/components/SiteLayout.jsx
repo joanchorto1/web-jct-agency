@@ -1,9 +1,6 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import jcLogo from './img/joan-chorto-consultor-logo.svg';
-import { seoArticlesWithContent } from '../data/seoArticles';
-
-const featuredSeoArticles = seoArticlesWithContent.filter((article) => article.category === 'pain').slice(0, 6);
 
 const FooterIcon = ({ children }) => (
   <span className="site-footer__icon" aria-hidden="true">
@@ -92,16 +89,11 @@ function SiteLayout() {
             </div>
           </div>
           <div className="site-footer__seo">
-            <p className="site-footer__heading">Guías SEO</p>
-            <Link to="/problemas" className="site-footer__all-guides">
-              Ver problemas
-            </Link>
+            <p className="site-footer__heading">RECURSOS</p>
             <div className="site-footer__seo-links">
-              {featuredSeoArticles.map((article) => (
-                <Link key={article.slug} to={`/problemas/${article.slug}`}>
-                  {article.title}
-                </Link>
-              ))}
+              <Link to="/guias">Índice de guías</Link>
+              <Link to="/problemas">Índice de problemas</Link>
+              <Link to="/consultoria-informatica">Blog SEO local</Link>
             </div>
           </div>
           <div className="site-footer__contact">
