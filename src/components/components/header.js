@@ -55,7 +55,7 @@ const Header = () => {
         >
           <a href="/consultoria" onClick={closeMenu}>Consultoría</a>
           <a href="/avero" onClick={closeMenu}>Avero</a>
-          <a href="/regit" onClick={closeMenu}>REGIT</a>
+          <a href="/regit" onClick={closeMenu}>RegIT</a>
           <a href="/constructpro" onClick={closeMenu}>ConstructPro</a>
           <a
             href={whatsappDiagnostic}
