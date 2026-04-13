@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import ajuntamentLogo from '../components/img/Escudo heraldico en tonos grises.png';
 import curmacLogo from '../components/img/Logo de Curmac Elevacio en gris.png';
 import egeaLogo from '../components/img/Logo de EGEA en gris.png';
@@ -227,7 +228,16 @@ function HomePage() {
   };
 
   return (
-    <div className="home-premium">
+    <>
+      <Helmet>
+        <title>Consultoría operativa para pymes | Joan Chorto Consultor</title>
+        <meta
+          name="description"
+          content="Consultoría operativa para pymes que necesitan control: detecto dónde pierdes dinero, ordeno procesos y dejo sistemas claros para decidir con datos."
+        />
+      </Helmet>
+
+      <div className="home-premium">
       {isLeadModalOpen && (
         <div className="lead-modal" role="dialog" aria-modal="true" aria-labelledby="lead-modal-title">
           <button
@@ -423,7 +433,8 @@ function HomePage() {
           </a>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
 
