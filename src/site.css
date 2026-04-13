@@ -1500,6 +1500,22 @@ a {
   gap: 12px;
 }
 
+.light-page__faq-list {
+  display: grid;
+  gap: 14px;
+}
+
+.light-page__faq-item {
+  padding: 22px;
+  border: 1px solid var(--home-line);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.light-page__faq-item h3 {
+  margin-bottom: 8px;
+}
+
 .light-page__side-note {
   padding: 38px;
 }

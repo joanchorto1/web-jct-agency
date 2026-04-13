@@ -18,6 +18,8 @@ import ProjectDetailPage from './pages/projects/ProjectDetailPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import SeoHubPage from './pages/SeoHubPage';
 import SeoArticlePage from './pages/SeoArticlePage';
+import LocalSeoHubPage from './pages/LocalSeoHubPage';
+import LocalSeoPage from './pages/LocalSeoPage';
 import './site.css';
 
 function ScrollAnimator() {
@@ -59,6 +61,8 @@ function App() {
           <Route path="/soluciones/:slug" element={<ServiceDetailPage />} />
           <Route path="/solucions/:slug" element={<ServiceDetailPage />} />
           <Route path="/consultoria" element={<ConsultingPage />} />
+          <Route path="/consultoria-informatica" element={<LocalSeoHubPage />} />
+          <Route path="/consultoria-informatica/:slug" element={<LocalSeoPage />} />
           <Route path="/contacto" element={<ContactPage />} />
           <Route path="/contacte" element={<ContactPage />} />
           <Route path="/politica-privacidad" element={<PrivacyPolicyPage />} />
