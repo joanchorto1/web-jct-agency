@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import ajuntamentLogo from '../components/img/Escudo heráldico en tonos grises.png';
+import curmacLogo from '../components/img/Logo de Curmac Elevació en gris.png';
+import egeaLogo from '../components/img/Logo de EGEA en gris.png';
+import vimHouseLogo from '../components/img/Logotipo minimalista de VIM HOUSE.png';
 const LEAD_MODAL_STORAGE_KEY = 'jctagency_lead_modal_submitted';
 
 const partners = [
-  { name: 'EGEA Arquitectura', icon: 'architecture' },
-  { name: 'VIM House', icon: 'housing' },
-  { name: "Ajuntament de L'Aldea", icon: 'public' },
-  { name: 'Curmac Elevacions', icon: 'services' },
+  { name: 'EGEA Arquitectura', logo: egeaLogo, alt: 'Logo de EGEA Arquitectura, cliente de consultoría operativa' },
+  { name: 'VIM House', logo: vimHouseLogo, alt: 'Logo de VIM House, cliente de digitalización en construcción' },
+  { name: "Ajuntament de L'Aldea", logo: ajuntamentLogo, alt: "Logo de l'Ajuntament de L'Aldea, cliente de modernización de procesos" },
+  { name: 'Curmac Elevacions', logo: curmacLogo, alt: 'Logo de Curmac Elevacions, cliente de mejora operativa' },
 ];
 
 const reasons = [
@@ -71,49 +75,6 @@ function ReasonIcon({ type }) {
   return (
     <svg className="home-premium__reason-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
       {reasonIcons[type]}
-    </svg>
-  );
-}
-
-const partnerIcons = {
-  architecture: (
-    <>
-      <path d="M4 20h16" />
-      <path d="M6 20V9l6-4 6 4v11" />
-      <path d="M9 20v-7h6v7" />
-    </>
-  ),
-  housing: (
-    <>
-      <path d="M4 11 12 5l8 6" />
-      <path d="M6 10v10h12V10" />
-      <path d="M10 20v-6h4v6" />
-    </>
-  ),
-  public: (
-    <>
-      <path d="M4 10h16" />
-      <path d="M5 20h14" />
-      <path d="M7 10v10" />
-      <path d="M12 10v10" />
-      <path d="M17 10v10" />
-      <path d="M12 4 4 8h16l-8-4Z" />
-    </>
-  ),
-  services: (
-    <>
-      <path d="M7 17h10" />
-      <path d="M9 17V9a3 3 0 0 1 6 0v8" />
-      <path d="M6 13h12" />
-      <path d="M8 20h8" />
-    </>
-  ),
-};
-
-function PartnerIcon({ type }) {
-  return (
-    <svg className="home-premium__partner-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      {partnerIcons[type]}
     </svg>
   );
 }
@@ -363,8 +324,7 @@ function HomePage() {
           <div className="home-premium__partners-row">
             {partners.map((partner) => (
               <span key={partner.name}>
-                <PartnerIcon type={partner.icon} />
-                {partner.name}
+                <img src={partner.logo} alt={partner.alt} loading="lazy" />
               </span>
             ))}
           </div>
