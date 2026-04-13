@@ -16,7 +16,7 @@ function SeoHubPage() {
 
       <section className="section seo-hub">
         <div className="site-container">
-          <div className="section-title-row">
+          <div className="section-title-row" data-aos="fade-up">
             <p className="eyebrow">Recursos SEO</p>
             <h1>Guías para empresas que quieren ordenar gestión, procesos y rentabilidad</h1>
             <p>
@@ -27,8 +27,8 @@ function SeoHubPage() {
           </div>
 
           <div className="seo-hub__grid">
-            {seoArticlesWithContent.map((article) => (
-              <article key={article.slug} className="seo-hub__card">
+            {seoArticlesWithContent.map((article, index) => (
+              <article key={article.slug} className="seo-hub__card" data-aos="fade-up" data-aos-delay={(index % 3) * 80}>
                 <span className="seo-hub__tag">{article.groupLabel}</span>
                 <h2>{article.title}</h2>
                 <p>{article.paragraphs[0]}</p>

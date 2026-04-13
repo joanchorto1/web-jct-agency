@@ -1,11 +1,9 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import jcLogo from './img/joan-chorto-consultor-logo.svg';
-import { featuredSeoSlugs, seoArticlesWithContent } from '../data/seoArticles';
+import { seoArticlesWithContent } from '../data/seoArticles';
 
-const featuredSeoArticles = featuredSeoSlugs
-  .map((slug) => seoArticlesWithContent.find((article) => article.slug === slug))
-  .filter(Boolean);
+const featuredSeoArticles = seoArticlesWithContent.filter((article) => article.category === 'pain').slice(0, 6);
 
 const FooterIcon = ({ children }) => (
   <span className="site-footer__icon" aria-hidden="true">
@@ -30,14 +28,14 @@ function SiteLayout() {
           </Link>
 
           <nav className="site-header__nav" aria-label="Navegación principal">
-            <Link to="/consultoria">Consultoría</Link>
-            <Link to="/soluciones">Soluciones</Link>
-            <Link to="/guias">Guías</Link>
+            <Link to="/analisis-gratuito">Análisis gratuito</Link>
+            <Link to="/productos">Productos</Link>
+            <Link to="/problemas">Problemas</Link>
             <Link to="/contacto">Contacto</Link>
           </nav>
 
           <a href="/contacto#reserva" className="site-header__cta">
-            Reservar diagnóstico
+            Analizar mi empresa
           </a>
         </div>
       </header>
@@ -58,22 +56,22 @@ function SiteLayout() {
               foco en resultados medibles.
             </p>
             <div className="site-footer__quick-links">
-              <Link to="/consultoria">
+              <Link to="/analisis-gratuito">
                 <FooterIcon>
                   <path d="M4 19h16" />
                   <path d="M7 16V8" />
                   <path d="M12 16V5" />
                   <path d="M17 16v-4" />
                 </FooterIcon>
-                Consultoría
+                Análisis
               </Link>
-              <Link to="/soluciones">
+              <Link to="/productos">
                 <FooterIcon>
                   <path d="M12 3l7 4v10l-7 4-7-4V7l7-4Z" />
                   <path d="M12 7v10" />
                   <path d="m5 9 7 4 7-4" />
                 </FooterIcon>
-                Soluciones
+                Productos
               </Link>
               <Link to="/contacto">
                 <FooterIcon>
@@ -95,12 +93,12 @@ function SiteLayout() {
           </div>
           <div className="site-footer__seo">
             <p className="site-footer__heading">Guías SEO</p>
-            <Link to="/guias" className="site-footer__all-guides">
-              Ver todas las guías
+            <Link to="/problemas" className="site-footer__all-guides">
+              Ver problemas
             </Link>
             <div className="site-footer__seo-links">
               {featuredSeoArticles.map((article) => (
-                <Link key={article.slug} to={`/guias/${article.slug}`}>
+                <Link key={article.slug} to={`/problemas/${article.slug}`}>
                   {article.title}
                 </Link>
               ))}

@@ -23,7 +23,7 @@ function SeoArticlePage() {
 
       <article className="section seo-article">
         <div className="site-container">
-          <div className="section-title-row seo-article__head">
+          <div className="section-title-row seo-article__head" data-aos="fade-up">
             <p className="eyebrow">{article.groupLabel}</p>
             <h1>{article.title}</h1>
             <p>
@@ -34,11 +34,11 @@ function SeoArticlePage() {
 
           <div className="seo-article__layout">
             <div className="seo-article__body">
-              {article.paragraphs.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
+              {article.paragraphs.map((paragraph, index) => (
+                <p key={paragraph} data-aos="fade-up" data-aos-delay={(index % 3) * 60}>{paragraph}</p>
               ))}
 
-              <section className="seo-article__block">
+              <section className="seo-article__block" data-aos="fade-up">
                 <h2>Qué conviene revisar primero</h2>
                 <ul>
                   {article.checklist.map((item) => (
@@ -47,11 +47,11 @@ function SeoArticlePage() {
                 </ul>
               </section>
 
-              <section className="seo-article__block">
+              <section className="seo-article__block" data-aos="fade-up">
                 <h2>Preguntas frecuentes</h2>
                 <div className="seo-article__faq-list">
-                  {article.faqs.map((faq) => (
-                    <div key={faq.question} className="seo-article__faq-item">
+                  {article.faqs.map((faq, index) => (
+                    <div key={faq.question} className="seo-article__faq-item" data-aos="fade-up" data-aos-delay={index * 70}>
                       <h3>{faq.question}</h3>
                       <p>{faq.answer}</p>
                     </div>
@@ -59,7 +59,7 @@ function SeoArticlePage() {
                 </div>
               </section>
 
-              <section className="cta-box seo-article__cta">
+              <section className="cta-box seo-article__cta" data-aos="fade-up">
                 <h2>¿Quieres aterrizar esta mejora en tu empresa?</h2>
                 <p>
                   Si tu caso encaja con <strong>{article.keyword}</strong>, podemos revisar el proceso actual, detectar
@@ -76,7 +76,7 @@ function SeoArticlePage() {
               </section>
             </div>
 
-            <aside className="seo-article__sidebar">
+            <aside className="seo-article__sidebar" data-aos="fade-left" data-aos-delay="120">
               <div className="seo-article__sidebar-card">
                 <h2>Keyword principal</h2>
                 <p>{article.keyword}</p>

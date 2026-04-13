@@ -4,10 +4,15 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import SiteLayout from './components/SiteLayout';
 import HomePage from './pages/HomePage';
+import AnalysisPage from './pages/AnalysisPage';
 import ProjectsPage from './pages/ProjectsPage';
 import SolutionsPage from './pages/SolutionsPage';
 import ConsultingPage from './pages/ConsultingPage';
 import ContactPage from './pages/ContactPage';
+import ProductsPageNew from './pages/ProductsPageNew';
+import ProductPage from './pages/ProductPage';
+import ProblemsPage from './pages/ProblemsPage';
+import ProblemPage from './pages/ProblemPage';
 import ServiceDetailPage from './pages/services/ServiceDetailPage';
 import ProjectDetailPage from './pages/projects/ProjectDetailPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
@@ -41,6 +46,12 @@ function App() {
       <Routes>
         <Route element={<SiteLayout />}>
           <Route path="/" element={<HomePage />} />
+          <Route path="/analisis-gratuito" element={<AnalysisPage />} />
+          <Route path="/analisis" element={<Navigate to="/analisis-gratuito" replace />} />
+          <Route path="/productos" element={<ProductsPageNew />} />
+          <Route path="/productos/:slug" element={<ProductPage />} />
+          <Route path="/problemas" element={<ProblemsPage />} />
+          <Route path="/problemas/:slug" element={<ProblemPage />} />
           <Route path="/proyectos" element={<ProjectsPage />} />
           <Route path="/projectes" element={<ProjectsPage />} />
           <Route path="/soluciones" element={<SolutionsPage />} />

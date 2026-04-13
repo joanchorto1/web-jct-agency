@@ -1,87 +1,170 @@
 import React, { useEffect, useState } from 'react';
-
 const LEAD_MODAL_STORAGE_KEY = 'jctagency_lead_modal_submitted';
 
-const partners = ['EGEA Arquitectura', 'VIM House', "Ajuntament de L'Aldea", 'Curmac Elevacions'];
+const partners = [
+  { name: 'EGEA Arquitectura', icon: 'architecture' },
+  { name: 'VIM House', icon: 'housing' },
+  { name: "Ajuntament de L'Aldea", icon: 'public' },
+  { name: 'Curmac Elevacions', icon: 'services' },
+];
 
 const reasons = [
   {
-    title: 'ROI antes de intervenir',
-    text: 'Antes de implantar cambios, cuantificamos cuánto cuesta cada ineficiencia en tiempo, margen y estructura. Si no hay retorno claro, se dice.',
+    title: 'Control',
+    text: 'Todo en un sitio.',
+    icon: 'control',
   },
   {
-    title: 'Implantación, no teoría',
-    text: 'No entregamos un informe para archivar. Reordenamos procesos, configuramos sistemas y dejamos la operación funcionando en producción.',
+    title: 'Claridad',
+    text: 'Sabes qué pasa y por qué.',
+    icon: 'clarity',
   },
   {
-    title: 'Digitalización útil',
-    text: 'ERP, herramientas propias y automatizaciones orientadas a negocio. Tecnología al servicio de la gestión, no al revés.',
+    title: 'Orden',
+    text: 'Menos errores y menos lío.',
+    icon: 'order',
   },
   {
-    title: 'Partner de dirección',
-    text: 'Acompañamiento real en seguimiento, revisión y evolución. La transformación no termina al lanzar un sistema.',
+    title: 'Dinero',
+    text: 'Más margen, menos pérdidas.',
+    icon: 'money',
   },
 ];
+
+const reasonIcons = {
+  control: (
+    <>
+      <path d="M12 3v3" />
+      <path d="M12 18v3" />
+      <path d="M3 12h3" />
+      <path d="M18 12h3" />
+      <circle cx="12" cy="12" r="5" />
+      <circle cx="12" cy="12" r="1.5" />
+    </>
+  ),
+  clarity: (
+    <>
+      <path d="M3 12s3.4-6 9-6 9 6 9 6-3.4 6-9 6-9-6-9-6Z" />
+      <circle cx="12" cy="12" r="2.5" />
+    </>
+  ),
+  order: (
+    <>
+      <path d="M4 7h16" />
+      <path d="M4 12h16" />
+      <path d="M4 17h16" />
+      <path d="m7 7 1.2 1.2L10.5 6" />
+      <path d="m7 12 1.2 1.2 2.3-2.2" />
+      <path d="m7 17 1.2 1.2 2.3-2.2" />
+    </>
+  ),
+  money: (
+    <>
+      <path d="M4 17 9 12l3 3 8-8" />
+      <path d="M14 7h6v6" />
+      <path d="M5 20h14" />
+    </>
+  ),
+};
+
+function ReasonIcon({ type }) {
+  return (
+    <svg className="home-premium__reason-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      {reasonIcons[type]}
+    </svg>
+  );
+}
+
+const partnerIcons = {
+  architecture: (
+    <>
+      <path d="M4 20h16" />
+      <path d="M6 20V9l6-4 6 4v11" />
+      <path d="M9 20v-7h6v7" />
+    </>
+  ),
+  housing: (
+    <>
+      <path d="M4 11 12 5l8 6" />
+      <path d="M6 10v10h12V10" />
+      <path d="M10 20v-6h4v6" />
+    </>
+  ),
+  public: (
+    <>
+      <path d="M4 10h16" />
+      <path d="M5 20h14" />
+      <path d="M7 10v10" />
+      <path d="M12 10v10" />
+      <path d="M17 10v10" />
+      <path d="M12 4 4 8h16l-8-4Z" />
+    </>
+  ),
+  services: (
+    <>
+      <path d="M7 17h10" />
+      <path d="M9 17V9a3 3 0 0 1 6 0v8" />
+      <path d="M6 13h12" />
+      <path d="M8 20h8" />
+    </>
+  ),
+};
+
+function PartnerIcon({ type }) {
+  return (
+    <svg className="home-premium__partner-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      {partnerIcons[type]}
+    </svg>
+  );
+}
 
 const cases = [
   {
     sector: 'ARQUITECTURA',
-    metric: '3 semanas',
-    title: 'Primera mejora operativa implantada',
-    text: 'Reorganización del flujo de proyectos y seguimiento documental para acelerar control y reducir tareas manuales.',
-    meta: 'EGEA Arquitectura',
+    text: 'Más control en 3 semanas.',
   },
   {
     sector: 'CONSTRUCCION',
-    metric: '75%',
-    title: 'Reducción en tiempo administrativo',
-    text: 'Digitalización del seguimiento de obra y control económico para reducir retrasos, errores y duplicidades.',
-    meta: 'VIM House',
+    text: '75% menos tiempo administrativo.',
   },
   {
     sector: 'ADMINISTRACION',
-    metric: '78.000€/año',
-    title: 'Ahorro potencial identificado',
-    text: 'Estandarización de circuitos internos y trazabilidad de expedientes con menos fricción entre departamentos.',
-    meta: "Ajuntament de L'Aldea",
+    text: '78.000€ detectados en pérdidas.',
   },
   {
     sector: 'SERVICIOS',
-    metric: '80%',
-    title: 'Mayor visibilidad operativa',
-    text: 'Coordinación técnica, asignación y cierre de servicios con datos más fiables y control de ejecución.',
-    meta: 'Curmac Elevacions',
+    text: '+80% control operativo.',
   },
 ];
 
 const phases = [
   {
     step: '01',
-    label: 'Fase 01 · Diagnóstico',
-    title: 'Identificar',
-    text: 'Entrevistamos a dirección y equipos clave, revisamos procesos críticos y calculamos el coste real de cada ineficiencia.',
-    result: 'Resultado en 2-3 semanas',
+    label: 'Paso 1',
+    title: 'Entiendo tu empresa',
+    text: 'Veo cómo trabajas hoy.',
+    result: 'Sin teoría',
   },
   {
     step: '02',
-    label: 'Fase 02 · Prioridades',
-    title: 'Decidir',
-    text: 'Priorizamos las acciones según impacto, esfuerzo y retorno. Se define una hoja de ruta clara, sin dispersión.',
-    result: 'Plan accionable por fases',
+    label: 'Paso 2',
+    title: 'Detecto el problema real',
+    text: 'Señalo dónde se pierde dinero.',
+    result: 'Sin rodeos',
   },
   {
     step: '03',
-    label: 'Fase 03 · Implantación',
-    title: 'Implementar',
-    text: 'Configuramos sistemas, automatizaciones y herramientas propias para que el cambio llegue a la operación diaria.',
-    result: 'Procesos en producción',
+    label: 'Paso 3',
+    title: 'Lo solucionamos',
+    text: 'Ordenamos el proceso que falla.',
+    result: 'Sin complicaciones',
   },
   {
     step: '04',
-    label: 'Fase 04 · Seguimiento',
-    title: 'Consolidar',
-    text: 'Medimos adopción, resultados y nuevas oportunidades de mejora para consolidar una estructura más rentable.',
-    result: 'Control y mejora continua',
+    label: 'Paso 4',
+    title: 'Lo dejamos funcionando',
+    text: 'El sistema queda claro y usable.',
+    result: 'Sin humo',
   },
 ];
 
@@ -205,24 +288,24 @@ function HomePage() {
             <div className="lead-modal__content">
               <div className="lead-modal__copy">
                 <p className="lead-modal__eyebrow">Diagnóstico operativo</p>
-                <h2 id="lead-modal-title">¿Tu empresa está funcionando todo lo bien que podría?</h2>
+                <h2 id="lead-modal-title">¿Tu empresa funciona como debería?</h2>
 
                 <div className="lead-modal__highlight">
                   <ul>
-                    <li>Hay desorden o falta de control en el día a día</li>
-                    <li>Se pierde tiempo en procesos que deberían ser simples</li>
-                    <li>Sientes que podrías mejorar resultados pero no sabes por dónde empezar</li>
+                    <li>Hay desorden o falta de control</li>
+                    <li>Se pierde tiempo en procesos simples</li>
+                    <li>Quieres mejorar, pero no sabes por dónde empezar</li>
                   </ul>
                 </div>
 
                 <p className="lead-modal__proposal">
-                  Si te identificas, deja tus datos y vemos cómo ayudarte.
+                  Si te identificas, deja tus datos y lo revisamos.
                 </p>
               </div>
 
               <form className="lead-modal__form" onSubmit={handleLeadSubmit}>
                 <div>
-                  <p className="lead-modal__form-title">Déjame tus datos y vemos si tiene sentido ayudarte.</p>
+                  <p className="lead-modal__form-title">Déjame tus datos y vemos si tiene sentido.</p>
                 </div>
 
                 <label className="lead-modal__field">
@@ -243,7 +326,7 @@ function HomePage() {
                   {submitState.status === 'submitting' ? 'Enviando…' : 'Quiero revisar mi caso'}
                 </button>
 
-                <p className="lead-modal__microcopy">Sin compromiso. Sin venta agresiva. Solo claridad.</p>
+                <p className="lead-modal__microcopy">Sin compromiso. Solo claridad.</p>
 
                 {submitState.message && (
                   <p className={`lead-modal__feedback lead-modal__feedback--${submitState.status}`}>{submitState.message}</p>
@@ -256,26 +339,33 @@ function HomePage() {
 
       <section className="home-premium__hero">
         <div className="site-container home-premium__hero-inner" data-aos="fade-up">
-          <p className="home-premium__eyebrow">Consultoría estratégica para pymes que necesitan ordenar y escalar</p>
+          <p className="home-premium__eyebrow">Consultoría operativa para pymes que necesitan control</p>
           <h1 className="home-premium__hero-title">
-            Mejoramos procesos. Reducimos costes. <span>Implantamos sistemas que funcionan.</span>
+            <span>
+              Tu empresa <mark>pierde dinero</mark> cada día.
+            </span>
+            <span>
+              Y seguramente <mark>no sabes</mark> por qué.
+            </span>
           </h1>
           <p className="home-premium__hero-copy">
-            Consultoría para empresas industriales, construcción y servicios que quieren ganar control, rentabilidad y
-            eficiencia real. Sin software decorativo. Sin presentaciones vacías.
+            Yo te digo dónde está el problema y cómo arreglarlo.
           </p>
           <a href="/contacto#reserva" className="home-premium__cta">
-            Reserva una sesión
+            Analizar mi empresa (45 min)
           </a>
         </div>
       </section>
 
       <section className="home-premium__partners" data-aos="fade-up">
         <div className="site-container">
-          <p className="home-premium__partners-kicker">Empresas y organizaciones con las que he trabajado</p>
+          <p className="home-premium__partners-kicker">Empresas con las que he trabajado</p>
           <div className="home-premium__partners-row">
             {partners.map((partner) => (
-              <span key={partner}>{partner}</span>
+              <span key={partner.name}>
+                <PartnerIcon type={partner.icon} />
+                {partner.name}
+              </span>
             ))}
           </div>
         </div>
@@ -283,32 +373,34 @@ function HomePage() {
 
       <section className="home-premium__problem">
         <div className="site-container home-premium__problem-inner" data-aos="fade-up">
-          <p className="home-premium__eyebrow">El problema real</p>
-          <h2>
-            Has invertido en herramientas. <br />
-            Pero la gestión sigue dependiendo de tareas manuales.
-          </h2>
-          <p>
-            Partes que llegan tarde, datos duplicados, decisiones sin visibilidad y costes que nadie ha calculado con
-            precisión. No es un problema de tener más software. Es un problema de estructura, proceso y control.
-          </p>
-          <p className="home-premium__problem-strong">
-            Lo resolvemos implantando un sistema de trabajo más claro, medible y rentable.
-          </p>
+          <p className="home-premium__eyebrow">Problema</p>
+          <h2>Si esto te suena, tienes un problema:</h2>
+          <ul className="home-premium__problem-list">
+            <li>No sabes exactamente cuánto tienes en stock.</li>
+            <li>Cada pedido va por un sitio distinto.</li>
+            <li>Repites tareas cada día.</li>
+            <li>Tomas decisiones sin datos claros.</li>
+          </ul>
+          <p className="home-premium__problem-strong">No es normal. Es dinero que estás perdiendo.</p>
         </div>
       </section>
 
       <section className="home-premium__reasons">
         <div className="site-container">
           <div className="home-premium__section-head" data-aos="fade-up">
-            <p className="home-premium__eyebrow">Por qué Joan Chorto Consultor</p>
-            <h2>Transformación empresarial orientada a resultado.</h2>
+            <p className="home-premium__eyebrow">Propuesta</p>
+            <h2>
+              No necesitas más herramientas. <span>Necesitas que todo funcione.</span>
+            </h2>
           </div>
           <div className="home-premium__reason-grid">
             {reasons.map((reason) => (
               <article key={reason.title} className="home-premium__reason-card" data-aos="fade-up">
-                <h3>{reason.title}</h3>
-                <p>{reason.text}</p>
+                <ReasonIcon type={reason.icon} />
+                <div>
+                  <h3>{reason.title}</h3>
+                  <p>{reason.text}</p>
+                </div>
               </article>
             ))}
           </div>
@@ -320,17 +412,14 @@ function HomePage() {
           <div className="home-premium__section-head" data-aos="fade-up">
             <p className="home-premium__eyebrow">Casos de éxito</p>
             <h2>
-              Resultados de transformación <span>medibles y reales.</span>
+              Resultados <span>medibles y reales.</span>
             </h2>
           </div>
           <div className="home-premium__cases-grid">
             {cases.map((item) => (
-              <article key={item.title} className="home-premium__case-card" data-aos="fade-up">
+              <article key={item.sector} className="home-premium__case-card" data-aos="fade-up">
                 <span className="home-premium__case-badge">{item.sector}</span>
-                <div className="home-premium__case-metric">{item.metric}</div>
-                <h3>{item.title}</h3>
                 <p>{item.text}</p>
-                <footer>{item.meta}</footer>
               </article>
             ))}
           </div>
@@ -341,9 +430,7 @@ function HomePage() {
         <div className="site-container">
           <div className="home-premium__section-head" data-aos="fade-up">
             <p className="home-premium__eyebrow">Cómo trabajamos</p>
-            <h2>
-              Implantamos mejoras operativas <span>en cuatro fases.</span>
-            </h2>
+            <h2>Sin complicaciones. Sin teoría.</h2>
           </div>
           <div className="home-premium__timeline">
             {phases.map((phase) => (
@@ -363,10 +450,17 @@ function HomePage() {
 
       <section className="home-premium__cta-band" data-aos="fade-up">
         <div className="site-container home-premium__cta-inner">
+          <h2>Si tu empresa depende de Excel, WhatsApp o mil sistemas... no tienes control.</h2>
+          <p>Y sin control, pierdes dinero.</p>
+          <div className="home-premium__cta-list" aria-label="Qué revisamos en 45 minutos">
+            <span>dónde estás perdiendo dinero</span>
+            <span>qué lo está causando</span>
+            <span>cómo solucionarlo</span>
+          </div>
+          <p>Sin compromiso. Sin humo.</p>
           <a href="/contacto#reserva" className="home-premium__cta">
-            Solicitar diagnóstico inicial
+            Analizar mi empresa
           </a>
-          <p>30 minutos. Sin compromiso. Revisamos dónde estás perdiendo margen y capacidad de gestión.</p>
         </div>
       </section>
     </div>

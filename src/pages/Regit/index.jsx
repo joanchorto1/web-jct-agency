@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Layout from '../../components/layouts/layout';
-import RegitLogo from '../../components/img/regit-logo.svg';
+import RegitLogo from '../../components/img/regit_logo.png';
 import RegitWordmark from '../../components/img/regit-wordmark.svg';
 import './Regit.css';
 
