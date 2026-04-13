@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ajuntamentLogo from '../components/img/Escudo heraldico en tonos grises.png';
-import curmacLogo from '../components/img/Logo de Curmac Elevació en gris.png';
+import curmacLogo from '../components/img/Logo de Curmac Elevacio en gris.png';
 import egeaLogo from '../components/img/Logo de EGEA en gris.png';
 import vimHouseLogo from '../components/img/Logotipo minimalista de VIM HOUSE.png';
 const LEAD_MODAL_STORAGE_KEY = 'jctagency_lead_modal_submitted';
