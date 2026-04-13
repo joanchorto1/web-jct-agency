@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://joanchorto.com/sitemap.xml
+Sitemap: https://jctagency.com/sitemap.xml
