@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ajuntamentLogo from '../components/img/Escudo heráldico en tonos grises.png';
+import ajuntamentLogo from '../components/img/Escudo heraldico en tonos grises.png';
 import curmacLogo from '../components/img/Logo de Curmac Elevació en gris.png';
 import egeaLogo from '../components/img/Logo de EGEA en gris.png';
 import vimHouseLogo from '../components/img/Logotipo minimalista de VIM HOUSE.png';
