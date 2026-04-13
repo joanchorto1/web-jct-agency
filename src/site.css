@@ -1719,13 +1719,13 @@ a {
   display: grid;
   justify-items: center;
   align-items: center;
-  min-height: 86px;
+  min-height: 126px;
   opacity: 0.82;
 }
 
 .home-premium__partners-row img {
-  width: min(168px, 100%);
-  max-height: 58px;
+  width: min(240px, 100%);
+  max-height: 96px;
   object-fit: contain;
   filter: grayscale(1);
 }
