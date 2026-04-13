@@ -175,6 +175,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://jctagency.com/reservar-hora</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://jctagency.com/politica-privacidad</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>yearly</changefreq>

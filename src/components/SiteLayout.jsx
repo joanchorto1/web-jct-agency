@@ -31,9 +31,9 @@ function SiteLayout() {
             <Link to="/contacto">Contacto</Link>
           </nav>
 
-          <a href="/contacto#reserva" className="site-header__cta">
-            Analizar mi empresa
-          </a>
+          <Link to="/reservar-hora" className="site-header__cta">
+            Reservar hora
+          </Link>
         </div>
       </header>
 
