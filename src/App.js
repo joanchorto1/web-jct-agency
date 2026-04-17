@@ -8,6 +8,7 @@ import AnalysisPage from './pages/AnalysisPage';
 import ProjectsPage from './pages/ProjectsPage';
 import SolutionsPage from './pages/SolutionsPage';
 import ConsultingPage from './pages/ConsultingPage';
+import JcConsultorPremiumPage from './pages/JcConsultorPremiumPage';
 import ContactPage from './pages/ContactPage';
 import ProductsPageNew from './pages/ProductsPageNew';
 import ProductPage from './pages/ProductPage';
@@ -71,6 +72,7 @@ function App() {
           <Route path="/soluciones/:slug" element={<ServiceDetailPage />} />
           <Route path="/solucions/:slug" element={<ServiceDetailPage />} />
           <Route path="/consultoria" element={<ConsultingPage />} />
+          <Route path="/jc-consultor-premium" element={<JcConsultorPremiumPage />} />
           <Route path="/consultoria-informatica" element={<LocalSeoHubPage />} />
           <Route path="/consultoria-informatica/:slug" element={<LocalSeoPage />} />
           <Route path="/reservar-hora" element={<CalendarReservationPage />} />

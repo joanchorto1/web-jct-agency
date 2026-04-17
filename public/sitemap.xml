@@ -169,6 +169,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://jctagency.com/jc-consultor-premium</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.86</priority>
+  </url>
+  <url>
     <loc>https://jctagency.com/contacto</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
