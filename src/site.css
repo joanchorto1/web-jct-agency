@@ -3493,55 +3493,12 @@ a {
   background: #ffffff;
 }
 
-.constructpro-page__image-copy span {
-  width: fit-content;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: rgba(188, 150, 96, 0.92);
-  color: #111111;
-  font-size: 0.68rem;
-  font-weight: 900;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.constructpro-page__image-copy strong {
-  display: block;
-  color: #111111;
-  font-size: 1.28rem;
-  letter-spacing: -0.03em;
-}
-
-.constructpro-page__placeholder {
-  display: grid;
-  align-content: end;
-  gap: 8px;
-  padding: 24px;
-  position: relative;
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.74), rgba(239, 239, 239, 0.92)),
-    repeating-linear-gradient(45deg, rgba(17, 17, 17, 0.035) 0 10px, rgba(17, 17, 17, 0.01) 10px 20px);
-}
-
-.constructpro-page__placeholder span {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  padding: 8px 11px;
-  background: rgba(188, 150, 96, 0.92);
-  border-radius: 999px;
-  color: #111111;
-  font-size: 0.68rem;
-  font-weight: 900;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.constructpro-page__placeholder strong {
-  display: block;
-  color: #111111;
-  font-size: 1.28rem;
-  letter-spacing: -0.03em;
+.constructpro-page__image-caption {
+  padding: 10px 14px 0;
+  color: var(--home-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 .constructpro-page__warning-box {
@@ -3626,6 +3583,12 @@ a {
   border: 1px solid rgba(188, 150, 96, 0.28);
   color: #ffffff;
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.16);
+}
+
+.constructpro-page__feature-row.is-text-only,
+.constructpro-page__cta.is-text-only,
+.constructpro-page__ideal-layout.is-text-only {
+  grid-template-columns: 1fr;
 }
 
 .constructpro-page__cta h2 {

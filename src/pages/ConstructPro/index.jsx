@@ -221,29 +221,24 @@ const benefits = [
 ];
 
 function MediaCard({ item }) {
-  if (item.type === 'image') {
-    return (
-      <figure className="constructpro-page__image-card">
-        <img src={item.src} alt={item.alt} />
-        <div className="constructpro-page__image-copy">
-          <span>{item.label}</span>
-          <strong>{item.title}</strong>
-          <p>{item.text}</p>
-        </div>
-      </figure>
-    );
+  if (item.type !== 'image' || !item.src) {
+    return null;
   }
 
   return (
-    <div className="constructpro-page__placeholder" aria-label={item.label}>
-      <span>{item.label}</span>
-      <strong>{item.title}</strong>
-      <p>{item.text}</p>
-    </div>
+    <figure className="constructpro-page__image-card">
+      <img src={item.src} alt={item.alt} />
+      <figcaption className="constructpro-page__image-caption">{item.title}</figcaption>
+    </figure>
   );
 }
 
 function ConstructProPage() {
+  const featureSections = features.map((feature) => ({
+    ...feature,
+    visibleMedia: feature.media.filter((item) => item.type === 'image' && item.src),
+  }));
+
   return (
     <article className="light-page constructpro-page">
       <Helmet>
@@ -394,10 +389,10 @@ function ConstructProPage() {
             </p>
           </div>
 
-          {features.map((feature) => (
+          {featureSections.map((feature) => (
             <article
               key={feature.id}
-              className={`constructpro-page__feature-row${feature.reverse ? ' is-reverse' : ''}`}
+              className={`constructpro-page__feature-row${feature.reverse ? ' is-reverse' : ''}${feature.visibleMedia.length === 0 ? ' is-text-only' : ''}`}
               data-aos="fade-up"
             >
               <div className="constructpro-page__feature-copy">
@@ -415,11 +410,13 @@ function ConstructProPage() {
                 </div>
               </div>
 
-              <div className={`constructpro-page__media-grid constructpro-page__media-grid--${feature.mediaColumns}`}>
-                {feature.media.map((item) => (
-                  <MediaCard key={`${feature.id}-${item.label}`} item={item} />
-                ))}
-              </div>
+              {feature.visibleMedia.length > 0 ? (
+                <div className={`constructpro-page__media-grid constructpro-page__media-grid--${Math.min(feature.visibleMedia.length, feature.mediaColumns)}`}>
+                  {feature.visibleMedia.map((item) => (
+                    <MediaCard key={`${feature.id}-${item.label}`} item={item} />
+                  ))}
+                </div>
+              ) : null}
             </article>
           ))}
         </div>
@@ -448,16 +445,6 @@ function ConstructProPage() {
             ))}
           </div>
 
-          <div className="constructpro-page__single-media" data-aos="fade-up">
-            <MediaCard
-              item={{
-                type: 'placeholder',
-                label: 'Espacio para diagrama de flujo',
-                title: 'Diagrama del flujo completo',
-                text: 'Preparado para un esquema Presupuesto → Obra → Costes reales → Factura → Cobro → VeriFactu.',
-              }}
-            />
-          </div>
         </div>
       </section>
 
@@ -481,32 +468,6 @@ function ConstructProPage() {
               </div>
             </div>
 
-            <div className="constructpro-page__media-grid constructpro-page__media-grid--3">
-              <MediaCard
-                item={{
-                  type: 'placeholder',
-                  label: 'Espacio para configuración',
-                  title: 'Configuración',
-                  text: 'Preparado para entorno, certificado y parámetros.',
-                }}
-              />
-              <MediaCard
-                item={{
-                  type: 'placeholder',
-                  label: 'Espacio para estado fiscal',
-                  title: 'Estado fiscal',
-                  text: 'Preparado para una vista del seguimiento dentro de la factura.',
-                }}
-              />
-              <MediaCard
-                item={{
-                  type: 'placeholder',
-                  label: 'Espacio para QR generado',
-                  title: 'QR generado',
-                  text: 'Preparado para un ejemplo de QR fiscal.',
-                }}
-              />
-            </div>
           </article>
         </div>
       </section>
@@ -526,14 +487,6 @@ function ConstructProPage() {
           </div>
 
           <div className="constructpro-page__grid-2" data-aos="fade-up">
-            <MediaCard
-              item={{
-                type: 'placeholder',
-                label: 'Espacio para repositorio documental',
-                title: 'Repositorio documental de obra',
-                text: 'Preparado para una captura de documentos, tickets y justificantes asociados.',
-              }}
-            />
             <div className="constructpro-page__card">
               <h3>Archivos que genera y gestiona</h3>
               <p>
@@ -574,33 +527,6 @@ function ConstructProPage() {
             ))}
           </div>
 
-          <div className="constructpro-page__media-grid constructpro-page__media-grid--3 constructpro-page__report-grid" data-aos="fade-up">
-            <MediaCard
-              item={{
-                type: 'placeholder',
-                label: 'Espacio para rentabilidad por obra',
-                title: 'Rentabilidad por obra',
-                text: 'Preparado para una captura del informe de margen.',
-              }}
-            />
-            <MediaCard
-              item={{
-                type: 'placeholder',
-                label: 'Espacio para antigüedad de facturas',
-                title: 'Antigüedad de facturas',
-                text: 'Preparado para una vista de vencidas y riesgo.',
-              }}
-            />
-            <MediaCard
-              item={{
-                type: 'placeholder',
-                label: 'Espacio para hoja de horas',
-                title: 'Hoja de horas',
-                text: 'Preparado para horas totales, facturables y extra.',
-              }}
-            />
-          </div>
-
           <div className="constructpro-page__warning-box" data-aos="fade-up">
             <strong>Punto a mejorar antes de venderlo como premium</strong>
             <p>El PDF de informes debería maquetarse como informe ejecutivo si se quiere usar como argumento comercial fuerte.</p>
@@ -630,22 +556,12 @@ function ConstructProPage() {
             ))}
           </div>
 
-          <div className="constructpro-page__single-media" data-aos="fade-up">
-            <MediaCard
-              item={{
-                type: 'placeholder',
-                label: 'Espacio para beneficios visuales',
-                title: 'Página visual de beneficios',
-                text: 'Preparado para una composición con iconos y frases cortas.',
-              }}
-            />
-          </div>
         </div>
       </section>
 
       <section className="constructpro-page__section" id="ideal">
         <div className="constructpro-page__page">
-          <div className="constructpro-page__grid-2 constructpro-page__ideal-layout" data-aos="fade-up">
+          <div className="constructpro-page__grid-2 constructpro-page__ideal-layout is-text-only" data-aos="fade-up">
             <div>
               <p className="constructpro-page__kicker">Cliente ideal</p>
               <h2>Para constructoras, reformistas e instaladoras que trabajan por proyectos.</h2>
@@ -658,21 +574,13 @@ function ConstructProPage() {
                 control y profesionalización sin perder agilidad.
               </p>
             </div>
-            <MediaCard
-              item={{
-                type: 'placeholder',
-                label: 'Espacio para mockup sectorial',
-                title: 'Mockup sectorial',
-                text: 'Preparado para software en portátil y móvil con contexto visual de construcción.',
-              }}
-            />
           </div>
         </div>
       </section>
 
       <section className="constructpro-page__section" id="contacto">
         <div className="constructpro-page__page">
-          <div className="constructpro-page__cta" data-aos="fade-up">
+          <div className="constructpro-page__cta is-text-only" data-aos="fade-up">
             <div>
               <p className="constructpro-page__kicker">Cierre comercial</p>
               <h2>Transforma la gestión de obra en un sistema más ordenado, rentable y escalable.</h2>
@@ -690,14 +598,6 @@ function ConstructProPage() {
               </div>
             </div>
 
-            <MediaCard
-              item={{
-                type: 'placeholder',
-                label: 'Espacio para cierre visual',
-                title: 'Cierre visual',
-                text: 'Preparado para dashboard final o composición de tres pantallas clave.',
-              }}
-            />
           </div>
         </div>
       </section>
