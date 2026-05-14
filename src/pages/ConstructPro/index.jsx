@@ -272,13 +272,6 @@ function ConstructProPage() {
                 Ver funcionalidades
               </a>
             </div>
-            <div className="constructpro-page__hero-highlights">
-              <span>Presupuestos</span>
-              <span>Obras</span>
-              <span>Costes reales</span>
-              <span>Facturación</span>
-              <span>VeriFactu</span>
-            </div>
           </div>
 
           <MediaCard
@@ -401,13 +394,6 @@ function ConstructProPage() {
                 {feature.copy.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
-                <div className="constructpro-page__tag-list">
-                  {feature.tags.map((tag) => (
-                    <span key={tag} className="constructpro-page__tag">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
               </div>
 
               {feature.visibleMedia.length > 0 ? (
@@ -493,13 +479,6 @@ function ConstructProPage() {
                 PDF de presupuesto, PDF de factura, CSV de informes, XML VeriFactu, QR VeriFactu, documentos generales,
                 tickets de materiales y justificantes de gastos.
               </p>
-              <div className="constructpro-page__tag-list">
-                {['PDF', 'CSV', 'XML', 'SVG QR', 'Adjuntos'].map((tag) => (
-                  <span key={tag} className="constructpro-page__tag">
-                    {tag}
-                  </span>
-                ))}
-              </div>
             </div>
           </div>
         </div>

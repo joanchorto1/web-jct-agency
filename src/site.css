@@ -3268,26 +3268,6 @@ a {
   line-height: 1.55 !important;
 }
 
-.constructpro-page__hero-highlights {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 24px;
-}
-
-.constructpro-page__hero-highlights span {
-  display: inline-flex;
-  align-items: center;
-  min-height: 38px;
-  padding: 0 12px;
-  border: 1px solid rgba(188, 150, 96, 0.18);
-  border-radius: 999px;
-  background: rgba(188, 150, 96, 0.1);
-  color: #7b5b20;
-  font-size: 0.76rem;
-  font-weight: 800;
-}
-
 .constructpro-page__section-intro,
 .constructpro-page__feature-copy p,
 .constructpro-page__card p,
@@ -3332,8 +3312,7 @@ a {
 .constructpro-page__benefits-grid,
 .constructpro-page__media-grid,
 .constructpro-page__single-media,
-.constructpro-page__flow,
-.constructpro-page__tag-list {
+.constructpro-page__flow {
   display: grid;
 }
 
@@ -3451,23 +3430,6 @@ a {
   font-size: 1.02rem;
   color: #2a2a2a;
   line-height: 1.7;
-}
-
-.constructpro-page__tag-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 18px;
-}
-
-.constructpro-page__tag {
-  padding: 8px 11px;
-  border-radius: 999px;
-  border: 1px solid rgba(188, 150, 96, 0.22);
-  background: rgba(188, 150, 96, 0.12);
-  color: #7b5b20;
-  font-size: 0.8rem;
-  font-weight: 800;
 }
 
 .constructpro-page__image-card,
