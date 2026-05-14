@@ -2857,6 +2857,10 @@ a {
 
   .home-premium__partners-row,
   .home-premium__product-grid,
+  .constructpro-page__hero-grid,
+  .constructpro-page__section-head,
+  .constructpro-page__feature-row,
+  .constructpro-page__cta,
   .jc-premium__split,
   .jc-premium__split--reverse,
   .light-page__hero-grid,
@@ -2868,6 +2872,11 @@ a {
   .analysis-review,
   .home-premium__reason-grid,
   .home-premium__cases-grid,
+  .constructpro-page__summary-grid,
+  .constructpro-page__problem-grid,
+  .constructpro-page__differential-grid,
+  .constructpro-page__benefits,
+  .constructpro-page__ideal-grid,
   .jc-premium__grid,
   .jc-premium__qualify-grid {
     grid-template-columns: 1fr;
@@ -2879,6 +2888,18 @@ a {
 
   .jc-premium__bar-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .constructpro-page__metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .constructpro-page__flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .constructpro-page__flow-step::after {
+    display: none;
   }
 
   .jc-premium__bar-grid span:nth-child(odd) {
@@ -3034,6 +3055,26 @@ a {
     font-size: clamp(2.28rem, 11vw, 3.4rem);
   }
 
+  .constructpro-page__media-grid,
+  .constructpro-page__media-grid.is-wide,
+  .constructpro-page__metric-grid,
+  .constructpro-page__flow {
+    grid-template-columns: 1fr;
+  }
+
+  .constructpro-page__hero {
+    padding-bottom: 24px;
+  }
+
+  .constructpro-page__cta {
+    padding: 30px;
+  }
+
+  .constructpro-page__shot img,
+  .constructpro-page__placeholder {
+    min-height: 220px;
+  }
+
   .jc-premium h2 {
     font-size: clamp(1.86rem, 9vw, 2.88rem);
   }
@@ -3066,9 +3107,371 @@ a {
     border-top: 1px solid var(--premium-line);
   }
 
-  .jc-premium__bar-grid span:first-child {
-    border-top: 0;
-  }
+.jc-premium__bar-grid span:first-child {
+  border-top: 0;
+}
+
+.constructpro-page__hero {
+  padding-bottom: 48px;
+}
+
+.constructpro-page__hero-grid,
+.constructpro-page__section-head,
+.constructpro-page__feature-row,
+.constructpro-page__cta {
+  display: grid;
+  gap: 32px;
+}
+
+.constructpro-page__hero-grid,
+.constructpro-page__feature-row,
+.constructpro-page__cta {
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.92fr);
+  align-items: center;
+}
+
+.constructpro-page__section-head {
+  grid-template-columns: 0.82fr 1.18fr;
+  align-items: end;
+  margin-bottom: 34px;
+}
+
+.constructpro-page__brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.constructpro-page__brand img {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+  border: 1px solid var(--home-line);
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 10px;
+}
+
+.constructpro-page__brand span {
+  display: block;
+  color: var(--home-muted);
+  font-size: 0.92rem;
+}
+
+.constructpro-page__lead {
+  max-width: 700px;
+  font-size: clamp(1.08rem, 1.8vw, 1.34rem) !important;
+  color: var(--home-ink) !important;
+  line-height: 1.6 !important;
+}
+
+.constructpro-page__hero-actions,
+.constructpro-page__cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  margin-top: 28px;
+}
+
+.constructpro-page__ghost-link {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+  border: 1px solid var(--home-line);
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--home-ink);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.constructpro-page__summary-grid,
+.constructpro-page__problem-grid,
+.constructpro-page__differential-grid,
+.constructpro-page__benefits,
+.constructpro-page__metric-grid,
+.constructpro-page__ideal-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.constructpro-page__summary-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.constructpro-page__problem-grid,
+.constructpro-page__differential-grid,
+.constructpro-page__benefits {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.constructpro-page__metric-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 28px;
+}
+
+.constructpro-page__ideal-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.constructpro-page__summary-card,
+.constructpro-page__problem-card,
+.constructpro-page__benefit,
+.constructpro-page__ideal-item {
+  border: 1px solid var(--home-line);
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 26px;
+}
+
+.constructpro-page__summary-card span,
+.constructpro-page__benefit-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: #111111;
+  color: #dec18e;
+  font-family: 'Sora', 'Segoe UI', sans-serif;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.constructpro-page__summary-card p,
+.constructpro-page__problem-card p,
+.constructpro-page__benefit p,
+.constructpro-page__section-head p,
+.constructpro-page__feature-copy p,
+.constructpro-page__warning p,
+.constructpro-page__cta p {
+  color: var(--home-muted);
+}
+
+.constructpro-page__flow {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.constructpro-page__flow-step {
+  position: relative;
+  padding: 18px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  font-weight: 800;
+  text-align: center;
+}
+
+.constructpro-page__flow-step:not(:last-child)::after {
+  content: '→';
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gold-500);
+  font-weight: 900;
+}
+
+.constructpro-page__features {
+  display: grid;
+}
+
+.constructpro-page__feature-row {
+  padding: 42px 0;
+  border-bottom: 1px solid var(--home-line);
+}
+
+.constructpro-page__feature-row.is-reverse > :first-child {
+  order: 2;
+}
+
+.constructpro-page__feature-copy p {
+  margin-bottom: 14px;
+  font-size: 1rem;
+}
+
+.constructpro-page__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.constructpro-page__tags span {
+  padding: 8px 11px;
+  border: 1px solid rgba(188, 150, 96, 0.22);
+  border-radius: 999px;
+  background: rgba(188, 150, 96, 0.12);
+  color: #7b5b20;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.constructpro-page__media-grid,
+.constructpro-page__media-stack {
+  display: grid;
+  gap: 18px;
+}
+
+.constructpro-page__media-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.constructpro-page__media-grid.is-wide {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.constructpro-page__shot,
+.constructpro-page__placeholder {
+  min-height: 240px;
+  overflow: hidden;
+  border: 1px solid var(--home-line);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.constructpro-page__shot {
+  margin: 0;
+}
+
+.constructpro-page__shot img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top left;
+}
+
+.constructpro-page__shot figcaption {
+  padding: 12px 14px;
+  color: var(--home-muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.constructpro-page__placeholder {
+  display: grid;
+  align-content: end;
+  gap: 8px;
+  padding: 24px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.74), rgba(239, 239, 239, 0.92)),
+    repeating-linear-gradient(45deg, rgba(17, 17, 17, 0.035) 0 10px, rgba(17, 17, 17, 0.01) 10px 20px);
+  position: relative;
+}
+
+.constructpro-page__placeholder span {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 8px 11px;
+  border-radius: 999px;
+  background: rgba(188, 150, 96, 0.92);
+  color: #111111;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.constructpro-page__placeholder strong {
+  display: block;
+  color: var(--home-ink);
+  font-size: 1.28rem;
+}
+
+.constructpro-page__warning {
+  margin-top: 24px;
+  padding: 22px;
+  border-left: 4px solid var(--gold-500);
+  border-radius: 0 8px 8px 0;
+  background: rgba(188, 150, 96, 0.12);
+}
+
+.constructpro-page__metric {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  border: 1px solid rgba(188, 150, 96, 0.22);
+  border-radius: 8px;
+  background: #111111;
+  color: #ffffff;
+}
+
+.constructpro-page__metric strong {
+  color: #dec18e;
+  font-family: 'Sora', 'Segoe UI', sans-serif;
+  font-size: 2rem;
+}
+
+.constructpro-page__metric span {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.9rem;
+}
+
+.constructpro-page__benefit {
+  min-height: 178px;
+}
+
+.constructpro-page__ideal-item {
+  color: var(--home-ink);
+  font-weight: 700;
+}
+
+.constructpro-page__band {
+  background: #111111;
+}
+
+.constructpro-page__band h2,
+.constructpro-page__band h3,
+.constructpro-page__band .light-page__eyebrow,
+.constructpro-page__band .constructpro-page__warning strong {
+  color: #ffffff;
+}
+
+.constructpro-page__band .constructpro-page__section-head p,
+.constructpro-page__band .constructpro-page__problem-card p,
+.constructpro-page__band .constructpro-page__summary-card p,
+.constructpro-page__band .constructpro-page__warning p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.constructpro-page__band .constructpro-page__problem-card,
+.constructpro-page__band .constructpro-page__summary-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.constructpro-page__band .constructpro-page__summary-card span {
+  background: var(--gold-500);
+  color: #111111;
+}
+
+.constructpro-page__cta {
+  padding: 48px;
+  border: 1px solid rgba(188, 150, 96, 0.28);
+  border-radius: 8px;
+  background: linear-gradient(135deg, #111111, #222222);
+  color: #ffffff;
+}
+
+.constructpro-page__cta h2 {
+  color: #ffffff;
+}
+
+.constructpro-page__cta p {
+  color: rgba(255, 255, 255, 0.74);
+}
 
   .jc-premium__card {
     min-height: auto;

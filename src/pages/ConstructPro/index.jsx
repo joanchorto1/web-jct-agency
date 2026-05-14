@@ -1,413 +1,551 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import Layout from '../../components/layouts/layout';
-import Logo from '../../components/img/apple-touch-icon.png';
-import HeroLogo from '../../components/img/LOGO(Fondo Transparent).png';
-import Capture1 from '../../components/img/captura1.png';
-import Capture2 from '../../components/img/captura2.png';
-import Capture3 from '../../components/img/captura3.png';
+import { Link } from 'react-router-dom';
+import constructProLogo from '../../components/img/ContructPRO-Logo.png';
+import capture1 from '../../components/img/captura1.png';
+import capture2 from '../../components/img/captura2.png';
+import capture3 from '../../components/img/captura3.png';
 
-
-const CalendarIcon = () => (
-  <svg
-    aria-hidden="true"
-    width="18"
-    height="18"
-    viewBox="0 0 24 24"
-    className="ms-2"
-    xmlns="http://www.w3.org/2000/svg"
-    focusable="false"
-    fill="currentColor"
-  >
-    <path d="M7 2a1 1 0 0 0-1 1v1H5a3 3 0 0 0-3 3v11a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3h-1V3a1 1 0 0 0-2 0v1H9V3a1 1 0 0 0-1-1Zm12 6H5v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1Z" />
-    <path d="M9 13h6v3H9z" />
-  </svg>
-);
-
-const ContactActionGroup = ({
-  primaryHref,
-  secondaryHref,
-  primaryLabel,
-  secondaryLabel,
-  variant = 'primary',
-  secondaryVariant = 'outline-primary',
-  size = 'lg',
-  className = '',
-}) => (
-  <div className={`d-flex flex-column flex-sm-row gap-3 ${className}`}>
-    <a href={primaryHref} className={`btn btn-${variant} btn-${size}`}>
-      {primaryLabel}
-    </a>
-    <a href={secondaryHref} className={`btn btn-${secondaryVariant} btn-${size}`}>
-      {secondaryLabel}
-      <CalendarIcon />
-    </a>
-  </div>
-);
-
-const faqItems = [
+const executiveSummary = [
   {
-    question: '¿Tengo que abandonar mi programa actual?',
-    answer:
-      'No. Revisamos cómo trabajas hoy y te dejamos un plan claro para conectar partes, certificaciones y facturas sin cambiar de software si no quieres.',
+    number: '01',
+    title: 'De presupuesto a ejecución',
+    text: 'El presupuesto aceptado puede convertirse en obra y conservar su estructura de partidas. Lo vendido y lo ejecutado se comparan con el mismo criterio.',
   },
   {
-    question: '¿Qué pasa si ya tengo asesoría?',
-    answer:
-      'La involucramos desde el minuto uno para que el envío a la AEAT quede trazado y sin duplicar trabajo ni registros.',
-  },
-  {
-    question: '¿Cuánto tardaremos en ver resultados?',
-    answer: 'En la primera llamada obtienes riesgos y pasos. El ajuste básico suele quedar listo en 3 semanas.',
+    number: '02',
+    title: 'Control económico por partida',
+    text: 'Horas, materiales y gastos se imputan a partidas concretas para detectar desviaciones antes de que el margen desaparezca.',
   },
 ];
 
-const quickNumbers = [
-  { value: '40', label: 'horas ahorradas al mes' },
-  { value: '80%', label: 'menos errores en facturas' },
-  { value: '3', label: 'semanas para tener el flujo controlado' },
+const problemCards = [
+  {
+    title: 'Costes poco visibles',
+    text: 'La dirección no siempre sabe qué partida está consumiendo más recursos de los previstos.',
+  },
+  {
+    title: 'Decisiones tarde',
+    text: 'Cuando el sobrecoste se detecta al final, ya no queda margen para corregir.',
+  },
+  {
+    title: 'Documentación dispersa',
+    text: 'Justificantes, tickets, PDFs y datos críticos acaban repartidos entre carpetas, correos y chats.',
+  },
 ];
 
-const contactHref = '/contacte';
+const workflowSteps = ['Presupuesto', 'Obra', 'Costes reales', 'Factura', 'Cobro', 'Trazabilidad'];
 
-const ConstructProPage = () => (
-  <Layout stickyVisibility="desktop-only">
-    <Helmet>
-      <title>ConstructPro | Evita sanciones VeriFactu y controla tus obras</title>
-      <meta
-        name="description"
-        content="Evita sanciones VeriFactu y controla tus obras en un único sistema. Diagnóstico gratuito para empresas de construcción con partes, certificaciones y facturas."
-      />
-    </Helmet>
+const featureSections = [
+  {
+    id: 'presupuestos',
+    kicker: 'Presupuestos',
+    title: 'Ofertas profesionales con partidas, líneas e historial.',
+    copy: [
+      'ConstructPro permite crear, editar, duplicar y estructurar presupuestos por partidas.',
+      'Cada partida puede contener mano de obra, material o servicios externos, con cantidad, precio, descuento e importe.',
+      'También permite aplicar plantillas, reordenar partidas, cambiar estados y conservar observaciones e historial de actividad.',
+    ],
+    tags: ['Partidas', 'Plantillas', 'Historial', 'PDF corporativo'],
+    media: [
+      { type: 'image', src: capture1, alt: 'Captura de detalle de presupuesto en ConstructPro', label: 'Captura actual' },
+      { type: 'placeholder', label: 'Espacio para PDF de presupuesto', text: 'Preparado para insertar un PDF limpio con partidas, importes y branding corporativo.' },
+    ],
+  },
+  {
+    id: 'obras',
+    kicker: 'Obras',
+    title: 'Del presupuesto aceptado a la obra real.',
+    copy: [
+      'Una obra puede nacer de un presupuesto aceptado y heredar sus partidas como base planificada.',
+      'Esto evita reintroducciones manuales y permite comparar lo previsto contra lo ejecutado desde el primer día.',
+      'La ficha de obra reúne cliente, fechas, estado, presupuesto asociado, importe planificado, coste real y desviación.',
+    ],
+    tags: ['Importe planificado', 'Coste real', 'Desviación', 'Estado de obra'],
+    media: [
+      { type: 'image', src: capture2, alt: 'Captura de ficha de obra en ConstructPro', label: 'Captura actual' },
+      { type: 'placeholder', label: 'Espacio para conversión a obra', text: 'Reservado para una captura de creación de obra desde presupuesto aceptado.' },
+    ],
+    reverse: true,
+  },
+  {
+    id: 'partidas',
+    kicker: 'Control por partida',
+    title: 'La rentabilidad se mide donde se pierde: en la partida.',
+    copy: [
+      'Cada partida de obra tiene un importe previsto y un coste real acumulado construido a partir de horas, materiales y gastos.',
+      'Esto permite saber qué parte de la obra se está desviando y actuar antes de cerrar el proyecto con una sorpresa.',
+    ],
+    tags: ['Horas', 'Materiales', 'Gastos', 'Sobrecostes'],
+    media: [
+      { type: 'placeholder', label: 'Espacio para planificado vs real', text: 'Preparado para una comparativa económica por partida y desviación.' },
+      { type: 'placeholder', label: 'Espacio para informe de desviaciones', text: 'Preparado para una vista de partidas con margen, coste y desviación.' },
+    ],
+  },
+  {
+    id: 'operativa',
+    kicker: 'Operativa diaria',
+    title: 'El trabajo de campo alimenta el control económico.',
+    copy: [
+      'Los usuarios pueden registrar horas, consumos de materiales y gastos asociados a partidas concretas.',
+      'Cada registro actualiza el coste real de la obra y deja trazabilidad operativa y documental.',
+      'La parte móvil facilita accesos rápidos al dashboard, alta de horas, materiales e historial.',
+    ],
+    tags: ['Móvil', 'Justificantes', 'Coste hora', 'Trazabilidad'],
+    media: [
+      { type: 'placeholder', label: 'Espacio para horas', text: 'Preparado para una captura de partes de trabajo.' },
+      { type: 'placeholder', label: 'Espacio para materiales', text: 'Preparado para una captura de consumos, proveedor y ticket.' },
+      { type: 'placeholder', label: 'Espacio para gastos', text: 'Preparado para una captura de categoría, importe y adjunto.' },
+    ],
+    reverse: true,
+    wide: true,
+  },
+  {
+    id: 'facturacion',
+    kicker: 'Facturación',
+    title: 'Facturas conectadas con proyectos, partidas y cobros.',
+    copy: [
+      'ConstructPro permite crear facturas manuales o vinculadas a obra.',
+      'Las líneas de factura pueden asociarse a partidas del proyecto, calcular impuestos, registrar pagos parciales y conocer el pendiente real.',
+      'El PDF de factura puede incluir líneas, vencimiento, proyecto, impuestos, observaciones y notas legales.',
+    ],
+    tags: ['Pagos parciales', 'Pendiente', 'Vencimiento', 'PDF factura'],
+    media: [
+      { type: 'image', src: capture3, alt: 'Captura de facturación y cobros en ConstructPro', label: 'Captura actual' },
+      { type: 'placeholder', label: 'Espacio para PDF factura', text: 'Preparado para insertar un PDF A4 corporativo.' },
+      { type: 'placeholder', label: 'Espacio para pagos', text: 'Preparado para una vista de cobros y pendiente real.' },
+    ],
+    wide: true,
+  },
+];
 
-    <div className="bg-white text-dark">
-      <section className="section-spacing pb-5 position-relative overflow-hidden">
-        <div className="container position-relative">
-          <div className="row align-items-center g-5 flex-column-reverse flex-lg-row">
-            <div className="col-lg-6 position-relative">
+const diferencialCards = [
+  {
+    number: 'A',
+    title: 'Control operativo',
+    text: 'La actividad diaria de obra se convierte en información económica útil.',
+  },
+  {
+    number: 'B',
+    title: 'Control financiero',
+    text: 'Facturación, cobros, vencimientos y cash-flow se conectan con el estado real del proyecto.',
+  },
+  {
+    number: 'C',
+    title: 'Trazabilidad documental',
+    text: 'Presupuestos, facturas, justificantes y documentos quedan asociados al flujo de trabajo.',
+  },
+];
 
-              <span className="eyebrow text-uppercase text-primary">ConstructPro para constructoras</span>
-              <h1 className="display-5 fw-bold mt-3">
-                Evita sanciones VeriFactu y controla tus obras en un único sistema.
-              </h1>
-              <p className="lead text-muted mt-3">
-                Para empresas de construcción que trabajan con partes, certificaciones y facturas y no quieren duplicar trabajo con la nueva normativa.
-              </p>
+const reportMetrics = [
+  { value: 'Margen', label: 'por obra y por partida' },
+  { value: 'Desviación', label: 'por línea presupuestada' },
+  { value: 'Horas', label: 'imputadas y costeadas' },
+  { value: 'Facturas', label: 'pendientes y antigüedad' },
+];
 
-              <div className="d-flex flex-column gap-3">
-                <ContactActionGroup
-                  className="mt-1"
-                  primaryHref={contactHref}
-                  secondaryHref={contactHref}
-                  primaryLabel="Reserva diagnóstico gratuito"
-                  secondaryLabel="Solicitar llamada"
-                />
-                <div className="d-flex gap-3 align-items-center flex-wrap">
-                  {quickNumbers.map((item) => (
-                    <div
-                      key={item.label}
-                      className="px-3 py-2 rounded-3 bg-light border d-flex align-items-center gap-2"
-                    >
-                      <span className="fw-bold text-primary fs-4 mb-0">{item.value}</span>
-                      <span className="text-muted small fw-semibold">{item.label}</span>
-                    </div>
+const benefits = [
+  'Más control sobre el estado económico real de cada obra.',
+  'Mejor capacidad para detectar desviaciones antes de que sea tarde.',
+  'Menos trabajo duplicado entre oficina, producción y administración.',
+  'Facturación y cobros conectados con la ejecución real.',
+  'Documentación centralizada y más fácil de defender.',
+  'Base más sólida para trabajar con trazabilidad fiscal moderna.',
+];
+
+const idealFor = [
+  'Constructoras y reformas con varias obras en marcha.',
+  'Instaladoras que necesitan ligar presupuesto, ejecución y facturación.',
+  'Empresas que quieren controlar costes por obra y por partida.',
+  'Equipos que ya no pueden depender de Excel, papeles y seguimiento manual.',
+];
+
+function MediaCard({ item }) {
+  if (item.type === 'image') {
+    return (
+      <figure className="constructpro-page__shot">
+        <img src={item.src} alt={item.alt} />
+        <figcaption>{item.label}</figcaption>
+      </figure>
+    );
+  }
+
+  return (
+    <div className="constructpro-page__placeholder" aria-label={item.label}>
+      <span>{item.label}</span>
+      <strong>Espacio preparado para captura</strong>
+      <p>{item.text}</p>
+    </div>
+  );
+}
+
+function ConstructProPage() {
+  return (
+    <article className="light-page constructpro-page">
+      <Helmet>
+        <title>ConstructPro | Control real de obra, costes y facturación</title>
+        <meta
+          name="description"
+          content="ConstructPro conecta presupuestos, obras, partidas, costes reales, facturación, cobros y documentación en un único entorno pensado para empresas de construcción."
+        />
+      </Helmet>
+
+      <section className="light-page__hero constructpro-page__hero" id="inicio" data-aos="fade-up">
+        <div className="site-container constructpro-page__hero-grid">
+          <div>
+            <div className="constructpro-page__brand">
+              <img src={constructProLogo} alt="Logo ConstructPro" />
+              <div>
+                <p className="light-page__eyebrow">Plataforma para constructoras</p>
+                <span>by JC Consultor</span>
+              </div>
+            </div>
+            <h1>Control real de obra, costes y facturación.</h1>
+            <p className="constructpro-page__lead">
+              ConstructPro conecta presupuestos, obras, partidas, costes reales, facturación, cobros y documentación
+              en un único entorno pensado para empresas de construcción, reformas e instaladoras.
+            </p>
+            <div className="constructpro-page__hero-actions">
+              <Link to="/contacto#reserva" className="home-premium__cta">
+                Solicitar demostración
+              </Link>
+              <a href="#funciones" className="constructpro-page__ghost-link">
+                Ver funcionalidades
+              </a>
+            </div>
+          </div>
+
+          <MediaCard
+            item={{
+              type: 'image',
+              src: capture1,
+              alt: 'Dashboard principal de ConstructPro',
+              label: 'Captura actual',
+            }}
+          />
+        </div>
+      </section>
+
+      <section className="light-page__section" id="resumen">
+        <div className="site-container">
+          <div className="constructpro-page__section-head" data-aos="fade-up">
+            <div>
+              <p className="light-page__eyebrow">Resumen ejecutivo</p>
+              <h2>Un sistema de gestión pensado alrededor de la obra.</h2>
+            </div>
+            <p>
+              ConstructPro no se limita a emitir facturas o guardar contactos. Organiza el ciclo completo de una
+              constructora: desde la oferta comercial hasta la ejecución, los costes reales, la facturación, el cobro y
+              la trazabilidad fiscal.
+            </p>
+          </div>
+
+          <div className="constructpro-page__summary-grid">
+            {executiveSummary.map((item) => (
+              <article key={item.title} className="constructpro-page__summary-card" data-aos="fade-up">
+                <span>{item.number}</span>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="constructpro-page__media-stack" data-aos="fade-up">
+            <MediaCard
+              item={{
+                type: 'placeholder',
+                label: 'Espacio para menú principal',
+                text: 'Preparado para insertar una captura con accesos a Presupuestos, Obras, Clientes, Facturas, Informes y Configuración.',
+              }}
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="light-page__section constructpro-page__band" id="problema">
+        <div className="site-container">
+          <div className="constructpro-page__section-head" data-aos="fade-up">
+            <div>
+              <p className="light-page__eyebrow">El problema</p>
+              <h2>Cuando la información está dispersa, el margen se escapa.</h2>
+            </div>
+            <p>
+              Muchas constructoras trabajan con presupuestos por un lado, costes reales en Excel o papeles, facturas en
+              otro sistema y documentación repartida entre correos, carpetas y WhatsApp.
+            </p>
+          </div>
+
+          <div className="constructpro-page__problem-grid">
+            {problemCards.map((item) => (
+              <article key={item.title} className="constructpro-page__problem-card" data-aos="fade-up">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="constructpro-page__flow" aria-label="Flujo ConstructPro" data-aos="fade-up">
+            {workflowSteps.map((step) => (
+              <div key={step} className="constructpro-page__flow-step">
+                {step}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="light-page__section" id="funciones">
+        <div className="site-container">
+          <div className="constructpro-page__section-head" data-aos="fade-up">
+            <div>
+              <p className="light-page__eyebrow">Funcionalidades principales</p>
+              <h2>Todo el ciclo de obra conectado.</h2>
+            </div>
+            <p>
+              La clave no es tener muchas pantallas. La clave es que cada acción alimente el control económico y
+              documental del proyecto.
+            </p>
+          </div>
+
+          <div className="constructpro-page__features">
+            {featureSections.map((section) => (
+              <article
+                key={section.id}
+                className={`constructpro-page__feature-row${section.reverse ? ' is-reverse' : ''}`}
+                data-aos="fade-up"
+              >
+                <div className="constructpro-page__feature-copy">
+                  <p className="light-page__eyebrow">{section.kicker}</p>
+                  <h2>{section.title}</h2>
+                  {section.copy.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                  <div className="constructpro-page__tags">
+                    {section.tags.map((tag) => (
+                      <span key={tag}>{tag}</span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className={`constructpro-page__media-grid${section.wide ? ' is-wide' : ''}`}>
+                  {section.media.map((item) => (
+                    <MediaCard key={`${section.id}-${item.label}`} item={item} />
                   ))}
                 </div>
-                <p className="text-muted small mb-0">
-                  Beneficio + urgencia + acción: solicita la llamada y evita rehacer la facturación a última hora.
-                </p>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="position-relative shadow-lg rounded-4 overflow-hidden">
-                <div className="ratio ratio-16x9 rounded-4 overflow-hidden">
-                  <iframe
-                    src="https://www.youtube.com/embed/vxf2QPHDjxU?si=IaZvTkqvV0dxLFj4"
-                    title="Demo ConstructPro"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
-                <div className="position-absolute top-0 start-0 m-3 px-3 py-2 rounded-3 bg-white shadow-sm d-flex align-items-center gap-2">
-                  <img src={HeroLogo} alt="ConstructPro" width="32" height="32" className="rounded" />
-                  <span className="fw-semibold">Demo rápida: flujo completo</span>
-                </div>
-                <div className="position-absolute bottom-0 end-0 m-3 px-3 py-2 rounded-3 bg-dark text-white d-flex align-items-center gap-2">
-                  <span className="badge bg-primary">Vídeo</span>
-                  <span className="small">Cómo conectar obra, compras y facturas sin duplicar trabajo.</span>
-                </div>
-              </div>
-
-            </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="section-spacing pt-4 pb-5">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10 col-xl-9">
-              <div className="p-4 p-md-5 rounded-4 bg-light border position-relative overflow-hidden">
-                <div className="position-absolute top-0 end-0 m-3 px-3 py-1 bg-primary text-white rounded-pill fw-semibold">
-                  30 min en videollamada
-                </div>
-                <div className="d-flex align-items-center justify-content-between flex-wrap gap-3">
-                  <h2 className="h4 fw-semibold mb-0">Tu diagnóstico gratuito explicado como un producto</h2>
-                  <span className="badge bg-primary-subtle text-primary fw-semibold">Sin instalar nada</span>
-                </div>
-                <div className="row g-4 mt-3">
-                  <div className="col-md-6">
-                    <ul className="list-unstyled d-grid gap-3 fs-5 mb-0">
-                      <li className="d-flex gap-2 align-items-start">
-                        <span className="text-primary">●</span>
-                        <span>Revisamos cómo certificas y facturas hoy.</span>
-                      </li>
-                      <li className="d-flex gap-2 align-items-start">
-                        <span className="text-primary">●</span>
-                        <span>Detectamos riesgos de sanción: duplicidades, incoherencias y errores de trazabilidad.</span>
-                      </li>
-                      <li className="d-flex gap-2 align-items-start">
-                        <span className="text-primary">●</span>
-                        <span>Te entrego un esquema claro de lo que tendrías que adaptar con o sin ConstructPro.</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="d-grid gap-3">
-                      <div className="p-3 rounded-3 bg-white border d-flex align-items-center gap-3">
-                        <span className="badge bg-success">✅</span>
-                        <div>
-                          <h3 className="h6 mb-1">Plan claro antes de la fecha límite de VeriFactu</h3>
-                          <p className="mb-0 text-muted small">Checklist accionable para no improvisar la adaptación.</p>
-                        </div>
-                      </div>
-                      <div className="p-3 rounded-3 bg-white border d-flex align-items-center gap-3">
-                        <span className="badge bg-secondary">❌</span>
-                        <div>
-                          <h3 className="h6 mb-1">Sin cambiar tu programa actual</h3>
-                          <p className="mb-0 text-muted small">Nos adaptamos a tu ERP y añadimos la trazabilidad que pide AEAT.</p>
-                        </div>
-                      </div>
-                      <div className="p-3 rounded-3 bg-white border d-flex align-items-center gap-3">
-                        <span className="badge bg-info text-dark">🔎</span>
-                        <div>
-                          <h3 className="h6 mb-1">Todo queda registrado</h3>
-                          <p className="mb-0 text-muted small">Si AEAT revisa, tienes la evidencia: partes, certificaciones y facturas conectadas.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
+      <section className="light-page__section constructpro-page__band" id="diferencial">
+        <div className="site-container">
+          <div className="constructpro-page__section-head" data-aos="fade-up">
+            <div>
+              <p className="light-page__eyebrow">Diferencial</p>
+              <h2>No es un facturador genérico con casco de obra puesto.</h2>
             </div>
+            <p>
+              ConstructPro está modelado para presupuestos, obras y partidas. El valor está en mantener un hilo continuo
+              entre lo vendido, lo ejecutado, lo facturado, lo cobrado y lo trazado fiscalmente.
+            </p>
+          </div>
+
+          <div className="constructpro-page__differential-grid">
+            {diferencialCards.map((item) => (
+              <article key={item.title} className="constructpro-page__summary-card" data-aos="fade-up">
+                <span>{item.number}</span>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="constructpro-page__media-stack" data-aos="fade-up">
+            <MediaCard
+              item={{
+                type: 'placeholder',
+                label: 'Espacio para diagrama de flujo',
+                text: 'Preparado para un esquema Presupuesto → Obra → Costes reales → Factura → Cobro → VeriFactu.',
+              }}
+            />
           </div>
         </div>
       </section>
 
-      <section className="section-spacing pt-4 pb-4 bg-dark text-white">
-        <div className="container">
-          <div className="row g-4 align-items-center">
-            <div className="col-lg-6">
-              <h2 className="fw-semibold mb-3">VeriFactu: el riesgo real de sanción</h2>
-              <p className="text-white-50 mb-4">
-                La normativa penaliza duplicidades, incoherencias y trazas incompletas. Evita multas que pueden ir de 1.500€ a 400.000€ por obra.
-              </p>
-              <div className="d-grid gap-3">
-                <div className="p-3 rounded-3 bg-white bg-opacity-10 border border-opacity-25">
-                  <strong>1.500€</strong> por cada factura sin trazabilidad correcta.
-                </div>
-                <div className="p-3 rounded-3 bg-white bg-opacity-10 border border-opacity-25">
-                  <strong>60.000€</strong> si no puedes demostrar el envío VeriFactu.
-                </div>
-                <div className="p-3 rounded-3 bg-white bg-opacity-10 border border-opacity-25">
-                  <strong>Hasta 400.000€</strong> si se considera ocultación sistemática.
-                </div>
-              </div>
+      <section className="light-page__section" id="verifactu">
+        <div className="site-container constructpro-page__feature-row" data-aos="fade-up">
+          <div className="constructpro-page__feature-copy">
+            <p className="light-page__eyebrow">VeriFactu</p>
+            <h2>Base preparada para trazabilidad fiscal moderna.</h2>
+            <p>
+              ConstructPro incorpora configuración de entorno, certificado digital, generación de hash, UUID, XML, QR y
+              seguimiento del estado de la factura.
+            </p>
+            <p>
+              Esto debe comunicarse con precisión: la base técnica existe, pero conviene validar el envío real, la
+              respuesta de AEAT y el ciclo completo antes de prometer cumplimiento total en producción.
+            </p>
+            <div className="constructpro-page__warning">
+              <strong>Nota comercial prudente</strong>
+              <p>Usar “base preparada para VeriFactu” o “módulo orientado a VeriFactu” hasta confirmar todo el flujo real.</p>
             </div>
-            <div className="col-lg-6">
-              <div className="p-4 rounded-4 bg-white text-dark shadow-sm">
-                <div className="d-flex align-items-center justify-content-between mb-3">
-                  <h3 className="h5 mb-0">¿Qué evitamos en la primera llamada?</h3>
-                  <span className="badge bg-danger-subtle text-danger fw-semibold">Dolor → acción</span>
-                </div>
-                <ul className="list-unstyled mb-0 d-grid gap-3">
-                  <li className="d-flex gap-3 align-items-start">
-                    <span className="badge bg-danger">!</span>
-                    <div>
-                      <strong>Duplicar partes y facturas</strong>
-                      <p className="mb-0 text-muted small">Detectamos incoherencias antes de que AEAT te las reclame.</p>
-                    </div>
-                  </li>
-                  <li className="d-flex gap-3 align-items-start">
-                    <span className="badge bg-warning text-dark">!</span>
-                    <div>
-                      <strong>Errores de trazabilidad</strong>
-                      <p className="mb-0 text-muted small">Conectamos obra, compras y certificaciones para que nada quede suelto.</p>
-                    </div>
-                  </li>
-                  <li className="d-flex gap-3 align-items-start">
-                    <span className="badge bg-success">✓</span>
-                    <div>
-                      <strong>Plan de adaptación listo</strong>
-                      <p className="mb-0 text-muted small">Guía práctica de qué cambiar y cuándo para evitar sanciones.</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+          </div>
 
-            </div>
+          <div className="constructpro-page__media-grid">
+            <MediaCard
+              item={{
+                type: 'placeholder',
+                label: 'Espacio para configuración VeriFactu',
+                text: 'Preparado para entorno, certificado digital, hash, QR y seguimiento de estado.',
+              }}
+            />
+            <MediaCard
+              item={{
+                type: 'placeholder',
+                label: 'Espacio para XML y QR',
+                text: 'Preparado para una vista clara de XML generado y QR asociado a factura.',
+              }}
+            />
           </div>
         </div>
       </section>
 
-      <section className="section-spacing pt-4 pb-4">
-        <div className="container">
-          <div className="row g-4 align-items-center">
-            <div className="col-lg-6">
-              <div className="d-flex align-items-center gap-2 mb-3">
-                <img src={Logo} alt="ConstructPro" width="32" height="32" className="rounded" />
-                <span className="text-uppercase text-primary fw-bold small">Resultados medibles</span>
-              </div>
-              <h2 className="h4 fw-semibold">Impacto real en cifras</h2>
-              <p className="text-muted">Menos teoría y más datos: así queda tu operación después de adoptar el flujo VeriFactu.</p>
-              <div className="d-grid gap-3">
-                {[{ label: 'Tareas administrativas por obra', value: 60 }, { label: 'Desviación media en 18 obras', value: 97.5 }, { label: 'Errores entre oficina y obra', value: 40 }].map((item) => (
-                  <div key={item.label} className="p-3 rounded-3 bg-light border">
-                    <div className="d-flex justify-content-between align-items-center mb-2">
-                      <span className="fw-semibold">{item.label}</span>
-                      <span className="text-primary fw-bold">-{item.value}%</span>
-                    </div>
-                    <div className="progress" role="progressbar" aria-label={item.label} aria-valuenow={item.value} aria-valuemin="0" aria-valuemax="100">
-                      <div
-                        className="progress-bar bg-primary"
-                        style={{ width: `${Math.min(item.value, 100)}%` }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="row g-3">
-                {[Capture1, Capture2, Capture3].map((src, index) => (
-                  <div key={src} className="col-12 col-md-6">
-                    <div className="rounded-4 overflow-hidden border shadow-sm h-100">
-                      <img src={src} alt={`Captura ConstructPro ${index + 1}`} className="img-fluid w-100" />
-                    </div>
+      <section className="light-page__section" id="documentos">
+        <div className="site-container constructpro-page__section-head" data-aos="fade-up">
+          <div>
+            <p className="light-page__eyebrow">Documentos</p>
+            <h2>Presupuestos, facturas y justificantes dentro del mismo flujo.</h2>
+          </div>
+          <p>
+            PDF de presupuesto, PDF de factura, CSV de informes, XML VeriFactu, QR VeriFactu y documentación general
+            asociados al proceso, no perdidos fuera de él.
+          </p>
+        </div>
 
-                  </div>
-                ))}
-              </div>
+        <div className="constructpro-page__media-grid is-wide" data-aos="fade-up">
+          <MediaCard
+            item={{
+              type: 'placeholder',
+              label: 'Espacio para documentos',
+              text: 'Preparado para una galería de documentos generados y adjuntos por proceso.',
+            }}
+          />
+          <MediaCard
+            item={{
+              type: 'placeholder',
+              label: 'Espacio para justificantes',
+              text: 'Preparado para tickets de materiales, gastos y archivos adjuntos asociados a obra o partida.',
+            }}
+          />
+          <MediaCard
+            item={{
+              type: 'placeholder',
+              label: 'Espacio para QR y XML',
+              text: 'Preparado para evidencias fiscales y exportables.',
+            }}
+          />
+        </div>
+      </section>
+
+      <section className="light-page__section constructpro-page__band" id="informes">
+        <div className="site-container">
+          <div className="constructpro-page__section-head" data-aos="fade-up">
+            <div>
+              <p className="light-page__eyebrow">Informes</p>
+              <h2>Dirección ve margen, desviación y facturas pendientes.</h2>
             </div>
+            <p>
+              ConstructPro permite analizar margen por obra, desviación por partida, hoja de horas y antigüedad de
+              facturas para seguimiento interno y reuniones de dirección.
+            </p>
+          </div>
+
+          <div className="constructpro-page__metric-grid" data-aos="fade-up">
+            {reportMetrics.map((metric) => (
+              <article key={metric.label} className="constructpro-page__metric">
+                <strong>{metric.value}</strong>
+                <span>{metric.label}</span>
+              </article>
+            ))}
+          </div>
+
+          <div className="constructpro-page__warning" data-aos="fade-up">
+            <strong>Qué cambia para dirección</strong>
+            <p>
+              Ya no se revisa la obra cuando el problema explota. Se revisa mientras aún se puede corregir.
+            </p>
           </div>
         </div>
       </section>
 
-      <section className="section-spacing pt-4 pb-5 bg-light">
-        <div className="container">
-          <div className="row g-4">
-            <div className="col-lg-4">
-              <div className="p-4 rounded-4 bg-white border h-100 shadow-sm">
-                <span className="badge bg-secondary-subtle text-secondary fw-semibold mb-2">Claridad operativa</span>
-                <h3 className="h5">Todo conectado</h3>
-                <p className="text-muted">Obra, compras, facturas y costes en pantallas fáciles de leer, sin lenguaje corporate.</p>
-                <img src={HeroLogo} alt="Logo ConstructPro" width="120" className="mt-3 opacity-75" />
-              </div>
+      <section className="light-page__section" id="beneficios">
+        <div className="site-container">
+          <div className="constructpro-page__section-head" data-aos="fade-up">
+            <div>
+              <p className="light-page__eyebrow">Beneficios</p>
+              <h2>Más control operativo, financiero y documental.</h2>
             </div>
-            <div className="col-lg-4">
-              <div className="p-4 rounded-4 bg-white border h-100 shadow-sm">
-                <span className="badge bg-primary-subtle text-primary fw-semibold mb-2">Ajuste a tu equipo</span>
-                <h3 className="h5">Sesión de alineación</h3>
-                <p className="text-muted">Nos sentamos con tu equipo para ajustar cómo trabajarán, sin consultorías infinitas.</p>
-                <ContactActionGroup
-                  className="mt-3"
-                  size="md"
-                  primaryHref={contactHref}
-                  secondaryHref={contactHref}
-                  primaryLabel="Reserva diagnóstico"
-                  secondaryLabel="Solicitar llamada"
-                  variant="outline-primary"
-                  secondaryVariant="primary"
-                />
-              </div>
-            </div>
-            <div className="col-lg-4">
-              <div className="p-4 rounded-4 bg-white border h-100 shadow-sm">
-                <span className="badge bg-danger-subtle text-danger fw-semibold mb-2">Enfoque VeriFactu</span>
-                <h3 className="h5">AEAT ready</h3>
-                <p className="text-muted">Registros listos por si AEAT revisa: trazabilidad completa y evidencias guardadas.</p>
-                <div className="d-flex align-items-center gap-2">
-                  <span className="display-6 fw-bold text-danger">0</span>
-                  <span className="text-muted">sorpresas cuando llegue la inspección.</span>
-                </div>
-              </div>
+            <p>
+              La ventaja no es solo emitir facturas o guardar archivos. La ventaja es sostener toda la operación con una
+              estructura coherente.
+            </p>
+          </div>
 
-            </div>
+          <div className="constructpro-page__benefits" data-aos="fade-up">
+            {benefits.map((item, index) => (
+              <article key={item} className="constructpro-page__benefit">
+                <div className="constructpro-page__benefit-icon">{String(index + 1).padStart(2, '0')}</div>
+                <p>{item}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="section-spacing pt-4 pb-5">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10 col-xl-8">
-              <div className="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
-                <h2 className="h4 fw-semibold mb-0">Preguntas frecuentes</h2>
-                <span className="badge bg-secondary-subtle text-secondary">Lo que otros preguntan antes de reservar</span>
-              </div>
-              <div className="accordion" id="faq-constructpro">
-                {faqItems.map((item, index) => (
-                  <div className="accordion-item" key={item.question}>
-                    <h3 className="accordion-header" id={`faq-heading-${index}`}>
-                      <button
-                        className={`accordion-button ${index !== 0 ? 'collapsed' : ''}`}
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target={`#faq-collapse-${index}`}
-                        aria-expanded={index === 0 ? 'true' : 'false'}
-                        aria-controls={`faq-collapse-${index}`}
-                      >
-                        {item.question}
-                      </button>
-                    </h3>
-                    <div
-                      id={`faq-collapse-${index}`}
-                      className={`accordion-collapse collapse ${index === 0 ? 'show' : ''}`}
-                      aria-labelledby={`faq-heading-${index}`}
-                      data-bs-parent="#faq-constructpro"
-                    >
-                      <div className="accordion-body">{item.answer}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+      <section className="light-page__section" id="ideal">
+        <div className="site-container constructpro-page__section-head" data-aos="fade-up">
+          <div>
+            <p className="light-page__eyebrow">Encaje</p>
+            <h2>Especialmente adecuado para empresas que viven por obra y por partida.</h2>
           </div>
+          <p>
+            ConstructPro encaja mejor cuando hace falta controlar costes por obra y por partida, emitir documentos
+            profesionales y centralizar información operativa, financiera y documental.
+          </p>
+        </div>
+
+        <div className="constructpro-page__ideal-grid" data-aos="fade-up">
+          {idealFor.map((item) => (
+            <div key={item} className="constructpro-page__ideal-item">
+              {item}
+            </div>
+          ))}
         </div>
       </section>
 
-      <section className="section-spacing pb-5">
-        <div className="container">
-          <div className="row justify-content-center text-center">
-            <div className="col-lg-8">
-              <h2 className="h4 fw-semibold">Reserva ahora y evita improvisar con VeriFactu</h2>
-              <p className="text-muted">Dolor fuerte → solución simple → acción inmediata. Un solo objetivo: tu diagnóstico gratuito.</p>
-              <ContactActionGroup
-                className="justify-content-center mt-3"
-                primaryHref={contactHref}
-                secondaryHref={contactHref}
-                primaryLabel="Reserva diagnóstico gratuito"
-                secondaryLabel="Solicitar llamada"
-                variant="primary"
-                secondaryVariant="outline-primary"
-              />
-            </div>
+      <section className="light-page__section" id="contacto">
+        <div className="site-container constructpro-page__cta" data-aos="fade-up">
+          <div>
+            <p className="light-page__eyebrow">Siguiente paso</p>
+            <h2>Solicita una demostración y revisamos si ConstructPro encaja con tu operativa real.</h2>
+            <p>
+              ConstructPro ayuda a controlar mejor la obra, defender márgenes, facturar con más trazabilidad y tener una
+              visión más clara del negocio.
+            </p>
+          </div>
+          <div className="constructpro-page__cta-actions">
+            <Link to="/contacto#reserva" className="home-premium__cta">
+              Solicitar demostración
+            </Link>
+            <Link to="/contacto" className="constructpro-page__ghost-link">
+              Hablar con Joan
+            </Link>
           </div>
         </div>
       </section>
-    </div>
-  </Layout>
-);
+    </article>
+  );
+}
 
 export default ConstructProPage;

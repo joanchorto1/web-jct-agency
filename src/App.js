@@ -22,6 +22,7 @@ import SeoArticlePage from './pages/SeoArticlePage';
 import LocalSeoHubPage from './pages/LocalSeoHubPage';
 import LocalSeoPage from './pages/LocalSeoPage';
 import CalendarReservationPage from './pages/CalendarReservationPage';
+import ConstructProPage from './pages/ConstructPro';
 import './site.css';
 
 function ScrollAnimator() {
@@ -62,6 +63,8 @@ function App() {
           <Route path="/analisis-gratuito" element={<AnalysisPage />} />
           <Route path="/analisis" element={<Navigate to="/analisis-gratuito" replace />} />
           <Route path="/productos" element={<ProductsPageNew />} />
+          <Route path="/constructpro" element={<ConstructProPage />} />
+          <Route path="/productos/constructpro" element={<Navigate to="/constructpro" replace />} />
           <Route path="/productos/:slug" element={<ProductPage />} />
           <Route path="/problemas" element={<ProblemsPage />} />
           <Route path="/problemas/:slug" element={<ProblemPage />} />
