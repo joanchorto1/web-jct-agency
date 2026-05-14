@@ -2858,7 +2858,7 @@ a {
   .home-premium__partners-row,
   .home-premium__product-grid,
   .constructpro-page__hero-grid,
-  .constructpro-page__section-head,
+  .constructpro-page__section-header,
   .constructpro-page__feature-row,
   .constructpro-page__cta,
   .jc-premium__split,
@@ -2872,11 +2872,9 @@ a {
   .analysis-review,
   .home-premium__reason-grid,
   .home-premium__cases-grid,
-  .constructpro-page__summary-grid,
-  .constructpro-page__problem-grid,
-  .constructpro-page__differential-grid,
-  .constructpro-page__benefits,
-  .constructpro-page__ideal-grid,
+  .constructpro-page__grid-2,
+  .constructpro-page__grid-3,
+  .constructpro-page__benefits-grid,
   .jc-premium__grid,
   .jc-premium__qualify-grid {
     grid-template-columns: 1fr;
@@ -3056,7 +3054,6 @@ a {
   }
 
   .constructpro-page__media-grid,
-  .constructpro-page__media-grid.is-wide,
   .constructpro-page__metric-grid,
   .constructpro-page__flow {
     grid-template-columns: 1fr;
@@ -3070,7 +3067,7 @@ a {
     padding: 30px;
   }
 
-  .constructpro-page__shot img,
+  .constructpro-page__image-card img,
   .constructpro-page__placeholder {
     min-height: 220px;
   }
@@ -3112,26 +3109,56 @@ a {
 }
 
 .constructpro-page__hero {
-  padding-bottom: 48px;
+  padding: 78px 0 56px;
+  position: relative;
+  overflow: hidden;
+}
+
+.constructpro-page__hero::before {
+  content: '';
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  right: -180px;
+  top: -180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(188, 150, 96, 0.22), transparent 66%);
+  pointer-events: none;
+}
+
+.constructpro-page__page {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.constructpro-page__section {
+  padding: 70px 0;
+}
+
+.constructpro-page__section--dark {
+  margin: 50px 0;
+  padding: 86px 0;
+  background: #111111;
+  color: #ffffff;
 }
 
 .constructpro-page__hero-grid,
-.constructpro-page__section-head,
+.constructpro-page__section-header,
 .constructpro-page__feature-row,
 .constructpro-page__cta {
   display: grid;
-  gap: 32px;
 }
 
-.constructpro-page__hero-grid,
-.constructpro-page__feature-row,
-.constructpro-page__cta {
-  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.92fr);
+.constructpro-page__hero-grid {
+  position: relative;
+  grid-template-columns: 1fr 0.92fr;
+  gap: 42px;
   align-items: center;
 }
 
-.constructpro-page__section-head {
+.constructpro-page__section-header {
   grid-template-columns: 0.82fr 1.18fr;
+  gap: 38px;
   align-items: end;
   margin-bottom: 34px;
 }
@@ -3144,116 +3171,187 @@ a {
 }
 
 .constructpro-page__brand img {
-  width: 68px;
-  height: 68px;
-  object-fit: contain;
-  border: 1px solid var(--home-line);
-  border-radius: 8px;
-  background: #ffffff;
+  width: 62px;
+  height: 62px;
   padding: 10px;
+  border: 1px solid rgba(188, 150, 96, 0.28);
+  border-radius: 14px;
+  background: #ffffff;
+  object-fit: contain;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
 }
 
 .constructpro-page__brand span {
   display: block;
+  margin-top: 2px;
   color: var(--home-muted);
   font-size: 0.92rem;
 }
 
-.constructpro-page__lead {
-  max-width: 700px;
-  font-size: clamp(1.08rem, 1.8vw, 1.34rem) !important;
-  color: var(--home-ink) !important;
-  line-height: 1.6 !important;
+.constructpro-page__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 8px 12px;
+  border: 1px solid rgba(188, 150, 96, 0.42);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.64);
+  color: var(--gold-500);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.constructpro-page__hero-actions,
-.constructpro-page__cta-actions {
+.constructpro-page__kicker {
+  margin: 0 0 12px;
+  color: var(--gold-500);
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.constructpro-page h1 {
+  max-width: 780px;
+  margin: 0 0 26px;
+  color: var(--home-ink);
+  font-size: clamp(3rem, 7vw, 5.75rem);
+  line-height: 0.92;
+  letter-spacing: -0.06em;
+}
+
+.constructpro-page h2 {
+  font-size: clamp(2.1rem, 4vw, 3.6rem);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+
+.constructpro-page h3 {
+  margin: 0 0 12px;
+  font-size: 1.5rem;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.constructpro-page__hero-lead {
+  max-width: 690px;
+  margin: 0 0 34px;
+  color: #2a2a2a !important;
+  font-size: clamp(1.12rem, 2vw, 1.44rem) !important;
+  line-height: 1.55 !important;
+}
+
+.constructpro-page__section-intro,
+.constructpro-page__feature-copy p,
+.constructpro-page__card p,
+.constructpro-page__warning-box p,
+.constructpro-page__cta p,
+.constructpro-page__image-copy p,
+.constructpro-page__placeholder p {
+  color: var(--home-muted);
+}
+
+.constructpro-page__hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
   align-items: center;
-  margin-top: 28px;
 }
 
-.constructpro-page__ghost-link {
+.constructpro-page__ghost-link,
+.constructpro-page__cta-secondary {
   display: inline-flex;
-  min-height: 52px;
   align-items: center;
   justify-content: center;
-  padding: 0 18px;
-  border: 1px solid var(--home-line);
-  border-radius: 8px;
-  background: #ffffff;
-  color: var(--home-ink);
+  min-height: 50px;
+  padding: 13px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.74);
+  color: #111111;
   font-weight: 800;
   text-decoration: none;
 }
 
-.constructpro-page__summary-grid,
-.constructpro-page__problem-grid,
-.constructpro-page__differential-grid,
-.constructpro-page__benefits,
+.constructpro-page__grid-2,
+.constructpro-page__grid-3,
 .constructpro-page__metric-grid,
-.constructpro-page__ideal-grid {
+.constructpro-page__benefits-grid,
+.constructpro-page__media-grid,
+.constructpro-page__single-media,
+.constructpro-page__flow,
+.constructpro-page__tag-list {
   display: grid;
-  gap: 18px;
 }
 
-.constructpro-page__summary-grid {
+.constructpro-page__grid-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
 }
 
-.constructpro-page__problem-grid,
-.constructpro-page__differential-grid,
-.constructpro-page__benefits {
+.constructpro-page__grid-3,
+.constructpro-page__benefits-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
 }
 
 .constructpro-page__metric-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin-top: 28px;
+  gap: 18px;
+  margin-top: 26px;
 }
 
-.constructpro-page__ideal-grid {
+.constructpro-page__media-grid {
+  gap: 18px;
+}
+
+.constructpro-page__media-grid--2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.constructpro-page__summary-card,
-.constructpro-page__problem-card,
-.constructpro-page__benefit,
-.constructpro-page__ideal-item {
-  border: 1px solid var(--home-line);
-  border-radius: 8px;
-  background: #ffffff;
-  padding: 26px;
+.constructpro-page__media-grid--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.constructpro-page__summary-card span,
+.constructpro-page__single-media {
+  margin-top: 24px;
+}
+
+.constructpro-page__card,
+.constructpro-page__benefit,
+.constructpro-page__metric,
+.constructpro-page__warning-box,
+.constructpro-page__ideal-layout .constructpro-page__placeholder,
+.constructpro-page__image-card,
+.constructpro-page__placeholder {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+}
+
+.constructpro-page__card,
+.constructpro-page__benefit {
+  padding: 26px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+}
+
+.constructpro-page__number,
 .constructpro-page__benefit-icon {
   width: 42px;
   height: 42px;
   display: grid;
   place-items: center;
   border-radius: 999px;
+  margin-bottom: 18px;
+  border-radius: 999px;
   background: #111111;
   color: #dec18e;
   font-family: 'Sora', 'Segoe UI', sans-serif;
-  font-weight: 800;
-  margin-bottom: 18px;
-}
-
-.constructpro-page__summary-card p,
-.constructpro-page__problem-card p,
-.constructpro-page__benefit p,
-.constructpro-page__section-head p,
-.constructpro-page__feature-copy p,
-.constructpro-page__warning p,
-.constructpro-page__cta p {
-  color: var(--home-muted);
+  font-weight: 900;
 }
 
 .constructpro-page__flow {
-  display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 12px;
   margin-top: 28px;
@@ -3262,8 +3360,8 @@ a {
 .constructpro-page__flow-step {
   position: relative;
   padding: 18px 14px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
   background: rgba(255, 255, 255, 0.08);
   color: #ffffff;
   font-weight: 800;
@@ -3276,17 +3374,16 @@ a {
   right: -12px;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--gold-500);
+  color: #bc9660;
   font-weight: 900;
 }
 
-.constructpro-page__features {
-  display: grid;
-}
-
 .constructpro-page__feature-row {
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 32px;
+  align-items: center;
   padding: 42px 0;
-  border-bottom: 1px solid var(--home-line);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .constructpro-page__feature-row.is-reverse > :first-child {
@@ -3294,55 +3391,37 @@ a {
 }
 
 .constructpro-page__feature-copy p {
-  margin-bottom: 14px;
-  font-size: 1rem;
+  margin: 0 0 14px;
+  font-size: 1.02rem;
+  color: #2a2a2a;
 }
 
-.constructpro-page__tags {
+.constructpro-page__tag-list {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 18px;
 }
 
-.constructpro-page__tags span {
+.constructpro-page__tag {
   padding: 8px 11px;
-  border: 1px solid rgba(188, 150, 96, 0.22);
   border-radius: 999px;
+  border: 1px solid rgba(188, 150, 96, 0.22);
   background: rgba(188, 150, 96, 0.12);
   color: #7b5b20;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 800;
 }
 
-.constructpro-page__media-grid,
-.constructpro-page__media-stack {
-  display: grid;
-  gap: 18px;
-}
-
-.constructpro-page__media-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.constructpro-page__media-grid.is-wide {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.constructpro-page__shot,
+.constructpro-page__image-card,
 .constructpro-page__placeholder {
   min-height: 240px;
   overflow: hidden;
-  border: 1px solid var(--home-line);
-  border-radius: 8px;
-  background: #ffffff;
-}
-
-.constructpro-page__shot {
   margin: 0;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
 }
 
-.constructpro-page__shot img {
+.constructpro-page__image-card img {
   width: 100%;
   display: block;
   aspect-ratio: 16 / 10;
@@ -3350,29 +3429,15 @@ a {
   object-position: top left;
 }
 
-.constructpro-page__shot figcaption {
-  padding: 12px 14px;
-  color: var(--home-muted);
-  font-size: 0.82rem;
-  font-weight: 700;
-}
-
-.constructpro-page__placeholder {
+.constructpro-page__image-copy {
   display: grid;
-  align-content: end;
-  gap: 8px;
-  padding: 24px;
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.74), rgba(239, 239, 239, 0.92)),
-    repeating-linear-gradient(45deg, rgba(17, 17, 17, 0.035) 0 10px, rgba(17, 17, 17, 0.01) 10px 20px);
-  position: relative;
+  gap: 6px;
+  padding: 18px;
 }
 
-.constructpro-page__placeholder span {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  padding: 8px 11px;
+.constructpro-page__image-copy span {
+  width: fit-content;
+  padding: 6px 10px;
   border-radius: 999px;
   background: rgba(188, 150, 96, 0.92);
   color: #111111;
@@ -3382,106 +3447,153 @@ a {
   text-transform: uppercase;
 }
 
-.constructpro-page__placeholder strong {
+.constructpro-page__image-copy strong {
   display: block;
-  color: var(--home-ink);
+  color: #111111;
   font-size: 1.28rem;
+  letter-spacing: -0.03em;
 }
 
-.constructpro-page__warning {
-  margin-top: 24px;
+.constructpro-page__placeholder {
+  display: grid;
+  align-content: end;
+  gap: 8px;
+  padding: 24px;
+  position: relative;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.74), rgba(239, 239, 239, 0.92)),
+    repeating-linear-gradient(45deg, rgba(17, 17, 17, 0.035) 0 10px, rgba(17, 17, 17, 0.01) 10px 20px);
+}
+
+.constructpro-page__placeholder span {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 8px 11px;
+  background: rgba(188, 150, 96, 0.92);
+  border-radius: 999px;
+  color: #111111;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.constructpro-page__placeholder strong {
+  display: block;
+  color: #111111;
+  font-size: 1.28rem;
+  letter-spacing: -0.03em;
+}
+
+.constructpro-page__warning-box {
   padding: 22px;
-  border-left: 4px solid var(--gold-500);
-  border-radius: 0 8px 8px 0;
+  border-left: 4px solid #bc9660;
+  border-radius: 0 18px 18px 0;
   background: rgba(188, 150, 96, 0.12);
+  box-shadow: none;
 }
 
 .constructpro-page__metric {
-  min-height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 150px;
   padding: 24px;
-  border: 1px solid rgba(188, 150, 96, 0.22);
-  border-radius: 8px;
   background: #111111;
+  border: 1px solid rgba(188, 150, 96, 0.22);
   color: #ffffff;
 }
 
 .constructpro-page__metric strong {
+  font-size: 2rem;
   color: #dec18e;
   font-family: 'Sora', 'Segoe UI', sans-serif;
-  font-size: 2rem;
+  letter-spacing: -0.05em;
 }
 
 .constructpro-page__metric span {
-  color: rgba(255, 255, 255, 0.68);
   font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.68);
 }
 
 .constructpro-page__benefit {
   min-height: 178px;
 }
 
-.constructpro-page__ideal-item {
-  color: var(--home-ink);
-  font-weight: 700;
+.constructpro-page__report-grid {
+  margin-top: 24px;
 }
 
-.constructpro-page__band {
-  background: #111111;
+.constructpro-page__ideal-copy {
+  margin-top: 20px;
 }
 
-.constructpro-page__band h2,
-.constructpro-page__band h3,
-.constructpro-page__band .light-page__eyebrow,
-.constructpro-page__band .constructpro-page__warning strong {
+.constructpro-page__section--dark h2,
+.constructpro-page__section--dark h3,
+.constructpro-page__section--dark .constructpro-page__kicker,
+.constructpro-page__section--dark .constructpro-page__warning-box strong {
   color: #ffffff;
 }
 
-.constructpro-page__band .constructpro-page__section-head p,
-.constructpro-page__band .constructpro-page__problem-card p,
-.constructpro-page__band .constructpro-page__summary-card p,
-.constructpro-page__band .constructpro-page__warning p {
+.constructpro-page__section--dark .constructpro-page__section-intro,
+.constructpro-page__section--dark .constructpro-page__card p,
+.constructpro-page__section--dark .constructpro-page__warning-box p {
   color: rgba(255, 255, 255, 0.72);
 }
 
-.constructpro-page__band .constructpro-page__problem-card,
-.constructpro-page__band .constructpro-page__summary-card {
+.constructpro-page__section--dark .constructpro-page__card {
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: none;
 }
 
-.constructpro-page__band .constructpro-page__summary-card span {
+.constructpro-page__section--dark .constructpro-page__number {
   background: var(--gold-500);
   color: #111111;
 }
 
 .constructpro-page__cta {
-  padding: 48px;
-  border: 1px solid rgba(188, 150, 96, 0.28);
-  border-radius: 8px;
+  grid-template-columns: 1fr 0.74fr;
+  gap: 34px;
+  align-items: center;
+  padding: 54px;
+  border-radius: 36px;
   background: linear-gradient(135deg, #111111, #222222);
+  border: 1px solid rgba(188, 150, 96, 0.28);
   color: #ffffff;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.16);
 }
 
 .constructpro-page__cta h2 {
+  max-width: 760px;
   color: #ffffff;
 }
 
 .constructpro-page__cta p {
+  margin-top: 18px;
+  font-size: 1.08rem;
   color: rgba(255, 255, 255, 0.74);
 }
 
-  .jc-premium__card {
-    min-height: auto;
-  }
+.constructpro-page__cta-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 13px 20px;
+  border-radius: 999px;
+  background: #bc9660;
+  color: #111111;
+  font-weight: 800;
+  text-decoration: none;
+}
 
-  .jc-premium__step {
-    grid-template-columns: 1fr;
-    gap: 12px;
-    padding: 22px;
-  }
+.constructpro-page__cta-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
 
   .jc-premium__qualifier {
     min-height: auto;
