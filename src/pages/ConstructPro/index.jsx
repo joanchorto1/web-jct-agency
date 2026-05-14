@@ -277,6 +277,13 @@ function ConstructProPage() {
                 Ver funcionalidades
               </a>
             </div>
+            <div className="constructpro-page__hero-highlights">
+              <span>Presupuestos</span>
+              <span>Obras</span>
+              <span>Costes reales</span>
+              <span>Facturación</span>
+              <span>VeriFactu</span>
+            </div>
           </div>
 
           <MediaCard
@@ -289,6 +296,19 @@ function ConstructProPage() {
               text: 'Panel preparado para métricas de presupuestos, obras, facturas, cobros y cash-flow.',
             }}
           />
+        </div>
+      </section>
+
+      <section className="constructpro-page__subnav-wrap" aria-label="Navegación de la página">
+        <div className="constructpro-page__page">
+          <nav className="constructpro-page__subnav">
+            <a href="#resumen">Resumen</a>
+            <a href="#problema">Problema</a>
+            <a href="#funciones">Funcionalidades</a>
+            <a href="#verifactu">VeriFactu</a>
+            <a href="#informes">Informes</a>
+            <a href="#contacto">Contacto</a>
+          </nav>
         </div>
       </section>
 

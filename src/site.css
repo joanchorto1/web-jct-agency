@@ -3156,6 +3156,30 @@ a {
   align-items: center;
 }
 
+.constructpro-page__subnav-wrap {
+  padding: 0 0 18px;
+}
+
+.constructpro-page__subnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.constructpro-page__subnav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--home-line);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--home-muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
 .constructpro-page__section-header {
   grid-template-columns: 0.82fr 1.18fr;
   gap: 38px;
@@ -3242,6 +3266,26 @@ a {
   line-height: 1.55 !important;
 }
 
+.constructpro-page__hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.constructpro-page__hero-highlights span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 12px;
+  border: 1px solid rgba(188, 150, 96, 0.18);
+  border-radius: 999px;
+  background: rgba(188, 150, 96, 0.1);
+  color: #7b5b20;
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
 .constructpro-page__section-intro,
 .constructpro-page__feature-copy p,
 .constructpro-page__card p,
@@ -3250,6 +3294,12 @@ a {
 .constructpro-page__image-copy p,
 .constructpro-page__placeholder p {
   color: var(--home-muted);
+}
+
+.constructpro-page__section-intro {
+  max-width: 720px;
+  font-size: 1.06rem;
+  line-height: 1.7;
 }
 
 .constructpro-page__hero-actions {
@@ -3336,6 +3386,10 @@ a {
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
 }
 
+.constructpro-page__card {
+  min-height: 220px;
+}
+
 .constructpro-page__number,
 .constructpro-page__benefit-icon {
   width: 42px;
@@ -3381,7 +3435,7 @@ a {
 .constructpro-page__feature-row {
   grid-template-columns: 0.95fr 1.05fr;
   gap: 32px;
-  align-items: center;
+  align-items: start;
   padding: 42px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
@@ -3394,6 +3448,7 @@ a {
   margin: 0 0 14px;
   font-size: 1.02rem;
   color: #2a2a2a;
+  line-height: 1.7;
 }
 
 .constructpro-page__tag-list {
@@ -3433,6 +3488,7 @@ a {
   display: grid;
   gap: 6px;
   padding: 18px;
+  background: #ffffff;
 }
 
 .constructpro-page__image-copy span {
@@ -3487,6 +3543,7 @@ a {
 }
 
 .constructpro-page__warning-box {
+  margin-top: 24px;
   padding: 22px;
   border-left: 4px solid #bc9660;
   border-radius: 0 18px 18px 0;
@@ -3519,6 +3576,10 @@ a {
 
 .constructpro-page__benefit {
   min-height: 178px;
+}
+
+.constructpro-page__benefit h3 {
+  font-size: 1.2rem;
 }
 
 .constructpro-page__report-grid {
