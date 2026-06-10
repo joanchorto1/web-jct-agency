@@ -2934,16 +2934,21 @@ a {
 .jc-base-page__hero-copy {
   display: grid;
   gap: 18px;
-  max-width: 920px;
-  margin: 0 auto;
-  padding: 52px 42px;
-  text-align: center;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  text-align: left;
 }
 
 .jc-base-page__hero-brand {
   display: flex;
   align-items: center;
   gap: 14px;
+  margin-bottom: 8px;
 }
 
 .jc-base-page__hero-logo {
@@ -3013,7 +3018,7 @@ a {
   flex-wrap: wrap;
   gap: 14px;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .jc-base-page__ghost-link {
@@ -3034,7 +3039,8 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-top: 8px;
 }
 
 .jc-base-page__tag-cloud span,
