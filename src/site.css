@@ -1360,6 +1360,26 @@ a {
   font-weight: 800;
 }
 
+.light-page__tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 24px;
+}
+
+.light-page__tag-cloud span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--home-line);
+  border-radius: 999px;
+  background: #f8f8f8;
+  color: var(--home-ink);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
 .light-page__results-grid {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
@@ -1529,6 +1549,16 @@ a {
 
 .light-page__product-row p {
   margin: 12px 0 18px;
+}
+
+.light-page__product-pricing {
+  color: var(--home-ink) !important;
+  font-weight: 700;
+}
+
+.light-page__product-sections {
+  display: grid;
+  gap: 22px;
 }
 
 .light-page__article {

@@ -24,6 +24,13 @@ function ProductPage() {
             <p className="light-page__eyebrow">{product.eyebrow}</p>
             <h1>{product.title}</h1>
             <p>{product.summary}</p>
+            {product.labels ? (
+              <div className="light-page__tag-cloud">
+                {product.labels.map((label) => (
+                  <span key={label}>{label}</span>
+                ))}
+              </div>
+            ) : null}
             <Link to="/contacto#reserva" className="home-premium__cta">
               Analizar mi empresa
             </Link>
@@ -61,6 +68,7 @@ function ProductPage() {
             <p className="light-page__eyebrow">Solución</p>
             <h2>{product.name}</h2>
             <p>{product.definition}</p>
+            {product.pricing ? <p className="light-page__product-pricing">{product.pricing}</p> : null}
           </div>
           <div className="light-page__text">
             <div className="light-page__mini-list">
@@ -72,6 +80,28 @@ function ProductPage() {
           </div>
         </div>
       </section>
+
+      {product.sections ? (
+        <section className="light-page__section" data-aos="fade-up">
+          <div className="site-container light-page__product-sections">
+            {product.sections.map((section) => (
+              <article key={section.title} className="light-page__article-block">
+                <h2>{section.title}</h2>
+                {section.paragraphs
+                  ? section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)
+                  : null}
+                {section.bullets ? (
+                  <ul>
+                    {section.bullets.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                ) : null}
+              </article>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <section className="light-page__section" data-aos="fade-up">
         <div className="site-container light-page__results-grid">
@@ -102,6 +132,24 @@ function ProductPage() {
           </div>
         </div>
       </section>
+
+      {product.highlights ? (
+        <section className="light-page__section" data-aos="fade-up">
+          <div className="site-container">
+            <div className="light-page__section-head">
+              <p className="light-page__eyebrow">Diferenciación</p>
+              <h2>Por qué no es solo otro software de facturación.</h2>
+            </div>
+            <div className="light-page__card-grid">
+              {product.highlights.map((item) => (
+                <article key={item} className="light-page__card">
+                  <h3>{item}</h3>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section className="light-page__section" data-aos="fade-up">
         <div className="site-container light-page__cta">

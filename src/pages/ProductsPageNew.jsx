@@ -43,7 +43,14 @@ function ProductsPageNew() {
                 <p className="light-page__eyebrow">{product.eyebrow}</p>
                 <h2>{product.name}</h2>
                 <h3>{product.title}</h3>
-                <p>{product.summary}</p>
+                <p>{product.indexDescription || product.summary}</p>
+                {product.labels ? (
+                  <div className="light-page__tag-cloud">
+                    {product.labels.map((label) => (
+                      <span key={label}>{label}</span>
+                    ))}
+                  </div>
+                ) : null}
                 <Link to={`/productos/${product.slug}`} className="seo-link-button">
                   Ver producto
                 </Link>
