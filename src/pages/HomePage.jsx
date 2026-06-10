@@ -143,14 +143,6 @@ function HomePage() {
   });
 
   useEffect(() => {
-    const hasSubmittedLead = window.localStorage.getItem(LEAD_MODAL_STORAGE_KEY) === 'true';
-
-    if (!hasSubmittedLead) {
-      setIsLeadModalOpen(true);
-    }
-  }, []);
-
-  useEffect(() => {
     if (!isLeadModalOpen) {
       return undefined;
     }
