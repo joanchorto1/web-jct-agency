@@ -27,6 +27,7 @@ function SiteLayout() {
           <nav className="site-header__nav" aria-label="Navegación principal">
             <Link to="/analisis-gratuito">Análisis gratuito</Link>
             <Link to="/jc-consultor-premium">Premium</Link>
+            <Link to="/jc-base">JC Base</Link>
             <Link to="/productos">Productos</Link>
             <Link to="/problemas">Problemas</Link>
             <Link to="/contacto">Contacto</Link>
