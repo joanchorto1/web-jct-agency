@@ -2,6 +2,33 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 
 const jcBaseLogo = '/JC_Base_Resources/JC_BASE_LOGO.png';
+const jcBaseShots = [
+  {
+    src: encodeURI('/JC_Base_Resources/Captura de pantalla 2026-06-10 a las 16.02.10.png'),
+    alt: 'Vista principal de JC Base',
+    title: 'Vista principal del ecosistema',
+  },
+  {
+    src: encodeURI('/JC_Base_Resources/Captura de pantalla 2026-06-10 a las 16.02.26.png'),
+    alt: 'Vista operativa de JC Base',
+    title: 'Operativa conectada',
+  },
+  {
+    src: encodeURI('/JC_Base_Resources/Captura de pantalla 2026-06-10 a las 16.02.41.png'),
+    alt: 'Vista documental de JC Base',
+    title: 'Gestión documental y trazabilidad',
+  },
+  {
+    src: encodeURI('/JC_Base_Resources/Captura de pantalla 2026-06-10 a las 16.02.59.png'),
+    alt: 'Vista de procesos de JC Base',
+    title: 'Procesos y datos maestros',
+  },
+  {
+    src: encodeURI('/JC_Base_Resources/Captura de pantalla 2026-06-10 a las 16.03.33.png'),
+    alt: 'Vista de control en JC Base',
+    title: 'Control y configuración',
+  },
+];
 
 const coreAreas = [
   {
@@ -87,6 +114,15 @@ const processStarts = [
   'Alquiler: reserva o contrato',
 ];
 
+function ShotCard({ shot }) {
+  return (
+    <figure className="jc-base-page__shot-card">
+      <img src={shot.src} alt={shot.alt} />
+      <figcaption>{shot.title}</figcaption>
+    </figure>
+  );
+}
+
 function JcBasePage() {
   return (
     <article className="jc-base-page">
@@ -101,8 +137,30 @@ function JcBasePage() {
       <section className="jc-base-page__hero">
         <div className="site-container jc-base-page__hero-grid" data-aos="fade-up">
           <div className="jc-base-page__hero-copy">
-            <img src={jcBaseLogo} alt="Logo de JC Base" className="jc-base-page__hero-logo" />
+            <div className="jc-base-page__hero-brand">
+              <img src={jcBaseLogo} alt="Logo de JC Base" className="jc-base-page__hero-logo" />
+              <div>
+                <p className="jc-base-page__eyebrow">Ecosistema ERP modular</p>
+                <span>by JC Consultor</span>
+              </div>
+            </div>
             <h1>El ecosistema para construir ERPs sectoriales sin rehacer el núcleo cada vez.</h1>
+            <p className="jc-base-page__hero-lead">
+              JC Base une operativa, stock, facturación, contabilidad, fiscalidad y trazabilidad dentro de un núcleo
+              común preparado para crear verticales sectoriales con más velocidad, más coherencia y menos riesgo.
+            </p>
+            <div className="jc-base-page__hero-actions">
+              <a href="/contacto#reserva" className="home-premium__cta">
+                Solicitar presentación
+              </a>
+              <a href="#verticales" className="jc-base-page__ghost-link">
+                Ver verticales
+              </a>
+            </div>
+          </div>
+
+          <div className="jc-base-page__hero-visual" data-aos="zoom-in" data-aos-delay="120">
+            <ShotCard shot={jcBaseShots[0]} />
           </div>
         </div>
       </section>
@@ -125,6 +183,11 @@ function JcBasePage() {
               <p>{item.text}</p>
             </article>
           ))}
+        </div>
+
+        <div className="site-container jc-base-page__shots-grid jc-base-page__shots-grid--2" data-aos="fade-up">
+          <ShotCard shot={jcBaseShots[1]} />
+          <ShotCard shot={jcBaseShots[2]} />
         </div>
       </section>
 
@@ -187,6 +250,12 @@ function JcBasePage() {
               </ul>
             </article>
           ))}
+        </div>
+
+        <div className="site-container jc-base-page__shots-grid jc-base-page__shots-grid--3" data-aos="fade-up">
+          <ShotCard shot={jcBaseShots[2]} />
+          <ShotCard shot={jcBaseShots[3]} />
+          <ShotCard shot={jcBaseShots[4]} />
         </div>
       </section>
 
