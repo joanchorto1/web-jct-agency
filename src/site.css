@@ -2902,10 +2902,7 @@ a {
 }
 
 .jc-base-page__hero-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.95fr);
-  gap: 34px;
-  align-items: stretch;
+  display: block;
 }
 
 .jc-base-page__hero-copy,
@@ -2922,9 +2919,17 @@ a {
 
 .jc-base-page__hero-copy {
   display: grid;
-  align-content: center;
+  justify-items: center;
   gap: 18px;
-  padding: 42px;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 52px 42px;
+  text-align: center;
+}
+
+.jc-base-page__hero-logo {
+  width: min(100%, 320px);
+  height: auto;
 }
 
 .jc-base-page__eyebrow {
@@ -2971,19 +2976,6 @@ a {
   line-height: 1.4 !important;
 }
 
-.jc-base-page__hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  align-items: center;
-}
-
-.jc-base-page__tag-cloud {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
 .jc-base-page__tag-cloud span,
 .jc-base-page__process-list span {
   display: inline-flex;
@@ -2996,60 +2988,6 @@ a {
   color: var(--jcbase-ink);
   font-size: 0.8rem;
   font-weight: 700;
-}
-
-.jc-base-page__hero-visual {
-  position: relative;
-  overflow: hidden;
-  padding: 38px;
-  background:
-    radial-gradient(circle at top right, rgba(159, 128, 80, 0.16), transparent 26%),
-    linear-gradient(180deg, #ffffff, #f7f7f7);
-}
-
-.jc-base-page__hero-core {
-  display: grid;
-  place-items: center;
-  min-height: 180px;
-  border: 1px solid rgba(159, 128, 80, 0.24);
-  border-radius: 22px;
-  background: #090909;
-  color: #ffffff;
-  text-align: center;
-}
-
-.jc-base-page__hero-core strong {
-  font-family: 'Sora', 'Segoe UI', sans-serif;
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-}
-
-.jc-base-page__hero-core span {
-  margin-top: 8px;
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.jc-base-page__hero-orbits {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 18px;
-}
-
-.jc-base-page__hero-orbits div {
-  min-height: 86px;
-  display: grid;
-  place-items: center;
-  padding: 16px;
-  border: 1px solid var(--jcbase-line);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.88);
-  color: var(--jcbase-ink);
-  font-weight: 800;
-  text-align: center;
-}
-
-.jc-base-page__hero-orbits div:last-child {
-  grid-column: 1 / -1;
 }
 
 .jc-base-page__section {

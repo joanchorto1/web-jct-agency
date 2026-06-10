@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
+const jcBaseLogo = '/JC_Base_Resources/JC_BASE_LOGO.png';
+
 const coreAreas = [
   {
     title: 'Core empresarial',
@@ -99,45 +101,8 @@ function JcBasePage() {
       <section className="jc-base-page__hero">
         <div className="site-container jc-base-page__hero-grid" data-aos="fade-up">
           <div className="jc-base-page__hero-copy">
-            <p className="jc-base-page__eyebrow">JC Base</p>
+            <img src={jcBaseLogo} alt="Logo de JC Base" className="jc-base-page__hero-logo" />
             <h1>El ecosistema para construir ERPs sectoriales sin rehacer el núcleo cada vez.</h1>
-            <p className="jc-base-page__hero-lead">
-              JC Base no es un simple producto. Es una base empresarial modular que resuelve la capa transversal del
-              negocio y deja libre la parte realmente diferencial de cada sector.
-            </p>
-            <p className="jc-base-page__hero-text">
-              Une operativa, administración, stock, facturación, contabilidad, fiscalidad y trazabilidad dentro de un
-              núcleo común preparado para crear verticales más naturales, más comprensibles y más útiles.
-            </p>
-            <div className="jc-base-page__hero-actions">
-              <a href="/contacto#reserva" className="home-premium__cta">
-                Solicitar presentación
-              </a>
-              <a href="#verticales" className="seo-link-button">
-                Ver verticales
-              </a>
-            </div>
-            <div className="jc-base-page__tag-cloud">
-              <span>ERP modular</span>
-              <span>VeriFactu y AEAT</span>
-              <span>Stock y contabilidad</span>
-              <span>Canal y distribuidores</span>
-              <span>Base evolutiva</span>
-            </div>
-          </div>
-
-          <div className="jc-base-page__hero-visual" data-aos="zoom-in" data-aos-delay="120">
-            <div className="jc-base-page__hero-core">
-              <strong>JC Base</strong>
-              <span>Núcleo empresarial común</span>
-            </div>
-            <div className="jc-base-page__hero-orbits">
-              <div>JC Taller</div>
-              <div>JC SAT</div>
-              <div>JC Construcción</div>
-              <div>JC Distribución</div>
-              <div>JC Lloguer</div>
-            </div>
           </div>
         </div>
       </section>

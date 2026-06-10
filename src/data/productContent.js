@@ -21,7 +21,7 @@ export const products = [
       'Canal y distribuidores',
       'Base evolutiva',
     ],
-    image: averoLogo,
+    image: '/JC_Base_Resources/JC_BASE_LOGO.png',
   },
   {
     slug: 'avero',
