@@ -32,41 +32,43 @@ const jcBaseShots = [
 
 const coreAreas = [
   {
-    title: 'Core empresarial',
-    text: 'Empresas, usuarios, permisos, datos maestros, configuración, auditoría, adjuntos y estructura común lista para crecer.',
+    title: 'Gestión general',
+    text: 'Empresas, usuarios, roles, permisos, configuraciones, datos fiscales, series documentales y ejercicios fiscales dentro de una estructura clara y utilizable.',
   },
   {
     title: 'Comercial y administración',
-    text: 'Presupuestos, albaranes, facturas, compras, cobros, pagos, vencimientos y transformaciones documentales conectadas.',
+    text: 'Presupuestos, albaranes, facturas emitidas, compras, albaranes de compra, facturas recibidas, cobros y pagos conectados dentro del mismo sistema.',
   },
   {
     title: 'Economía y fiscalidad',
-    text: 'Contabilidad, cierres, libros, balances, fiscalidad y soporte para entornos AEAT y VeriFactu.',
+    text: 'Contabilidad, asientos, vencimientos, tesorería, libros contables, balances, pérdidas y ganancias, control económico y cumplimiento normativo.',
   },
   {
-    title: 'Stock y trazabilidad',
-    text: 'Existencias, movimientos, regularizaciones, multialmacén y relación directa entre operativa, documento y control económico.',
+    title: 'Stock, operativa y trazabilidad',
+    text: 'Stock, movimientos de almacén, regularizaciones, seguimiento de materiales e historial de acciones para saber qué se ha hecho, cuándo y con qué impacto.',
   },
 ];
 
 const audiences = [
   {
-    title: 'Cliente final',
-    text: 'Pymes, empresas de servicios, negocios técnicos, actividades con stock y compañías que no encajan ni en software básico ni en un ERP rígido.',
+    title: 'Pymes que necesitan orden',
+    text: 'Empresas pequeñas y medianas que quieren controlar mejor su actividad comercial, administrativa, económica y operativa sin complicarse con un ERP pesado.',
   },
   {
-    title: 'Canal',
-    text: 'Distribuidores, consultorías, implantadores y empresas de digitalización que quieren lanzar soluciones sectoriales sin construir un ERP completo desde cero.',
+    title: 'Negocios que ya no pueden seguir a base de Excel',
+    text: 'Empresas que hoy trabajan con datos repartidos entre facturas, hojas de cálculo, papeles, mensajes y procesos internos poco conectados.',
   },
 ];
 
 const advantages = [
-  'Reduce trabajo manual y evita duplicar datos entre Excel, WhatsApp, papeles y facturas.',
-  'Conecta operativa, documentación, stock, facturación, contabilidad y control.',
-  'Mejora la trazabilidad de lo hecho, lo pendiente y lo facturado.',
-  'Permite controlar mejor costes, materiales, tiempos, incidencias y márgenes.',
-  'Da una base modular y escalable para crecer sin rehacer el sistema.',
-  'Evita elegir entre un software demasiado simple y un ERP demasiado pesado.',
+  'Reduce tareas manuales y repetitivas.',
+  'Evita errores y duplicación de información.',
+  'Conecta mejor operativa y administración.',
+  'Mejora el control de stock, documentos y procesos.',
+  'Permite saber mejor qué se ha hecho y qué queda pendiente.',
+  'Aporta información más fiable para decidir.',
+  'Ofrece una herramienta más próxima a la realidad de la empresa.',
+  'Se adapta mejor al sector y a la forma real de trabajar.',
 ];
 
 const verticals = [
@@ -97,13 +99,13 @@ const verticals = [
   },
 ];
 
-const channelBenefits = [
-  'Reducir tiempos de desarrollo e implantación.',
-  'Evitar rehacer un ERP completo en cada nuevo proyecto.',
-  'Ofrecer productos más adaptados al sector.',
-  'Diferenciarse del software genérico.',
-  'Crear líneas de negocio propias y evolucionables.',
-  'Vender más valor que simple licencia.',
+const adaptationKeys = [
+  'Es un ERP básico pero completo.',
+  'Es adaptable, no rígido.',
+  'Tiene variantes específicas por sector.',
+  'Conecta la realidad operativa con la gestión administrativa.',
+  'Es más natural de entender y de usar en el día a día.',
+  'Se sitúa entre el software demasiado simple y el ERP demasiado pesado.',
 ];
 
 const processStarts = [
@@ -127,10 +129,10 @@ function JcBasePage() {
   return (
     <article className="jc-base-page">
       <Helmet>
-        <title>JC Base | Ecosistema ERP modular para verticales sectoriales</title>
+        <title>JC Base | ERP adaptable para la gestión real de la empresa</title>
         <meta
           name="description"
-          content="JC Base es un ecosistema ERP modular y evolutivo que une gestión, operativa, stock, facturación, contabilidad y trazabilidad para crear soluciones sectoriales sin empezar de cero."
+          content="JC Base es un ERP básico, completo y adaptable que conecta operativa, documentación, stock, facturación, contabilidad y trazabilidad, con variantes específicas para distintos sectores."
         />
       </Helmet>
 
@@ -140,14 +142,15 @@ function JcBasePage() {
             <div className="jc-base-page__hero-brand">
               <img src={jcBaseLogo} alt="Logo de JC Base" className="jc-base-page__hero-logo" />
               <div>
-                <p className="jc-base-page__eyebrow">Ecosistema ERP modular</p>
+                <p className="jc-base-page__eyebrow">ERP adaptable</p>
                 <span>by JC Consultor</span>
               </div>
             </div>
-            <h1>El ecosistema para construir ERPs sectoriales sin rehacer el núcleo cada vez.</h1>
+            <h1>Un ERP básico, completo y adaptable para ordenar la gestión real de la empresa.</h1>
             <p className="jc-base-page__hero-lead">
-              JC Base une operativa, stock, facturación, contabilidad, fiscalidad y trazabilidad dentro de un núcleo
-              común preparado para crear verticales sectoriales con más velocidad, más coherencia y menos riesgo.
+              JC Base cubre las necesidades esenciales de control de una empresa y conecta operativa, documentación,
+              stock, facturación, contabilidad y trazabilidad dentro de una solución práctica, clara y preparada para
+              adaptarse según el sector.
             </p>
             <div className="jc-base-page__hero-actions">
               <a href="/contacto#reserva" className="home-premium__cta">
@@ -168,11 +171,15 @@ function JcBasePage() {
       <section className="jc-base-page__section">
         <div className="site-container jc-base-page__intro" data-aos="fade-up">
           <p className="jc-base-page__eyebrow">Qué es</p>
-          <h2>Una base común para no empezar cada solución desde cero.</h2>
+          <h2>Un ERP de gestión pensado para trabajar con más orden, más control y más conexión.</h2>
           <p>
-            JC Base aporta un núcleo ERP ya resuelto con empresas, usuarios, datos maestros, facturación, compras,
-            contabilidad, stock, fiscalidad, configuración general y trazabilidad. Sobre esa base, cada vertical solo
-            desarrolla la parte verdaderamente propia del sector: pantallas, reglas, automatismos y procesos.
+            JC Base parte de una estructura empresarial común, sólida y funcional, que resuelve las áreas habituales
+            de cualquier negocio: clientes, proveedores, productos, presupuestos, albaranes, facturas, compras,
+            stock, cobros, pagos, contabilidad, fiscalidad y control interno.
+          </p>
+          <p>
+            A partir de esta base, el sistema dispone de variantes específicas para sectores concretos, de forma que
+            cada empresa puede trabajar con una solución más próxima a su manera real de funcionar.
           </p>
         </div>
 
@@ -195,7 +202,7 @@ function JcBasePage() {
         <div className="site-container jc-base-page__audience-grid">
           <div data-aos="fade-up">
             <p className="jc-base-page__eyebrow">Para quién es</p>
-            <h2>Doble valor: cliente final y canal.</h2>
+            <h2>Para empresas que necesitan una gestión completa pero accesible.</h2>
           </div>
 
           <div className="jc-base-page__audience-cards">
@@ -213,15 +220,20 @@ function JcBasePage() {
         <div className="site-container jc-base-page__split" data-aos="fade-up">
           <div>
             <p className="jc-base-page__eyebrow">Diferenciación</p>
-            <h2>No parte del documento final. Parte del proceso real del negocio.</h2>
+            <h2>Ni demasiado simple, ni rígido en exceso.</h2>
             <p>
-              Muchas herramientas genéricas empiezan desde la factura, el presupuesto o el asiento. JC Base permite
-              empezar desde una orden de reparación, una incidencia, una obra, una reserva o una comanda. Después
-              traduce esa realidad en documentos comerciales, stock, facturación, contabilidad y control.
+              JC Base se sitúa en un punto mucho más práctico que muchas herramientas del mercado. No se queda en un
+              programa básico centrado solo en facturas, pero tampoco obliga a la empresa a encajar en un ERP pesado,
+              complejo o poco natural.
+            </p>
+            <p>
+              Su diferencia está en combinar una base de gestión empresarial completa con variantes específicas por
+              sector, para que la herramienta sea más comprensible, más útil y más alineada con la actividad real del
+              negocio.
             </p>
           </div>
           <div className="jc-base-page__process-list">
-            {processStarts.map((item) => (
+            {adaptationKeys.map((item) => (
               <span key={item}>{item}</span>
             ))}
           </div>
@@ -231,10 +243,11 @@ function JcBasePage() {
       <section className="jc-base-page__section" id="verticales">
         <div className="site-container jc-base-page__section-head" data-aos="fade-up">
           <p className="jc-base-page__eyebrow">Verticales</p>
-          <h2>Un ecosistema preparado para especializarse.</h2>
+          <h2>Un ecosistema que evoluciona a través de variantes específicas.</h2>
           <p>
-            El núcleo común resuelve la capa transversal. Cada vertical resuelve el flujo operativo propio del sector
-            sin perder coherencia, velocidad de desarrollo ni continuidad tecnológica.
+            JC Base parte de una base común de gestión empresarial, pero crece incorporando versiones más alineadas con
+            sectores concretos. Así la empresa no solo tiene una herramienta general, sino una solución más cercana a
+            su proceso real de trabajo.
           </p>
         </div>
 
@@ -262,15 +275,20 @@ function JcBasePage() {
       <section className="jc-base-page__section jc-base-page__section--alt">
         <div className="site-container jc-base-page__split" data-aos="fade-up">
           <div>
-            <p className="jc-base-page__eyebrow">Ventaja para el canal</p>
-            <h2>Una oportunidad de producto, no solo una base técnica.</h2>
+            <p className="jc-base-page__eyebrow">Proceso real</p>
+            <h2>La empresa puede empezar desde lo que realmente hace.</h2>
             <p>
-              JC Base permite a distribuidores, consultorías, implantadores y empresas de digitalización ofrecer
-              soluciones más adaptadas sin construir un ERP completo en cada proyecto.
+              Un taller puede empezar desde una orden de reparación, una empresa de mantenimiento desde una incidencia,
+              una constructora desde un parte de obra, un distribuidor desde una comanda y una empresa de alquiler
+              desde una reserva o contrato.
+            </p>
+            <p>
+              Después, el sistema transforma esta actividad en documentos comerciales, movimientos de stock,
+              facturación, contabilidad y trazabilidad.
             </p>
           </div>
           <ul className="jc-base-page__bullet-list">
-            {channelBenefits.map((item) => (
+            {processStarts.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
@@ -281,7 +299,7 @@ function JcBasePage() {
         <div className="site-container jc-base-page__split" data-aos="fade-up">
           <div>
             <p className="jc-base-page__eyebrow">Ventaja para el cliente</p>
-            <h2>Más control sin obligar a la empresa a trabajar de una forma artificial.</h2>
+            <h2>Más control y menos dependencia de procesos dispersos.</h2>
           </div>
           <ul className="jc-base-page__bullet-list">
             {advantages.map((item) => (
@@ -294,10 +312,11 @@ function JcBasePage() {
       <section className="jc-base-page__cta" data-aos="fade-up">
         <div className="site-container jc-base-page__cta-inner">
           <p className="jc-base-page__eyebrow">Posicionamiento</p>
-          <h2>Ni software demasiado simple, ni ERP demasiado rígido.</h2>
+          <h2>Una alternativa flexible a los ERPs genéricos.</h2>
           <p>
-            JC Base ocupa un punto intermedio mucho más útil: una base empresarial sólida, flexible y preparada para
-            crecer por especialización sectorial.
+            JC Base ofrece una base empresarial completa, pero con capacidad real de adaptación y variantes específicas
+            para sectores concretos. El resultado es una herramienta más comprensible, más cercana y más útil para el
+            negocio real.
           </p>
           <a href="/contacto#reserva" className="home-premium__cta">
             Hablar sobre JC Base
