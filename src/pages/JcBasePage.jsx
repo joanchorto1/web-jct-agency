@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-const jcBaseLogo = '/JC_Base_Resources/JC_BASE_LOGO.png';
 const jcBaseShots = [
   {
     src: encodeURI('/JC_Base_Resources/Captura de pantalla 2026-06-10 a las 16.02.10.png'),
@@ -115,6 +114,7 @@ const processStarts = [
   'Distribución: pedido',
   'Alquiler: reserva o contrato',
 ];
+const heroTags = ['ERP básico y completo', 'Gestión conectada', 'Adaptable por sector', 'Stock y contabilidad'];
 
 function ShotCard({ shot }) {
   return (
@@ -139,13 +139,7 @@ function JcBasePage() {
       <section className="jc-base-page__hero">
         <div className="site-container jc-base-page__hero-grid" data-aos="fade-up">
           <div className="jc-base-page__hero-copy">
-            <div className="jc-base-page__hero-brand">
-              <img src={jcBaseLogo} alt="Logo de JC Base" className="jc-base-page__hero-logo" />
-              <div>
-                <p className="jc-base-page__eyebrow">ERP adaptable</p>
-                <span>by JC Consultor</span>
-              </div>
-            </div>
+            <p className="jc-base-page__eyebrow">ERP adaptable</p>
             <h1>Un ERP básico, completo y adaptable para ordenar la gestión real de la empresa.</h1>
             <p className="jc-base-page__hero-lead">
               JC Base cubre las necesidades esenciales de control de una empresa y conecta operativa, documentación,
@@ -160,10 +154,11 @@ function JcBasePage() {
                 Ver verticales
               </a>
             </div>
-          </div>
-
-          <div className="jc-base-page__hero-visual" data-aos="zoom-in" data-aos-delay="120">
-            <ShotCard shot={jcBaseShots[0]} />
+            <div className="jc-base-page__tag-cloud">
+              {heroTags.map((tag) => (
+                <span key={tag}>{tag}</span>
+              ))}
+            </div>
           </div>
         </div>
       </section>

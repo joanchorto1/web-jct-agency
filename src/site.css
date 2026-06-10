@@ -2916,10 +2916,7 @@ a {
 }
 
 .jc-base-page__hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 0.92fr;
-  gap: 42px;
-  align-items: center;
+  display: block;
 }
 
 .jc-base-page__hero-copy,
@@ -2937,7 +2934,10 @@ a {
 .jc-base-page__hero-copy {
   display: grid;
   gap: 18px;
+  max-width: 920px;
+  margin: 0 auto;
   padding: 52px 42px;
+  text-align: center;
 }
 
 .jc-base-page__hero-brand {
@@ -3013,6 +3013,7 @@ a {
   flex-wrap: wrap;
   gap: 14px;
   align-items: center;
+  justify-content: center;
 }
 
 .jc-base-page__ghost-link {
@@ -3029,9 +3030,11 @@ a {
   text-decoration: none;
 }
 
-.jc-base-page__hero-visual {
-  padding: 0;
-  overflow: hidden;
+.jc-base-page__tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 
 .jc-base-page__tag-cloud span,
@@ -4047,7 +4050,6 @@ a {
 }
 
 @media (max-width: 1100px) {
-  .jc-base-page__hero-grid,
   .jc-base-page__audience-grid,
   .jc-base-page__split {
     grid-template-columns: 1fr;
@@ -4064,7 +4066,6 @@ a {
 
 @media (max-width: 860px) {
 
-  .jc-base-page__hero-grid,
   .jc-base-page__audience-grid,
   .jc-base-page__split,
   .jc-base-page__core-grid,
