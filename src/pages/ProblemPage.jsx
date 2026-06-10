@@ -36,27 +36,40 @@ function ProblemPage() {
       </section>
 
       <section className="light-page__section">
-        <div className="site-container light-page__article">
-          {article.paragraphs.slice(0, 4).map((paragraph, index) => (
-            <p key={paragraph} data-aos="fade-up" data-aos-delay={index * 60}>{paragraph}</p>
-          ))}
+        <div className="site-container light-page__reading-layout">
+          <div className="light-page__reading-body light-page__article">
+            {article.paragraphs.slice(0, 4).map((paragraph, index) => (
+              <p key={paragraph} data-aos="fade-up" data-aos-delay={index * 60}>{paragraph}</p>
+            ))}
 
-          <section className="light-page__article-block" data-aos="fade-up">
-            <h2>Qué revisar primero</h2>
-            <ul>
-              {article.checklist.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </section>
+            <section className="light-page__article-block" data-aos="fade-up">
+              <h2>Qué revisar primero</h2>
+              <ul>
+                {article.checklist.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </section>
 
-          <section className="light-page__cta" data-aos="fade-up">
-            <h2>En 45 minutos lo bajamos a tu caso.</h2>
-            <p>Revisamos dónde se pierde tiempo, control y margen.</p>
-            <Link to="/contacto#reserva" className="home-premium__cta">
-              Reservar análisis
-            </Link>
-          </section>
+            <section className="light-page__cta light-page__cta--inline" data-aos="fade-up">
+              <h2>En 45 minutos lo bajamos a tu caso.</h2>
+              <p>Revisamos dónde se pierde tiempo, control y margen.</p>
+              <Link to="/contacto#reserva" className="home-premium__cta">
+                Reservar análisis
+              </Link>
+            </section>
+          </div>
+
+          <aside className="light-page__reading-sidebar" data-aos="fade-left" data-aos-delay="120">
+            <div className="light-page__sticky-cta">
+              <p className="light-page__eyebrow">Diagnóstico</p>
+              <h2>Si te suena este problema, lo aterrizamos a tu empresa.</h2>
+              <p>Una revisión corta basta para detectar dónde se rompe el proceso y qué conviene corregir primero.</p>
+              <Link to="/contacto#reserva" className="home-premium__cta home-premium__cta--small">
+                Pedir revisión
+              </Link>
+            </div>
+          </aside>
         </div>
       </section>
     </article>

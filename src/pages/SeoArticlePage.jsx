@@ -35,8 +35,8 @@ function SeoArticlePage() {
 
         <section className="light-page__section">
           <div className="site-container">
-            <div className="seo-article__layout">
-              <div className="seo-article__body">
+            <div className="light-page__reading-layout seo-article__layout">
+              <div className="light-page__reading-body seo-article__body">
                 {article.paragraphs.map((paragraph, index) => (
                   <p key={paragraph} data-aos="fade-up" data-aos-delay={(index % 3) * 60}>
                     {paragraph}
@@ -69,7 +69,7 @@ function SeoArticlePage() {
                   </div>
                 </section>
 
-                <section className="light-page__cta seo-article__cta" data-aos="fade-up">
+                <section className="light-page__cta light-page__cta--inline seo-article__cta" data-aos="fade-up">
                   <h2>¿Quieres aterrizar esta mejora en tu empresa?</h2>
                   <p>
                     Si tu caso encaja con <strong>{article.keyword}</strong>, podemos revisar el proceso actual, detectar
@@ -86,9 +86,17 @@ function SeoArticlePage() {
                 </section>
               </div>
 
-              <aside className="seo-article__sidebar" data-aos="fade-left" data-aos-delay="120">
+              <aside className="light-page__reading-sidebar seo-article__sidebar" data-aos="fade-left" data-aos-delay="120">
+                <div className="light-page__sticky-cta">
+                  <p className="light-page__eyebrow">Diagnóstico</p>
+                  <h2>¿Encaja con tu empresa?</h2>
+                  <p>Revisamos el proceso actual y te digo qué conviene corregir antes de implantar más herramientas.</p>
+                  <a href="/contacto#reserva" className="home-premium__cta home-premium__cta--small">
+                    Solicitar diagnóstico
+                  </a>
+                </div>
                 <div className="light-page__card seo-article__sidebar-card">
-                  <h2>Keyword principal</h2>
+                  <h2>Keyword</h2>
                   <p>{article.keyword}</p>
                 </div>
                 <div className="light-page__card seo-article__sidebar-card">
