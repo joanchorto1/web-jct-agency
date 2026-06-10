@@ -4,6 +4,26 @@ import regitLogo from '../components/img/regit_logo.png';
 
 export const products = [
   {
+    slug: 'jc-base',
+    path: '/jc-base',
+    name: 'JC Base',
+    eyebrow: 'Ecosistema ERP modular',
+    title: 'La base común para crear ERPs sectoriales sin empezar de cero.',
+    summary:
+      'JC Base es un ecosistema ERP modular que une operativa, facturación, stock, contabilidad, fiscalidad y trazabilidad dentro de un núcleo común preparado para crear verticales sectoriales.',
+    indexDescription:
+      'JC Base no es un simple programa de facturación ni un ERP rígido. Es una base empresarial modular que resuelve el núcleo transversal del negocio y permite construir soluciones verticales específicas para talleres, SAT, construcción, distribución, alquiler u otros sectores sin rehacer el ERP en cada proyecto.',
+    labels: [
+      'ERP modular',
+      'Verticales sectoriales',
+      'VeriFactu y AEAT',
+      'Stock y contabilidad',
+      'Canal y distribuidores',
+      'Base evolutiva',
+    ],
+    image: averoLogo,
+  },
+  {
     slug: 'avero',
     name: 'Avero',
     eyebrow: 'Facturación y gestión',

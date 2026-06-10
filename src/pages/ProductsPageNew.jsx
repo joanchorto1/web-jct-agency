@@ -51,7 +51,7 @@ function ProductsPageNew() {
                     ))}
                   </div>
                 ) : null}
-                <Link to={`/productos/${product.slug}`} className="seo-link-button">
+                <Link to={product.path || `/productos/${product.slug}`} className="seo-link-button">
                   Ver producto
                 </Link>
               </div>

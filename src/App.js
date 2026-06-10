@@ -9,6 +9,7 @@ import ProjectsPage from './pages/ProjectsPage';
 import SolutionsPage from './pages/SolutionsPage';
 import ConsultingPage from './pages/ConsultingPage';
 import JcConsultorPremiumPage from './pages/JcConsultorPremiumPage';
+import JcBasePage from './pages/JcBasePage';
 import ContactPage from './pages/ContactPage';
 import ProductsPageNew from './pages/ProductsPageNew';
 import ProductPage from './pages/ProductPage';
@@ -63,6 +64,8 @@ function App() {
           <Route path="/analisis-gratuito" element={<AnalysisPage />} />
           <Route path="/analisis" element={<Navigate to="/analisis-gratuito" replace />} />
           <Route path="/productos" element={<ProductsPageNew />} />
+          <Route path="/jc-base" element={<JcBasePage />} />
+          <Route path="/productos/jc-base" element={<Navigate to="/jc-base" replace />} />
           <Route path="/constructpro" element={<ConstructProPage />} />
           <Route path="/productos/constructpro" element={<Navigate to="/constructpro" replace />} />
           <Route path="/productos/:slug" element={<ProductPage />} />
