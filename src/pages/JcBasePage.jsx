@@ -1,139 +1,103 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-
-const jcBaseLogo = '/JC_Base_Resources/JC_BASE_LOGO.png';
-const jcBaseShots = [
-  {
-    src: encodeURI('/JC_Base_Resources/Captura de pantalla 2026-06-10 a las 16.02.10.png'),
-    alt: 'Vista principal de JC Base',
-    title: 'Vista principal del ecosistema',
-  },
-  {
-    src: encodeURI('/JC_Base_Resources/Captura de pantalla 2026-06-10 a las 16.02.26.png'),
-    alt: 'Vista operativa de JC Base',
-    title: 'Operativa conectada',
-  },
-  {
-    src: encodeURI('/JC_Base_Resources/Captura de pantalla 2026-06-10 a las 16.02.41.png'),
-    alt: 'Vista documental de JC Base',
-    title: 'Gestión documental y trazabilidad',
-  },
-  {
-    src: encodeURI('/JC_Base_Resources/Captura de pantalla 2026-06-10 a las 16.02.59.png'),
-    alt: 'Vista de procesos de JC Base',
-    title: 'Procesos y datos maestros',
-  },
-  {
-    src: encodeURI('/JC_Base_Resources/Captura de pantalla 2026-06-10 a las 16.03.33.png'),
-    alt: 'Vista de control en JC Base',
-    title: 'Control y configuración',
-  },
-];
+import fecsysLogo from '../components/img/fecsys-logo.png';
 
 const coreAreas = [
   {
-    title: 'Gestión general',
-    text: 'Empresas, usuarios, roles, permisos, configuraciones, datos fiscales, series documentales y ejercicios fiscales dentro de una estructura clara y utilizable.',
+    title: 'Base común para todo el negocio',
+    text: 'Fecsys reúne la parte comercial, administrativa y operativa dentro de una misma base, para que la empresa deje de trabajar con información repartida y gane una visión mucho más clara del día a día.',
   },
   {
-    title: 'Comercial y administración',
-    text: 'Presupuestos, albaranes, facturas emitidas, compras, albaranes de compra, facturas recibidas, cobros y pagos conectados dentro del mismo sistema.',
+    title: 'Verticales que hablan el idioma del sector',
+    text: 'La propuesta no es obligar a todas las empresas a funcionar igual, sino ofrecer variantes específicas para cada actividad: servicios técnicos, talleres, alquiler de maquinaria y despachos que trabajan por proyectos.',
   },
   {
-    title: 'Economía y fiscalidad',
-    text: 'Contabilidad, asientos, vencimientos, tesorería, libros contables, balances, pérdidas y ganancias, control económico y cumplimiento normativo.',
+    title: 'Implantación con sentido práctico',
+    text: 'Fecsys está planteado para implantarse con criterio comercial: priorizando el proceso principal de cada empresa, reduciendo fricción y evitando proyectos eternos difíciles de asumir.',
   },
   {
-    title: 'Stock, operativa y trazabilidad',
-    text: 'Stock, movimientos de almacén, regularizaciones, seguimiento de materiales e historial de acciones para saber qué se ha hecho, cuándo y con qué impacto.',
+    title: 'Más control sin complicar la operativa',
+    text: 'El objetivo es que dirección, administración y operación puedan trabajar con más orden, menos dependencia de Excel, mensajes sueltos y tareas repetidas.',
   },
 ];
 
 const audiences = [
   {
-    title: 'Pymes que necesitan orden',
-    text: 'Empresas pequeñas y medianas que quieren controlar mejor su actividad comercial, administrativa, económica y operativa sin complicarse con un ERP pesado.',
+    title: 'Empresas de servicios técnicos',
+    text: 'Negocios que necesitan coordinar avisos, intervenciones, contratos de mantenimiento y facturación sin perder tiempo persiguiendo información.',
   },
   {
-    title: 'Negocios que ya no pueden seguir a base de Excel',
-    text: 'Empresas que hoy trabajan con datos repartidos entre facturas, hojas de cálculo, papeles, mensajes y procesos internos poco conectados.',
+    title: 'Talleres y empresas de reparación',
+    text: 'Equipos que quieren controlar mejor órdenes, piezas, mano de obra, seguimiento al cliente y rentabilidad sin depender de sistemas improvisados.',
+  },
+  {
+    title: 'Alquiler de maquinaria y equipos',
+    text: 'Empresas que necesitan saber qué está disponible, qué está alquilado, qué debe volver y cómo mejorar la rentabilidad de cada activo.',
+  },
+  {
+    title: 'Despachos y negocios por proyecto',
+    text: 'Equipos que quieren conectar propuestas, fases, documentación, horas, facturación y rentabilidad con una visión mucho más ordenada.',
   },
 ];
 
 const advantages = [
-  'Reduce tareas manuales y repetitivas.',
-  'Evita errores y duplicación de información.',
-  'Conecta mejor operativa y administración.',
-  'Mejora el control de stock, documentos y procesos.',
-  'Permite saber mejor qué se ha hecho y qué queda pendiente.',
-  'Aporta información más fiable para decidir.',
-  'Ofrece una herramienta más próxima a la realidad de la empresa.',
-  'Se adapta mejor al sector y a la forma real de trabajar.',
+  'Ayuda a vender, organizar y facturar con más continuidad.',
+  'Reduce pérdidas de tiempo entre oficina, operativa y administración.',
+  'Evita duplicidades y mejora la visibilidad de lo pendiente.',
+  'Permite tomar decisiones con una foto más real del negocio.',
+  'Aporta una implantación más natural que un ERP genérico.',
+  'Hace que cada vertical tenga un discurso comercial claro y fácil de entender.',
 ];
 
 const verticals = [
   {
-    name: 'JC Taller',
-    intro: 'Para talleres mecánicos, reparación y servicios similares que trabajan desde vehículo, reparación, piezas y horas.',
-    bullets: ['Órdenes de reparación', 'Historial por vehículo', 'Piezas y recambios', 'Horas de mano de obra'],
+    name: 'Fecsys SAT',
+    intro: 'Pensado para empresas de mantenimiento, instalaciones y asistencia técnica que necesitan convertir incidencias y visitas en una operativa controlada.',
+    bullets: ['Órdenes de trabajo más claras', 'Seguimiento de técnicos', 'Contratos de mantenimiento', 'Facturación conectada al servicio'],
   },
   {
-    name: 'JC Mantenimiento / SAT',
-    intro: 'Para mantenimiento, SAT, climatización, electricidad, fontanería e intervención técnica en campo.',
-    bullets: ['Avisos e incidencias', 'Órdenes de trabajo', 'Asignación de técnicos', 'Partes, materiales y firma del cliente'],
+    name: 'Fecsys Talleres',
+    intro: 'Orientado a talleres y negocios de reparación que quieren ordenar el trabajo diario y entender mejor el margen de cada intervención.',
+    bullets: ['Órdenes de reparación', 'Seguimiento de clientes', 'Piezas y mano de obra', 'Más control del rendimiento diario'],
   },
   {
-    name: 'JC Construcción',
-    intro: 'Para constructoras, reformas e instaladoras que necesitan convertir la actividad real de obra en control económico.',
-    bullets: ['Obras y partes', 'Horas y materiales', 'Certificaciones', 'Presupuesto vs coste real'],
+    name: 'Fecsys Maquinaria',
+    intro: 'Dirigido a empresas de alquiler que necesitan controlar disponibilidad, contratos, entregas, devoluciones y rentabilidad de la flota.',
+    bullets: ['Reservas y contratos', 'Disponibilidad real', 'Entregas y devoluciones', 'Rentabilidad por activo'],
   },
   {
-    name: 'JC Distribución',
-    intro: 'Para mayoristas, almacenes y distribución que viven de stock, tarifas, compras, ventas y margen.',
-    bullets: ['Pedidos de venta y compra', 'Reposición y stock mínimo', 'Multialmacén', 'Historial de movimientos'],
-  },
-  {
-    name: 'JC Lloguer',
-    intro: 'Para empresas que alquilan maquinaria, herramientas o equipos y necesitan controlar disponibilidad, estado y facturación por período.',
-    bullets: ['Inventario de equipos', 'Disponibilidad y calendario', 'Contratos, entregas y retornos', 'Historial e incidencias por equipo'],
+    name: 'Fecsys Arquitectura',
+    intro: 'Creado para despachos que trabajan por proyectos y necesitan ordenar fases, honorarios, documentación, horas y seguimiento al cliente.',
+    bullets: ['Gestión por fases', 'Propuestas y honorarios', 'Control documental', 'Rentabilidad por proyecto'],
   },
 ];
 
 const adaptationKeys = [
-  'Es un ERP básico pero completo.',
-  'Es adaptable, no rígido.',
-  'Tiene variantes específicas por sector.',
-  'Conecta la realidad operativa con la gestión administrativa.',
-  'Es más natural de entender y de usar en el día a día.',
-  'Se sitúa entre el software demasiado simple y el ERP demasiado pesado.',
+  'Una sola base para crecer con orden.',
+  'Variantes específicas para vender mejor por sector.',
+  'Implantación realista y progresiva.',
+  'Más útil que un software genérico.',
+  'Más asumible que un ERP pesado.',
+  'Preparado para acompañar la evolución del negocio.',
 ];
 
 const processStarts = [
-  'Taller: orden de reparación',
-  'Construcción: parte de obra',
-  'Mantenimiento: incidencia',
-  'Distribución: pedido',
-  'Alquiler: reserva o contrato',
+  'Incidencia o aviso de cliente',
+  'Orden de reparación',
+  'Reserva o contrato de alquiler',
+  'Proyecto o propuesta de honorarios',
+  'Proceso comercial que necesita seguimiento real',
 ];
-const heroTags = ['ERP básico y completo', 'Gestión conectada', 'Adaptable por sector', 'Stock y contabilidad'];
-
-function ShotCard({ shot }) {
-  return (
-    <figure className="jc-base-page__shot-card">
-      <img src={shot.src} alt={shot.alt} />
-      <figcaption>{shot.title}</figcaption>
-    </figure>
-  );
-}
+const heroTags = ['ERP modular', 'Verticales por sector', 'Implantación adaptable', 'Más control comercial'];
 
 function JcBasePage() {
   return (
     <article className="jc-base-page">
       <Helmet>
-        <title>JC Base | ERP adaptable para la gestión real de la empresa</title>
+        <title>Fecsys | ERP vertical para pymes que necesitan más control y más claridad</title>
         <meta
           name="description"
-          content="JC Base es un ERP básico, completo y adaptable que conecta operativa, documentación, stock, facturación, contabilidad y trazabilidad, con variantes específicas para distintos sectores."
+          content="Fecsys es una plataforma de gestión empresarial con verticales específicas para servicios técnicos, talleres, alquiler de maquinaria y negocios que trabajan por proyectos."
         />
       </Helmet>
 
@@ -141,17 +105,16 @@ function JcBasePage() {
         <div className="site-container jc-base-page__hero-grid" data-aos="fade-up">
           <div className="jc-base-page__hero-copy">
             <div className="jc-base-page__hero-brand">
-              <img src={jcBaseLogo} alt="Logo de JC Base" className="jc-base-page__hero-logo" />
+              <img src={fecsysLogo} alt="Logo de Fecsys" className="jc-base-page__hero-logo" />
               <div>
-                <p className="jc-base-page__eyebrow">ERP adaptable</p>
+                <p className="jc-base-page__eyebrow">ERP vertical para pymes</p>
                 <span>by JC Consultor</span>
               </div>
             </div>
-            <h1>Un ERP básico, completo y adaptable para ordenar la gestión real de la empresa.</h1>
+            <h1>Un software de gestión modular para empresas que ya no quieren crecer con procesos dispersos.</h1>
             <p className="jc-base-page__hero-lead">
-              JC Base cubre las necesidades esenciales de control de una empresa y conecta operativa, documentación,
-              stock, facturación, contabilidad y trazabilidad dentro de una solución práctica, clara y preparada para
-              adaptarse según el sector.
+              Fecsys une una base común de gestión con verticales específicas para distintos sectores, para que cada
+              empresa pueda vender, organizar su operativa y ganar control sin asumir la rigidez de un ERP genérico.
             </p>
             <div className="jc-base-page__hero-actions">
               <a href="/contacto#reserva" className="home-premium__cta">
@@ -173,15 +136,14 @@ function JcBasePage() {
       <section className="jc-base-page__section">
         <div className="site-container jc-base-page__intro" data-aos="fade-up">
           <p className="jc-base-page__eyebrow">Qué es</p>
-          <h2>Un ERP de gestión pensado para trabajar con más orden, más control y más conexión.</h2>
+          <h2>Una propuesta pensada para convertir el caos operativo en una gestión más clara y vendible.</h2>
           <p>
-            JC Base parte de una estructura empresarial común, sólida y funcional, que resuelve las áreas habituales
-            de cualquier negocio: clientes, proveedores, productos, presupuestos, albaranes, facturas, compras,
-            stock, cobros, pagos, contabilidad, fiscalidad y control interno.
+            Fecsys parte de una idea muy simple: muchas pymes no necesitan un software más, sino una manera más clara
+            de conectar su actividad comercial, su operativa diaria y el control del negocio.
           </p>
           <p>
-            A partir de esta base, el sistema dispone de variantes específicas para sectores concretos, de forma que
-            cada empresa puede trabajar con una solución más próxima a su manera real de funcionar.
+            Por eso se plantea como una solución modular, con una base común y variantes específicas por sector, para
+            que el producto encaje mejor en la forma real de trabajar de cada empresa.
           </p>
         </div>
 
@@ -194,17 +156,13 @@ function JcBasePage() {
           ))}
         </div>
 
-        <div className="site-container jc-base-page__shots-grid jc-base-page__shots-grid--2" data-aos="fade-up">
-          <ShotCard shot={jcBaseShots[1]} />
-          <ShotCard shot={jcBaseShots[2]} />
-        </div>
       </section>
 
       <section className="jc-base-page__section jc-base-page__section--alt">
         <div className="site-container jc-base-page__audience-grid">
           <div data-aos="fade-up">
             <p className="jc-base-page__eyebrow">Para quién es</p>
-            <h2>Para empresas que necesitan una gestión completa pero accesible.</h2>
+            <h2>Para empresas que quieren profesionalizar su gestión sin complicarse más.</h2>
           </div>
 
           <div className="jc-base-page__audience-cards">
@@ -222,16 +180,14 @@ function JcBasePage() {
         <div className="site-container jc-base-page__split" data-aos="fade-up">
           <div>
             <p className="jc-base-page__eyebrow">Diferenciación</p>
-            <h2>Ni demasiado simple, ni rígido en exceso.</h2>
+            <h2>Ni un programa básico que se queda corto, ni un ERP pesado que frena la implantación.</h2>
             <p>
-              JC Base se sitúa en un punto mucho más práctico que muchas herramientas del mercado. No se queda en un
-              programa básico centrado solo en facturas, pero tampoco obliga a la empresa a encajar en un ERP pesado,
-              complejo o poco natural.
+              Fecsys busca un punto mucho más práctico: suficiente estructura para ordenar el negocio, pero con una
+              narrativa comercial y una implantación más cercanas a la realidad de cada sector.
             </p>
             <p>
-              Su diferencia está en combinar una base de gestión empresarial completa con variantes específicas por
-              sector, para que la herramienta sea más comprensible, más útil y más alineada con la actividad real del
-              negocio.
+              Su valor está en combinar una base común sólida con verticales que permiten hablar mejor con el cliente,
+              demostrar el encaje desde el primer momento y acompañar el crecimiento con más coherencia.
             </p>
           </div>
           <div className="jc-base-page__process-list">
@@ -245,11 +201,10 @@ function JcBasePage() {
       <section className="jc-base-page__section" id="verticales">
         <div className="site-container jc-base-page__section-head" data-aos="fade-up">
           <p className="jc-base-page__eyebrow">Verticales</p>
-          <h2>Un ecosistema que evoluciona a través de variantes específicas.</h2>
+          <h2>Cuatro verticales claras para salir al mercado con un discurso más preciso.</h2>
           <p>
-            JC Base parte de una base común de gestión empresarial, pero crece incorporando versiones más alineadas con
-            sectores concretos. Así la empresa no solo tiene una herramienta general, sino una solución más cercana a
-            su proceso real de trabajo.
+            Fecsys no se vende como una promesa abstracta. Se presenta como una propuesta concreta para sectores con
+            problemas reales de coordinación, seguimiento y control diario.
           </p>
         </div>
 
@@ -266,27 +221,19 @@ function JcBasePage() {
             </article>
           ))}
         </div>
-
-        <div className="site-container jc-base-page__shots-grid jc-base-page__shots-grid--3" data-aos="fade-up">
-          <ShotCard shot={jcBaseShots[2]} />
-          <ShotCard shot={jcBaseShots[3]} />
-          <ShotCard shot={jcBaseShots[4]} />
-        </div>
       </section>
 
       <section className="jc-base-page__section jc-base-page__section--alt">
         <div className="site-container jc-base-page__split" data-aos="fade-up">
           <div>
-            <p className="jc-base-page__eyebrow">Proceso real</p>
-            <h2>La empresa puede empezar desde lo que realmente hace.</h2>
+            <p className="jc-base-page__eyebrow">Encaje comercial</p>
+            <h2>La conversación empieza en el proceso real de cada empresa.</h2>
             <p>
-              Un taller puede empezar desde una orden de reparación, una empresa de mantenimiento desde una incidencia,
-              una constructora desde un parte de obra, un distribuidor desde una comanda y una empresa de alquiler
-              desde una reserva o contrato.
+              En Fecsys, cada vertical arranca desde lo que el cliente ya reconoce como su problema: una incidencia,
+              una reparación, una reserva, un proyecto o un proceso comercial que hoy está mal conectado.
             </p>
             <p>
-              Después, el sistema transforma esta actividad en documentos comerciales, movimientos de stock,
-              facturación, contabilidad y trazabilidad.
+              Eso facilita una demostración mucho más comercial, más comprensible y orientada a resultados concretos.
             </p>
           </div>
           <ul className="jc-base-page__bullet-list">
@@ -301,7 +248,7 @@ function JcBasePage() {
         <div className="site-container jc-base-page__split" data-aos="fade-up">
           <div>
             <p className="jc-base-page__eyebrow">Ventaja para el cliente</p>
-            <h2>Más control y menos dependencia de procesos dispersos.</h2>
+            <h2>Más orden diario, mejor seguimiento y una propuesta de valor más clara.</h2>
           </div>
           <ul className="jc-base-page__bullet-list">
             {advantages.map((item) => (
@@ -314,14 +261,14 @@ function JcBasePage() {
       <section className="jc-base-page__cta" data-aos="fade-up">
         <div className="site-container jc-base-page__cta-inner">
           <p className="jc-base-page__eyebrow">Posicionamiento</p>
-          <h2>Una alternativa flexible a los ERPs genéricos.</h2>
+          <h2>Una alternativa comercialmente más potente que el software genérico.</h2>
           <p>
-            JC Base ofrece una base empresarial completa, pero con capacidad real de adaptación y variantes específicas
-            para sectores concretos. El resultado es una herramienta más comprensible, más cercana y más útil para el
-            negocio real.
+            Fecsys permite presentar una base de gestión sólida con verticales específicas, para vender con más foco,
+            implantar con más criterio y acompañar a cada pyme con una solución que se entiende mejor desde el primer
+            minuto.
           </p>
           <a href="/contacto#reserva" className="home-premium__cta">
-            Hablar sobre JC Base
+            Hablar sobre Fecsys
           </a>
         </div>
       </section>

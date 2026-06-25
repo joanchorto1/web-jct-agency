@@ -1,27 +1,28 @@
 import averoLogo from '../components/img/AVERO LOGO.png';
 import constructProLogo from '../components/img/ContructPRO-Logo.png';
+import fecsysLogo from '../components/img/fecsys-logo.png';
 import regitLogo from '../components/img/regit_logo.png';
 
 export const products = [
   {
     slug: 'jc-base',
     path: '/jc-base',
-    name: 'JC Base',
-    eyebrow: 'ERP adaptable',
-    title: 'Un ERP básico, completo y adaptable para ordenar la gestión real de la empresa.',
+    name: 'Fecsys',
+    eyebrow: 'ERP vertical para pymes',
+    title: 'Un software de gestión modular para vender mejor, operar con más control y crecer sin caos.',
     summary:
-      'JC Base es un ERP de gestión empresarial pensado para cubrir las necesidades esenciales de control de una pyme, conectando operativa, documentación, stock, facturación, contabilidad y trazabilidad.',
+      'Fecsys es una plataforma de gestión empresarial pensada para pymes que necesitan una base sólida y, al mismo tiempo, una solución más cercana a la realidad de su sector.',
     indexDescription:
-      'JC Base no es un simple programa para facturar ni un ERP rígido y difícil de asumir. Es una solución de gestión empresarial clara, práctica y adaptable que cubre clientes, proveedores, productos, presupuestos, albaranes, facturas, compras, stock, cobros, pagos, contabilidad y fiscalidad, con variantes específicas para sectores concretos.',
+      'Fecsys no se plantea como un software genérico ni como un ERP pesado de implantar. Su propuesta es unir una base común de gestión con verticales específicas para servicios técnicos, talleres, alquiler de maquinaria y despachos que trabajan por proyectos, para que cada empresa tenga una herramienta más natural de vender, organizarse y controlar su negocio.',
     labels: [
-      'ERP básico y completo',
-      'Gestión conectada',
-      'Stock y contabilidad',
-      'Adaptable por sector',
-      'Trazabilidad y control',
-      'VeriFactu y AEAT',
+      'Verticales por sector',
+      'Implantación adaptable',
+      'Control comercial y operativo',
+      'Más orden diario',
+      'Visión global del negocio',
+      'Demostración personalizada',
     ],
-    image: '/JC_Base_Resources/JC_BASE_LOGO.png',
+    image: fecsysLogo,
   },
   {
     slug: 'avero',
