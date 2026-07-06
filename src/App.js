@@ -11,6 +11,7 @@ import ConsultingPage from './pages/ConsultingPage';
 import JcConsultorPremiumPage from './pages/JcConsultorPremiumPage';
 import JcBasePage from './pages/JcBasePage';
 import ContactPage from './pages/ContactPage';
+import IncidenciesPage from './pages/IncidenciesPage';
 import ProductsPageNew from './pages/ProductsPageNew';
 import ProductPage from './pages/ProductPage';
 import ProblemsPage from './pages/ProblemsPage';
@@ -84,6 +85,8 @@ function App() {
           <Route path="/reservar-hora" element={<CalendarReservationPage />} />
           <Route path="/contacto" element={<ContactPage />} />
           <Route path="/contacte" element={<ContactPage />} />
+          <Route path="/incidencias" element={<IncidenciesPage />} />
+          <Route path="/incidencies" element={<IncidenciesPage />} />
           <Route path="/politica-privacidad" element={<PrivacyPolicyPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
           <Route path="/guias" element={<SeoHubPage />} />

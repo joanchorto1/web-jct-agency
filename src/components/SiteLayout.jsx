@@ -30,6 +30,7 @@ function SiteLayout() {
             <Link to="/jc-base">Fecsys</Link>
             <Link to="/productos">Productos</Link>
             <Link to="/problemas">Problemas</Link>
+            <Link to="/incidencies">Incidencias</Link>
             <Link to="/contacto">Contacto</Link>
           </nav>
 
@@ -78,6 +79,14 @@ function SiteLayout() {
                   <path d="m4 8 8 6 8-6" />
                 </FooterIcon>
                 Contacto
+              </Link>
+              <Link to="/incidencies">
+                <FooterIcon>
+                  <path d="M12 9v4" />
+                  <path d="M12 17h.01" />
+                  <path d="M10.3 3.4 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.4a2 2 0 0 0-3.4 0Z" />
+                </FooterIcon>
+                Incidencias
               </Link>
             </div>
             <div className="site-footer__legal">
